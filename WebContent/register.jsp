@@ -171,7 +171,7 @@ Already registered or want to change your account info?
 </span>
 <br>
 <div>
-<input id="firstname" type="text" maxlength="64" value="" size="32" name="firstname">
+<input id="firstname" type="text" pattern="[a-zA-Z]+" maxlength="10" value="" size="32" name="firstname" required="true">
 </div>
 </div>
 <span class="error"></span>
@@ -183,7 +183,7 @@ Already registered or want to change your account info?
 </span>
 <br>
 <div>
-<input id="lastname" type="text" maxlength="64" value="" size="32" name="lastname">
+<input id="lastname" type="text" maxlength="10" pattern="[a-zA-Z]+" value="" size="32" name="lastname" required="true">
 </div>
 </div>
 <span class="error"></span>
@@ -206,7 +206,7 @@ Already registered or want to change your account info?
 </span>
 <br>
 <div>
-<input id="address1" type="text" maxlength="128" value="" size="32" name="address1">
+<input id="address1" type="text" maxlength="128" value="" size="32" name="address1" required="true">
 </div>
 <span class="error"></span>
 </div>
@@ -228,7 +228,7 @@ Already registered or want to change your account info?
 </span>
 <br>
 <div>
-<input id="city" type="text" maxlength="128" value="" size="32" name="city">
+<input id="city" type="text" pattern="[a-zA-Z]+" maxlength="15" size="32" name="city" required="true">
 </div>
 <span class="error"></span>
 </div>
@@ -305,7 +305,7 @@ if (iscity == 'true') e.form.elements['city'].value = e.options[e.selectedIndex]
 </span>
 <br>
 <div>
-<input id="pincode" type="text" maxlength="12" value="" size="12" name="pincode">
+<input id="pincode" type="text" maxlength="6" pattern="\d{6}" value="" size="12" name="pincode" required="true">
 </div>
 <span class="error"></span>
 </div>
@@ -557,7 +557,7 @@ javascript:submitToTargetPage('https://scgi.ebay.in/ws/eBayISAPI.dll','RegisterC
 <div id="PHONE_GROUP">
 <div class="moduleNoMargins" style="padding-top:6px;">
 <label for="phone">10 digit mobile number</label>
-<input id="phone" type="text" title="Primary telephone number" maxlength="16" value="" name="phone" size="17">
+<input id="phone" type="text" title="Primary telephone number" maxlength="10" minlength="10" value="" pattern="\d{10}" name="phone" size="17" required="true">
 <div>
 <span class="error"></span>
 <span id="secdayphone1" class="help">
@@ -576,7 +576,7 @@ We will contact you if we have questions about your account.
 </span>
 <br>
 <div>
-<input id="email" type="text" value="" maxlength="64" size="32" name="email">
+<input title="shatakirti@gmail.com" id="email" type="email" value="" maxlength="64" size="32" name="email" required="true">
 </div>
 <span class="error"></span>
 </div>
@@ -587,7 +587,7 @@ We will contact you if we have questions about your account.
 </span>
 <br>
 <div>
-<input id="retype_email" type="text" value="" maxlength="64" size="32" name="retype_email">
+<input title="shatakirti@gmail.com" id="retype_email" type="email" value="" maxlength="64" size="32" name="retype_email">
 </div>
 <div id="div_retype_email" class="quickwinError" style="color:red;"></div>
 <div id="secremail" class="YukHelpTxt">Please use a valid email address that you frequently access.</div>
@@ -613,7 +613,7 @@ We will contact you if we have questions about your account.
 <div>
 <img id="img_newuserid" alt="Error" style="display:none;margin-bottom:-2px;_margin-bottom:0px;" src="https://securepics.ebaystatic.com/aw/pics/icons/iconFormError_16x16.gif">
 <img id="chgImg" alt="Success" style="display:none;margin-bottom:-2px;_margin-bottom:0px;margin-right:2px" name="chgImg" src="https://securepics.ebaystatic.com/aw/pics/icon/iconSuccess_16x16.gif">
-<input id="uid" type="text" maxlength="64"  size="32" name="uid">
+<input id="uid" type="text" maxlength="64" size="32" name="uid">
 <!--<s:textfield maxlength="64"  size="32" key="uid"  />-->
 <span id="user_throbberdiv" style="display:none;color:#A5A6A5;" name="user_throbberdiv">
 <img alt="Loading" src="https://securepics.ebaystatic.com/aw/pics/globalAssets/imgLoading_15x15.gif">

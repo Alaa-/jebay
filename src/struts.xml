@@ -1,0 +1,23 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.ui.theme" value="simple" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+    <package name="ebay" namespace="/" extends="struts-default">
+     
+     <action name="Login" class="ebay.login_page">
+        <result name="success">/home.jsp</result>
+        <result name="error">/user_sign_in.jsp</result>
+    </action>
+    
+       <action name="Register" class="ebay.sign_up">
+        <result name="success">/home.jsp</result>
+
+    </action>
+    
+
+    </package>
+</struts>

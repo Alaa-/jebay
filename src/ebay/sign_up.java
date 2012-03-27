@@ -6,7 +6,6 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ActionContext;
 import java.util.*;
 import java.sql.*;
-
 public class sign_up  extends ActionSupport{
 
 
@@ -28,7 +27,7 @@ private String birthyear;
 private String birthmonth;
 private String secquestion;
 private String secanswer;
-
+long number;
 public String getFirstname()
 {
     return firstname;
@@ -210,10 +209,18 @@ public void setSecanswer(String secanswer)
          		String sql;
 			String sql1;
 		        ResultSet rs=null;
-                sql="insert into user_details (user_id,first_name,last_name,home_address,city,state,country,pin_code,phone_no,email,dob,password,secret_question,secret_answer) values ('"+getUid()+"','"+getFirstname()+"','"+getLastname()+"','"+getAddress1()+getAddress2()+"','"+getCity()+"','"+getState()+"','"+getCountry()+"','"+getPincode()+"','"+getPhone()+"','"+getEmail()+"','"+getBirthdate()+"-"+getBirthmonth()+"-"+getBirthyear()+"','"+getPassword()+"','"+getSecquestion()+"','"+getSecanswer()+"')";
-				System.out.println(sql);
+		        number = (long) Math.floor(Math.random() * 9000000000L) + 1000000000L;
+		        checkrandom();
+                sql="insert into user_details (user_id,first_name,last_name,home_address,city,state,country,pin_code,phone_no,email,dob,password,secret_question,secret_answer,cstatus,cid) values ('"+getUid()+"','"+getFirstname()+"','"+getLastname()+"','"+getAddress1()+getAddress2()+"','"+getCity()+"','"+getState()+"','"+getCountry()+"','"+getPincode()+"','"+getPhone()+"','"+getEmail()+"','"+getBirthdate()+"-"+getBirthmonth()+"-"+getBirthyear()+"','"+getPassword()+"','"+getSecquestion()+"','"+getSecanswer()+"','0','"+number+"')";
+				
+                System.out.println(sql);
                                 stat.executeUpdate(sql);
 
+                                SendMail1 s=new SendMail1();
+                        		s.to=email;
+                        		s.subject="JEBAY CONFIRMATION LINK";
+                        		s.message="<a href=\"http://192.16.11.86:8080/Jebay/Confirmation.action?cid="+number+"\">CLICK HERE </a>TO CONFIRM YOUR JEBAY REGISTRATION";
+                        		s.main();
                 Map session=ActionContext.getContext().getSession();
                 session.put("logged-in","true");
                 session.put("User",getFirstname());
@@ -227,7 +234,17 @@ public void setSecanswer(String secanswer)
         }
         return SUCCESS;
     }
-
+    public void checkrandom() throws Exception {
+    	Connect c=new Connect();
+    	ResultSet rs=c.getResult("select * from user_details where cid='"+number+"'");
+    	if(rs.next()){
+    		number = (long) Math.floor(Math.random() * 9000000000L) + 1000000000L;
+    		checkrandom();
+    	}
+    	else{
+    		return ;
+    	}
+    }
 }
 
 

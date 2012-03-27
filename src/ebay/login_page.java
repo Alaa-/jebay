@@ -66,6 +66,11 @@ public void setPassword(String password)
 
                  if (rs.next())
                  {
+                	if(rs.getInt("cstatus")==0){
+                		addActionError("confirm your registration by clicking the confirmation link set to your email");
+                		return "unconfirm";
+                		
+                	}
                     System.out.println("in rs next");
                     Map session=ActionContext.getContext().getSession();
                     session.put("logged-in","true");

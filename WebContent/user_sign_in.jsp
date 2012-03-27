@@ -1,9 +1,3 @@
-<%--
-    Document   : user_sign_in
-    Created on : 12 Feb, 2011, 3:42:41 PM
-    Author     : samrat
---%>
-
 <%@page contentType="text/html; charset=UTF-8"%>
 
 <%@taglib prefix="s" uri="/struts-tags"%>
@@ -128,7 +122,9 @@
 																								style="display: -moz-inline-stack"> <label
 																								for="userid"><font size="2">User
 																										ID&nbsp;&nbsp;</font>
-																							</label> </span> <span> <input id="userid" class="txtBxF"
+																							</label> </span> 
+																						
+																							<span> <input id="userid" class="txtBxF"
 																								name="uid" value="" maxlength="64" size="27">
 																							</span>
 																						</div>

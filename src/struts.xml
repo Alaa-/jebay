@@ -11,6 +11,7 @@
      <action name="Login" class="ebay.login_page">
         <result name="success">/header_new.jsp</result>
         <result name="error">/user_sign_in.jsp</result>
+        <result name="unconfirm">user_sign_in.jsp</result>
     </action>
     
        <action name="Register" class="ebay.sign_up">
@@ -19,6 +20,9 @@
 	 
 	  <action name="Logout" class="ebay.logout">
         <result name="success">/logout.jsp</result>
+    </action>
+    <action name="Confirmation" class="ebay.Confirmation">
+    <result name="success">/confirmationsuccess.jsp</result>
     </action>
 	 
     

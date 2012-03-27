@@ -183,14 +183,10 @@
 										rel="nofollow"><img
 											src="http://p.ebaystatic.com/aw/pics/in/logos/logoEbay_x45.gif"
 											alt="From collectables to cars, buy and sell all kinds of items on eBay"
-											border="0"></img></a></span><span class="greeting gh-ui">
-										<!-- BEGIN: GREETING:SIGNEDOUT -->Welcome! <a
-										href="user_sign_in.jsp"
-										rel="nofollow">Sign in</a> or <a
-										href="register.jsp"
-										id="registerLink" rel="nofollow">register</a>
-									<!-- END: GREETING:SIGNEDOUT -->
-										<span id="bta"></span>
+											border="0"></img></a></span><span class="greeting gh-ui"> <!-- BEGIN: GREETING:SIGNEDOUT -->Welcome!
+										<a href="user_sign_in.jsp" rel="nofollow">Sign in</a> or <a
+										href="register.jsp" id="registerLink" rel="nofollow">register</a>
+										<!-- END: GREETING:SIGNEDOUT --> <span id="bta"></span>
 									</span><span class="coupon"></span><span></span>
 								</div>
 								<div class="gh-rph">
@@ -198,15 +194,14 @@
 										src="http://q.ebaystatic.com/aw/pics/cart.gif" height="15"
 										width="15"> <a
 										href="http://orders.ebay.in/ws/eBayISAPI.dll?ShoppingCartMgmt">My
-											Shopping Cart</a><span id="glb_cart"></span>
-									<script type="text/javascript">
+											Shopping Cart</a><span id="glb_cart"></span> <script
+											type="text/javascript">
 										vjo.darwin.core.ebayheader.cart.Cart
 												.init(
 														"glb_cart",
 														"http://payments.ebay.in/ws/eBayISAPI.dll?GetCartDetails",
 														"http://orders.ebay.in/ws/eBayISAPI.dll?ShoppingCartMgmt");
-									</script>
-										| <a
+									</script> | <a
 										href="http://orders.ebay.in/ws/eBayISAPI.dll?MyPaisaPaySummary">My
 											PaisaPay</a> | <a
 										href="http://pages.ebay.in/help/contact_us/_base/index.html">Contact
@@ -576,21 +571,18 @@
 																	<tr>
 																		<td class="r3_c"><div class="r3_cm bp tp">
 																				<form name="signInForm" id="signInForm"
-																					method="post"
-																					>
+																					method="post">
 																					<div class="signin_module">
 																						<h2 class="return_text">Return to your
 																							account</h2>
 																						<div class="spacing_module">Ready to do more
 																							bidding and buying?</div>
 																						<div class="signin_Button">
-																							<s:form action="LogoutSignin">
-																								<b id="submit" class="btn-w btn-m btn-p">
-																									<a href="user_sign_in.jsp"><i>Sign
-																										in</i></a><span id="spn_submit" class="btn-b pbn-P"><input
-																										id="but_submit" name="" value="Sign in"
-																										type="submit"><b id="txt_submit">Sign
-																											in</b></span></b>
+																							
+																								<b id="submit" class="btn-w btn-m btn-p"> <a href="user_sign_in.jsp"><span id="spn_submit" class="btn-b pbn-P">
+																								<input id="but_submit" name="" value="Sign in" type="button">
+																								<b id="txt_submit">Sign	in</b></span></a></b>
+																							
 																						</div>
 																					</div>
 																				</form>
@@ -713,9 +705,9 @@
 									<tr>
 										<td class="g-pipe"><img
 											src="http://q.ebaystatic.com/aw/pics/s.gif" height="10"
-											width="1" alt=""><br>
-										<a href="http://pages.ebay.in/aboutebay.html">About eBay</a> |
-											<a href="http://www2.ebay.com/aw/marketing-in.shtml">Announcements</a>
+											width="1" alt=""><br> <a
+											href="http://pages.ebay.in/aboutebay.html">About eBay</a> | <a
+											href="http://www2.ebay.com/aw/marketing-in.shtml">Announcements</a>
 											| <a href="http://hub.shop.ebay.in/">Buy Hub</a> | <a
 											href="https://scgi.ebay.in/ws/eBayISAPI.dll?RegisterEnterInfo">Register</a>
 											| <a href="http://pages.ebay.in/securitycentre/index.html">Security
@@ -743,10 +735,11 @@
 											target="_blank" rel="nofollow">User Agreement</a> and <a
 											title=" "
 											href="http://pages.ebay.in/help/policies/privacy-policy.html"
-											target="_blank" rel="nofollow">Privacy Policy</a>.<br>
-										<img src="http://q.ebaystatic.com/aw/pics/s.gif" height="20"
+											target="_blank" rel="nofollow">Privacy Policy</a>.<br> <img
+											src="http://q.ebaystatic.com/aw/pics/s.gif" height="20"
 											alt="">
-										<table border="0" cellpadding="0" cellspacing="0" width="100%">
+											<table border="0" cellpadding="0" cellspacing="0"
+												width="100%">
 												<tr>
 													<td class="g-nav" width="100%"><a rel="nofollow"
 														href="http://viv.ebay.in/ws/eBayISAPI.dll?EbayTime">eBay
@@ -810,7 +803,7 @@ vjo.ctype("vjo.dsf.FirePageLoad").endType();if(typeof(oGaugeInfo)!="undefined"){
 vjo.dsf.EventDispatcher.load(document.body);
 
 </script>
-<%-- 	<%@include file="footer.jsp"%> --%>
-	</s:form>
+	<%-- 	<%@include file="footer.jsp"%> --%>
+	
 </body>
 </html>

@@ -9,14 +9,18 @@
     <package name="ebay" namespace="/" extends="struts-default">
      
      <action name="Login" class="ebay.login_page">
-        <result name="success">/home.jsp</result>
+        <result name="success">/header_new.jsp</result>
         <result name="error">/user_sign_in.jsp</result>
     </action>
     
        <action name="Register" class="ebay.sign_up">
         <result name="success">/home.jsp</result>
-
+	 </action>
+	 
+	  <action name="Logout" class="ebay.logout">
+        <result name="success">/logout.jsp</result>
     </action>
+	 
     
 
     </package>

@@ -5,10 +5,7 @@
 
 package ebay;
 
-/**
- *
- * @author samrat
- */
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ActionContext;
 import java.util.*;

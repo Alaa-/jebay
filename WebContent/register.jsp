@@ -1096,7 +1096,7 @@ Listen to the verification code
 <tr>
 <td width="25" valign="top">
 <span class="resetMargins">
-<input id="acceptq1" type="checkbox" value="1" name="acceptq1" onchange="check()">
+<input id="acceptq1" type="checkbox" value="1" name="acceptq1" required="true">
 </span>
 </td>
 <td colspan="2">
@@ -1247,7 +1247,7 @@ PaisaPay User Agreement
 <span class="btn">Continue</span>
 </span>
 </button>-->
-    <s:submit value="Register" id="s1" onclick="check()"></s:submit>
+    <s:submit value="Register" id="s1"></s:submit>
 
 </div>
 </div>

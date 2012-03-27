@@ -1,8 +1,4 @@
-<%--
-    Document   : register
-    Created on : 12 Feb, 2011, 6:20:39 PM
-    Author     : samrat
---%>
+
 
 <%@page contentType="text/html; charset=UTF-8" %>
 
@@ -1203,7 +1199,7 @@ That by clicking on the box I agree that I have read and understood the
 <tr>
 <td width="25" valign="top">
 <span class="resetMargins">
-<input id="acceptq5" type="checkbox" value="1" name="acceptq5">
+<input id="acceptq5" type="checkbox" value="1" name="acceptq5" required="true">
 </span>
 </td>
 </tr>

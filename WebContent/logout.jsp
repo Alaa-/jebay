@@ -1,15 +1,3 @@
-<%-- 
-    Document   : logout
-    Created on : 9 Mar, 2011, 3:00:47 PM
-    Author     : samrat
---%>
-
-<%--
-    Document   : Logout
-    Created on : Mar 8, 2011, 5:33:19 PM
-    Author     : Rohit
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">

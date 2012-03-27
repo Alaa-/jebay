@@ -1,9 +1,3 @@
-<%-- 
-    Document   : header_new
-    Created on : 5 Apr, 2011, 3:31:14 PM
-    Author     : samrat
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"

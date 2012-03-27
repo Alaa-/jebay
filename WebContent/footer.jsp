@@ -1,11 +1,3 @@
-<%-- 
-    Document   : footer
-    Created on : 12 Feb, 2011, 3:35:33 PM
-    Author     : samrat
---%>
-
-
-
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">

@@ -29,7 +29,7 @@
                     or&ensp;
                     <s:a rel="nofollow" href="register.jsp">register</s:a>
                         </s:if>
-                    <s:else> Welcome!<s:property value="#session['User']"/>
+                    <s:else> Welcome!<b><s:property value="#session['User']"/></b>
                         <s:url id="url1" action="Logout" encode="true">
 
                                     </s:url>

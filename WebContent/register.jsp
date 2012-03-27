@@ -97,6 +97,14 @@ function WriteYearOptions(YearsAhead)
   return line;
 }
 //  End -->
+function check(){
+	var a=document.getElementById("acceptq1");
+	if(a.checked==true){//alert("checked");
+	document.getElementById("s1").disabled=false;
+	}
+	else{//alert("not checked");
+	document.getElementById("s1").disabled=true;}
+}
 </script>
     </head>
     <body onLoad="SetToToday('birth');">
@@ -1088,7 +1096,7 @@ Listen to the verification code
 <tr>
 <td width="25" valign="top">
 <span class="resetMargins">
-<input id="acceptq1" type="checkbox" value="1" name="acceptq1">
+<input id="acceptq1" type="checkbox" value="1" name="acceptq1" onchange="check()">
 </span>
 </td>
 <td colspan="2">
@@ -1239,7 +1247,7 @@ PaisaPay User Agreement
 <span class="btn">Continue</span>
 </span>
 </button>-->
-    <s:submit value="Register"></s:submit>
+    <s:submit value="Register" id="s1" onclick="check()"></s:submit>
 
 </div>
 </div>

@@ -3,33 +3,40 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-    <constant name="struts.ui.theme" value="simple" />
-    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
-    <constant name="struts.devMode" value="true" />
-    <package name="ebay"  extends="struts-default">
-     
-     <action name="Login" class="ebay.login_page">
-        <result name="success">/header.jsp</result>
-        <result name="error">/user_sign_in.jsp</result>
-        <result name="unconfirm">user_sign_in.jsp</result>
-    </action>
-    
-       <action name="Register" class="ebay.sign_up">
-        <result name="success">/confirmation.jsp</result>
-	 </action>
-	 
-	 <action name="addcompactheader">
-        <result name="success">header.jsp</result>
-	 </action>
-	 
-	  <action name="Logout" class="ebay.logout">
-        <result name="success">/logout.jsp</result>
-    </action>
-    <action name="Confirmation" class="ebay.Confirmation">
-    <result name="success">/confirmationsuccess.jsp</result>
-    </action>
-	 
-    
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
 
-    </package>
+	<package name="ebay" extends="struts-default">
+
+		<action name="Login" class="ebay.login_page">
+			<result name="success">/header.jsp</result>
+			<result name="error">/user_sign_in.jsp</result>
+			<result name="unconfirm">user_sign_in.jsp</result>
+		</action>
+
+		<action name="Register" class="ebay.sign_up">
+			<result name="success">/confirmation.jsp</result>
+		</action>
+
+		<action name="addcompactheader">
+			<result name="success">header.jsp</result>
+		</action>
+
+		<action name="sell_choosecat" class="ebay.Sell_choosecategory">
+			<result name="success">/Sell_choosecat.jsp</result>
+		</action>
+
+
+		<action name="Logout" class="ebay.logout">
+			<result name="success">/logout.jsp</result>
+		</action>
+
+		<action name="Confirmation" class="ebay.Confirmation">
+			<result name="success">/confirmationsuccess.jsp</result>
+		</action>
+
+
+
+	</package>
 </struts>

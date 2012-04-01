@@ -52,7 +52,7 @@
 							<!--DIV-->
 						</div>
 						<div>
-							<form action="" method="post" name="SearchCategories">
+							<form action="sell_choosecat" method="post" name="SearchCategories">
 								<div class="main">
 									<div class="mainCnt">
 										<div>

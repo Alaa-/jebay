@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	
+	<%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -80,16 +82,119 @@
 							</div>
 						</div>
 						<div class="brdcmb" id="brdcmb">
-							<b><div class="level1">SELL YOUR ITEM</div>
-								<div class="active">1. TELL US WHAT YOU SELL</div>
-								<div class="inactive">2. CREATE YOUR LISTING</div>
-								<div class="inactive">3. REVIEW YOUR LISTING</div></b>
+							<div class="level1">SELL YOUR ITEM</div>
+							<div class="active">1. TELL US WHAT YOU SELL</div>
+							<div class="inactive">2. CREATE YOUR LISTING</div>
+							<div class="inactive">3. REVIEW YOUR LISTING</div>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+						<div class="clr"></div>
 
+						<div class="areaTitleBox" id="areaTitleBox">
+							<div class="areaTitle">
+								<a name="mainContent"></a>
+								<h1></h1>
+							</div>
+							<div class="areaCtl">
+								<div class="headerLnks">
+									<a
+										href="http://pages.ebay.in/help/sell/contextual/inframe/choosing-category.html"
+										id="helpBtnlink" class="hlpimg">Help</a>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+
+
+
+
+
+
+						<div>
+							<div class="ttlPanel-n">
+								<div class="ttlPanel-e">
+									<div class="ttlPanel-w"></div>
+								</div>
+							</div>
+							<div class="ttlPanel-head">
+								<h2 class="lst">Find a matching category</h2>
+								<span class="titleCtl"></span>
+							</div>
+							<div class="secCnt">
+								<div>
+									<div>
+										<div class="idtHrz">
+											<div>
+												<div class="verSpc"></div>
+												Enter 3-5 words about your item.
+											</div>
+											<div>
+												<div>
+													<input type="text" id="keywords" name="keywords" value=""
+														class="posRelat" aria-autocomplete="list"
+														aria-expanded="false" role="combobox" aria-owns="results"
+														autocomplete="off"
+														title="Enter 3-5 words about your item. "><input
+														type="hidden" id="keywords1" name="keywords1"
+														tabindex="-1" value=""><input type="hidden"
+														id="acKeywords" name="acKeywords" tabindex="-1" value=""><input
+														id="aidZ4" name="aidZ4" type="submit" value="Search"
+														title="Search">
+												</div>
+											</div>
+											<div class="idtTopSm help">For example: Levis 501
+												women's jeans</div>
+										</div>
+									</div>
+								</div>
+
+
+
+
+
+
+								<div>
+									<ul class="tab" role="tablist">
+										<li role="presentation" class="inactive"><span><a
+												href="http://cgi5.ebay.in/ws/eBayISAPI.dll?NewListing&amp;itemid=&amp;sid=143739292803&amp;cpg=4&amp;js=1&amp;aid=4"
+												id="searchcatlink" role="tab"> Suggested categories </a></span></li>
+										<li role="presentation" aria-selected="true" class="active"><span><a
+												href="#" id="browsecatlink" role="tab"> Select a
+													suitable category </a></span></li>
+										<li role="presentation" class="inactive"><span><a
+												href="http://cgi5.ebay.in/ws/eBayISAPI.dll?NewListing&amp;itemid=&amp;sid=143739292803&amp;cpg=4&amp;js=1&amp;aid=5"
+												id="recentcatlink" role="tab">Recently used categories</a></span></li>
+									</ul>
+									<div class="secTab" role="tabpanel"
+										aria-labelledby="browsecatlink">
+										<div class="idt">
+											<label for="fcat">Categories</label>
+											<div id="ariabrowse" class="g-hdn" aria-live="assertive"
+												aria-relevant="text" aria-atomic="true"></div>
+										</div>
+										<div class="idtHrz" id="categories_fldSet">
+											<div></div>
+											<div id="catboxes_inpGrp">
+												<table cellpadding="0" cellspacing="0" border="0" summary="">
+													<tr id="catboxes_row_1">
+														<td valign="top"><div id="fcat_inp" class="idtRgt">
+																<s:select id="fcat" name="fcat" list="catlist" listKey="category_id" listValue="category_name" size="13" />
+															</div></td>
+														<td valign="top"><span id="lyr_fcat"></span></td>
+													</tr>
+												</table>
+											</div>
+
+
+
+
+
+
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 </body>
 </html>

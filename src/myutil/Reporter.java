@@ -16,7 +16,7 @@ public class Reporter
 	private static Hashtable reporters = new Hashtable();
 	private final int reportSuffix;
 	private final String reportPrefix = System.getProperty("user.home");
-	private final String pathseperator = System.getProperty("path.separator");
+	private final String pathseperator = System.getProperty("file.separator");
 	private final String reportType;
 
 	public Reporter(String reportType)

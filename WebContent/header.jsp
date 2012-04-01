@@ -54,7 +54,7 @@
 									<div class="gh-hid"></div>
 									<div class="gh-mn">
 										<span class="gh-fst"><a id="MyEbay"	href="myebay.jsp">My eBay</a></span>
-										<a id="Sell" href="sell.jsp">Sell</a>
+										<a id="Sell" href="/Jebay/Sell.jsp">Sell</a>
 										<a id="Community" href="http://hub.ebay.in/community">Community</a>
 										<a id="Help" href="http://ocs.ebay.in/ws/eBayISAPI.dll?CustomerSupportRedirect&amp;target=help">Customer
 											Support</a><span class="gh-nho"><span></span></span>

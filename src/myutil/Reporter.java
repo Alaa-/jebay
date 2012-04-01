@@ -25,7 +25,7 @@ public class Reporter
 		reportSuffix = 1;
 		this.reportType = reportType;
 		// reportPrefix = "/";
-		writer = getNewWriter(reportPrefix + pathseperator + reportType + reportSuffix + ".txt");
+		writer = getNewWriter(reportPrefix + pathseperator + "jebay" + reportType + reportSuffix + ".txt");
 	}
 
 	public PrintWriter getWriter()

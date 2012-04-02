@@ -2,10 +2,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Footer</title>
-<link href="http://include.ebaystatic.com/v4css/en_IN/e705i/GH-ZAM_ReskinEbay_e705i12661656_en_IN.css" type="text/css" rel="stylesheet">
+<link href="css/header.css" type="text/css" rel="stylesheet">
 
 
-<link href="http://include.ebaystatic.com/v4css/en_IN/e705i/CCHP_HomepageV4_DLSR_e705i12661656_en_IN.css" type="text/css" rel="stylesheet">
+<link href="css/header1.css" type="text/css" rel="stylesheet">
 
 
 <style type="text/css">

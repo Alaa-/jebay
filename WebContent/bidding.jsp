@@ -6,28 +6,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript">var plst=new Date().getTime();</script>
 <title>Combo of Nokia BL-5C Battery+Freshner+WARANTY | eBay</title>
-<meta name="description"
-	content="Combo of Nokia BL-5C Battery+Freshner+WARANTY in Mobile Accessories , Batteries , Nokia |eBay">
-<meta name="keywords"
-	content="Combo of Nokia BL-5C Battery+Freshner+WARANTY, Mobile Accessories, Batteries, Nokia">
-<link rel="canonical"
-	href="http://www.ebay.in/itm/Combo-Nokia-BL-5C-Battery-Freshner-WARANTY-/110852165677">
-<meta name="google-site-verification"
-	content="FhX5RgxqM_mmLAfBKHOUJAIShteGrrwq52kR5wmiLcg">
-<meta name="y_key" content="">
-<meta name="msvalidate.01" content="">
-<meta property="og:title"
-	content="Combo of Nokia BL-5C Battery+Freshner+WARANTY">
-<meta property="og:type" content="product">
-<meta property="og:url"
-	content="http://www.ebay.in/itm/Combo-Nokia-BL-5C-Battery-Freshner-WARANTY-/110852165677">
-<meta property="og:image"
-	content="http://i.ebayimg.com/00/s/MTk0WDI1OQ==/$(KGrHqFHJBEE8+i(NON+BPWRF)mcE!~~60_1.JPG?set_id=8800004005">
-<meta property="og:site_name" content="eBay">
-<meta property="og:description"
-	content="Combo of Nokia BL-5C Battery+Freshner+WARANTY in Mobile Accessories , Batteries , Nokia |eBay">
-<meta property="fb:app_id" content="102628213125203">
-<!--[if lt IE 7]><style>* html .vi-c_0 { width: 940px; width: expression((document.documentElement && document.documentElement.clientHeight) ? ( (document.documentElement.clientWidth < 940) ? "940px" : ( (document.documentElement.clientWidth > 1200) ? "1200px" : "auto") ) : ( (document.body.clientWidth < 940) ? "940px" : "auto") ); }</style><![endif]-->
 <script>var pageHasRtmPlacements = true;</script>
 <link rel="stylesheet" type="text/css"
 	href="http://ir.ebaystatic.com/v4css/z/i5/44sahi3l3azqpahlonk2cetjj.css#GH-ZAM_ReskinEbayNoAutoComplete_e767i_Ear_en_IN">

@@ -39,4 +39,9 @@ public class Category
 		return null;
 
 	}
+
+	public static ArrayList<CategoryVo> getSubCategories(int cat_id)
+	{
+		return null;
+	}
 }

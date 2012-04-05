@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	
-	<%@taglib prefix="s" uri="/struts-tags"%>
+
+<%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -27,10 +27,7 @@
 	src="http://include.ebaystatic.com/js/e765/in/features/syi3/category_browse_e7656in.js">
 	
 </script>
-<script type="text/javascript" language="JavaScript"
-	src="http://include.ebaystatic.com/js/e765/in/features/syi/livehelp_e7656in.js">
-	
-</script>
+
 </head>
 <body>
 
@@ -81,6 +78,9 @@
 								</div>
 							</div>
 						</div>
+
+
+
 						<div class="brdcmb" id="brdcmb">
 							<div class="level1">SELL YOUR ITEM</div>
 							<div class="active">1. TELL US WHAT YOU SELL</div>
@@ -88,6 +88,9 @@
 							<div class="inactive">3. REVIEW YOUR LISTING</div>
 						</div>
 						<div class="clr"></div>
+
+
+
 
 						<div class="areaTitleBox" id="areaTitleBox">
 							<div class="areaTitle">
@@ -155,14 +158,14 @@
 								<div>
 									<ul class="tab" role="tablist">
 										<li role="presentation" class="inactive"><span><a
-												href="http://cgi5.ebay.in/ws/eBayISAPI.dll?NewListing&amp;itemid=&amp;sid=143739292803&amp;cpg=4&amp;js=1&amp;aid=4"
-												id="searchcatlink" role="tab"> Suggested categories </a></span></li>
+												href="#" id="searchcatlink" role="tab"> Suggested
+													categories </a></span></li>
 										<li role="presentation" aria-selected="true" class="active"><span><a
 												href="#" id="browsecatlink" role="tab"> Select a
 													suitable category </a></span></li>
 										<li role="presentation" class="inactive"><span><a
-												href="http://cgi5.ebay.in/ws/eBayISAPI.dll?NewListing&amp;itemid=&amp;sid=143739292803&amp;cpg=4&amp;js=1&amp;aid=5"
-												id="recentcatlink" role="tab">Recently used categories</a></span></li>
+												href="#" id="recentcatlink" role="tab">Recently used
+													categories</a></span></li>
 									</ul>
 									<div class="secTab" role="tabpanel"
 										aria-labelledby="browsecatlink">
@@ -177,24 +180,26 @@
 												<table cellpadding="0" cellspacing="0" border="0" summary="">
 													<tr id="catboxes_row_1">
 														<td valign="top"><div id="fcat_inp" class="idtRgt">
-																<s:select id="fcat" name="fcat" list="catlist" listKey="category_id" listValue="category_name" size="13" />
+																
+																<s:select id="fcat" name="fcat" list="catlist"
+																	listKey="category_id" listValue="category_name"
+																	size="13" />
 															</div></td>
 														<td valign="top"><span id="lyr_fcat"></span></td>
 													</tr>
 												</table>
 											</div>
-
-
-
-
-
-
-
-
 										</div>
 									</div>
 								</div>
+
+
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

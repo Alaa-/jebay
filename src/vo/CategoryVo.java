@@ -5,6 +5,16 @@ public class CategoryVo
 	int category_id;
 	String category_name;
 
+	public CategoryVo()
+	{
+	}
+
+	public CategoryVo(int category_id, String category_name)
+	{
+		this.category_id = category_id;
+		this.category_name = category_name;
+	}
+
 	public int getCategory_id()
 	{
 		return category_id;

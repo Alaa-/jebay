@@ -6,11 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript">var plst=new Date().getTime();</script>
 <title>Combo of Nokia BL-5C Battery+Freshner+WARANTY | eBay</title>
-<script>var pageHasRtmPlacements = true;</script>
+
+
 <link rel="stylesheet" type="text/css"
-	href="http://ir.ebaystatic.com/v4css/z/i5/44sahi3l3azqpahlonk2cetjj.css#GH-ZAM_ReskinEbayNoAutoComplete_e767i_Ear_en_IN">
-<link rel="stylesheet" type="text/css"
-	href="http://ir.ebaystatic.com/v4css/z/m3/xm34bs302e22zfmwqqguklzhz.css#BuyingApp_ViewItemATLShipping_e767i_Ear_en_IN">
+	href="css/bid2.css">
 </head>
 <body style="text-align: left" id="body">
 <div><%@ include file="header.jsp" %></div>
@@ -26,18 +25,7 @@
 										<span class="shig" id="freeShippingIcon"><span
 											id="spclOffers"></span>
 										</span>
-										<form name="ssFrm"
-											action="http://cgi.ebay.in/ws/eBayISAPI.dll?VISuperSize&amp;item=110852165677"
-											target="ssFrmWin" method="post">
-											<input type="hidden" name="ssr" value="0"><input
-												type="hidden" name="iurls"
-												value="0#http://i.ebayimg.com/00/s/MTk0WDI1OQ==#$(KGrHqFHJBEE8+i(NON+BPWRF)mcE!~~60_14.JPG#$(KGrHqFHJBEE8+i(NON+BPWRF)mcE!~~60_1.JPG|1#http://i.ebayimg.com/00/s/MzYwWDM2MA==#$(KGrHqRHJB!E9!j13fL9BPRn7-8mD!~~60_14.JPG#$(KGrHqRHJB!E9!j13fL9BPRn7-8mD!~~60_12.JPG"><input
-												type="hidden" name="dtid" id="dtid" value="0"><input
-												type="hidden" name="vs" value="1"><input
-												type="hidden" name="sh" value="0"><input
-												type="hidden" name="title"
-												value="Combo of Nokia BL-5C Battery+Freshner+WARANTY">
-										</form>
+
 										<div>
 											<table border="0" cellpadding="0" cellspacing="0">
 												<tr>
@@ -53,21 +41,7 @@
 																	</center>
 																</div>
 																<a id="vv4-38_a" class="ic-cp" href="javascript:;"></a>
-																<div id="vv4-38_bdiv" class="ic-p ic-b1"
-																	style="height: 298px; width: 298px;">
-																	<div id="vv4-38_t" class="ic-thr">
-																		<span></span>
-																	</div>
-																	<div id="vv4-38_e" class="ic-err">
-																		<span></span>
-																	</div>
-																</div>
-															</div>
-															<div class="tbr-c" id="vv4-38_TB">
-																<ul class="tbr-w">
-																	<li title="Show larger and alternate views"
-																		class="tbr-l"></li>
-																</ul>
+				
 															</div>
 														</div>
 													</td>
@@ -81,10 +55,7 @@
 												</tr>
 											</table>
 										</div>
-										<div>
-											<img src="http://q.ebaystatic.com/aw/pics/s.gif" height="1"
-												width="302px" alt="">
-										</div>
+
 									</div>
 								</td>
 								<td id="isclmn" class="isumv1_5-cell"><form name="v4-26"

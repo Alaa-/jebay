@@ -214,7 +214,7 @@ public class DB
 		return result;
 	}
 
-	private static ArrayList<String> getColumnNames(ResultSet rs)
+	public static ArrayList<String> getColumnNames(ResultSet rs)
 	{
 		ArrayList<String> result = new ArrayList<String>();
 		try

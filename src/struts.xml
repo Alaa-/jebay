@@ -36,7 +36,11 @@
 			<result name="success">/confirmationsuccess.jsp</result>
 		</action>
 
-
+	<action name="search" class="ebay.Search">
+			<!-- <result name="camera">/details.jsp</result>
+			<result name="books">/bookDetails.jsp</result> -->
+			<result name="success">/details.jsp</result>
+		</action>
 
 	</package>
 </struts>

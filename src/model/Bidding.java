@@ -12,7 +12,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class Bidding extends ActionSupport {
 
-	public static ArrayList<BidItemUserJoinVo> getAllBidDetails(int item_id) {
+	public ArrayList<BidItemUserJoinVo> getAllBidDetails(int item_id) {
 		
 		ArrayList<BidItemUserJoinVo> bidList = new ArrayList<BidItemUserJoinVo>();
 		ResultSet rs = null, rs3 = null, rs4 = null;

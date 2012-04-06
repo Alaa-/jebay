@@ -1,0 +1,91 @@
+package vo;
+
+public class BidItemUserJoinVo {
+String user_first_name,user_city,user_state,user_country,user_email,user_phone_no,bidding_timestamp,user_id,item_condition;
+int item_id,bidding_bid,item_baseprice,count,max_bid;
+
+public String getItem_condition() {
+	return item_condition;
+}
+public void setItem_condition(String item_condition) {
+	this.item_condition = item_condition;
+}
+public int getCount() {
+	return count;
+}
+public void setCount(int count) {
+	this.count = count;
+}
+public int getMax_bid() {
+	return max_bid;
+}
+public void setMax_bid(int max_bid) {
+	this.max_bid = max_bid;
+}
+public String getUser_first_name() {
+	return user_first_name;
+}
+public void setUser_first_name(String user_first_name) {
+	this.user_first_name = user_first_name;
+}
+public String getUser_city() {
+	return user_city;
+}
+public void setUser_city(String user_city) {
+	this.user_city = user_city;
+}
+public String getUser_state() {
+	return user_state;
+}
+public void setUser_state(String user_state) {
+	this.user_state = user_state;
+}
+public String getUser_country() {
+	return user_country;
+}
+public void setUser_country(String user_country) {
+	this.user_country = user_country;
+}
+public String getUser_email() {
+	return user_email;
+}
+public void setUser_email(String user_email) {
+	this.user_email = user_email;
+}
+public String getUser_phone_no() {
+	return user_phone_no;
+}
+public void setUser_phone_no(String user_phone_no) {
+	this.user_phone_no = user_phone_no;
+}
+public String getBidding_timestamp() {
+	return bidding_timestamp;
+}
+public void setBidding_timestamp(String bidding_timestamp) {
+	this.bidding_timestamp = bidding_timestamp;
+}
+public String getUser_id() {
+	return user_id;
+}
+public void setUser_id(String user_id) {
+	this.user_id = user_id;
+}
+public int getItem_id() {
+	return item_id;
+}
+public void setItem_id(int item_id) {
+	this.item_id = item_id;
+}
+public int getBidding_bid() {
+	return bidding_bid;
+}
+public void setBidding_bid(int bidding_bid) {
+	this.bidding_bid = bidding_bid;
+}
+public int getItem_baseprice() {
+	return item_baseprice;
+}
+public void setItem_baseprice(int item_baseprice) {
+	this.item_baseprice = item_baseprice;
+}
+}

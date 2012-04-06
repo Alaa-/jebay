@@ -71,6 +71,7 @@
 															</div>
 															<div>Enter 3-5 words about your item.</div>
 															<div>
+															
 																<input type="text" id="keywords" name="keywords"
 																	value="" class="posRelat" aria-autocomplete="list"
 																	aria-expanded="false" role="combobox"

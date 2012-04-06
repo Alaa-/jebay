@@ -35,12 +35,21 @@
 		<action name="Confirmation" class="ebay.Confirmation">
 			<result name="success">/confirmationsuccess.jsp</result>
 		</action>
-
-	<action name="search" class="ebay.Search">
+		
+		<action name="search" class="ebay.Search">
 			<!-- <result name="camera">/details.jsp</result>
 			<result name="books">/bookDetails.jsp</result> -->
 			<result name="success">/details.jsp</result>
 		</action>
 
+		<action name="mobile_sell_detail" class="ebay.mobile_sell_detail">
+			<result name="success">/home.jsp</result>
+		</action>
+
+
+		<action name="getform" class="ebay.Getform">
+			<result name="mobile">/mobile_sell_form.jsp</result>
+		</action>
+		
 	</package>
 </struts>

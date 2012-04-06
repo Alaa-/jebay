@@ -132,6 +132,7 @@
 											</div>
 											<div>
 												<div>
+
 													<input type="text" id="keywords" name="keywords" value=""
 														class="posRelat" aria-autocomplete="list"
 														aria-expanded="false" role="combobox" aria-owns="results"
@@ -180,10 +181,11 @@
 												<table cellpadding="0" cellspacing="0" border="0" summary="">
 													<tr id="catboxes_row_1">
 														<td valign="top"><div id="fcat_inp" class="idtRgt">
-																
-																<s:select id="fcat" name="fcat" list="catlist"
-																	listKey="category_id" listValue="category_name"
-																	size="13" />
+																<s:form name="categoryform" action="getform">
+																	<s:select id="fcat" name="fcat" list="catlist"
+																		listKey="category_id" listValue="category_name"
+																		size="13" onchange="this.form.submit()"/>
+																</s:form>
 															</div></td>
 														<td valign="top"><span id="lyr_fcat"></span></td>
 													</tr>

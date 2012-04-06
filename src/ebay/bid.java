@@ -1,34 +1,35 @@
 package ebay;
 
 import java.util.ArrayList;
-import vo.BiddingVo;
+
+import vo.BidItemUserJoinVo;
 import model.Bidding;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 public class bid extends ActionSupport {
-	int itemid;
-//get item id from the previous page where the user clicks on the link of the product.
-	public int getItemid() {
-		return itemid;
+	ArrayList<BidItemUserJoinVo> arr = new ArrayList<BidItemUserJoinVo>();
+	int item_id;
+
+	public int getItem_id() {
+		return item_id;
 	}
 
-	public void setItemid(int itemid) {
-		this.itemid = itemid;
+	public void setItem_id(int item_id) {
+		this.item_id = item_id;
 	}
 
-	ArrayList<BiddingVo> bidlist;
+	public ArrayList<BidItemUserJoinVo> getArr() {
+		return arr;
+	}
+
+	public void setArr(ArrayList<BidItemUserJoinVo> arr) {
+		this.arr = arr;
+	}
 
 	public String execute() {
-		bidlist = Bidding.getAllBids(itemid);
+		Bidding b = new Bidding();
+		arr = b.getAllBidDetails(item_id);
 		return SUCCESS;
-	}
-
-	public ArrayList<BiddingVo> getBidlist() {
-		return bidlist;
-	}
-
-	public void setBidlist(ArrayList<BiddingVo> bidlist) {
-		this.bidlist = bidlist;
 	}
 }

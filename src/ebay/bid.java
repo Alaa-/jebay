@@ -1,5 +1,6 @@
 package ebay;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import vo.BidItemUserJoinVo;
@@ -29,7 +30,12 @@ public class bid extends ActionSupport {
 
 	public String execute() {
 		Bidding b = new Bidding();
-		arr = b.getAllBidDetails(item_id);
+		try {
+			arr = b.getAllBidDetails(item_id);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return SUCCESS;
 	}
 }

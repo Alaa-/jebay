@@ -26,8 +26,9 @@
 		<action name="sell_choosecat" class="ebay.Sell_choosecategory">
 			<result name="success">/Sell_choosecat.jsp</result>
 		</action>
-
-
+<action name="Myebay" class="ebay.Myebay">
+			<result name="success">/myebay.jsp</result>
+		</action>
 		<action name="Logout" class="ebay.logout">
 			<result name="success">/logout.jsp</result>
 		</action>

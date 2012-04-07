@@ -61,12 +61,12 @@ public void setPassword(String password)
                 String sql;
 	        ResultSet rs=null;
 
-                sql= "select * from user_details where user_id='"+getUid()+"' and password='"+getPassword()+"'";
+                sql= "select * from user_details where user_id='"+getUid()+"' and user_password='"+getPassword()+"'";
                 rs = stat.executeQuery(sql);
 
                  if (rs.next())
                  {
-                	if(rs.getInt("cstatus")==0){
+                	if(rs.getInt("ser_cstatus")==0){
                 		addActionError("confirm your registration by clicking the confirmation link set to your email");
                 		return "unconfirm";
                 		

@@ -12,26 +12,25 @@
 <form action="details">
 <table>
 <tr> 
-	<th>Image</th>
-    <th>Brand</th>
+	<!-- <th>Image</th> -->
     <th>Name</th>
-    <th>Memory</th>
-    <th>Pixel</th>
     <th>Price</th>
+    <th>Shipping Charge</th>
     
     
 </tr>
 <%-- <%@ page import="java.util.ArrayList,edu.iiitb.bookstore.models.*" %> --%>
 <s:iterator value="searchDetails" >
 <tr>
-<td> <img alt="" src="<s:property value='image'/>">
-<td> <s:property value="brand" /></td>
-<td> <s:property value="name" /></td>
-<td> <s:property value="memory" /></td>
-<td> <s:property value="pixel" /></td>
-<td> <s:property value="condition" /></td>
-<td> <s:property value="price" /></td>
-
+<!-- <td> <img alt="" src="<s:property value='image'/>"/></td> -->
+<td><a href="pdtDetails"> <s:property value="item_name"/></a></td>
+<td> Rs <s:property value="price" /></td>
+<td> Rs <s:property value= "shipping_charge" /></td>
+<td> <s:set name="mode" value="%{<s:property value='mode'}"/>
+<s:if test="#session['pdtMode']==1">Bid Now</s:if></td>
+<td><s:elseif test="#session['pdtMode']==0">
+  Buy Now
+  </s:elseif></td>
 <%-- <td><img src="./images/Books.PNG" alt="image text"/> </td>
 <!--<td> <a href="ModifyBook3?book_id=<s:property value="id" />">Modify</a> </td>-->
 <s:hidden name="id"></s:hidden>

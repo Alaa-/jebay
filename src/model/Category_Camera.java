@@ -46,7 +46,7 @@ public class Category_Camera
 	}
 	
 	
-	public static ArrayList getCameraDetails(String search){
+	public static ArrayList getCameraDetails(String search,String category){
 		ArrayList details = new ArrayList();
 		String tbl_name=null;
 		ResultSet resultSet = null;

@@ -22,6 +22,14 @@
 		<action name="addcompactheader">
 			<result name="success">header.jsp</result>
 		</action>
+<action name="BuyItNow" class="ebay.BuyItNow">
+			<result name="success">buyitnow.jsp</result>
+			
+		</action>
+<action name="AddToCart" class="ebay.AddToCart">
+			<result name="success">cart.jsp</result>
+			
+		</action>
 
 		<action name="sell_choosecat" class="ebay.Sell_choosecategory">
 			<result name="success">/Sell_choosecat.jsp</result>

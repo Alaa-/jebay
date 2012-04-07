@@ -1,9 +1,13 @@
 package ebay;
 
-import com.opensymphony.xwork2.ActionSupport;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Map;
+
 import com.opensymphony.xwork2.ActionContext;
-import java.util.*;
-import java.sql.*;
+import com.opensymphony.xwork2.ActionSupport;
 
 public class sign_up extends ActionSupport
 {
@@ -223,7 +227,7 @@ public class sign_up extends ActionSupport
 			System.out.println("here in try");
 			Class.forName("org.gjt.mm.mysql.Driver");
 
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/ebay", "root", "");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost/jebay", "root", "");
 			Statement stat = con.createStatement();
 			String sql;
 			String sql1;

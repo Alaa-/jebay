@@ -7,10 +7,16 @@ package ebay;
  *
  * @author mohit
  */
-import com.opensymphony.xwork2.ActionSupport;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Map;
+
+import org.apache.struts2.ServletActionContext;
+
 import com.opensymphony.xwork2.ActionContext;
-import java.util.*;
-import java.sql.*;
+import com.opensymphony.xwork2.ActionSupport;
 
 public class login_page  extends ActionSupport{
 
@@ -55,7 +61,7 @@ public void setPassword(String password)
         try{
 
                 Class.forName("org.gjt.mm.mysql.Driver");
-                Connection con=DriverManager.getConnection("jdbc:mysql://localhost/ebay","root","");
+                Connection con=DriverManager.getConnection("jdbc:mysql://localhost/jebay","root","");
 
                 Statement stat=con.createStatement();
                 String sql;
@@ -76,6 +82,7 @@ public void setPassword(String password)
                     session.put("logged-in","true");
                     System.out.println(getUid());
                     session.put("User",getUid());
+                    ServletActionContext.getRequest().getSession().setAttribute("username",getUid());
                  }
 
                 else{

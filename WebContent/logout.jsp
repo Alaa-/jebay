@@ -34,7 +34,7 @@
 		<div class="pageminwidth">
 			<div class="pagelayout">
 				<div class="pagecontainer">
-				<%@include file="header.jsp"%> 
+				<%@include file="logoutheader.jsp"%> 
 		
 					<script type="text/javascript">
 						var _GlobalNavHeaderUtf8Encoding = true;

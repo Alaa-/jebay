@@ -26,9 +26,9 @@
 		<action name="sell_choosecat" class="ebay.Sell_choosecategory">
 			<result name="success">/Sell_choosecat.jsp</result>
 		</action>
-<action name="Myebay" class="ebay.Myebay">
+<!-- <action name="Myebay" class="ebay.Myebay">
 			<result name="success">/myebay.jsp</result>
-		</action>
+		</action> -->
 		<action name="Logout" class="ebay.logout">
 			<result name="success">/logout.jsp</result>
 		</action>
@@ -37,7 +37,11 @@
 			<result name="success">/confirmationsuccess.jsp</result>
 		</action>
 		
-		<action name="search" class="ebay.Search">
+		<action name="search" class="ebay.Search_Name">
+			<result name="success">/details.jsp</result>
+		</action>
+		
+		<action name="camera" class="ebay.search_camera">
 			<!-- <result name="camera">/details.jsp</result>
 			<result name="books">/bookDetails.jsp</result> -->
 			<result name="success">/details.jsp</result>

@@ -1,7 +1,25 @@
 package vo;
 
 public class BidItemUserJoinVo {
-String user_first_name,user_city,user_state,user_country,user_email,user_phone_no,bidding_timestamp,user_id,item_condition;
+String item_name,item_mode,diff,user_first_name,user_city,user_state,user_country,user_email,user_phone_no,bidding_timestamp,user_id,item_condition;
+public String getDiff() {
+	return diff;
+}
+public void setDiff(String diff) {
+	this.diff = diff;
+}
+public String getItem_mode() {
+	return item_mode;
+}
+public void setItem_mode(String item_mode) {
+	this.item_mode = item_mode;
+}
+public String getItem_name() {
+	return item_name;
+}
+public void setItem_name(String item_name) {
+	this.item_name = item_name;
+}
 int item_id,bidding_bid,item_baseprice,count,max_bid;
 
 public String getItem_condition() {

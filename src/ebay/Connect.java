@@ -6,7 +6,7 @@ public class Connect {
     public Connection connection() {
 
         Connection con = null;
-        String url = "jdbc:mysql://localhost:3306/ebay";
+        String url = "jdbc:mysql://localhost:3306/jebay";
        
       //  String db = "IE";
         String driver = "com.mysql.jdbc.Driver";

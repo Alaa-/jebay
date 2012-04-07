@@ -1,9 +1,12 @@
 package vo;
 
+import java.util.ArrayList;
+
 public class CategoryVo
 {
 	int category_id;
 	String category_name;
+	ArrayList<SubCategoryVo> subcatlist;
 
 	public CategoryVo()
 	{
@@ -13,6 +16,16 @@ public class CategoryVo
 	{
 		this.category_id = category_id;
 		this.category_name = category_name;
+	}
+
+	public ArrayList<SubCategoryVo> getSubcatlist()
+	{
+		return subcatlist;
+	}
+
+	public void setSubcatlist(ArrayList<SubCategoryVo> subcatlist)
+	{
+		this.subcatlist = subcatlist;
 	}
 
 	public int getCategory_id()

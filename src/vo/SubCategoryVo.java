@@ -3,6 +3,7 @@ package vo;
 public class SubCategoryVo {
 int subcategory_id,subcategory_category_id;
 String subcategory_name;
+
 public int getSubcategory_id() {
 	return subcategory_id;
 }

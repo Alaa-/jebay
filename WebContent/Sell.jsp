@@ -36,7 +36,7 @@
 						<s:action name='addcompactheader' executeResult='true' />
 
 						<div class="brdcmb_sellhub" id="brdcmb">
-							<a href="http://www.ebay.in/">Home</a> &gt; <b>Sell</b>
+							<a href="home.jsp">Home</a> &gt; <b>Sell</b>
 						</div>
 						<div class="clr"></div>
 						<div class="areaTitleBox" id="areaTitleBox">

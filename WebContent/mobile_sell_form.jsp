@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Enter Item Details</title>
 </head>
 <body>
 
@@ -36,7 +36,7 @@
 						</div>
 						
 						
-		<s:form action="mobile_sell_detail">
+		<s:form action="save_mobile_detail">
         <img src="images/logoebay.gif"/>
         <hr>
         <font size="2">SELL YOUR ITEM   > &nbsp 1.SELECT A CATEGORY  &nbsp <b>2.CREATE YOUR LISTING</b> &nbsp  3.REVIEW YOUR LISTING</font>

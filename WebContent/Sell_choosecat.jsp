@@ -46,7 +46,7 @@
 									<div class="gh-emn">&nbsp;</div>
 								</div>
 								<div class="gh-log">
-									<span class="gh-lg"><a href="http://www.ebay.in"
+									<span class="gh-lg"><a href="home.jsp"
 										rel="nofollow"> <img
 											src="http://p.ebaystatic.com/aw/pics/in/logos/logoEbay_x45.gif"
 											alt="eBay" border="0"></img></a></span>
@@ -181,11 +181,25 @@
 												<table cellpadding="0" cellspacing="0" border="0" summary="">
 													<tr id="catboxes_row_1">
 														<td valign="top"><div id="fcat_inp" class="idtRgt">
+																
+																
+																
+																
 																<s:form name="categoryform" action="getform">
-																	<s:select id="fcat" name="fcat" list="catlist"
-																		listKey="category_id" listValue="category_name"
-																		size="13" onchange="this.form.submit()"/>
+																	<s:doubleselect id="fcat" name="fcat" list="catlist"
+																		listKey="category_id" listValue="category_name" value="" required="true"
+																		size="13" doubleSize="13" doubleName="fsubcat" doubleList="subcatlist" doubleListKey="subcategory_id" doubleListValue="subcategory_name" 
+																		doubleOnchange="this.form.submit()" doubleOndblclick="this.form.submit()" />
+																<s:submit name="getform_submit" value="Continue"/>
+																
+																
+																
 																</s:form>
+															
+															
+															
+															
+															
 															</div></td>
 														<td valign="top"><span id="lyr_fcat"></span></td>
 													</tr>

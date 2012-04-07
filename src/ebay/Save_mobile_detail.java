@@ -13,7 +13,7 @@ import java.sql.*;
  *
  * @author Rohit
  */
-public class mobile_sell_detail extends ActionSupport {
+public class Save_mobile_detail extends ActionSupport {
 
      private String mobilename;
      private String mobilebrand;

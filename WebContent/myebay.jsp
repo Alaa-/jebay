@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
@@ -33,9 +33,9 @@
 								class="th-bet"></span></span><span><b><h2
 										class="th-tih th-titl">: Summary</h2></b></span><span id="topHeaderDiv"><div
 									class="mbg">
-									<a title="Member id nikdd87"
-										href="http://myworld.ebay.in/nikdd87"><b class="g-hdn">Member
-											id </b><span class="mbg-nw">nikdd87</span></a> 
+									<a title="Member id "
+										href="userprofile.jsp"><b class="g-hdn">Member
+											id </b><span class="mbg-nw"><s:property value="#session['username']"/></span></a> 
 						<td align="right"><span></span></td>
 						</td>
 					</tr>
@@ -327,22 +327,14 @@
 				<div class="vtsr-bboard">
 					
 					<table width="700" height="125" border="1">
+					<s:iterator value="pur">
   <tr>
     <td width="180" rowspan="3">&nbsp;</td>
-    <td width="170">&nbsp;</td>
-    <td width="170">&nbsp;</td>
-    <td width="170">&nbsp;</td>
+    <td width="170"><s:property value="item_name"/></td>
+    <td width="170"><s:property value="t_seller"/></td>
+   
   </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
+  </s:iterator>
 </table>
 					
 					

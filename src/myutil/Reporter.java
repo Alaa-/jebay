@@ -4,6 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Hashtable;
 
+//import myutil.String;
+
 public class Reporter
 {
 
@@ -24,7 +26,7 @@ public class Reporter
 		messageCount = 0;
 		reportSuffix = 1;
 		this.reportType = reportType;
-		// reportPrefix = "/";
+		//reportPrefix = "/";
 		writer = getNewWriter(reportPrefix + pathseperator + "jebay" + reportType + reportSuffix + ".txt");
 	}
 

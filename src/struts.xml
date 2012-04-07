@@ -52,5 +52,17 @@
 			<result name="mobile">/mobile_sell_form.jsp</result>
 		</action>
 		
+		<action name="bidding" class="ebay.bid">
+			<result name="success">bidding.jsp</result>
+		</action>
+		
+		<action name="bidhistory" class="ebay.BidHistory">
+			<result name="success">bidhistory.jsp</result>
+		</action>
+		
+		<action name="placebid" class="ebay.PlaceBid">
+			<result name="success">fake.jsp</result>
+			<result name="error" type="chain">bidding</result>
+		</action>
 	</package>
 </struts>

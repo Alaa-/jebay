@@ -88,7 +88,7 @@
 							<div class="gh-cl"></div>
 						
 							
-							<form method="get" action="http://www.ebay.in/sch/i.html"
+							<form method="get" action="search.action"
 								name="headerSearch" id="headerSearch">
 								<input type="hidden" name="_from" value="R40"><input
 									type="hidden" name="_trksid" value="m570">
@@ -108,7 +108,7 @@
 											<option value="174982">Shoes &amp; Other Footwear</option>
 											<option value="131090">Auto Accessories &amp; Parts</option>
 											<option value="267">Books &amp; Magazines</option>
-											<option value="625">Cameras &amp; Optics</option>
+											<option value="Cameras & Optics">Cameras &amp; Optics</option>
 											<option value="9800">Cars &amp; Bikes</option>
 											<option value="116365">Charity</option>
 											<option value="11116">Coins &amp; Notes</option>
@@ -124,7 +124,7 @@
 											<option value="162260">Memory Cards, Pen Drives
 												&amp; HDD</option>
 											<option value="14416">Mobile Accessories</option>
-											<option value="15032">Mobile Phones</option>
+											<option value="Mobile Phones">Mobile Phones</option>
 											<option value="11232">Movies &amp; Music</option>
 											<option value="619">Musical Instruments</option>
 											<option value="26395">Perfumes, Cosmetics &amp;
@@ -152,7 +152,7 @@
 							<div id="headerWrapper" class="gh-hbw">
 								<div class="gh-hb">
 									<div class="gh-mn">
-										<a id="BrowseCategories"
+										<a id="BrowseCategories" name="BrowseCategories"
 											href="allcategories.jsp">CATEGORIES</a><a
 											id="chevron0" href="javascript:;" class="gh-ai"><b>&nbsp;</b></a><a
 											id="EbayStores" title="Find more of what you love."

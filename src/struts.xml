@@ -20,6 +20,12 @@
 			<result name="success">cart.jsp</result>
 			
 		</action>
+		<action name="RemoveFromCart" class="ebay.RemoveFromCart">
+
+			<result name="success" type="chain">AddToCart</result>
+			
+			
+		</action>
 
 		<action name="Register" class="ebay.sign_up">
 			<result name="success">/confirmation.jsp</result>

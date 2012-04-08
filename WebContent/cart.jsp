@@ -729,9 +729,14 @@
 }</style>
 <script type="text/javascript">
 function visit(a){
-	alert(a);
-	var b=document.getElementById('quantity').value;
+	//alert(a);
+	var b=document.getElementById('quantity'+a).value;
 	window.location.href="AddToCart.action?item_id="+a+"&quantity="+b;
+}
+function proceed(a){
+	//alert(a);
+	var b=document.getElementById('quantity'+a).value;
+	window.location.href="ProceedToPayment.action?cart_id="+a+"&cart_quantity="+b;
 }
 </script>
 
@@ -783,9 +788,7 @@ function visit(a){
 																			<div class="yellowboxcontb">
 																				<div class="yellowboxconlr">
 																					<div>
-																						<form name="cartForm1"
-																							action="http://orders.ebay.in/ws/eBayISAPI.dll?ShoppingCartMgmt"
-																							method="post">
+																						
 																							<input value="ShoppingCartMgmt"
 																								name="MfcISAPICommand" type="hidden"><input
 																								name="bucketid" value="1" id="bucketid"
@@ -830,19 +833,19 @@ function visit(a){
 																														onblur="return vjo.dsf.ServiceEngine.handleRequest(new vjo.dsf.Message('CLOSE_OVERLAY_PANEL_shippingDetails130662051525'));">View
 																															shipping details</a>
 																													</span>|<a
-																														href="http://orders.ebay.in/ws/eBayISAPI.dll?ShoppingCartMgmt&amp;itemid=130662051525&amp;transid=1932672003&amp;action=remove&amp;ssPageName=SCART:SCRE:IN:1"
+																														href="RemoveFromCart.action?cart_id=<s:property value="cart_id"/>"
 																														class="link">Remove</a>|<a
 																														href="http://orders.ebay.in/ws/eBayISAPI.dll?ShoppingCartMgmt&amp;itemid=130662051525&amp;transid=1932672003&amp;action=save&amp;ssPageName=SCART:SCSL:IN:2"
 																														class="link">Save for later</a>
 																												</div>
 																											</div>
 																											<div class="item-quantity">
-																												<input id="quantity" name="bx_quantity"
+																												<input id="quantity<s:property value="cart_id"/>" name="bx_quantity"
 																													style="text-align: center;"
 																													autocomplete="off" size="5" maxlength="5"
 																													class="item-quantityValue"
 																													value="<s:property value="cart_quantity"/>"
-																													type="text">(
+																													type="text"><br>(
 																												<s:property value="item_quantity" />
 																												available)
 																											</div>
@@ -879,8 +882,8 @@ function visit(a){
 																													</span>
 																													<div style="padding-top: 5px;">
 																														<input src="cart/proceed_to_pay.gif"
-																															name="continue" align="absmiddle"
-																															type="image"><span
+																															
+																															type="image" onclick="proceed('<s:property value="cart_id"/>')"><span
 																															style="padding-left: 5px">The next
 																															step is to select shipping method.</span>
 																													</div>
@@ -926,7 +929,7 @@ function visit(a){
 																									</tbody>
 																								</table>
 																							</div>
-																						</form>
+																						
 																					</div>
 																				</div>
 																			</div>

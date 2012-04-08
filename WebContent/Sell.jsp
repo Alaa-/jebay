@@ -76,17 +76,15 @@
 																	value="" class="posRelat" aria-autocomplete="list"
 																	aria-expanded="false" role="combobox"
 																	aria-owns="results" autocomplete="off"
-																	title="Enter 3-5 words about your item. "> <input
-																	type="hidden" id="keywords1" name="keywords1"
-																	tabindex="-1" value=""><input type="hidden"
-																	id="acKeywords" name="acKeywords" tabindex="-1"
-																	value="">
+																	title="Enter 3-5 words about your item. ">
 																<button id="aidZ" name="aidZ" type="submit"
 																	class="startSellingBtn">
 																	<span class="btn" id="aidZ_btnFrm"><span
 																		class="btn" id="aidZ_btnLbl">Start selling</span></span>
 																</button>
 															</div>
+															
+															
 															<div class="idtBtm">For example: Amethyst gemstone
 																rings</div>
 															<div class="idtTop">

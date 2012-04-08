@@ -177,8 +177,8 @@
 										</div>
 										<div class="idtHrz" id="categories_fldSet">
 											<div></div>
-											<div id="catboxes_inpGrp">
-												<table cellpadding="0" cellspacing="0" border="0" summary="">
+											<div id="catboxes_inpGrp" style="height:auto">
+												<table cellpadding="0" cellspacing="0" border="0">
 													<tr id="catboxes_row_1">
 														<td valign="top"><div id="fcat_inp" class="idtRgt">
 																
@@ -187,24 +187,18 @@
 																
 																<s:form name="categoryform" action="getform">
 																	<s:doubleselect id="fcat" name="fcat" list="catlist"
-																		listKey="category_id" listValue="category_name" value="" required="true"
-																		size="13" doubleSize="13" doubleName="fsubcat" doubleList="subcatlist" doubleListKey="subcategory_id" doubleListValue="subcategory_name" 
-																		doubleOnchange="this.form.submit()" doubleOndblclick="this.form.submit()" />
-																<s:submit name="getform_submit" value="Continue"/>
-																
-																
-																
-																</s:form>
-															
-															
-															
-															
-															
+																		listKey="category_id" listValue="category_name"	size="13" 
+																		cssStyle="float:right" doubleCssClass="idtRgt" doubleCssStyle="top:0px;left:215px;width:215px;position:absolute;float:top"
+																		doubleSize="13" doubleName="o_fcat" doubleId="o_fcat" doubleList="subcatlist" 
+																		doubleListKey="subcategory_id" doubleListValue="subcategory_name" 
+																		doubleOnchange="this.form.submit()" doubleOndblclick="this.form.submit()" />												
 															</div></td>
-														<td valign="top"><span id="lyr_fcat"></span></td>
 													</tr>
 												</table>
+											
 											</div>
+												<s:submit name="submit" value="Continue"/>
+																</s:form>
 										</div>
 									</div>
 								</div>

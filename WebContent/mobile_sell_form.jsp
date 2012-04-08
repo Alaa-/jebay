@@ -66,7 +66,7 @@
                 <option value="old">Old</option>
             </select><br/><br/>
 
-            Mobile quantity :<input type="text" name="mobilequantity" value="1"/><br/><br/>
+            Quantity :<input type="text" name="mobilequantity" value="1"/><br/><br/>
 
             Buying Option:<select name="mobilebuying" >
                 <option value="buyitnow">Buy It Now</option>

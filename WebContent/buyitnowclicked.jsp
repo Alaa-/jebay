@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Select shipping and payment method</title>
@@ -461,7 +462,7 @@ div.btnMsgBar input.btnMsgBar-bTxt {
 		smart_buffer="Smart Buffer" percentage="%" label_delimitor=":"></bundle></mytubeelement>
 	<script type="text/javascript">vjo.dsf.error.ErrorHandlerManager.register(new vjo.dsf.error.DefaultErrorHandler());
 vjo.dsf.error.ErrorHandlerManager.enableOnError(true, false);
-vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VjCookieJar.writeCookielet('ebay','js','1');
+vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VtotojCookieJar.writeCookielet('ebay','js','1');
 </script>
 	<script type="text/javascript">var _GlobalNavHeaderUtf8Encoding=true;
 </script>
@@ -549,8 +550,8 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VjCookieJar
 							<tbody>
 								<tr>
 									<td><form name="pageForm" autocomplete="OFF"
-											action="http://orders.ebay.in/ws/eBayISAPI.dll?CreateOrder"
-											method="post" id="SSPMformID">
+											action="ProceedToPayment.action"
+											method="get" id="SSPMformID">
 											<input value="CreateOrder" name="MfcISAPICommand"
 												type="hidden"><input name="paymenthidden"
 												id="paymenthidden" value="29" type="hidden"><input
@@ -599,6 +600,9 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VjCookieJar
 																				</div>
 																			</td>
 																		</tr>
+																		<s:iterator value="arr">
+																		<input type="hidden" name="item_id" value="<s:property value="item_id"/>"/>
+																		<input type="hidden" name="quantity" value="<s:property value="quantity"/>"/>
 																		<tr>
 																			<td><div class="cr-cnt">
 																					<div>
@@ -639,10 +643,8 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VjCookieJar
 																											<div>
 																												<div class="item-summ-body-titleinline">
 																													<a
-																														href="http://cgi.ebay.in/ws/eBayISAPI.dll?ViewItem&amp;item=270950260152"
-																														style="color: rgb(0, 51, 255);">New
-																														Apple iPad 3rd Gen 16GB Wifi + 4G / 3G
-																														Unlocked &amp; Sealed iPad 3 HD</a>
+																														href="BuyItNow.action?item_id=<s:property value="item_id"/>"
+																														style="color: rgb(0, 51, 255);"><s:property value="item_name"/></a>
 																												</div>
 																											</div>
 																											<div>
@@ -653,18 +655,15 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VjCookieJar
 																													<a title="Member id itplaza2011"
 																														href="http://myworld.ebay.in/itplaza2011"><b
 																														class="g-hdn">Member id </b><span
-																														class="mbg-nw">itplaza2011</span>
+																														class="mbg-nw"><s:property value="item_seller"/></span>
 																													</a> 
 																												</div>
 																											</div>
 																										</div>
 																										<div class="single-item-summ-body-price">Rs.
-																											45,750.00</div>
+																											<s:property value="item_price"/></div>
 																										<div class="single-item-summ-body-qty">
-																											<input autocomplete="off" name="req_quantity"
-																												size="5" maxlength="5" id="req_quantity"
-																												class="item-summ-qtybox-align" value="1"
-																												type="text">
+																											<s:property value="quantity"/>
 																										</div>
 																										<div class="stDiv">
 																											<table class="amountTable">
@@ -674,7 +673,7 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VjCookieJar
 																																class="symDiv">Rs.</div>
 																														</td>
 																														<td class="priceDivTd"><div
-																																class="priceDiv" id="regsubtotal">45,750.00</div>
+																																class="priceDiv" id="regsubtotal"><s:property value="item_total"/></div>
 																														</td>
 																													</tr>
 																												</tbody>
@@ -733,11 +732,7 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VjCookieJar
 																							</div>
 																						</div>
 																						<div style="padding-top: 10px;">
-																							<a name="uaddress"
-																								href="http://payments.ebay.in/ws/eBayISAPI.dll?ViewUserAddresses&amp;cmd=checkouteditshow&amp;editFlag=3965&amp;quantity=1&amp;cartid=6741964010&amp;isbinflow=1&amp;sspagename=SCART:SIPAD:IN:1"
-																								class="ChangeAddressLink"
-																								style="color: rgb(0, 51, 255);">Change
-																								shipping address</a>
+																							
 																						</div>
 																					</div>
 																				</div>
@@ -767,7 +762,7 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VjCookieJar
 																											<b>Sub-Total</b>
 																										</div>
 																										<div class="sub-div-middle2">Rs.</div>
-																										<div class="sub-div-right2">45,750.00</div>
+																										<div class="sub-div-right2"><s:property value="item_total"/></div>
 																										<div class="sub-div-left">
 																											<b>Shipping method: </b><input
 																												name="shipping_method" id="shipping_method"
@@ -776,7 +771,7 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VjCookieJar
 																										</div>
 																										<div class="sub-div-middle"
 																											style="width: 7.7%">Rs.</div>
-																										<div class="sub-div-right">115.00</div>
+																										<div class="sub-div-right"><s:property value="item_shipping_charge"/></div>
 																										<div class="separator">
 																											<img src="buyitnow/s.gif"
 																												height="1" width="1">
@@ -784,7 +779,7 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VjCookieJar
 																										<div class="sub-div-ltotal">Total</div>
 																										<div class="sub-div-mtotal"
 																											style="width: 7.7%">Rs.</div>
-																										<div class="sub-div-rtotal">45,865.00</div>
+																										<div class="sub-div-rtotal"><s:property value="item_total_shipping"/></div>
 																										<div class="taxmessage">The item price
 																											is inclusive of all applicable taxes.</div>
 																									</div>
@@ -937,6 +932,7 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VjCookieJar
 														order in the next step.</span>
 												</div>
 											</div>
+											</s:iterator>
 										</form>
 									</td>
 								</tr>

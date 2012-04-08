@@ -2,9 +2,6 @@ package ebay;
 import java.util.ArrayList;
 
 import model.BuyItNowModel;
-
-import org.apache.struts2.ServletActionContext;
-
 import vo.ItemVo;
 public class BuyItNow {
 	int item_id;
@@ -22,7 +19,7 @@ public class BuyItNow {
 		this.arr = arr;
 	}
 	public String execute(){
-		String refererPage =ServletActionContext.getRequest().getHeader("referer");
+		//String refererPage =ServletActionContext.getRequest().getHeader("referer");
 		//System.out.println(refererPage);
 		BuyItNowModel b=new BuyItNowModel();
 		arr=b.getitemdetails(item_id);

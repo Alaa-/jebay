@@ -15,16 +15,16 @@
 			<result name="unconfirm">user_sign_in.jsp</result>
 		</action>
 
-<action name="ViewCart" class="ebay.AddToCart">
+		<action name="ViewCart" class="ebay.AddToCart">
 
 			<result name="success">cart.jsp</result>
-			
+
 		</action>
 		<action name="RemoveFromCart" class="ebay.RemoveFromCart">
 
 			<result name="success" type="chain">AddToCart</result>
-			
-			
+
+
 		</action>
 
 		<action name="Register" class="ebay.sign_up">
@@ -34,21 +34,20 @@
 		<action name="addcompactheader">
 			<result name="success">header.jsp</result>
 		</action>
-<action name="BuyItNow" class="ebay.BuyItNow">
+		<action name="BuyItNow" class="ebay.BuyItNow">
 			<result name="success">buyitnow.jsp</result>
-			
+
 		</action>
-<action name="AddToCart" class="ebay.AddToCart">
+		<action name="AddToCart" class="ebay.AddToCart">
 			<result name="success">cart.jsp</result>
-			
+
 		</action>
 
 		<action name="sell_choosecat" class="ebay.Sell_choosecategory">
 			<result name="success">/Sell_choosecat.jsp</result>
 		</action>
-<!-- <action name="Myebay" class="ebay.Myebay">
-			<result name="success">/myebay.jsp</result>
-		</action> -->
+		<!-- <action name="Myebay" class="ebay.Myebay"> <result name="success">/myebay.jsp</result> 
+			</action> -->
 		<action name="Logout" class="ebay.logout">
 			<result name="success">/logout.jsp</result>
 		</action>
@@ -56,29 +55,32 @@
 		<action name="Confirmation" class="ebay.Confirmation">
 			<result name="success">/confirmationsuccess.jsp</result>
 		</action>
-		
+
 		<action name="search" class="ebay.Search_Name">
 			<result name="success">/details.jsp</result>
 		</action>
-		
+
 		<action name="camera" class="ebay.search_camera">
-			<!-- <result name="camera">/details.jsp</result>
-			<result name="books">/bookDetails.jsp</result> -->
+			<!-- <result name="camera">/details.jsp</result> <result name="books">/bookDetails.jsp</result> -->
 			<result name="success">/details.jsp</result>
 		</action>
 
-	
+
 
 		<action name="getform" class="ebay.Getform">
 			<result name="mobile">/mobile_sell_form.jsp</result>
 		</action>
-		
+
 		<action name="bidding" class="ebay.bid">
 			<result name="success">bidding.jsp</result>
 		</action>
-		
+
 		<action name="bidhistory" class="ebay.BidHistory">
 			<result name="success">bidhistory.jsp</result>
+		</action>
+
+		<action name="BuyItNowClicked" class="ebay.BuyItNowClicked">
+			<result name="success">buyitnowclicked.jsp</result>
 		</action>
 		
 		<action name="placebid" class="ebay.PlaceBid">

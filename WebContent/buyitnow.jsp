@@ -71,7 +71,7 @@
 										</div></td>
 									<td id="isclmn" class="isumv1_5-cell"><form name="v4-26"
 											id="v4-26" method="post" class="vi-is1-s4"
-											action="placebid.action?item_id=2">
+											action="BuyItNowClicked.action">
 											<table class="vi-is1" cellpadding="0" cellspacing="0"
 												border="0">
 												<tr>
@@ -112,7 +112,7 @@
 													<th class="vi-is1-lbl">Quantity:</th>
 													<td colspan="3" class="vi-is1-clr">
 													<input type="number" name="quantity" id="quantity" min="1" max="<s:property value="item_quantity"/>"/>(<s:property value="item_quantity"/> available)
-													
+													<input type="hidden" name="item_id" value="<s:property value="item_id"/>"/>
 													
 													
 													</td>

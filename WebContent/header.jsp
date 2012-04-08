@@ -80,7 +80,7 @@
 							</div>
 							<div class="gh-rph">
 								<span class="addllinks"><img src="http://q.ebaystatic.com/aw/pics/cart.gif" height="15" width="15"> 
-								<a href="shoppingcart.jsp">My Shopping Cart</a><span id="glb_cart"></span>| 
+								<a href="ViewCart.action">My Shopping Cart</a><span id="glb_cart"></span>| 
 								<a href="mypaisapay.jsp">My PaisaPay</a> | 
 								<a href="sitemap.jsp">Site Map</a>
 								</span>

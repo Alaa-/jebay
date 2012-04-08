@@ -15,6 +15,12 @@
 			<result name="unconfirm">user_sign_in.jsp</result>
 		</action>
 
+<action name="ViewCart" class="ebay.AddToCart">
+
+			<result name="success">cart.jsp</result>
+			
+		</action>
+
 		<action name="Register" class="ebay.sign_up">
 			<result name="success">/confirmation.jsp</result>
 		</action>
@@ -55,10 +61,7 @@
 			<result name="success">/details.jsp</result>
 		</action>
 
-		<action name="mobile_sell_detail" class="ebay.mobile_sell_detail">
-			<result name="success">/home.jsp</result>
-		</action>
-
+	
 
 		<action name="getform" class="ebay.Getform">
 			<result name="mobile">/mobile_sell_form.jsp</result>

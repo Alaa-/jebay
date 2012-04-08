@@ -83,6 +83,7 @@ public void setPassword(String password)
                     System.out.println(getUid());
                     session.put("User",getUid());
                     ServletActionContext.getRequest().getSession().setAttribute("username",getUid());
+                   
                  }
 
                 else{

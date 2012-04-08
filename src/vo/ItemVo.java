@@ -1,7 +1,14 @@
 package vo;
 
 public class ItemVo {
-int item_id,item_subcategory_id,item_price,item_baseprice,item_quantity,item_shipping_charge;
+int item_id,item_subcategory_id,item_price,item_baseprice,item_quantity,item_shipping_charge,item_total;
+
+public int getItem_total() {
+	return item_total;
+}
+public void setItem_total(int item_total) {
+	this.item_total = item_total;
+}
 public int getItem_id() {
 	return item_id;
 }

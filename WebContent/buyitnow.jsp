@@ -8,8 +8,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript">
 	var plst = new Date().getTime();
-	function check(){
-		alert("hello");
+	function check(a){
+		alert(a);
+		var quantity=document.getElementById('quantity').value;
+		alert("AddToCart.action?item_id="+a+"&quantity="+quantity);
+		window.location.href="AddToCart.action?item_id="+a+"&quantity="+quantity;
 	}
 	
 </script>
@@ -108,7 +111,7 @@
 												<tr>
 													<th class="vi-is1-lbl">Quantity:</th>
 													<td colspan="3" class="vi-is1-clr">
-													<input type="number" name="quantity" min="1" max="<s:property value="item_quantity"/>"/>(<s:property value="item_quantity"/> available)
+													<input type="number" name="quantity" id="quantity" min="1" max="<s:property value="item_quantity"/>"/>(<s:property value="item_quantity"/> available)
 													
 													
 													
@@ -150,7 +153,7 @@
 																		type="submit"><b id="txt_v4-7">BUY IT NOW</b> </span>
 																		<span id="spn_v4-8" class="bn-b psb-b psb-S"><input
 																		id="but_v4-8" name="" value="ADD TO CART" title=""
-																		type="button" onclick="check()"><b id="txt_v4-7">ADD TO CART</b> </span>
+																		type="button" onclick="check('<s:property value="item_id"/>')"><b id="txt_v4-7">ADD TO CART</b> </span>
 																		
 																</b><label class="g-hdn" for="v4-31"></label><input
 																	type="text" name="hiddenText" style="display: none"

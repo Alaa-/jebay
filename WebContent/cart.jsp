@@ -735,170 +735,202 @@ function visit(a){
 }
 </script>
 
-</head><body id="body"><script type="text/javascript" src="cart/5oiu3dmnniy4tculwdphcncts.js"></script><mytubeelement savebandwidth="false" enablefullscreen="true" onlynotification="false" fshd="false" quality="small" autoplayonsmartbuffer="true" autoplayonbufferpercentage="42" autoplayonbuffer="false" autobuffer="false" autoplay="false" hidepopup="false" loop="false" enable="true" soundnotification="true" desktopnotification="true" id="myTubeElement"><bundle any_moment="Any Moment" sec="Sec" min="Min" hr="Hr" stopped="Stopped" completed="Completed" will_start_playing_when_initialized="Will start playing when initialized" will_start_buffering_when_initialized="Will start buffering when initialized" waiting="Waiting" calculating="Calculating" adblock_interferance_message="Adblock (or similar extension) is known to interfere with SmartVideo. Please add this url to adblock whitelist." error="Error" notification_status_delimitor=";" desktop_notification_denied="You have denied permission for desktop notification for this site" click_to_enable_for_this_site="Click to enable for this site" off="Off" on="On" not_supported="Not Supported" buffered_message="The video has been buffered as requested and is ready to play." hyphen="-" buffered="Buffered" video_buffered="Video Buffered" no_notification_supported_on_your_browser="No notification style supported on your browser version" global_preferences="Global Preferences" estimated_time="Estimated Time" only_notify="Only Notify" loop="Loop" continuation_on_next_line="-" desktop_notification="Desktop Notification" sound="Sound" start_playing_when_buffered="Start playing when buffered" smart_buffer="Smart Buffer" percentage="%" label_delimitor=":"></bundle></mytubeelement><script type="text/javascript">
-	vjo.dsf.error.ErrorHandlerManager
-			.register(new vjo.dsf.error.DefaultErrorHandler());
-	vjo.dsf.error.ErrorHandlerManager.enableOnError(true, false);
-	vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';
-	vjo.dsf.cookie.VjCookieJar.writeCookielet('ebay', 'js', '1');
-</script><script type="text/javascript">
-	var _GlobalNavHeaderUtf8Encoding = true;
-</script><script type="text/javascript">
-	var _oGlobalNavRTMInfo = {};
-	_oGlobalNavRTMInfo.aRTMPlacementData = [];
-	_oGlobalNavRTMInfo.aRTMPlacementData = [ {
-		"ord" : null,
-		"maxWidth" : "470",
-		"rtmUrl" : "http://srx.in.ebayrtm.com/rtm",
-		"htmlId" : "rtm_html_433",
-		"userId" : null,
-		"isUserSignin" : false,
-		"GUid" : null,
-		"renderBeforeOnload" : true,
-		"maxHeight" : "22",
-		"pid" : "433"
-	}, {
-		"ord" : null,
-		"maxWidth" : "160",
-		"rtmUrl" : "http://srx.in.ebayrtm.com/rtm",
-		"htmlId" : "rtm_html_876",
-		"userId" : null,
-		"isUserSignin" : false,
-		"GUid" : null,
-		"renderBeforeOnload" : true,
-		"maxHeight" : "22",
-		"pid" : "876"
-	}, {
-		"ord" : null,
-		"maxWidth" : "160",
-		"rtmUrl" : "http://srx.in.ebayrtm.com/rtm",
-		"htmlId" : "rtm_html_912",
-		"userId" : null,
-		"isUserSignin" : false,
-		"GUid" : null,
-		"renderBeforeOnload" : true,
-		"maxHeight" : "22",
-		"pid" : "912"
-	} ];
-</script><div></div>
-	<div class="pagewidth">
-		<div class="pageminwidth">
-			<div class="pagelayout">
-				<div class="pagecontainer">
-					<div class="GlobalNavigation" id="GlobalNavigation"><!--cacheStatus: true--><script>
-						var _GlobalNavHeaderUtf8Encoding = true;
-					</script><script src="cart/dmbqkc3eg20rvfehnpdqdnwpy.js"></script><script type="text/javascript">
-						vjo
-								.ctype("vjo.darwin.core.ebayheader.cart.Cart")
-								.needs(
-										[ "vjo.dsf.cookie.VjCookieJar",
-												"vjo.dsf.Element",
-												"vjo.dsf.client.Browser" ])
-								.props(
-										{
-											init : function(pId, pServerUrl,
-													pCartLink) {
-												var oC = vjo.dsf.client.Browser, sc = vjo.darwin.core.ebayheader.cart.Cart;
-												sc.sId = pId;
-												sc.sCartLink = pCartLink;
-												sc.bUpdated = false;
-												if ((oC.bNav && oC.iVer < 7)
-														|| (oC.bOpera && (oC.iVer + oC.fMinorVer) < 0.5)
-														|| (oC.bIE && oC.iVer < 5))
-													return;
-												if (!sc.isSignedIn())
-													return;
-												if (sc.isCartReadDone()) {
-													sc.update(sc.sId,
-															sc.sCartLink);
-												} else {
-													sc.doRequest(pServerUrl);
-												}
-											},
-											doRequest : function(pServerUrl) {
-												if (pServerUrl
-														&& pServerUrl.length > 1) {
-													document
-															.write('<img height="1" width="1" src="'+pServerUrl+'" style="display:none;">');
-												}
-											},
-											isSignedIn : function() {
-												var c = this.vj$.VjCookieJar
-														.readCookie("ebaysignin");
-												return c && c.is('in');
-											},
-											update : function(pId, pCartLink) {
-												var sc = vjo.darwin.core.ebayheader.cart.Cart;
-												sc.sId = pId;
-												sc.sCartLink = pCartLink;
-												if (!sc.isSignedIn())
-													return;
-												var oL = vjo.dsf.Element
-														.get(sc.sId), c;
-												if (oL && sc.isCartReadDone()) {
-													c = sc.getCount();
-													if (c > 0 && !sc.bUpdated) {
-														oL.innerHTML = '&nbsp;<a href="'+sc.sCartLink+'">('
-																+ c + ')</a>';
-														sc.bUpdated = true;
-													}
-												}
-											},
-											isCartReadDone : function() {
-												var VJ = this.vj$.VjCookieJar;
-												var c = VJ.readCookie("ebay",
-														"sbf");
-												if (c == 'true') {
-													return true;
-												} else
-													return VJ.getBitFlag(c, 22) == 1;
-											},
-											getCount : function() {
-												return this.vj$.VjCookieJar
-														.readCookie("dp1",
-																"exc")
-														|| "";
-											}
-										}).endType();
-					</script><script type="text/javascript">
-	(function() {
-		var _d = vjo.dsf.EventDispatcher;
-		var _r = vjo.Registry;
-		_d.add('body', 'load', function(event) {
-			this.update("glb_cart",
-					"http://orders.ebay.in/ws/eBayISAPI.dll?ShoppingCartMgmt");
-		}, vjo.darwin.core.ebayheader.cart.Cart);
-	})();
-</script><div id="gnheader" class="gh-w"><div id="cobrandHeader"></div><a href="#mainContent" rel="nofollow" style="display: block; position: absolute; left: -9999px;">Skip to main content</a><div><!-- headerType=HALF:DEFAULT:BUY--><script type="text/javascript">
-	var RoverDomainBaseUrl = 'http://rover.ebay.in';
-	var svrGMT = 1333825376920;
-</script><div></div><div class="gh-eb"><div class="gh-emn"><div class="gh-hid"></div><div class="gh-mn"><span class="gh-fst"><a id="MyEbay" href="http://my.ebay.in/ws/eBayISAPI.dll?MyEbay&amp;gbh=1" rel="nofollow">My eBay</a></span><a id="Sell" href="http://sell.ebay.in/sell">Sell</a><a id="Community" href="http://hub.ebay.in/community">Community</a><a id="Help" href="http://ocs.ebay.in/ws/eBayISAPI.dll?CustomerSupportRedirect&amp;target=help">Customer Support</a><span class="gh-nho"><span></span></span></div></div><form method="get" action="http://www.ebay.in/sch/i.html" name="headerSearch" id="headerSearch"><input name="_from" value="R40" type="hidden"><input name="_trksid" value="m570" type="hidden"><span class="gh-esb"><label for="_nkw" class="g-hdn">Enter your search keyword</label><input class="gh-txt" name="_nkw" id="_nkw" type="text"><a><input value="Go" class="gh-go" type="submit"></a></span></form></div><div class="gh-log"><span class="gh-lg"><a href="http://www.ebay.in/" rel="nofollow"> <img src="cart/logoEbay_x45.gif" alt="eBay" border="0"></a></span><span class="greeting gh-ui"><!-- BEGIN: GREETING:SIGNEDIN -->Hi, <b></b> (sivakrishna2012)! <a href="https://signin.ebay.in/ws/eBayISAPI.dll?SignIn" rel="nofollow" _sp="m570.l2622">Sign out</a><!-- END: GREETING:SIGNEDIN --><span id="bta"></span></span><span class="coupon"></span><span></span></div><div class="gh-rph"><span class="addllinks"><img src="cart/cart.gif" height="15" width="15"> <a href="http://orders.ebay.in/ws/eBayISAPI.dll?ShoppingCartMgmt">My Shopping Cart</a><span id="glb_cart"></span><script type="text/javascript">
-	vjo.darwin.core.ebayheader.cart.Cart.init("glb_cart",
-			"http://payments.ebay.in/ws/eBayISAPI.dll?GetCartDetails",
-			"http://orders.ebay.in/ws/eBayISAPI.dll?ShoppingCartMgmt");
-</script> | <a href="http://orders.ebay.in/ws/eBayISAPI.dll?MyPaisaPaySummary">My PaisaPay</a> | <a href="http://pages.ebay.in/sitemap.html">Site Map</a></span></div><div class="gh-cl"></div><div class="gh-col"><b class="gh-c1"></b><b class="gh-c2"></b><b class="gh-c3"></b><b class="gh-c4"></b><b class="gh-c5"></b><b class="gh-c6"></b><b class="gh-c7"></b><div class="gh-clr"></div></div><div id="headerWrapper" class="gh-hbw"><div class="gh-hb"><div class="gh-mn"><a id="BrowseCategories" href="http://shop.ebay.in/allcategories/all-categories">CATEGORIES</a><a id="chevron0" href="javascript:;" class="gh-ai"><b>&nbsp;</b></a><a id="EbayStores" title="Find more of what you love." href="http://stores.ebay.in/">SHOPS</a><a id="v4-gnh_0" href="http://cars.ebay.in/">MOTORS</a><a id="v4-gnh_1" href="http://pages.ebay.in/photocenter">PHOTO CENTRE</a></div></div><div class="gh-lbh1"><div class="gh-rtm"><div style="width: 160px; height: 22px; overflow: hidden; display: block;" id="rtm_html_876"><table bgcolor="#F5F5F5" cellpadding="0" cellspacing="0" height="22">
-  <tbody><tr align="center">
-    <td valign="bottom"><a href="http://srx.main.ebayrtm.com/clk?RtmClk&amp;lid=950718&amp;m=217168&amp;pg=2627&amp;aii=7557886107968743691&amp;u=1H4sIAAAAAAAAAFMOTixRcCwoUjAwVzA0sjIwsjI1V%2FANDlEwMjA04uXKzEyxNTc1NbewMDM0MLc0szA3MTazNOTlAgDVWokCOAAAAA%3D%3D&amp;i=1098404850&amp;g=1f97c7931350a02652d33ab3ff924aaf&amp;uf=0" target="_blank" style="text-decoration: none; color: rgb(102, 102, 102); bottom: 3px; font: bold 0.923em Trebuchet MS; padding: 0px 5px;" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">INSURANCE</a></td>
-    <td style="border-right: 1px solid rgb(204, 204, 204); border-left: 1px solid rgb(204, 204, 204);"><a href="http://srx.main.ebayrtm.com/clk?RtmClk&amp;lid=950180&amp;m=217168&amp;pg=2627&amp;aii=7557886107968743691&amp;u=1H4sIAAAAAAAAAFMOTixRcCwoUjAwVzA0sjIwsjI1V%2FANDlEwMjA04uXKzEyxNTc1NbewMDM0MLc0szA3MTazNOTlAgDVWokCOAAAAA%3D%3D&amp;i=1098404850&amp;g=1f97c7931350a02652d33ab3ff924aaf&amp;uf=0" target="_blank"><img src="cart/GEBHeader_15thSep.jpg" alt="Global EasyBuy" border="0" height="22" width="76"></a></td>
-	  </tr>
-</tbody></table></div></div></div><div class="gh-lbh2"><div class="gh-rtm"><div style="width: 160px; height: 22px; overflow: hidden; display: block;" id="rtm_html_912"><table bgcolor="#F5F5F5" cellpadding="0" cellspacing="0" height="22">
-  <tbody><tr align="center">
-    <td valign="bottom"><a href="http://srx.main.ebayrtm.com/clk?RtmClk&amp;lid=950719&amp;m=217171&amp;pg=2627&amp;aii=7557886107968743690&amp;u=1H4sIAAAAAAAAAFMOTixRcCwoUjAwVzA0sjIwsjI1V%2FANDlEwMjA04uXKzEyxNTc1NbewMDM0MLc0szA3MTazNODlAgDiMEsDOAAAAA%3D%3D&amp;i=1098404850&amp;g=1f97c7931350a02652d33ab3ff924aaf&amp;uf=0" target="_blank" style="text-decoration: none; color: rgb(102, 102, 102); position: relative; bottom: 3px; font: bold 0.923em Trebuchet MS; padding: 0px 9px 0px 0px;" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">JOBS</a></td>
-  <td style="border-right: 1px solid rgb(204, 204, 204); border-left: 1px solid rgb(204, 204, 204);" valign="bottom"><a href="http://srx.main.ebayrtm.com/clk?RtmClk&amp;lid=1035034&amp;m=217171&amp;pg=2627&amp;aii=7557886107968743690&amp;u=1H4sIAAAAAAAAAFMOTixRcCwoUjAwVzA0sjIwsjI1V%2FANDlEwMjA04uXKzEyxNTc1NbewMDM0MLc0szA3MTazNODlAgDiMEsDOAAAAA%3D%3D&amp;i=1098404850&amp;g=1f97c7931350a02652d33ab3ff924aaf&amp;uf=0" target="_blank" style="text-decoration: none; color: rgb(102, 102, 102); position: relative; bottom: 3px; font: bold 0.923em Trebuchet MS; padding: 0px 5px;" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">MY CITY</a></td>
-	  </tr>
-</tbody></table></div></div></div><div class="gh-lbh3"><div class="gh-rtm"><div style="width: 144px; height: 22px; overflow: hidden; display: block;" id="rtm_html_433"><table id="Table_01" border="0" cellpadding="0" cellspacing="0" width="700">
-<tbody><tr>
-		<td><a href="http://srx.main.ebayrtm.com/clk?RtmClk&amp;lid=1039711&amp;m=231864&amp;pg=2627&amp;aii=7557886107968743689&amp;u=1H4sIAAAAAAAAAFMOTixRcCwoUjAwVzA0sjIwsjI1V%2FANDlEwMjA04uXKzEyxNTc1NbewMDM0MLc0szA3MTazsOTlAgAIbCa0OAAAAA%3D%3D&amp;i=1098404850&amp;g=1f97c7931350a02652d33ab3ff924aaf&amp;uf=0" target="_blank"><img src="cart/Fonezone.png" alt="Dot Style Sale" border="0" height="22" width="144"></a></td>
-</tr>
-</tbody></table><table></table></div></div></div><div class="gh-clr"></div></div><a name="mainContent"></a></div></div></div>
-					<div class="AreaNavigation" id="AreaNavigation"></div>
+</head><body>
+ <%@ include file="header.jsp"%>
 					<div class="AreaTitle" id="AreaTitle"><div class="tbl1txt5"><div><div class="tbl1totalco38">My Shopping Cart</div><div class="tbl1totalco39"><span style="float:right"><h4 class="fontnormal"><a href="http://cgi.ebay.in/ws/eBayISAPI.dll?ViewItem&amp;item=130662051525"><img src="cart/iconLtArrow_20x20.gif" alt="Back" style="margin-right: 5px;" align="absmiddle" border="0" height="20" width="20"></a></h4><span><a href="http://cgi.ebay.in/ws/eBayISAPI.dll?ViewItem&amp;item=130662051525"><b style="padding-right:9px;">Back</b></a></span></span></div></div></div></div>
 					<div class="PageLevelMessageArea" id="PageLevelMessageArea"><div></div></div>
 					<div class="CentralArea" id="CentralArea"><table width="100%"><tbody><tr><td><div class="main-Div"><div class="main-Div"><div class="static-content"><br><ul><li class="margin-bottom">Your shopping cart might contain items from different sellers.</li><li>To buy items from a specific seller, click the <b>Proceed to Pay</b> button below the seller's items.</li></ul><span style="float:right;margin-top: -30px;"><span><a href="javascript:void()"><img src="cart/ico_Livehelp_new.gif" id="livechathelp" name="livechathelp" border="0"></a></span></span></div><div><div style="width:100%;"><div class="blueboxld"><div class="blueboxlt" style="background-image:url('http://pics.ebaystatic.com/aw/in/psp_new/Goldbar_topleft.gif')"><div class="blueboxrt" style="background-image:url('http://pics.ebaystatic.com/aw/in/psp_new/Goldbar_topright.gif')"><div class="blueboxtb"><div class="blueboxlr5"><div class="blueboxtxt5"><span class="txt-black45bold">Items in my cart</span></div></div></div></div></div></div><div style="background-image:url(http://pics.ebaystatic.com/aw/pics/psp_new/corner_i.gif); background-repeat:no-repeat; background-position:left bottom;"><div style="padding-right:0px; padding-left:0px; background-image:url(http://pics.ebaystatic.com/aw/pics/psp_new/corner_j.gif); background-repeat:no-repeat; background-position:right bottom; padding-bottom:0px; margin:0px 0px 0px 0px; padding-top:0px;"><div class="blueboxcontb" style="margin-bottom:0px;"><div class="blueboxconlrshort"><div><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="right" width="75%"><div style="padding-right:60px"><b>Price</b></div></td><td width="15%"><b>Quantity</b></td><td width="10%"><b>Sub-total</b></td></tr></tbody></table><div></div>
 				
 <s:iterator value="arr">
-					<div style="width:100%;"><div class="bluegrayboxld" style="margin-top: 15px;"><div class="bluegrayboxlt"><div class="bluegrayboxrt"><div class="bluegrayboxtb"><div class="bluegrayboxlr"><span class="txt-black13bold"><div><div>From seller:<span style="padding-left:5px"><div class="mbg"><a title="Member id qubefashion" href="http://myworld.ebay.in/qubefashion"><b class="g-hdn">Member id </b><span class="mbg-nw"><s:property value="item_seller"/></span></a> <span class="mbg-l"> ( <a class="mbg-fb" title="Feedback Score Of 57" href="http://feedback.ebay.in/ws/eBayISAPI.dll?ViewFeedback&amp;userid=qubefashion"><b class="g-hdn">Feedback Score Of</b> 57</a><img src="cart/iconBlueStar_25x25.gif" class="mbg-star" title="Blue star icon for feedback score in between 50 to 99" alt="Blue star icon for feedback score in between 50 to 99" height="25" width="25">) </span> <span class="mbg-l"></span></div></span></div></div></span></div></div></div></div></div><div class="yellowboxconld"><div class="yellowboxconrd"><div class="yellowboxcontb"><div class="yellowboxconlr"><div><form name="cartForm1" action="http://orders.ebay.in/ws/eBayISAPI.dll?ShoppingCartMgmt" method="post"><input value="ShoppingCartMgmt" name="MfcISAPICommand" type="hidden"><input name="bucketid" value="1" id="bucketid" type="hidden"><input name="sellerid" value="1091283746" id="sellerid" type="hidden"><div><div><div><div class="item-SummaryDiv"><div class="item-image"><div style="Height:80px; Width:80px;"><a href="http://cgi.ebay.in/ws/eBayISAPI.dll?ViewItem&amp;item=130662051525"><img src="cart/1306620515258080_0.jpg" alt="" border="0"></a></div></div><div><img src="cart/s.gif" height="6" width="6"></div><div class="item-detailsDiv" style="padding-top:10px;"><input value="130662051525" name="bx_itemid" type="hidden"><input value="1932672003" name="transid" type="hidden"><div><span style="float:right;padding-right:30px;"><s:property value="item_price"/></span><a href="http://cgi.ebay.in/ws/eBayISAPI.dll?ViewItem&amp;item=130662051525"><s:property value="item_name"/></a><div></div></div><div class="item-links" style="margin-top:35px;"><span><a class="link" href="javascript:void(0)" id="v4-0" onblur="return vjo.dsf.ServiceEngine.handleRequest(new vjo.dsf.Message('CLOSE_OVERLAY_PANEL_shippingDetails130662051525'));">View shipping details</a></span>|<a href="http://orders.ebay.in/ws/eBayISAPI.dll?ShoppingCartMgmt&amp;itemid=130662051525&amp;transid=1932672003&amp;action=remove&amp;ssPageName=SCART:SCRE:IN:1" class="link">Remove</a>|<a href="http://orders.ebay.in/ws/eBayISAPI.dll?ShoppingCartMgmt&amp;itemid=130662051525&amp;transid=1932672003&amp;action=save&amp;ssPageName=SCART:SCSL:IN:2" class="link">Save for later</a></div></div><div class="item-quantity"><input id="quantity" name="bx_quantity" style="text-align: center;" autocomplete="off" size="5" maxlength="5" class="item-quantityValue" value="<s:property value="cart_quantity"/>" type="text">(<s:property value="item_quantity"/> available)</div><div class="item-summ-body-subtotal-ssm"><div style="float:left;padding-left:0px;">Rs.</div><div style="float:right"><s:property value="item_total"/></div></div></div></div></div></div><div style="margin-top:0px;"><table style="background-image: url(&quot;http://pics.ebaystatic.com/aw/pics/psp_new/sc_bg_grey.gif&quot;); background-repeat: repeat;" width="100%"><tbody><tr><td style="text-align: left;"><div class="tbl1totalco50"><span>Buy items from seller<span class="spant2"><b><s:property value="item_seller"/></b></span><span style="padding-left:5px;"> with <img src="cart/paisapay_text_76x16.gif" align="absmiddle" border="0" height="16" width="76"> .</span><a href="http://pages.ebay.in/ebayexplained/paisapay.html" target="_blank" id="v4-1" class="spant2">Learn more</a></span><div style="padding-top:5px;"><input src="cart/proceed_to_pay.gif" name="continue" align="absmiddle" type="image"><span style="padding-left:5px">The next step is to select shipping method.</span></div></div></td><td style="text-align: right; width: 206px;"><div><div class="totalDivMain"><div style="float:left;width:40%;text-align:right">Total:</div><div style="float:left;width:23%;text-align:right">Rs.</div><div style="float:right;width:35%"><s:property value="item_total"/></div></div></div><div class="updatelinkNonEMI"><input name="action" value="continue" type="hidden"><input name="bucketid" value="1" type="hidden"><input type="button" onclick="visit('<s:property value="item_id"/>')" id="v4-2" value="Update Total"/></div></td></tr></tbody></table><table class="spant3" style="margin-left: 12px;"><tbody><tr><td valign="TOP"><span style="font-weight:bold;">Note:</span></td><td>PaisaPay
- supports payments through credit card, debit card, online bank 
-transfer, cash card, mobile payment and eBay gift voucher / promotion 
-code. To pay by cheque, demand draft or other methods, click an item 
-title above and buy using the Buy It Now button.</td></tr></tbody></table></div></form></div></div></div></div></div></div></s:iterator></body></html>
+																<div style="width: 100%;">
+																	<div class="bluegrayboxld" style="margin-top: 15px;">
+																		<div class="bluegrayboxlt">
+																			<div class="bluegrayboxrt">
+																				<div class="bluegrayboxtb">
+																					<div class="bluegrayboxlr">
+																						<span class="txt-black13bold"><div>
+																								<div>
+																									From seller:<span style="padding-left: 5px"><div
+																											class="mbg">
+																											<a title="Member id qubefashion"
+																												href="http://myworld.ebay.in/qubefashion"><b
+																												class="g-hdn">Member id </b><span
+																												class="mbg-nw"><s:property
+																														value="item_seller" />
+																											</span>
+																											</a> <span class="mbg-l"> ( <a
+																												class="mbg-fb" title="Feedback Score Of 57"
+																												href="http://feedback.ebay.in/ws/eBayISAPI.dll?ViewFeedback&amp;userid=qubefashion"><b
+																													class="g-hdn">Feedback Score Of</b> 57</a><img
+																												src="cart/iconBlueStar_25x25.gif"
+																												class="mbg-star"
+																												title="Blue star icon for feedback score in between 50 to 99"
+																												alt="Blue star icon for feedback score in between 50 to 99"
+																												height="25" width="25">) </span> <span
+																												class="mbg-l"></span>
+																										</div>
+																									</span>
+																								</div>
+																							</div>
+																						</span>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="yellowboxconld">
+																		<div class="yellowboxconrd">
+																			<div class="yellowboxcontb">
+																				<div class="yellowboxconlr">
+																					<div>
+																						<form name="cartForm1"
+																							action="http://orders.ebay.in/ws/eBayISAPI.dll?ShoppingCartMgmt"
+																							method="post">
+																							<input value="ShoppingCartMgmt"
+																								name="MfcISAPICommand" type="hidden"><input
+																								name="bucketid" value="1" id="bucketid"
+																								type="hidden"><input name="sellerid"
+																								value="1091283746" id="sellerid" type="hidden">
+																							<div>
+																								<div>
+																									<div>
+																										<div class="item-SummaryDiv">
+																											<div class="item-image">
+																												<div style="Height: 80px; Width: 80px;">
+																													<a
+																														href="http://cgi.ebay.in/ws/eBayISAPI.dll?ViewItem&amp;item=130662051525"><img
+																														src="cart/1306620515258080_0.jpg" alt=""
+																														border="0">
+																													</a>
+																												</div>
+																											</div>
+																											<div>
+																												<img src="cart/s.gif" height="6" width="6">
+																											</div>
+																											<div class="item-detailsDiv"
+																												style="padding-top: 10px;">
+																												<input value="130662051525" name="bx_itemid"
+																													type="hidden"><input
+																													value="1932672003" name="transid"
+																													type="hidden">
+																												<div>
+																													<span
+																														style="float: right; padding-right: 30px;"><s:property
+																															value="item_price" />
+																													</span><a
+																														href="http://cgi.ebay.in/ws/eBayISAPI.dll?ViewItem&amp;item=130662051525"><s:property
+																															value="item_name" />
+																													</a>
+																													<div></div>
+																												</div>
+																												<div class="item-links"
+																													style="margin-top: 35px;">
+																													<span><a class="link"
+																														href="javascript:void(0)" id="v4-0"
+																														onblur="return vjo.dsf.ServiceEngine.handleRequest(new vjo.dsf.Message('CLOSE_OVERLAY_PANEL_shippingDetails130662051525'));">View
+																															shipping details</a>
+																													</span>|<a
+																														href="http://orders.ebay.in/ws/eBayISAPI.dll?ShoppingCartMgmt&amp;itemid=130662051525&amp;transid=1932672003&amp;action=remove&amp;ssPageName=SCART:SCRE:IN:1"
+																														class="link">Remove</a>|<a
+																														href="http://orders.ebay.in/ws/eBayISAPI.dll?ShoppingCartMgmt&amp;itemid=130662051525&amp;transid=1932672003&amp;action=save&amp;ssPageName=SCART:SCSL:IN:2"
+																														class="link">Save for later</a>
+																												</div>
+																											</div>
+																											<div class="item-quantity">
+																												<input id="quantity" name="bx_quantity"
+																													style="text-align: center;"
+																													autocomplete="off" size="5" maxlength="5"
+																													class="item-quantityValue"
+																													value="<s:property value="cart_quantity"/>"
+																													type="text">(
+																												<s:property value="item_quantity" />
+																												available)
+																											</div>
+																											<div class="item-summ-body-subtotal-ssm">
+																												<div style="float: left; padding-left: 0px;">Rs.</div>
+																												<div style="float: right">
+																													<s:property value="item_total" />
+																												</div>
+																											</div>
+																										</div>
+																									</div>
+																								</div>
+																							</div>
+																							<div style="margin-top: 0px;">
+																								<table
+																									style="background-image: url(&quot;http://pics.ebaystatic.com/aw/pics/psp_new/sc_bg_grey.gif&quot;); background-repeat: repeat;"
+																									width="100%">
+																									<tbody>
+																										<tr>
+																											<td style="text-align: left;"><div
+																													class="tbl1totalco50">
+																													<span>Buy items from seller<span
+																														class="spant2"><b><s:property
+																																	value="item_seller" />
+																														</b>
+																													</span><span style="padding-left: 5px;">
+																															with <img
+																															src="cart/paisapay_text_76x16.gif"
+																															align="absmiddle" border="0" height="16"
+																															width="76"> .</span><a
+																														href="http://pages.ebay.in/ebayexplained/paisapay.html"
+																														target="_blank" id="v4-1" class="spant2">Learn
+																															more</a>
+																													</span>
+																													<div style="padding-top: 5px;">
+																														<input src="cart/proceed_to_pay.gif"
+																															name="continue" align="absmiddle"
+																															type="image"><span
+																															style="padding-left: 5px">The next
+																															step is to select shipping method.</span>
+																													</div>
+																												</div>
+																											</td>
+																											<td style="text-align: right; width: 206px;"><div>
+																													<div class="totalDivMain">
+																														<div
+																															style="float: left; width: 40%; text-align: right">Total:</div>
+																														<div
+																															style="float: left; width: 23%; text-align: right">Rs.</div>
+																														<div style="float: right; width: 35%">
+																															<s:property value="item_total" />
+																														</div>
+																													</div>
+																												</div>
+																												<div class="updatelinkNonEMI">
+																													<input name="action" value="continue"
+																														type="hidden"><input
+																														name="bucketid" value="1" type="hidden"><input
+																														type="button"
+																														onclick="visit('<s:property value="item_id"/>')"
+																														id="v4-2" value="Update Total" />
+																												</div>
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																								<table class="spant3" style="margin-left: 12px;">
+																									<tbody>
+																										<tr>
+																											<td valign="TOP"><span
+																												style="font-weight: bold;">Note:</span>
+																											</td>
+																											<td>PaisaPay supports payments through
+																												credit card, debit card, online bank
+																												transfer, cash card, mobile payment and eBay
+																												gift voucher / promotion code. To pay by
+																												cheque, demand draft or other methods, click
+																												an item title above and buy using the Buy It
+																												Now button.</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																							</div>
+																						</form>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</s:iterator></body></html>

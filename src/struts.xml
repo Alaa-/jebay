@@ -10,7 +10,7 @@
 	<package name="ebay" extends="struts-default">
 
 		<action name="Login" class="ebay.login_page">
-			<result name="success">/header.jsp</result>
+			<result name="success">/home.jsp</result>
 			<result name="error">/user_sign_in.jsp</result>
 			<result name="unconfirm">user_sign_in.jsp</result>
 		</action>
@@ -47,12 +47,20 @@
 			<result name="login">/user_sign_in.jsp</result>
 			<result name="success">/Sell_choosecat.jsp</result>
 		</action>
-		
-		<!-- <action name="Myebay" class="ebay.Myebay"> <result name="success">/myebay.jsp</result> 
-			</action> -->
+
+		<action name="Myebay" class="ebay.Myebay">
+			<result name="success">/purchase.jsp</result>
+		</action>
+		<action name="EbaySummary" class="ebay.EbaySummary">
+			<result name="success">/ebaysummary.jsp</result>
+		</action>
 		<action name="Logout" class="ebay.logout">
 			<result name="success">/logout.jsp</result>
 		</action>
+
+
+
+
 
 		<action name="Confirmation" class="ebay.Confirmation">
 			<result name="success">/confirmationsuccess.jsp</result>

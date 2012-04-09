@@ -14,18 +14,30 @@ import com.opensymphony.xwork2.ActionSupport;
 public class Search_Name extends ActionSupport{
 	private String _nkw;
 	private String _sacat;
-	private ArrayList searchDetails = new ArrayList();
+	private ArrayList bidDetails = new ArrayList();
 	private ArrayList colNames = new ArrayList();
-	
+	private ArrayList buyDetails = new ArrayList();
 	
 
-	public ArrayList getSearchDetails() {
-		return searchDetails;
+
+
+	public ArrayList getBidDetails() {
+		return bidDetails;
 	}
 
 
-	public void setSearchDetails(ArrayList searchDetails) {
-		this.searchDetails = searchDetails;
+	public void setBidDetails(ArrayList bidDetails) {
+		this.bidDetails = bidDetails;
+	}
+
+
+	public ArrayList getBuyDetails() {
+		return buyDetails;
+	}
+
+
+	public void setBuyDetails(ArrayList buyDetails) {
+		this.buyDetails = buyDetails;
 	}
 
 
@@ -54,14 +66,16 @@ public class Search_Name extends ActionSupport{
 		if(_sacat.equals("See-All-Categories"))
 		{
 
-			searchDetails = ItemDetails.getAllCategoryDetails(_nkw);
+			bidDetails = ItemDetails.getAllCategoryDetails(_nkw);
+			buyDetails = ItemDetails.getBuyPdtDetails(_nkw);
 			Map session = ActionContext.getContext().getSession();
 			String pdtMode =(String)session.get("pdtMode");
 			return "success";
 		}
 		else
 		{
-			searchDetails = ItemDetails.getDetails(_nkw,_sacat);
+			bidDetails = ItemDetails.getDetails(_nkw,_sacat);
+			buyDetails = ItemDetails.getNameBuyDetails(_nkw, _sacat);
 			Map session = ActionContext.getContext().getSession();
 			String pdtMode =(String)session.get("pdtMode");
 			return "success";

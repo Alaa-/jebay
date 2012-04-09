@@ -2,21 +2,30 @@ package ebay;
 
 import java.util.ArrayList;
 
+import model.Category;
 import model.ItemDetails;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 public class CatDetailsAction extends ActionSupport{
 	private int catid;
-	private ArrayList searchDetails;
+	private ArrayList bidDetails;
+	private ArrayList buyDetails;
 	
-	
-	public ArrayList getSearchDetails() {
-		return searchDetails;
+	public ArrayList getBidDetails() {
+		return bidDetails;
 	}
 
-	public void setSearchDetails(ArrayList searchDetails) {
-		this.searchDetails = searchDetails;
+	public void setBidDetails(ArrayList bidDetails) {
+		this.bidDetails = bidDetails;
+	}
+
+	public ArrayList getBuyDetails() {
+		return buyDetails;
+	}
+
+	public void setBuyDetails(ArrayList buyDetails) {
+		this.buyDetails = buyDetails;
 	}
 
 	public int getCatid() {
@@ -29,7 +38,9 @@ public class CatDetailsAction extends ActionSupport{
 	
 	public String execute()
 	{
-		searchDetails = ItemDetails.getCatPdtDetails(catid);
+		String catname=Category.getCatName(catid);
+		bidDetails = ItemDetails. getCatPdtDetails(catid);	
+		buyDetails = ItemDetails.getCatPdtBuyDetails(catid);
 		return "success";
 	}
 

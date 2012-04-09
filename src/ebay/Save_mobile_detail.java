@@ -35,6 +35,7 @@ public class Save_mobile_detail extends ActionSupport
 	private String mobilesellmode;
 	private String mobileimage;
 	private String duration;
+	private int mobilecatid;
 	private int mobilesubcatid;
 	private int mobilequantity;
 	private int mobileprice;
@@ -142,6 +143,16 @@ public class Save_mobile_detail extends ActionSupport
 		this.mobiletype = mobiletype;
 	}
 
+	public int getMobilecatid()
+	{
+		return mobilecatid;
+	}
+
+	public void setMobilecatid(int mobilecatid)
+	{
+		this.mobilecatid = mobilecatid;
+	}
+
 	@Override
 	public String execute() throws Exception
 	{
@@ -151,6 +162,7 @@ public class Save_mobile_detail extends ActionSupport
 
 			ItemVo objitemvo = new ItemVo();
 			objitemvo.setItem_name(mobilename);
+			objitemvo.setItem_category_id(mobilecatid);
 			objitemvo.setItem_subcategory_id(mobilesubcatid);
 			objitemvo.setItem_price(mobileprice);
 			System.out.println(mobilebaseprice); // printing value to check....

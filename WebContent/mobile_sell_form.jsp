@@ -67,6 +67,7 @@ function checkmode()
         <h2>ENTER THE MOBILE DETAILS</h2>
 
             Enter Title:<input type="text" name="mobilename" required="true"/><br/><br/>
+            <input type="hidden" name="mobilecatid" value="<s:property value="fcat"/>"/>
 			<input type="hidden" name="mobilesubcatid" value="<s:property value="fsubcat"/>"/>
 			Brand:<s:select label="Brand" name="mobilebrand"  headerKey="1" headerValue="-- Please Select --" list="brands"/><br/><br/>
 

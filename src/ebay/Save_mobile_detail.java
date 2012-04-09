@@ -14,6 +14,7 @@ import java.sql.*;
 import vo.ItemVo;
 
 import model.ItemDetails;
+import model.Mobile;
 
 /**
  * 
@@ -28,6 +29,7 @@ public class Save_mobile_detail extends ActionSupport
 	private String mobilename;
 	private String mobilebrand;
 	private String mobiletype;
+	private String mobileos;
 	private String camera;
 	private String mobilecondition;
 	private String mobilesellmode;
@@ -143,6 +145,7 @@ public class Save_mobile_detail extends ActionSupport
 	@Override
 	public String execute() throws Exception
 	{
+		int newGeneratedItemId = -1;
 		try
 		{
 
@@ -150,8 +153,9 @@ public class Save_mobile_detail extends ActionSupport
 			objitemvo.setItem_name(mobilename);
 			objitemvo.setItem_subcategory_id(mobilesubcatid);
 			objitemvo.setItem_price(mobileprice);
+			System.out.println(mobilebaseprice); // printing value to check....
 			objitemvo.setItem_baseprice(mobilebaseprice);
-
+			objitemvo.setItem_mode(mobilesellmode);
 			Map session = ActionContext.getContext().getSession();
 			objitemvo.setItem_seller((String) session.get("User"));
 			objitemvo.setItem_quantity(mobilequantity);
@@ -159,7 +163,9 @@ public class Save_mobile_detail extends ActionSupport
 			objitemvo.setItem_endtime(duration);
 			objitemvo.setItem_shipping_charge(mobilesc);
 
-			ItemDetails.saveItemDetails();
+			newGeneratedItemId = ItemDetails.saveItemDetails(objitemvo);
+
+			Mobile.saveMobileDetails(newGeneratedItemId, mobilebrand, mobileos, camera, mobiletype);
 
 			int total_price = getMobileprice() + getMobilesc();
 		}
@@ -168,6 +174,16 @@ public class Save_mobile_detail extends ActionSupport
 			System.out.println(e);
 		}
 		return SUCCESS;
+	}
+
+	public String getMobileos()
+	{
+		return mobileos;
+	}
+
+	public void setMobileos(String mobileos)
+	{
+		this.mobileos = mobileos;
 	}
 
 	public String getDuration()

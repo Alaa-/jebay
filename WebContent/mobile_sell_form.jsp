@@ -10,9 +10,9 @@
 <script type="text/javascript">
 function checkmode()
 {
-	var e=document.getElementById("sellmode");
+	var e=document.getElementById("mobilesellmode");
 	var strmode=e.options[e.selectedIndex].value;
-	if(strmode=="auction")
+	if(strmode=="1")
 	{
 		document.getElementById("pbaseprice").style.display="inline";
 		document.getElementById("mobilebaseprice").style.display="inline";
@@ -22,7 +22,8 @@ function checkmode()
 	else
 	{
 		document.getElementById("pbaseprice").style.display="none";	
-		document.getElementById("mobilebaseprice").style.display="none";	
+		document.getElementById("mobilebaseprice").style.display="none";
+		document.getElementById("mobilequantity").disabled="false";
 	}
 }
 </script>
@@ -67,9 +68,17 @@ function checkmode()
 
             Enter Title:<input type="text" name="mobilename" required="true"/><br/><br/>
 			<input type="hidden" name="mobilesubcatid" value="<s:property value="fsubcat"/>"/>
-			<s:select label="Brand" name="mobilebrand"  headerKey="1" headerValue="-- Please Select --" list="brands"/><br/><br/>
+			Brand:<s:select label="Brand" name="mobilebrand"  headerKey="1" headerValue="-- Please Select --" list="brands"/><br/><br/>
 
-            <s:select label="Type" name="mobiletype"  headerKey="1" headerValue="-- Please Select --" list="types"/>	<br/><br/>
+            Type:<s:select label="Type" name="mobiletype"  headerKey="1" headerValue="-- Please Select --" list="types"/>	<br/><br/>
+            
+            Operating System:<select name="mobileos">
+ 				<option value="Android">Android</option>
+                <option value="Bada">Bada</option>
+                <option value="iOS">iOS</option>
+                <option value="Symbian">Symbian</option>
+				<option value="Windows mobile 7">Windows mobile 7</option>
+            </select><br/><br/>
 
 			Camera
            <select name="camera" >
@@ -84,22 +93,23 @@ function checkmode()
 
 
             Condition:<select name="mobilecondition">
-                <option value="new">New</option>
-                <option value="old">Old</option>
+                <option value="New">New</option>
+                <option value="Used">Used</option>
             </select><br/><br/>
 
+			
             Quantity :<input type="text" name="mobilequantity" id="mobilequantity" pattern="\d" value="1" pattern="\d{0,3}"/><br/><br/>
 
-            How you would like to sell:<select name="mobilesellmode" id="sellmode" onchange="checkmode()">
-                <option value="buyitnow">Buy It Now</option>
-                <option value="auction">Auction</option>
+            How you would like to sell:<select name="mobilesellmode" id="mobilesellmode" tabindex="-1" onchange="checkmode()">
+                <option value="0">Buy It Now</option>
+                <option value="1">Auction</option>
             </select><br/><br/>
 
-			<p id="pbaseprice" style="display:none;">Starting Price:<s:textfield label="Base Price" name="mobilebaseprice" id="baseprice" value="" pattern="\d{0,9}" required="true"/><br/><br/></p>
+			<p id="pbaseprice" style="display:none;">Starting Price:<s:textfield label="Base Price" name="mobilebaseprice" id="mobilebaseprice" value="0" pattern="\d{0,9}" required="true"/><br/><br/></p>
 
 			Buy it now Price:<s:textfield label="Price" id="price" name="mobileprice" value="" pattern="\d{0,9}" required="true"/><br/><br/>
 			
-            Shipping Charge:<input type="text" name="mobilesc" pattern="\d" required="true"/><br/><br/>
+            Shipping Charge:<input type="text" name="mobilesc" pattern="\d{0,9}" required="true"/><br/><br/>
 
             Mobile Feature:<input type="text" name="feature" /><br/><br/>
             

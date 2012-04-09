@@ -12,7 +12,7 @@ public class BidHistoryModel {
 		
 		ArrayList<BiddingVo> allBids = new ArrayList<BiddingVo>();
 		Connect c=new Connect();
-		ResultSet rs=c.getResult("select * from bidding_details where bidding_item_id="+item_id);
+		ResultSet rs=c.getResult("select * from bidding_details where bidding_item_id="+item_id+" order by bidding_bid desc");
 		while(rs.next())
 		{
 			BiddingVo bvo=new BiddingVo();

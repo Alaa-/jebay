@@ -1,0 +1,254 @@
+ /* CSS Document */
+
+/*Reset Classes*/
+* {
+outline:none;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+margin:0;
+padding:0;
+}
+
+ul, ol, li {
+list-style:none;
+margin: 0;
+padding: 0;
+}
+
+fieldset, img, abbr, acronym, input[type="image"] {
+border:0
+}
+
+table {
+border-collapse:collapse;
+border-spacing:0
+}
+
+a {
+text-decoration: none;
+}
+
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 18px;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul, li, span{
+	margin: 0;
+}
+
+.bgContainer {
+	padding: 0 10px;
+	}
+
+.tabsWrapper {
+	border: 1px solid #999999;
+	border-width: 0 0 1px;
+}
+
+.tab {
+	margin: 0 0 0 20px;
+	border: 1px solid #999999;
+	border-width: 1px 1px 0 1px;
+	width: 50px;
+	padding: 5px 0px 5px 12px;
+}
+
+.leftNav {
+	float: left;
+	width: 200px;
+}
+
+.bgLeft {
+	/*background: #F0F0F0;*/
+	background: url(../images/bg-nav.png) #eeeeee repeat-x;
+	border: 1px solid #cccccc;
+	border-width: 1px 1px;
+	padding: 6px 10px;
+	font-weight: bold;
+}
+
+.subSection ul {
+	background: #F0F0F0;
+	padding: 0 0 3px;
+	list-style: none;
+}
+
+.subSection ul li {
+	border-bottom: 1px solid #cccccc;
+	color: #333333;
+	margin: 0 15px;
+	padding: 3px 0;
+}
+
+.subSection ul li.last {
+	border: 0;
+}
+
+.subSection ul li a {
+	color: #333333;
+	font-weight: normal;
+}
+
+.mainContent {
+	float: left;
+	width: 700px;
+	padding: 0 0 0 10px;
+}
+
+.panelHead, .panelHead1 {
+	background: #eeeeee;
+	padding: 5px;
+	clear: both;
+	overflow: hidden;
+}
+
+.panelHead1 {
+	border: 1px solid #cccccc;
+	border-width: 1px 0 0;
+}
+
+.heading {
+	float: left;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.tabsHead li span {
+	color: #002398;
+	list-style: none;
+	padding: 0 14px 16px;
+	background: url(../images/seperator.png) no-repeat 100% 10%;
+}
+
+.tabsHead li.active span {
+	background: url(../images/arrow.png) no-repeat 50% 100%;
+}
+	
+.tabsHead li {
+	display: inline-block;
+	height: 25px;
+	padding: 5px 0 0 ;
+}
+
+.tabsHead li.active {
+	background: url(../images/bg-activetab.png) repeat-x;
+	border: 1px solid #cccccc;
+	border-width: 0 1px;
+	margin: 0;
+}
+
+.tabsHead li:hover {
+	background: url(../images/bg-activetab.png) repeat-x;
+}
+
+.tabSection {
+	border: 1px solid #cccccc;
+	border-width: 1px 0;
+	}
+
+.bold {
+	font-weight: bold;
+}
+
+.tabsContent {
+	padding: 10px;
+	display: none;
+}
+
+.bgShadow {
+	background: url(../images/bg-shadow.png) #ffffff repeat-x center bottom;
+}
+
+.mainLink a {
+	color: #333333;
+}
+
+.arrow {
+	background:url(../images/arrow-blue.png) no-repeat -3px -17px;
+	padding: 0 0 0 16px;
+}
+
+.arrow.active {
+	background-position: 0 3px;
+}
+
+#tabsContent_0_0, #tabsContent_1_0 {
+	display: block;
+}
+
+.wrapper {
+	clear: both;
+	overflow: hidden;
+	margin: 10px 0 0 0;
+}
+
+.subSection li:hover {
+	background: #cccccc;
+}
+	
+.mainLink a {
+	padding-left: 16px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.panelHead2 {
+	clear: both;
+	overflow: hidden;
+	border: 1px solid #cccccc;
+	border-width: 1px  0 0;
+	padding: 5px;
+}
+
+.grey {
+	color: #999999;
+}
+
+.seperator {
+	background: url(../images/seperator.png) no-repeat 100% 50%;
+	padding: 0 5px 0 0;
+}
+
+.panelHead2 input[type="checkbox"], .panelHead2 img, .panelHead2 .left {
+	margin-right: 10px;
+}
+
+.panelHead2 a {
+	color: #002398;
+}
+
+.list li {
+	display: inline-block;
+}
+
+.panelHead2.Last {
+	border-width: 1px 0;
+}
+
+.list li:hover a {
+	color: #000000;
+}
+
+.page {
+	margin-left: 430px;
+	font-size: 14px;
+}
+
+.panelHead2.Last1 {
+	border-width: 0 0 1px 0;
+	font-weight: bold;
+}

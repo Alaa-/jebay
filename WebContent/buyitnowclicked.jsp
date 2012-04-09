@@ -829,15 +829,17 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VtotojCooki
 																											</div>
 																										</div>
 																										<div class="ps-ppButton">
-																											<input name="payment_method" value="29"
-																												id="29"
-																												onclick='return vjo.Registry._7.handlePaymentMethod("emiselected", "29", true);'
-																												checked="checked" type="radio">
+																										<s:radio label="paymentmode" name="paymentmode" list="#{'1':'Credit Card','2':'Debit Card','3':'Online Bank Transfer'}" value="1" />
+																										<s:select name="banks" headerKey="-1" headerValue="--Select Bank--" list = "lstBanks"/>
+																											<!-- <input name="payment_method" value="29"
+																												id="29"> -->
+																												<!-- onclick='return vjo.Registry._7.handlePaymentMethod("emiselected", "29", true);'
+																												checked="checked" type="radio"> -->
 																										</div>
-																										<div style="margin-left: 26px;">Credit
+																										<!-- <div style="margin-left: 26px;">Credit
 																											card, debit card, online bank transfer, cash
 																											cards, mobile payments and eBay gift voucher
-																											/ promotion code.</div>
+																											/ promotion code.</div> -->
 																										
 																										<div></div>
 																									</td>

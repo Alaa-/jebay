@@ -90,7 +90,7 @@
 		</action>
 
 		<action name="bidhistory" class="ebay.BidHistory">
-			<result name="success">bidhistory.jsp</result>
+			<result name="success">bid_history.jsp</result>
 		</action>
 
 		<action name="BuyItNowClicked" class="ebay.BuyItNowClicked">

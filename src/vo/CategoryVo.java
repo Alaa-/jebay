@@ -6,12 +6,18 @@ public class CategoryVo
 {
 	int category_id;
 	String category_name;
+	String cat_name;
+	
 	ArrayList<SubCategoryVo> subcatlist;
 
 	public CategoryVo()
 	{
 	}
 
+	public CategoryVo(String cat_name) {
+		super();
+		this.cat_name = cat_name;
+	}
 	public CategoryVo(int category_id, String category_name)
 	{
 		this.category_id = category_id;
@@ -48,4 +54,12 @@ public class CategoryVo
 		this.category_name = category_name;
 	}
 
+	public String getCat_name() {
+		return cat_name;
+	}
+
+	public void setCat_name(String cat_name) {
+		this.cat_name = cat_name;
+	}
+	
 }

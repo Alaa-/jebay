@@ -5,8 +5,8 @@ public class ItemDetailsVo {
 	private int price;
 	private int shipping_charge;
 	private String mode;
-	
-	
+	private int item_id;
+	private String image;
 	
 	public ItemDetailsVo(String item_name, int price, int shipping_charge,
 			String mode) {
@@ -15,7 +15,22 @@ public class ItemDetailsVo {
 		this.price = price;
 		this.shipping_charge = shipping_charge;
 		this.mode = mode;
+		
 	}
+	
+	
+	public ItemDetailsVo(String item_name, int price, int shipping_charge,
+			String mode, int item_id,String image) {
+		super();
+		this.item_name = item_name;
+		this.price = price;
+		this.shipping_charge = shipping_charge;
+		this.mode = mode;
+		this.item_id = item_id;
+		this.image=image;
+	}
+
+
 	public String getItem_name() {
 		return item_name;
 	}
@@ -39,6 +54,26 @@ public class ItemDetailsVo {
 	}
 	public void setMode(String mode) {
 		this.mode = mode;
+	}
+
+
+	public int getItem_id() {
+		return item_id;
+	}
+
+
+	public void setItem_id(int item_id) {
+		this.item_id = item_id;
+	}
+
+
+	public String getImage() {
+		return image;
+	}
+
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 	
 	

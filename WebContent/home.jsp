@@ -159,7 +159,7 @@
 <body id="body" onload="document.getElementById('_nkw').focus()">
 	<script type="text/javascript"
 		src="http://ir.ebaystatic.com/v4js/z/qt/5oiu3dmnniy4tculwdphcncts.js#SYS-ZAM_vjo_e767i_1_Ear_en_IN"></script>
-	
+
 	<div></div>
 	<div align="center">
 
@@ -167,34 +167,120 @@
 		<div class="ContentContainer" id="TopContainer">
 
 			<div>
-<!-- ..........................HEADER.JSP IS INCLUDED HERE........................  HEADER START............	 -->	
+				<!-- ..........................HEADER.JSP IS INCLUDED HERE........................  HEADER START............	 -->
 				<div class="pcontent">
 					<!--cacheStatus: true-->
 					<script>var _GlobalNavHeaderUtf8Encoding=true;</script>
 					<script
 						src="http://ir.ebaystatic.com/v4js/z/e5/xlabaeavieyydbpqc5wlwyjye.js#GH-ZAM_ReskinEbay_e767i_1_Ear_en_IN"></script>
 
-					<%@include file="header.jsp"%> 	
+					<%@include file="header.jsp"%>
 
 					<!--vo{2d71f+}0nd{71hj,,RlogId p4kjkbsdabjkrk9%3Fvo%7B2d71f%2B%7D0nd%7F%7B71hj-1368e4f8187-0x167-->
 				</div>
 			</div>
-			
-		
+
+
 			<div>
 				<div class="pcontent">
 					<div id="rtm_html_245" style="height: 9999; width: 930"></div>
 					<!--vo{2d71f+}0nd{71hj,,RlogId p4kjkbsdabjkrk9%3Fvo%7B2d71f%2B%7D0nd%7F%7B71hj-1368e4f8187-0x164-->
-				
+
 				</div>
+
+				<div>
+					<table width="930" height="40" cellspacing="0" cellpadding="0"
+						border="0">
+						<tbody>
+							<tr>
+								<td width="309"></td>
+								<td width="310"></td>
+								<td width="311"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+
+
+
+
+
+
+				<div>
+
+
+
+					<table width="930" height="208" cellspacing="0" cellpadding="0"
+						border="0">
+						<tbody>
+							<tr>
+								<td width="309"><a href="#"><img border="0"
+										src="images/micromax_9april.jpg"></a></td>
+								<td width="310"><a href="#"><img border="0"
+										src="images/ipad_mobil_watchs_02.jpg"></a></td>
+								<td width="311"><a href="#"><img border="0"
+										src="images/ipad_mobil_watchs_03.jpg"></a></td>
+							</tr>
+						</tbody>
+					</table></div>
+					
+						<div>
+					<table width="930" height="30" cellspacing="0" cellpadding="0"
+						border="0">
+						<tbody>
+							<tr>
+								<td width="309"></td>
+								<td width="310"></td>
+								<td width="311"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+					
+					
+					
+					<div>
+						<table>
+							<tbody>
+								<tr>
+									<td height="76" bgcolor="#FFFFFF"><img border="0"
+										alt="brands" src="images/brands.jpg"></td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div>
+
 				
-				
-				
-				
-				
-				
-				
-				
+				<div>
+					<table width="930" height="30" cellspacing="0" cellpadding="0"
+						border="0">
+						<tbody>
+							<tr>
+								<td width="309"></td>
+								<td width="310"></td>
+								<td width="311"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div><%@include file="ebayslider.html"%>
+				</div>
+
+				<div>
+					<table width="930" height="30" cellspacing="0" cellpadding="0"
+						border="0">
+						<tbody>
+							<tr>
+								<td width="309"></td>
+								<td width="310"></td>
+								<td width="311"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
 			</div>
 			<div>
 				<div class="pcontent">
@@ -224,190 +310,130 @@
 															<table border="0" cellpadding="0" cellspacing="0">
 																<tr>
 																	<td valign="top" class="catContent"><h3>
-																			<a title="Clothing &amp; Accessories"
-																				href="#" _sp="p3907.m21;">Clothing
-																				&amp; Accessories</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Shoes &amp; Other Footwear"
-																				href="# " _sp="p3907.m21;">Shoes
-																				&amp; Other Footwear</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Auto Accessories &amp; Parts"
-																				href="#" _sp="p3907.m21;">Auto
-																				Accessories &amp; Parts</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Books &amp; Magazines"
-																				href="#" _sp="p3907.m21;">Books
-																				&amp; Magazines</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Cameras &amp; Optics"
-																				href="#" _sp="p3907.m21;">Cameras
-																				&amp; Optics</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Cars &amp; Bikes"
-																				href="#" _sp="p3907.m21;">Cars
+																			<a title="Clothing &amp; Accessories" href="#"
+																				_sp="p3907.m21;">Clothing &amp; Accessories</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Shoes &amp; Other Footwear" href="# "
+																				_sp="p3907.m21;">Shoes &amp; Other Footwear</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Auto Accessories &amp; Parts" href="#"
+																				_sp="p3907.m21;">Auto Accessories &amp; Parts</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Books &amp; Magazines" href="#"
+																				_sp="p3907.m21;">Books &amp; Magazines</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Cameras &amp; Optics" href="#"
+																				_sp="p3907.m21;">Cameras &amp; Optics</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Cars &amp; Bikes" href="#" _sp="p3907.m21;">Cars
 																				&amp; Bikes</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Charity items"
-																				href="#" _sp="p3907.m21;">Charity</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Coins &amp; Notes"
-																				href="#" _sp="p3907.m21;">Coins
-																				&amp; Notes</a>
-																		</h3>
-																		<br></td>
+																		</h3> <br>
+																		<h3>
+																			<a title="Charity items" href="#" _sp="p3907.m21;">Charity</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Coins &amp; Notes" href="#"
+																				_sp="p3907.m21;">Coins &amp; Notes</a>
+																		</h3> <br></td>
 																	<td valign="top" class="catContent"><h3>
-																			<a title="Collectibles"
-																				href="#"
-																				_sp="p3907.m21;">Collectibles</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Consumer Electronics"
-																				href="#"
+																			<a title="Collectibles" href="#" _sp="p3907.m21;">Collectibles</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Consumer Electronics" href="#"
 																				_sp="p3907.m21;">Consumer Electronics</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Fitness &amp; Sports"
-																				href="#" _sp="p3907.m21;">Fitness
-																				&amp; Sports</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Fun Stuff" href="#"
-																				_sp="p3907.m21;">Fun Stuff</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Home, Decor &amp; Furnishings"
-																				href="#" _sp="p3907.m21;">Home,
-																				Decor &amp; Furnishings</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Jewellery &amp; Diamonds"
-																				href="#"
+																		</h3> <br>
+																		<h3>
+																			<a title="Fitness &amp; Sports" href="#"
+																				_sp="p3907.m21;">Fitness &amp; Sports</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Fun Stuff" href="#" _sp="p3907.m21;">Fun
+																				Stuff</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Home, Decor &amp; Furnishings" href="#"
+																				_sp="p3907.m21;">Home, Decor &amp; Furnishings</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Jewellery &amp; Diamonds" href="#"
 																				_sp="p3907.m21;">Jewellery &amp; Diamonds</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Kitchen &amp; Home Appliances"
-																				href="#"
+																		</h3> <br>
+																		<h3>
+																			<a title="Kitchen &amp; Home Appliances" href="#"
 																				_sp="p3907.m21;">Kitchen &amp; Home Appliances</a>
-																		</h3>
-																		<br>
-																	<h3>
+																		</h3> <br>
+																		<h3>
 																			<a title="Laptops &amp; Computer Peripherals"
-																				href="#"
-																				_sp="p3907.m21;">Laptops &amp; Computer
+																				href="#" _sp="p3907.m21;">Laptops &amp; Computer
 																				Peripherals</a>
-																		</h3>
-																		<br></td>
+																		</h3> <br></td>
 																	<td valign="top" class="catContent"><h3>
 																			<a title="Memory Cards, Pen Drives &amp; HDD"
-																				href="#"
-																				_sp="p3907.m21;">Memory Cards, Pen Drives &amp;
-																				HDD</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Mobile Accessories"
-																				href="#"
+																				href="#" _sp="p3907.m21;">Memory Cards, Pen
+																				Drives &amp; HDD</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Mobile Accessories" href="#"
 																				_sp="p3907.m21;">Mobile Accessories</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Mobile Phones"
-																				href="#" _sp="p3907.m21;">Mobile
+																		</h3> <br>
+																		<h3>
+																			<a title="Mobile Phones" href="#" _sp="p3907.m21;">Mobile
 																				Phones</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Movies &amp; Music"
-																				href="#" _sp="p3907.m21;">Movies
-																				&amp; Music</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Musical Instruments"
-																				href="#"
+																		</h3> <br>
+																		<h3>
+																			<a title="Movies &amp; Music" href="#"
+																				_sp="p3907.m21;">Movies &amp; Music</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Musical Instruments" href="#"
 																				_sp="p3907.m21;">Musical Instruments</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Perfumes, Cosmetics &amp; Health"
-																				href="#" _sp="p3907.m21;">Perfumes,
-																				Cosmetics &amp; Health</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Services &amp; Real Estate"
-																				href="#"
+																		</h3> <br>
+																		<h3>
+																			<a title="Perfumes, Cosmetics &amp; Health" href="#"
+																				_sp="p3907.m21;">Perfumes, Cosmetics &amp;
+																				Health</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Services &amp; Real Estate" href="#"
 																				_sp="p3907.m21;">Services &amp; Real Estate</a>
-																		</h3>
-																		<br></td>
+																		</h3> <br></td>
 																	<td valign="top" class="catContent"><h3>
-																			<a title="Stamps" href="#"
-																				_sp="p3907.m21;">Stamps</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Tools &amp; Office Supplies"
-																				href="#" _sp="p3907.m21;">Tools
-																				&amp; Office Supplies</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Toys, Games &amp; Baby"
-																				href="#" _sp="p3907.m21;">Toys,
-																				Games &amp; Baby</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Travel" href="#"
-																				_sp="p3907.m21;">Travel</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Video &amp; Computer Games"
-																				href="#"
+																			<a title="Stamps" href="#" _sp="p3907.m21;">Stamps</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Tools &amp; Office Supplies" href="#"
+																				_sp="p3907.m21;">Tools &amp; Office Supplies</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Toys, Games &amp; Baby" href="#"
+																				_sp="p3907.m21;">Toys, Games &amp; Baby</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Travel" href="#" _sp="p3907.m21;">Travel</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Video &amp; Computer Games" href="#"
 																				_sp="p3907.m21;">Video &amp; Computer Games</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Watches"
-																				href="#" _sp="p3907.m21;">Watches</a>
-																		</h3>
-																		<br>
-																	<h3>
-																			<a title="Everything Else"
-																				href="#"
-																				_sp="p3907.m21;">Everything Else</a>
-																		</h3>
-																		<br></td>
+																		</h3> <br>
+																		<h3>
+																			<a title="Watches" href="#" _sp="p3907.m21;">Watches</a>
+																		</h3> <br>
+																		<h3>
+																			<a title="Everything Else" href="#" _sp="p3907.m21;">Everything
+																				Else</a>
+																		</h3> <br></td>
 																</tr>
 															</table>
 														</div>
 													</div>
 												</div>
 												<div class="r3_fm r3_s">
-													<a href="#"
-														_sp="p3907.m21;">Visit all categories</a>
+													<a href="#" _sp="p3907.m21;">Visit all categories</a>
 												</div>
 											</div>
 										</div>
@@ -433,14 +459,14 @@
 
 				<div>
 					<div class="pcontent">
-						
+
 						<!--vo.rp72(31`106b,RcmdId SOA.RemotePortletSoa.portlet,RlogId p4%60vtdkgoiwi%3C%3Dsm%2Bpu57*63e354g-1368e488213-0xda-->
 					</div>
 				</div>
 			</div>
 
 
-		
+
 
 		</div>
 
@@ -684,14 +710,12 @@
 			<div>
 				<div class="pcontent">
 					<!--cacheStatus: false-->
-					<span class="ebay">
-					
-					<%@include file="footer.jsp"%>
-			
-					
+					<span class="ebay"> <%@include file="footer.jsp"%>
+
+
 					</span>
 					<script type="text/javascript">var _GlobalNavHeaderStatic=false,_GlobalNavHeaderCookieTracking=true,_GlobalNavHeaderSrcPageId=PageHomePagePortal=3907;</script>
-					
+
 					<!--vo{2d71f+}0nd{71hj,,RlogId p4kjkbsdabjkrk9%3Fvo%7B2d71f%2B%7D0nd%7F%7B71hj-1368e4f8187-0x153-->
 				</div>
 			</div>
@@ -699,7 +723,7 @@
 
 	</div>
 	<!--vo{2d71f+}0nd{71hj,RcmdId HomePagePortal,RlogId p4kjkbsdabjkrk9%3Fvo%7B2d71f%2B%7D0nd%7F%7B71hj-1368e4f8196-0x124-->
-		<style type="text/css">
+	<style type="text/css">
 .c-sgf .r3_fm {
 	padding-bottom: 8px !important;
 	border-bottom: 1px solid #ccc !important

@@ -22,10 +22,28 @@
     
 </tr>
 <%-- <%@ page import="java.util.ArrayList,edu.iiitb.bookstore.models.*" %> --%>
-<s:iterator value="searchDetails" >
+<s:iterator value="buyDetails" >
 <tr>
 <td> <a href="BuyItNow.action?item_id=<s:property value='item_id'/>"> <img alt="" src="<s:property value='image'/>"/></td>
 <td><a href="BuyItNow.action?item_id=<s:property value='item_id'/>"> <s:property value="item_name"/></a></td>
+<td> Rs <s:property value="price" /></td>
+<td> Rs <s:property value= "shipping_charge" /></td>
+<td><s:property value="mode"/>
+<td> 
+<%-- <s:set name="mod" value="%{' <s:property value= " mode " /> '} "/>
+<s:if test="#session['pdtMode']==1">Bid Now</s:if></td>
+<td><s:elseif test="#session['pdtMode']==0">
+  Buy Now
+  </s:elseif></td>
+  <s:if test="%{#mod=='1'}">Bid Now</s:if></td>
+<s:elseif test="%{#mod=='0'}">
+  Buy Now
+  </s:elseif> --%>
+</s:iterator>
+<s:iterator value="bidDetails" >
+<tr>
+<td> <a href="bidding.action?item_id=<s:property value='item_id'/>"> <img alt="" src="<s:property value='image'/>"/></td>
+<td><a href="bidding.action?item_id=<s:property value='item_id'/>"> <s:property value="item_name"/></a></td>
 <td> Rs <s:property value="price" /></td>
 <td> Rs <s:property value= "shipping_charge" /></td>
 <td><s:property value="mode"/>

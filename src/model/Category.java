@@ -56,6 +56,7 @@ public class Category
 				objcatvo.setCategory_name(rs.getString("category_name"));
 				objcatvo.setSubcatlist(SubCategory.getAllSubCategoriesByCategoryId(rs.getInt("category_id")));
 				System.out.println(objcatvo.getSubcatlist().size() + " is the size of subcat list returned");
+				//System.out.println("sub cat "+objcatvo.getSubcatlist().get(1));
 				catList.add(objcatvo);
 			}
 			return catList;
@@ -79,17 +80,21 @@ public class Category
 		try{
 		Connect c=new Connect();
 		String strQuery="select * from category_details";
-		System.out.println(strQuery);
+		//System.out.println("rashi"+strQuery);
 		ResultSet rs=c.getResult(strQuery);
 		while(rs.next())
 		{
-			listCat.add(rs.getString("category_name"));
+			String category_name = rs.getString("category_name");
+			int category_id = rs.getInt("category_id");
+			CategoryVo catVo = new CategoryVo(category_id,category_name);
+			listCat.add(catVo);
 			//listId.add(rs.getString("sem_id"));
 		}
-		System.out.println(listCat);
+		//System.out.println(listCat);
 		//System.out.println(listId);
 		}
 		catch(Exception e){System.out.println(e);}
+		System.out.println("new "+listCat);
 		return listCat;
 		}
 }

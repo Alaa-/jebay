@@ -67,12 +67,12 @@
 								</span>
 								<span class="greeting gh-ui">
 									<!-- BEGIN: GREETING:SIGNEDOUT -->
-									<s:if test="#session['username']==null">Welcome!&ensp;<s:property value="#session['username']"/>
+									<s:if test="#session['User']==null">Welcome!&ensp;<s:property value="#session['User']"/>
                    					<s:a href="user_sign_in.jsp">Sign in</s:a>
                         
                     or
                     <s:a rel="nofollow" href="register.jsp">register</s:a></s:if>
-                    <s:else> Welcome!<b><s:property value="#session['username']"/></b>
+                    <s:else> Welcome!<b><s:property value="#session['User']"/></b>
                     <s:url id="url1" action="Logout" encode="true"></s:url>
                     <s:a id="registerLink" href="%{url1}" rel="nofollow" >  logout </s:a></s:else>							<!-- END: GREETING:SIGNEDOUT -->
 					<span id="bta"></span></span>
@@ -152,11 +152,13 @@
 							<div id="headerWrapper" class="gh-hbw">
 								<div class="gh-hb">
 									<div class="gh-mn">
+									<%-- <s:select name="cat_id" headerKey="-1" headerValue="CATEGORIES" list = "lstCats"/> --%>
 										<a id="BrowseCategories" name="BrowseCategories"
-											href="allcategories.jsp">CATEGORIES</a><a
-											id="chevron0" href="javascript:;" class="gh-ai"><b>&nbsp;</b></a><a
+											href="allcategories.action">CATEGORIES</a>
+											
+											<!-- <a id="chevron0" href="javascript:;" class="gh-ai"><b>&nbsp;</b></a --><a
 											id="EbayStores" title="Find more of what you love."
-											href="http://stores.ebay.in/">SHOPS</a><a id="v4-gnh_0"
+											 href="http://stores.ebay.in/">SHOPS</a><a id="v4-gnh_0"
 											href="http://cars.ebay.in/">MOTORS</a><a id="v4-gnh_1"
 											href="http://pages.ebay.in/photocenter">PHOTO CENTRE</a>
 									</div>

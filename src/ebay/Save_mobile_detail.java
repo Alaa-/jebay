@@ -4,168 +4,239 @@
  */
 
 package ebay;
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ActionContext;
 import java.util.*;
+import java.io.File;
 import java.sql.*;
 
+import vo.ItemVo;
+
+import model.ItemDetails;
+
 /**
- *
+ * 
  * @author Rohit
  */
-public class Save_mobile_detail extends ActionSupport {
+public class Save_mobile_detail extends ActionSupport
+{
 
-     private String mobilename;
-     private String mobilebrand;
-     private String mobilesn;
-     private String simopt;
-     private String mobiletype;
-     private String networkstandard;
-     private String camera;
-     private String mobilecondition;
-     private String mobilequantity;
-     private String mobilebuying;
-     private String mobileimage;
-     private int mobileprice;
-     private int mobilesc;
-     private String feature;
+	private File image;
+	private String imageContentType; // The content type of the file
+	private String imageFileName; // The uploaded file name
+	private String mobilename;
+	private String mobilebrand;
+	private String mobiletype;
+	private String camera;
+	private String mobilecondition;
+	private String mobilesellmode;
+	private String mobileimage;
+	private String duration;
+	private int mobilesubcatid;
+	private int mobilequantity;
+	private int mobileprice;
+	private int mobilebaseprice;
+	private int mobilesc;
+	private String feature;
 
+	public String getCamera()
+	{
+		return camera;
+	}
 
-    public String getCamera() {
-        return camera;
-    }
+	public void setCamera(String camera)
+	{
+		this.camera = camera;
+	}
 
-    public void setCamera(String camera) {
-        this.camera = camera;
-    }
+	public String getFeature()
+	{
+		return feature;
+	}
 
-    public String getFeature() {
-        return feature;
-    }
+	public void setFeature(String feature)
+	{
+		this.feature = feature;
+	}
 
-    public void setFeature(String feature) {
-        this.feature = feature;
-    }
+	public String getMobilebrand()
+	{
+		return mobilebrand;
+	}
 
-    public String getMobilebrand() {
-        return mobilebrand;
-    }
+	public void setMobilebrand(String mobilebrand)
+	{
+		this.mobilebrand = mobilebrand;
+	}
 
-    public void setMobilebrand(String mobilebrand) {
-        this.mobilebrand = mobilebrand;
-    }
+	public String getMobilecondition()
+	{
+		return mobilecondition;
+	}
 
-    public String getMobilebuying() {
-        return mobilebuying;
-    }
+	public void setMobilecondition(String mobilecondition)
+	{
+		this.mobilecondition = mobilecondition;
+	}
 
-    public void setMobilebuying(String mobilebuying) {
-        this.mobilebuying = mobilebuying;
-    }
+	public String getMobileimage()
+	{
+		return mobileimage;
+	}
 
-    public String getMobilecondition() {
-        return mobilecondition;
-    }
+	public void setMobileimage(String mobileimage)
+	{
+		this.mobileimage = mobileimage;
+	}
 
-    public void setMobilecondition(String mobilecondition) {
-        this.mobilecondition = mobilecondition;
-    }
+	public String getMobilename()
+	{
+		return mobilename;
+	}
 
-    public String getMobileimage() {
-        return mobileimage;
-    }
+	public void setMobilename(String mobilename)
+	{
+		this.mobilename = mobilename;
+	}
 
-    public void setMobileimage(String mobileimage) {
-        this.mobileimage = mobileimage;
-    }
+	public int getMobileprice()
+	{
+		return mobileprice;
+	}
 
-    public String getMobilename() {
-        return mobilename;
-    }
+	public void setMobileprice(int mobileprice)
+	{
+		this.mobileprice = mobileprice;
+	}
 
-    public void setMobilename(String mobilename) {
-        this.mobilename = mobilename;
-    }
+	public int getMobilequantity()
+	{
+		return mobilequantity;
+	}
 
-    public int getMobileprice() {
-        return mobileprice;
-    }
+	public void setMobilequantity(int mobilequantity)
+	{
+		this.mobilequantity = mobilequantity;
+	}
 
-    public void setMobileprice(int mobileprice) {
-        this.mobileprice = mobileprice;
-    }
+	public int getMobilesc()
+	{
+		return mobilesc;
+	}
 
-    public String getMobilequantity() {
-        return mobilequantity;
-    }
+	public void setMobilesc(int mobilesc)
+	{
+		this.mobilesc = mobilesc;
+	}
 
-    public void setMobilequantity(String mobilequantity) {
-        this.mobilequantity = mobilequantity;
-    }
+	public String getMobiletype()
+	{
+		return mobiletype;
+	}
 
-    public int getMobilesc() {
-        return mobilesc;
-    }
+	public void setMobiletype(String mobiletype)
+	{
+		this.mobiletype = mobiletype;
+	}
 
-    public void setMobilesc(int mobilesc) {
-        this.mobilesc = mobilesc;
-    }
+	@Override
+	public String execute() throws Exception
+	{
+		try
+		{
 
-    public String getMobilesn() {
-        return mobilesn;
-    }
+			ItemVo objitemvo = new ItemVo();
+			objitemvo.setItem_name(mobilename);
+			objitemvo.setItem_subcategory_id(mobilesubcatid);
+			objitemvo.setItem_price(mobileprice);
+			objitemvo.setItem_baseprice(mobilebaseprice);
 
-    public void setMobilesn(String mobilesn) {
-        this.mobilesn = mobilesn;
-    }
+			Map session = ActionContext.getContext().getSession();
+			objitemvo.setItem_seller((String) session.get("User"));
+			objitemvo.setItem_quantity(mobilequantity);
+			objitemvo.setItem_condition(mobilecondition);
+			objitemvo.setItem_endtime(duration);
+			objitemvo.setItem_shipping_charge(mobilesc);
 
-    public String getMobiletype() {
-        return mobiletype;
-    }
+			ItemDetails.saveItemDetails();
 
-    public void setMobiletype(String mobiletype) {
-        this.mobiletype = mobiletype;
-    }
+			int total_price = getMobileprice() + getMobilesc();
+		}
+		catch (Exception e)
+		{
+			System.out.println(e);
+		}
+		return SUCCESS;
+	}
 
-    public String getNetworkstandard() {
-        return networkstandard;
-    }
+	public String getDuration()
+	{
+		return duration;
+	}
 
-    public void setNetworkstandard(String networkstandard) {
-        this.networkstandard = networkstandard;
-    }
+	public void setDuration(String duration)
+	{
+		this.duration = duration;
+	}
 
-    public String getSimopt() {
-        return simopt;
-    }
+	public int getMobilesubcatid()
+	{
+		return mobilesubcatid;
+	}
 
-    public void setSimopt(String simopt) {
-        this.simopt = simopt;
-    }
+	public void setMobilesubcatid(int mobilesubcatid)
+	{
+		this.mobilesubcatid = mobilesubcatid;
+	}
 
+	public File getImage()
+	{
+		return image;
+	}
 
-     public String execute() throws Exception
-    {
-         try{
+	public void setImage(File image)
+	{
+		this.image = image;
+	}
 
+	public String getImageContentType()
+	{
+		return imageContentType;
+	}
 
-                Class.forName("org.gjt.mm.mysql.Driver");
+	public void setImageContentType(String imageContentType)
+	{
+		this.imageContentType = imageContentType;
+	}
 
-                Connection con=DriverManager.getConnection("jdbc:mysql://localhost/ebay","root","");
-                Statement stat=con.createStatement();
-         		String sql;
-			String sql1;
-		        ResultSet rs=null;
-                        int total_price = getMobileprice() + getMobilesc();
-                        sql="insert into mobile_details values (null,'"+getMobilebrand()+"','"+getMobilename()+"','"+getSimopt()+"','"+getMobiletype()+"','"+getMobilecondition()+"','"+getNetworkstandard()+"','"+getCamera()+"','"+getMobilebuying()+"','"+getMobilesn()+"','"+getMobilesc()+"',"+getMobilequantity()+",'"+getMobileimage()+"',"+getMobileprice()+","+total_price+",'"+getFeature()+"')";
-				System.out.println(sql);
-                                stat.executeUpdate(sql);
+	public String getImageFileName()
+	{
+		return imageFileName;
+	}
 
-             }
-         catch(Exception e)
-        {
-            System.out.println(e);
-        }
-        return SUCCESS;
-   }
+	public void setImageFileName(String imageFileName)
+	{
+		this.imageFileName = imageFileName;
+	}
+
+	public String getMobilesellmode()
+	{
+		return mobilesellmode;
+	}
+
+	public void setMobilesellmode(String mobilesellmode)
+	{
+		this.mobilesellmode = mobilesellmode;
+	}
+
+	public int getMobilebaseprice()
+	{
+		return mobilebaseprice;
+	}
+
+	public void setMobilebaseprice(int mobilebaseprice)
+	{
+		this.mobilebaseprice = mobilebaseprice;
+	}
 }

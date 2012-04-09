@@ -6,6 +6,26 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Enter Item Details</title>
+
+<script type="text/javascript">
+function checkmode()
+{
+	var e=document.getElementById("sellmode");
+	var strmode=e.options[e.selectedIndex].value;
+	if(strmode=="auction")
+	{
+		document.getElementById("pbaseprice").style.display="inline";
+		document.getElementById("mobilebaseprice").style.display="inline";
+		document.getElementById("mobilequantity").value="1";
+		document.getElementById("mobilequantity").disabled="true";
+	}
+	else
+	{
+		document.getElementById("pbaseprice").style.display="none";	
+		document.getElementById("mobilebaseprice").style.display="none";	
+	}
+}
+</script>
 </head>
 <body>
 
@@ -36,7 +56,7 @@
 						</div>
 						
 						
-		<s:form action="save_mobile_detail">
+		<s:form action="save_mobile_detail" method="post" enctype="multipart/form-data">
         <img src="images/logoebay.gif"/>
         <hr>
         <font size="2">SELL YOUR ITEM   > &nbsp 1.SELECT A CATEGORY  &nbsp <b>2.CREATE YOUR LISTING</b> &nbsp  3.REVIEW YOUR LISTING</font>
@@ -45,47 +65,53 @@
 
         <h2>ENTER THE MOBILE DETAILS</h2>
 
-            Enter Mobile Name:<input type="text" name="mobilename" required="true"/><br/><br/>
+            Enter Title:<input type="text" name="mobilename" required="true"/><br/><br/>
+			<input type="hidden" name="mobilesubcatid" value="<s:property value="fsubcat"/>"/>
+			<s:select label="Brand" name="mobilebrand"  headerKey="1" headerValue="-- Please Select --" list="brands"/><br/><br/>
 
-            Enter the brand:<input name="mobilebrand" required="true"/><br/><br/>
+            <s:select label="Type" name="mobiletype"  headerKey="1" headerValue="-- Please Select --" list="types"/>	<br/><br/>
 
-             Seller Name:<input type="text" name="mobilesn" required="true"/><br/><br/>
+			Camera
+           <select name="camera" >
+           	<option value="1">1</option>
+           	<option value="2">2</option>
+           	<option value="3">3</option>
+           	<option value="5">5</option>
+           	<option value="8">8</option>
+           	<option value="12">12</option>
+           </select>
+			<br/><br/>
 
-            Enter Sim Option:<input type="text" name="simopt" required="true"/><br/><br/>
 
-            Type:<input type="text" name="mobiletype" required="true"/><br/><br/>
-
-            Network Standard:<input type="text" name="networkstandard" required="true"/><br/><br/>
-
-            Camera <input type="text" name="camera" required="true"/><br/><br/>
-
-
-
-            Camera condition:<select name="mobilecondition">
+            Condition:<select name="mobilecondition">
                 <option value="new">New</option>
                 <option value="old">Old</option>
             </select><br/><br/>
 
-            Quantity :<input type="text" name="mobilequantity" value="1"/><br/><br/>
+            Quantity :<input type="text" name="mobilequantity" id="mobilequantity" pattern="\d" value="1" pattern="\d{0,3}"/><br/><br/>
 
-            Buying Option:<select name="mobilebuying" >
+            How you would like to sell:<select name="mobilesellmode" id="sellmode" onchange="checkmode()">
                 <option value="buyitnow">Buy It Now</option>
-                <option value="aution">Auction</option>
+                <option value="auction">Auction</option>
             </select><br/><br/>
 
+			<p id="pbaseprice" style="display:none;">Starting Price:<s:textfield label="Base Price" name="mobilebaseprice" id="baseprice" value="" pattern="\d{0,9}" required="true"/><br/><br/></p>
 
-
-            Mobile image:<input type="text" name="mobileimage" required="true"/><br/><br/>
-            <s:submit name="submit" value="image" align="left"></s:submit>
-
-            Mobile price:<input type="text" name="mobileprice" required="true"/><br/><br/>
-
-
-            Shipping Charge:<input type="text" name="mobilesc" required="true"/><br/><br/>
+			Buy it now Price:<s:textfield label="Price" id="price" name="mobileprice" value="" pattern="\d{0,9}" required="true"/><br/><br/>
+			
+            Shipping Charge:<input type="text" name="mobilesc" pattern="\d" required="true"/><br/><br/>
 
             Mobile Feature:<input type="text" name="feature" /><br/><br/>
+            
+            Listing Duration:<select name="duration">
+                <option value="3">3 Days</option>
+                <option value="5">5 Days</option>
+                <option value="7" selected="selected">7 Days</option>
+                <option value="10">10 Days</option>
+            </select><br/><br/>
 
-
+            Upload Image:<s:file name="image" id="image" label="Upload Image" /><br/><br/>
+            <s:submit name="submit" value="upload image"></s:submit>
 
             <s:submit name="submit" value="submit" align="left"></s:submit>
         </s:form>

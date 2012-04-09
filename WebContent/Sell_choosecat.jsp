@@ -189,9 +189,8 @@
 																	<s:doubleselect id="fcat" name="fcat" list="catlist"
 																		listKey="category_id" listValue="category_name"	size="13" 
 																		cssStyle="float:right" doubleCssClass="idtRgt" doubleCssStyle="top:0px;left:215px;width:215px;position:absolute;float:top"
-																		doubleSize="13" doubleName="o_fcat" doubleId="o_fcat" doubleList="subcatlist" 
-																		doubleListKey="subcategory_id" doubleListValue="subcategory_name" 
-																		doubleOnchange="this.form.submit()" doubleOndblclick="this.form.submit()" />												
+																		doubleSize="13" doubleName="fsubcat" doubleId="fsubcat" doubleList="subcatlist" 
+																		doubleListKey="subcategory_id" doubleListValue="subcategory_name"  />												
 															</div></td>
 													</tr>
 												</table>
@@ -199,6 +198,10 @@
 											</div>
 												<s:submit name="submit" value="Continue"/>
 																</s:form>
+																<script type="text/javascript" >
+																	document.getElementById("fcat").selectedIndex=0;
+																	document.getElementById("fsubcat").selectedIndex=0;
+																</script>
 										</div>
 									</div>
 								</div>

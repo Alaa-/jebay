@@ -97,4 +97,25 @@ public class Category
 		System.out.println("new "+listCat);
 		return listCat;
 		}
+
+	public static String getCatName(int catid)
+	{
+		String catname=null;
+		ResultSet rs = null;
+		String sqlQuery = "select category_name from category_details where category_id='"+catid+"'";
+
+		rs = DB.readFromDB(sqlQuery);
+		try
+		{
+			if (rs.next())
+			{
+				catname=rs.getString("category_name");
+			}
+		}
+		catch(Exception e)
+		{
+			
+		}
+		return catname;
+	}
 }

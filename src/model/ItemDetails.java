@@ -115,7 +115,7 @@ public class ItemDetails
 		ResultSet rs = null;
 		int newGeneratedItemid = -1;
 		conn = DB.getConnection();
-		sqlQuery = "insert into item_details (item_name,item_subcategory_id,item_mode,item_price,item_baseprice,item_seller,item_quantity,item_condition,item_endtime,item_shipping_charge)" + " values('" + objitemvo.getItem_name() + "'," + objitemvo.getItem_subcategory_id() + ",'" + objitemvo.getItem_mode() + "'," + objitemvo.getItem_price() + "," + objitemvo.getItem_baseprice() + ",'" + objitemvo.getItem_seller() + "'," + objitemvo.getItem_quantity() + ",'" + objitemvo.getItem_condition()
+		sqlQuery = "insert into item_details (item_name,item_category_id,item_subcategory_id,item_mode,item_price,item_baseprice,item_seller,item_quantity,item_condition,item_endtime,item_shipping_charge)" + " values('" + objitemvo.getItem_name() + "'," + objitemvo.getItem_subcategory_id() + ",'" + objitemvo.getItem_mode() + "'," + objitemvo.getItem_price() + "," + objitemvo.getItem_baseprice() + ",'" + objitemvo.getItem_seller() + "'," + objitemvo.getItem_quantity() + ",'" + objitemvo.getItem_condition()
 				+ "',DATE_ADD(now(), Interval " + objitemvo.getItem_endtime() + " day),'" + objitemvo.getItem_shipping_charge() + "')";
 		System.out.println(sqlQuery);
 		try

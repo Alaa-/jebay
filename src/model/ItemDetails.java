@@ -19,6 +19,7 @@ public class ItemDetails
 	{
 		ArrayList details = new ArrayList();
 		ResultSet rs = null;
+		String mode=null;
 		String sqlQuery = "select * from item_details where item_name like '%" + pdt + "%' and item_category_id=" + "" + getCategory(category) + " and item_mode<>2";
 		rs = DB.readFromDB(sqlQuery);
 		try
@@ -29,10 +30,16 @@ public class ItemDetails
 				System.out.println("" + item_name);
 				int price = rs.getInt("item_price");
 				int shipping_charge = rs.getInt("item_shipping_charge");
-				String mode = rs.getString("item_mode");
+				String mod = rs.getString("item_mode");
+				String image = rs.getString("item_image");
+				int item_id = rs.getInt("item_id");
+				if(mod.equals("1"))
+					mode="Bid Now";
+				else
+					mode="Buy Now";
 				Map session = ActionContext.getContext().getSession();
 				session.put("pdtMode", mode);
-				ItemDetailsVo itemVo = new ItemDetailsVo(item_name, price, shipping_charge, mode);
+				ItemDetailsVo itemVo = new ItemDetailsVo(item_name, price, shipping_charge, mode,item_id,image);
 				details.add(itemVo);
 			}
 		}
@@ -112,6 +119,7 @@ public class ItemDetails
 		ArrayList details = new ArrayList();
 
 		ResultSet rs = null;
+		String mode=null;
 		String sqlQuery = "select * from item_details where item_name like '%" + pdtName + "%' and item_mode<>2";
 		rs = DB.readFromDB(sqlQuery);
 		try
@@ -121,11 +129,17 @@ public class ItemDetails
 				String item_name = rs.getString("item_name");
 				System.out.println("" + item_name);
 				int price = rs.getInt("item_price");
+				int item_id=rs.getInt("item_id");
 				int shipping_charge = rs.getInt("item_shipping_charge");
-				String mode = rs.getString("item_mode");
+				String image = rs.getString("item_image");
+				String mod = rs.getString("item_mode");
+				if(mod.equals("1"))
+					mode="Bid Now";
+				else
+					mode="Buy Now";
 				Map session = ActionContext.getContext().getSession();
 				session.put("pdtMode", mode);
-				ItemDetailsVo itemVo = new ItemDetailsVo(item_name, price, shipping_charge, mode);
+				ItemDetailsVo itemVo = new ItemDetailsVo(item_name, price, shipping_charge, mode,item_id,image);
 				details.add(itemVo);
 			}
 		}
@@ -135,4 +149,53 @@ public class ItemDetails
 		}
 		return details;
 	}
+	
+	public static String getItemName(int itemId)
+	{
+		String item=null;
+		return item;
+	}
+	
+	public static int getItemPrice(int itemId)
+	{
+		int price = 0;
+		return price;
+	}
+	
+	public static ArrayList getCatPdtDetails(int catid)
+	{
+		ArrayList details = new ArrayList();
+		ResultSet rs = null;
+		String mode=null;
+		String sqlQuery = "select * from item_details where item_category_id ="+catid+"";
+		rs = DB.readFromDB(sqlQuery);
+		try
+		{
+			while (rs.next())
+			{
+				String item_name = rs.getString("item_name");
+				System.out.println("" + item_name);
+				int price = rs.getInt("item_price");
+				int shipping_charge = rs.getInt("item_shipping_charge");
+				String mod = rs.getString("item_mode");
+				String image = rs.getString("item_image");
+				int item_id = rs.getInt("item_id");
+				if(mod.equals("1"))
+					mode="Bid Now";
+				else
+					mode="Buy Now";
+				Map session = ActionContext.getContext().getSession();
+				session.put("pdtMode", mode);
+				ItemDetailsVo itemVo = new ItemDetailsVo(item_name, price, shipping_charge, mode,item_id,image);
+				details.add(itemVo);
+			}
+		}
+		catch(Exception ex)
+		{
+			
+		}
+		return details;
+		
+	}
+	
 }

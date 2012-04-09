@@ -1,9 +1,23 @@
 package ebay;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Map;
+
+import model.BankDetails;
+
+import com.opensymphony.xwork2.ActionContext;
 public class BuyItNowClicked {
 int item_id,quantity;
 ArrayList<xyz> arr=new ArrayList<xyz>();
+ArrayList lstBanks = new ArrayList();
+
+
+public ArrayList getLstBanks() {
+	return lstBanks;
+}
+public void setLstBanks(ArrayList lstBanks) {
+	this.lstBanks = lstBanks;
+}
 public ArrayList<xyz> getArr() {
 	return arr;
 }
@@ -24,6 +38,7 @@ public void setQuantity(int quantity) {
 }
 public String execute() throws Exception
 {
+	lstBanks = BankDetails.getAllBanks();
 	Connect c=new Connect();
 	ResultSet rs=c.getResult("select * from item_details where item_id='"+item_id+"'");
 	while(rs.next()){
@@ -36,6 +51,7 @@ public String execute() throws Exception
 		x.setItem_id(rs.getInt("item_id"));
 		x.setQuantity(quantity);
 		x.setItem_shipping_charge(rs.getInt("item_shipping_charge"));
+		//int total=get
 		arr.add(x);
 	}
 	return "success";
@@ -44,7 +60,11 @@ public String execute() throws Exception
 }
 class xyz{
 	String item_seller,item_name;int item_total_shipping;
+	int total=getItem_total();
 	
+	//Map session=ActionContext.getContext().getSession();
+    //session.put("totalPrice",total);
+    
 	public int getItem_total_shipping() {
 		return item_total_shipping;
 	}
@@ -97,5 +117,4 @@ class xyz{
 		this.item_id = item_id;
 	}
 
-	
 }

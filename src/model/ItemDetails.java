@@ -20,7 +20,8 @@ public class ItemDetails
 		ArrayList details = new ArrayList();
 		ResultSet rs = null;
 		String mode=null;
-		String sqlQuery = "select * from item_details where item_name like '%" + pdt + "%' and item_category_id=" + "" + getCategory(category) + " and item_mode<>2";
+		String sqlQuery = "select * from item_details where item_name like '%" + pdt + "%' and " +
+				"item_category_id=" + "" + getCategory(category) + " and item_mode=1";
 		rs = DB.readFromDB(sqlQuery);
 		try
 		{
@@ -35,8 +36,6 @@ public class ItemDetails
 				int item_id = rs.getInt("item_id");
 				if(mod.equals("1"))
 					mode="Bid Now";
-				else
-					mode="Buy Now";
 				Map session = ActionContext.getContext().getSession();
 				session.put("pdtMode", mode);
 				ItemDetailsVo itemVo = new ItemDetailsVo(item_name, price, shipping_charge, mode,item_id,image);
@@ -51,6 +50,43 @@ public class ItemDetails
 		return details;
 	}
 
+	
+	public static ArrayList getNameBuyDetails(String pdt, String category)
+	{
+		ArrayList details = new ArrayList();
+		ResultSet rs = null;
+		String mode=null;
+		String sqlQuery = "select * from item_details where item_name like '%" + pdt + "%' and " +
+				"item_category_id=" + "" + getCategory(category) + " and item_mode=0";
+		rs = DB.readFromDB(sqlQuery);
+		try
+		{
+			while (rs.next())
+			{
+				String item_name = rs.getString("item_name");
+				System.out.println("" + item_name);
+				int price = rs.getInt("item_price");
+				int shipping_charge = rs.getInt("item_shipping_charge");
+				String mod = rs.getString("item_mode");
+				String image = rs.getString("item_image");
+				int item_id = rs.getInt("item_id");
+				if(mod.equals("0"))
+					
+					mode="Buy Now";
+				Map session = ActionContext.getContext().getSession();
+				session.put("pdtMode", mode);
+				ItemDetailsVo itemVo = new ItemDetailsVo(item_name, price, shipping_charge, mode,item_id,image);
+				details.add(itemVo);
+			}
+		}
+		catch (Exception e)
+		{
+
+		}
+
+		return details;
+	}
+	
 	public static String getCategory(String category)
 	{
 		String id = null;
@@ -116,11 +152,11 @@ public class ItemDetails
 
 	public static ArrayList getAllCategoryDetails(String pdtName)
 	{
-		ArrayList details = new ArrayList();
+		ArrayList biddetails = new ArrayList();
 
 		ResultSet rs = null;
 		String mode=null;
-		String sqlQuery = "select * from item_details where item_name like '%" + pdtName + "%' and item_mode<>2";
+		String sqlQuery = "select * from item_details where item_name like '%" + pdtName + "%' and item_mode=1";
 		rs = DB.readFromDB(sqlQuery);
 		try
 		{
@@ -135,19 +171,51 @@ public class ItemDetails
 				String mod = rs.getString("item_mode");
 				if(mod.equals("1"))
 					mode="Bid Now";
-				else
-					mode="Buy Now";
 				Map session = ActionContext.getContext().getSession();
 				session.put("pdtMode", mode);
 				ItemDetailsVo itemVo = new ItemDetailsVo(item_name, price, shipping_charge, mode,item_id,image);
-				details.add(itemVo);
+				biddetails.add(itemVo);
 			}
 		}
 		catch (Exception e)
 		{
 
 		}
-		return details;
+		return biddetails;
+	}
+	
+	public static ArrayList getBuyPdtDetails(String pdtName)
+	{
+		ArrayList buydetails = new ArrayList();
+
+		ResultSet rs = null;
+		String mode=null;
+		String sqlQuery = "select * from item_details where item_name like '%" + pdtName + "%' and item_mode=0";
+		rs = DB.readFromDB(sqlQuery);
+		try
+		{
+			while (rs.next())
+			{
+				String item_name = rs.getString("item_name");
+				System.out.println("" + item_name);
+				int price = rs.getInt("item_price");
+				int item_id=rs.getInt("item_id");
+				int shipping_charge = rs.getInt("item_shipping_charge");
+				String image = rs.getString("item_image");
+				String mod = rs.getString("item_mode");
+				if(mod.equals("0"))
+					mode="Buy Now";
+				Map session = ActionContext.getContext().getSession();
+				session.put("pdtMode", mode);
+				ItemDetailsVo itemVo = new ItemDetailsVo(item_name, price, shipping_charge, mode,item_id,image);
+				buydetails.add(itemVo);
+			}
+		}
+		catch (Exception e)
+		{
+
+		}
+		return buydetails;
 	}
 	
 	public static String getItemName(int itemId)
@@ -167,7 +235,7 @@ public class ItemDetails
 		ArrayList details = new ArrayList();
 		ResultSet rs = null;
 		String mode=null;
-		String sqlQuery = "select * from item_details where item_category_id ="+catid+"";
+		String sqlQuery = "select * from item_details where item_category_id ="+catid+" and item_mode=1";
 		rs = DB.readFromDB(sqlQuery);
 		try
 		{
@@ -182,8 +250,6 @@ public class ItemDetails
 				int item_id = rs.getInt("item_id");
 				if(mod.equals("1"))
 					mode="Bid Now";
-				else
-					mode="Buy Now";
 				Map session = ActionContext.getContext().getSession();
 				session.put("pdtMode", mode);
 				ItemDetailsVo itemVo = new ItemDetailsVo(item_name, price, shipping_charge, mode,item_id,image);
@@ -198,4 +264,38 @@ public class ItemDetails
 		
 	}
 	
+	
+	public static ArrayList getCatPdtBuyDetails(int catid)
+	{
+		ArrayList details = new ArrayList();
+		ResultSet rs = null;
+		String mode=null;
+		String sqlQuery = "select * from item_details where item_category_id ="+catid+" and item_mode=0";
+		rs = DB.readFromDB(sqlQuery);
+		try
+		{
+			while (rs.next())
+			{
+				String item_name = rs.getString("item_name");
+				System.out.println("" + item_name);
+				int price = rs.getInt("item_price");
+				int shipping_charge = rs.getInt("item_shipping_charge");
+				String mod = rs.getString("item_mode");
+				String image = rs.getString("item_image");
+				int item_id = rs.getInt("item_id");
+				if(mod.equals("0"))
+					mode="Buy Now";
+				Map session = ActionContext.getContext().getSession();
+				session.put("pdtMode", mode);
+				ItemDetailsVo itemVo = new ItemDetailsVo(item_name, price, shipping_charge, mode,item_id,image);
+				details.add(itemVo);
+			}
+		}
+		catch(Exception ex)
+		{
+			
+		}
+		return details;
+		
+	}
 }

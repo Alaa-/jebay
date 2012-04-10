@@ -1,6 +1,7 @@
 package ebay;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
@@ -9,6 +10,8 @@ import model.BankDetails;
 import org.apache.struts2.ServletActionContext;
 
 import vo.ItemVo;
+
+import com.opensymphony.xwork2.ActionContext;
 
 public class Intermediate {
 	String winner;
@@ -48,6 +51,8 @@ public String execute()throws Exception{
 	lstBanks = BankDetails.getAllBanks();
 	Connect c=new Connect();
 	HttpSession session=ServletActionContext.getRequest().getSession();
+	Map session1=ActionContext.getContext().getSession();
+	session1.put("User",winner);
 	session.setAttribute("username",winner);
 	ResultSet rs=c.getResult("select * from item_details where item_id='"+item_id+"'");
 	while(rs.next()){

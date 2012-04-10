@@ -30,7 +30,7 @@ function checkmode()
 </head>
 <body>
 
-<div class="brdcmb" id="brdcmb">
+						<div class="brdcmb" id="brdcmb">
 							<div class="level1">SELL YOUR ITEM</div>
 							<div class="active">1. TELL US WHAT YOU SELL</div>
 							<div class="inactive">2. CREATE YOUR LISTING</div>
@@ -49,7 +49,7 @@ function checkmode()
 							<div class="areaCtl">
 								<div class="headerLnks">
 									<a
-										href="http://pages.ebay.in/help/sell/contextual/inframe/choosing-category.html"
+										href="#"
 										id="helpBtnlink" class="hlpimg">Help</a>
 								</div>
 							</div>
@@ -60,7 +60,6 @@ function checkmode()
 		<s:form action="save_mobile_detail" method="post" enctype="multipart/form-data">
         <img src="images/logoebay.gif"/>
         <hr>
-        <font size="2">SELL YOUR ITEM   > &nbsp 1.SELECT A CATEGORY  &nbsp <b>2.CREATE YOUR LISTING</b> &nbsp  3.REVIEW YOUR LISTING</font>
         <br>
         <br>
 
@@ -77,6 +76,7 @@ function checkmode()
  				<option value="Android">Android</option>
                 <option value="Bada">Bada</option>
                 <option value="iOS">iOS</option>
+                <option value="Java">Java</option>
                 <option value="Symbian">Symbian</option>
 				<option value="Windows mobile 7">Windows mobile 7</option>
             </select><br/><br/>
@@ -126,5 +126,6 @@ function checkmode()
 
             <s:submit name="submit" value="submit" align="left"></s:submit>
         </s:form>
+        <%@ include file="footer.jsp" %>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE struts PUBLIC
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
@@ -55,6 +56,16 @@
 		<action name="EbaySummary" class="ebay.EbaySummary">
 			<result name="success">/ebaysummary.jsp</result>
 		</action>
+		
+		<action name="SellHistory" class="ebay.SellHistory">
+			<result name="success">/sellhistory.jsp</result>
+		</action>
+		
+		<action name="BiddingStatus" class="ebay.BiddingStatus">
+			<result name="success">/myebaybidding.jsp</result>
+		</action>
+		
+		
 		<action name="Logout" class="ebay.logout">
 			<result name="success">/logout.jsp</result>
 		</action>

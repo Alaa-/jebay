@@ -73,7 +73,7 @@
 					<div style="margin-top: -2px;">
 
 						<a
-							href="bidding.action?<s:property value="item_id"/>"
+							href="bidding.action?item_id=<s:property value="item_id"/>"
 							style="vertical-align: middle;"><img
 							src="http://pics.ebaystatic.com/aw/pics/viewitem/backArrow_14x14.gif"
 							width="14" height="14" border="0" align="absmiddle" alt=" "><img

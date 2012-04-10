@@ -33,7 +33,7 @@
   </tr>
   
 </table>
-<s:submit name="submit" value="Pay Now">In the next step you may be redirected to your bank's website to verify yourself.</s:submit>
+<s:submit name="submit?item_id=<s:property value='item_id'/>" value="Pay Now">In the next step you may be redirected to your bank's website to verify yourself.</s:submit>
 </form> 
 </body>
 </html>

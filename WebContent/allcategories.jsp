@@ -9,9 +9,10 @@
 </head>
 <body>
 <s:action name='addcompactheader' executeResult='true' />
+<h1>All Categories</h1>
 <form action="details">
 <s:iterator value="allCats">
-	<a href="catDetails.action?catid=<s:property value='category_id'/>"><s:property value="category_name"/>
+	<a href="catDetails.action?catid=<s:property value='category_id'/>" ><s:property value="category_name"/></a><br>
 		<s:iterator value="allCats">
 			<s:property value="subcategory_name"/>
 		</s:iterator>

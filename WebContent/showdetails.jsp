@@ -11,6 +11,7 @@
 <s:action name='addcompactheader' executeResult='true' />
 <table class="bodyFontSmall" width="100%" cellpadding="0" cellspacing="0"><tr
 
+
 ><td colspan="4" class="itemHeaderStyle"><span>&nbsp;</span></td><td class="itemHeaderStyle">
 <span>Price</span></td><td class="itemHeaderStyle"><span>Shipping</span></td>
 	<%-- <td class="itemHeaderRightAlignStyle"><span>Time left</span></td> --%></tr>

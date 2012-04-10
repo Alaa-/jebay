@@ -41,7 +41,7 @@ public class Search extends ActionSupport{
 		System.out.println(""+_nkw);
 		if(_nkw.equalsIgnoreCase("camera") || _nkw.equalsIgnoreCase("cameras"))
 		{
-			searchDetails = Category_Camera.getCameraDetails(_nkw);
+			//searchDetails = Category_Camera.getCameraDetails(_nkw);
 			//return "success";
 		}
 		if(_nkw.equalsIgnoreCase("book") || _nkw.equalsIgnoreCase("books"))

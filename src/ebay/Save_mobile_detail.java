@@ -178,8 +178,7 @@ public class Save_mobile_detail extends ActionSupport
 			newGeneratedItemId = ItemDetails.saveItemDetails(objitemvo);
 
 			Mobile.saveMobileDetails(newGeneratedItemId, mobilebrand, mobileos, camera, mobiletype);
-
-			int total_price = getMobileprice() + getMobilesc();
+			System.out.println("Mobile details saved.");
 		}
 		catch (Exception e)
 		{

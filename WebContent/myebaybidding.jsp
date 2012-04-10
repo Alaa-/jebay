@@ -1,10 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Purchase History</title>
+<title>Untitled Document</title>
 
 <link href="css/global.css" rel="stylesheet"/>
 
@@ -14,9 +13,7 @@
 
 <body>
 
-
 	<%@include file="header.jsp"%> 
-
 	<div class="bgContainer">
 		<div class="tabsWrapper">
 			<div class="tab">Activity</div>
@@ -59,89 +56,59 @@
 				</div>
 			</div>
 			<div class="mainContent">
+			
 				<div class="panel">
 					<div class="panelHead">
-						<div class="heading">Purchases</div>
+						<div class="heading">Bidding History</div>
 					</div>
-					<div class="panelHead1">
-						<label>Show : </label>
-						<input type="radio" name="show" id="recent" />
-						<label for="recent">Recent</label>
-						<input type="radio" name="show" id="archieve" />
-						<label for="archieve">Archieve</label>
-					</div>
-					<div class="panelHead2">
-						<div class="left">
-							<label>Period: </label>
-							<select>
-								<option>Last 60 days</option>
-							</select>
+					<div class="tabsContainer" id="tabsContainer_1">
+						<div class="tabSection">
+							<ul id="tabsHead_1" class="tabsHead">
+								<li class="active" id="tabsHead_1_0"><span>Winning</span></li>
+							
+								<li id="tabsHead_1_2"><span>Not Winning</span></li>
+							</ul>
 						</div>
-						<div class="right">
-						
-							<label>Sort By: </label>
-							<select>
-								<option>Time ended:recent first</option>
-							</select>
-						</div>
-					</div><s:iterator value="pur">
-					
-					<div class="panelHead2">	
+						<div id="tabsContent_1_0" class="tabsContent">
+						<s:iterator value="bidhis">
+							<div class="panelHead2">
 						<input type="checkbox"  class="left"/>
-						<img src="images/icecream.jpg" width="205" height="156" class="left" />
+						<img src="images/ipad_mobil_watchs_02.jpg" width="205" height="156" class="left" />
 						<div class="left">
-					
 							<div>
 								<a href="#"><s:property value="item_name"/></a>
 								<span class="grey">123456789</span>
 							</div>
 							<div>
-								<a href="#" class="seperator">Seller: <s:property value="t_seller"/></a>
+								<a href="#" class="seperator">Seller: <s:property value="item_seller"/></a>
 								<a href="#" class="seperator">124</a>
 								<span class="grey">100%</span>
 							</div>
-							<div>
-								<a href="#">Sale Date: <s:property value="t_timestamp"/></a>
-								
-							</div>
+							
+							
 							
 						</div>
 						<div class="left">
 							<div class="green">Rs. <s:property value="item_price"/></div>
 							<div class="grey">Free shipping</div>
 						</div>
-						
 					</div></s:iterator>
-					<div class="panelHead2 Last">
-						<div>
-							<input type="checkbox" />
-							<input type="button"  value="Add Note"/>
-							<input type="button" value="Archieve" />
 						</div>
-						<div class="right">
-							<div class="left">
-								<label>Items per page : </label>
-							</div>
-							<div class="left">
-								<ul class="list">
-									<li><a href="#" class="seperator">10</a></li>
-									<li><a href="#" class="seperator">25</a></li>
-									<li><a href="#" class="seperator">50</a></li>
-									<li><a href="#" class="seperator">100</a></li>
-									<li><a href="#">200</a></li>
-								</ul>
-							</div>
+				
+						<div id="tabsContent_1_2" class="tabsContent">
+							<div class="bold">You are not bidding on any offers</div>
+							<p>To see items you were bidding on that have ended, go to <a href="#">Purchase History</a> or <a href="#">Didn't Win</a>.</p>
 						</div>
-					</div>
-					<div class="panelHead2 Last1">
-						<label>Page 1 of 1</label>
-						<label class="page"><span class="grey">< </span>1<span class="grey"> ></span></label>
 					</div>
 				</div>
+				<div class="panel">
+					<div class="panelHead">
+						<div class="heading"></div>
+					
+				</div>
+			</div>
 			</div>
 		</div>
 	</div>
-	
-	<div><%@include file="footer.jsp"%></div>
 </body>
 </html>

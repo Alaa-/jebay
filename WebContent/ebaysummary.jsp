@@ -26,7 +26,7 @@
 				<div class="bgShadow"><div class="bgLeft"><div class="mainLink"><a href="EbaySummary.action">Summary</a></div></div></div>
 				<div class="bgShadow">
 					<div class="bgLeft">
-						<div class="mainLink"><a href="#" class="arrow active" id="arrow_0">Buy</a></div>
+						<div class="mainLink"><a href="BiddingStatus" class="arrow active" id="arrow_0">Bidding History</a></div>
 						<div class="subSection" id="subSection_0">
 							<ul>
 								<li><a href="#">Bids/Offers<span>(0)</span></a></li>
@@ -54,7 +54,7 @@
 				<div class="bgShadow"><div class="bgLeft"><div class="mainLink"><a href="Myebay.action">Purchase History</a></div></div></div>
 				<div class="bgShadow">
 					<div class="bgLeft">
-						<div class="mainLink"><a href="#" class="arrow active">Sell</a></div>
+						<div class="mainLink"><a href="SellHistory.action" class="arrow active">Sell History</a></div>
 					</div>
 				</div>
 			</div>

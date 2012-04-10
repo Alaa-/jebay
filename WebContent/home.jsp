@@ -489,46 +489,46 @@
 										<div class="fnode_n">
 											<div>
 												<a title="Media Centre"
-													href="http://pages.ebay.in/mediacentre/" _sp="p3907.m36;">Media
-													Centre</a>
+													href="shipping_login.jsp" _sp="p3907.m36;">Shipping and Admin
+											</a>
 											</div>
 											<div>
 												<a title="Sell Internationally"
-													href="http://pages.ebay.in/globaltrade/" _sp="p3907.m36;">Sell
+													href="#"_sp="p3907.m36;">Sell
 													Internationally</a>
 											</div>
 											<div>
 												<a title="Charity Fundraising"
-													href="http://pages.ebay.in/charity/index.html"
+													href="#"
 													_sp="p3907.m36;">Charity Fundraising</a>
 											</div>
 											<div>
 												<a title="eBay Explained"
-													href="http://pages.ebay.in/ebayexplained/index.html"
+													href="#"
 													_sp="p3907.m36;">eBay Explained</a>
 											</div>
 											<div>
 												<a title="Careers"
-													href="http://pages.ebay.in/aboutebay/jobs.html"
+													href="#"
 													_sp="p3907.m36;">Careers</a>
 											</div>
 											<div>
 												<a title="Affiliates"
-													href="http://pages.ebay.in/affiliates/" _sp="p3907.m36;">Affiliates</a>
+													href="#" _sp="p3907.m36;">Affiliates</a>
 											</div>
 											<div>
 												<a title="Developers"
-													href="http://developer.ebay.com/DevProgram/"
+													href="#"
 													_sp="p3907.m36;">Developers</a>
 											</div>
 											<div>
 												<a title="eBay Toolbar"
-													href="http://pages.ebay.in/ebay_toolbar/" _sp="p3907.m36;">eBay
+													href="#" _sp="p3907.m36;">eBay
 													Toolbar</a>
 											</div>
 											<div>
 												<a title="VeRO"
-													href="http://pages.ebay.in/help/confidence/programs-vero.html"
+													href="#"
 													_sp="p3907.m36;">VeRO</a>
 											</div>
 										</div>
@@ -538,131 +538,131 @@
 										<div class="fnode_n">
 											<div>
 												<a title="Argentina Home Page"
-													href="http://www.mercadolibre.com.ar/" _sp="p3907.m36;">Argentina</a>
+													href="#" _sp="p3907.m36;">Argentina</a>
 											</div>
 											<div>
 												<a title="Australia Home Page"
-													href="http://www.ebay.com.au/" _sp="p3907.m36;">Australia</a>
+													href="#" _sp="p3907.m36;">Australia</a>
 											</div>
 											<div>
-												<a title="Austria Home Page" href="http://www.ebay.at/"
+												<a title="Austria Home Page" href="#"
 													_sp="p3907.m36;">Austria</a>
 											</div>
 											<div>
-												<a title="Belgium Home Page" href="http://www.ebay.be/"
+												<a title="Belgium Home Page" href="#"
 													_sp="p3907.m36;">Belgium</a>
 											</div>
 											<div>
 												<a title="Brazil Home Page"
-													href="http://www.mercadolivre.com.br/" _sp="p3907.m36;">Brazil</a>
+													href="#" _sp="p3907.m36;">Brazil</a>
 											</div>
 											<div>
-												<a title="Canada Home Page" href="http://www.ebay.ca/"
+												<a title="Canada Home Page" href="#"
 													_sp="p3907.m36;">Canada</a>
 											</div>
 											<div>
-												<a title="China Home Page" href="http://www.ebay.com.cn/"
+												<a title="China Home Page" href="#"
 													_sp="p3907.m36;">China</a>
 											</div>
 											<div>
-												<a title="France Home Page" href="http://www.ebay.fr/"
+												<a title="France Home Page" href="#"
 													_sp="p3907.m36;">France</a>
 											</div>
 											<div>
-												<a title="German Home Page" href="http://www.ebay.de/"
+												<a title="German Home Page" href="#"
 													_sp="p3907.m36;">Germany</a>
 											</div>
 											<div>
 												<a title="Hong Kong Home Page"
-													href="http://www.ebay.com.hk/" _sp="p3907.m36;">Hong
+													href="#" _sp="p3907.m36;">Hong
 													Kong</a>
 											</div>
 											<div>
-												<a title="India Home Page" href="http://www.ebay.in/"
+												<a title="India Home Page" href="#"
 													_sp="p3907.m36;">India</a>
 											</div>
 											<div>
-												<a title="Ireland Home Page" href="http://www.ebay.ie/"
+												<a title="Ireland Home Page" href="#"
 													_sp="p3907.m36;">Ireland</a>
 											</div>
 										</div>
 										<div class="fnode_n">
 											<div>
-												<a title="Italy Home Page" href="http://www.ebay.it/"
+												<a title="Italy Home Page" href="#"
 													_sp="p3907.m36;">Italy</a>
 											</div>
 											<div>
 												<a title="Korea Home Page"
-													href="http://www.auction.co.kr/default.html"
+													href="#"
 													_sp="p3907.m36;">Korea</a>
 											</div>
 											<div>
-												<a title="Malaysia Home Page" href="http://www.ebay.com.my/"
+												<a title="Malaysia Home Page" href="#"
 													_sp="p3907.m36;">Malaysia</a>
 											</div>
 											<div>
 												<a title="Mexico Home Page"
-													href="http://www.mercadolibre.com.mx/" _sp="p3907.m36;">Mexico</a>
+													href="#" _sp="p3907.m36;">Mexico</a>
 											</div>
 											<div>
-												<a title="Netherlands Home Page" href="http://www.ebay.nl/"
+												<a title="Netherlands Home Page" href="#"
 													_sp="p3907.m36;">Netherlands</a>
 											</div>
 											<div>
 												<a title="New Zealand Home Page"
-													href="http://pages.ebay.com/nz/" _sp="p3907.m36;">New
+													href="#"_sp="p3907.m36;">New
 													Zealand</a>
 											</div>
 											<div>
-												<a title="Philippines Home Page" href="http://www.ebay.ph/"
+												<a title="Philippines Home Page" href="#"
 													_sp="p3907.m36;">Philippines</a>
 											</div>
 											<div>
-												<a title="Poland Home Page" href="http://www.ebay.pl/"
+												<a title="Poland Home Page" href="#"
 													_sp="p3907.m36;">Poland</a>
 											</div>
 											<div>
 												<a title="Singapore Home Page"
-													href="http://www.ebay.com.sg/" _sp="p3907.m36;">Singapore</a>
+													href="#" _sp="p3907.m36;">Singapore</a>
 											</div>
 											<div>
-												<a title="Spain Home Page" href="http://www.ebay.es/"
+												<a title="Spain Home Page" href="#"
 													_sp="p3907.m36;">Spain</a>
 											</div>
 											<div>
-												<a title="Sweden Home Page" href="http://www.tradera.com/"
+												<a title="Sweden Home Page" href="#"
 													_sp="p3907.m36;">Sweden</a>
 											</div>
 											<div>
-												<a title="Switzerland Home Page" href="http://www.ebay.ch/"
+												<a title="Switzerland Home Page" href="#"
 													_sp="p3907.m36;">Switzerland</a>
 											</div>
 										</div>
 										<div class="fnode_n">
 											<div>
-												<a title="Taiwan Home Page" href="http://www.ruten.com.tw/"
+												<a title="Taiwan Home Page" href="#"
 													_sp="p3907.m36;">Taiwan</a>
 											</div>
 											<div>
-												<a title="Thailand Home Page" href="http://www.ebay.co.th"
+												<a title="Thailand Home Page" href="#"
 													_sp="p3907.m36;">Thailand</a>
 											</div>
 											<div>
 												<a title="Turkey Home Page"
-													href="http://www.gittigidiyor.com/" _sp="p3907.m36;">Turkey</a>
+													href="#"_sp="p3907.m36;">Turkey</a>
 											</div>
 											<div>
 												<a title="United Kingdom Home Page"
-													href="http://www.ebay.co.uk/" _sp="p3907.m36;">United
+													href="#" _sp="p3907.m36;">United
 													Kingdom</a>
 											</div>
 											<div>
 												<a title="United States Home Page"
-													href="http://www.ebay.com/" _sp="p3907.m36;">United
+													href="#"_sp="p3907.m36;">United
 													States</a>
 											</div>
 											<div>
-												<a title="Vietnam Home Page" href="http://www.ebay.vn"
+												<a title="Vietnam Home Page" href="#"
 													_sp="p3907.m36;">Vietnam</a>
 											</div>
 										</div>
@@ -671,31 +671,31 @@
 								<td class="fcont_b"><div class="fnode">
 										<div class="fnode_n">
 											<div>
-												<a title="B2B Motors" href="http://b2bmotors.ebay.in/"
+												<a title="B2B Motors" href="#"
 													_sp="p3907.m36;">B2B Motors</a>
 											</div>
 											<div>
 												<a title="India Export Bazaar"
-													href="http://pages.ebay.in/exportbazaar/index.html"
+													href="#"
 													_sp="p3907.m36;">India Export Bazaar</a>
 											</div>
 											<div>
 												<a title="Safe Trading Tips"
-													href="http://pages.ebay.in/help/confidence/overview.html"
+													href="#"
 													_sp="p3907.m36;">Safe Trading Tips</a>
 											</div>
 											<div>
 												<a title="Want It Now"
-													href="http://pages.ebay.in/wantitnow/" _sp="p3907.m36;">Want
+													href="#" _sp="p3907.m36;">Want
 													It Now</a>
 											</div>
 											<div>
 												<a title="Media Centre"
-													href="http://pages.ebay.in/community/aboutebay/news/index.html"
+													href="#"
 													_sp="p3907.m36;">Media Centre</a>
 											</div>
 											<div>
-												<a title="eBay Shops" href="http://stores.ebay.in/"
+												<a title="eBay Shops" href="#"
 													_sp="p3907.m36;">eBay Shops</a>
 											</div>
 										</div>

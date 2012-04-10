@@ -22,16 +22,17 @@ public class CreditCardCheck extends ActionSupport{
 	    {
 	    	Map session=ActionContext.getContext().getSession();
 	    	String total=(String)session.get("totalPrice");
+	    	int ccnumber = Integer.parseInt(creditcardnumber);
 	    	int price = Integer.parseInt(total);
 	    	String buyer=(String)session.get("User");
 	    	String itemid=(String)session.get("item_id");
-	    	int item_id=Integer.parseInt(itemid);
-	    	
+	    	int item_id=Integer.parseInt(itemid);	    	
 	    	String qtyi = (String)session.get("qty");
 	    	int qty = Integer.parseInt(qtyi);
+	    	int acc = Account.getAccountBuyerCredit(ccnumber);
 	    	System.out.println("price after is "+price);
 	    	System.out.println("item id in payment "+item_id);
-	    	//Transaction.makePayment(price,buyer,item_id,qty);
+	    	Transaction.makePayment(price,buyer,item_id,qty,acc);
 	    	return "success";
 	    }
 	    	

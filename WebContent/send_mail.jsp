@@ -41,7 +41,7 @@ try {
 		if(rs2.next())
 		{
 			winner=rs2.getString("bidding_buyer");
-			query3="update bidding_details set bidding_buyer='"+winner+"' where bidding_item_id="+item_id;
+			query3="update biddingstatus set bidding_winner='"+winner+"' where bidding_item_id="+item_id;
 			query4="update biddingstatus set email_sent=1 where bidding_item_id="+item_id;
 			c.dml(query3);
 			c.dml(query4);

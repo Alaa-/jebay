@@ -102,8 +102,5 @@
 			<result name="error" type="chain">bidding</result>
 		</action>
 		
-		<action name="sendmail" class="ebay.Bid_send_mail">
-			<result name="success">send_mail.jsp</result>
-		</action>
 	</package>
 </struts>

@@ -2,6 +2,19 @@ package vo;
 
 public class AccountVo {
 int account_id,account_bank_id,account_no,account_dc_no,account_cc_no,account_pin;
+int acc;
+
+
+public AccountVo(int acc) {
+	super();
+	this.acc = acc;
+}
+public int getAcc() {
+	return acc;
+}
+public void setAcc(int acc) {
+	this.acc = acc;
+}
 public int getAccount_id() {
 	return account_id;
 }

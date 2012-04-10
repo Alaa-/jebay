@@ -7,7 +7,15 @@ public class ItemDetailsVo {
 	private String mode;
 	private int item_id;
 	private String image;
+	private String seller;
 	
+	
+	public ItemDetailsVo(String seller) {
+		super();
+		this.seller = seller;
+	}
+
+
 	public ItemDetailsVo(String item_name, int price, int shipping_charge,
 			String mode) {
 		super();
@@ -74,6 +82,16 @@ public class ItemDetailsVo {
 
 	public void setImage(String image) {
 		this.image = image;
+	}
+
+
+	public String getSeller() {
+		return seller;
+	}
+
+
+	public void setSeller(String seller) {
+		this.seller = seller;
 	}
 	
 	

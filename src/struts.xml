@@ -107,7 +107,17 @@
 		</action>
 		
 		<action name="creditCardPayment" class="ebay.CreditCardCheck">
-			<result name="success">fake.jsp</result>
+			<result name="success">ack.jsp</result>
+			<result name="error" type="chain">bidding</result>
+		</action>
+		
+		<action name="debitCardPayment" >
+			<result name="success">ack.jsp</result>
+			<result name="error" type="chain">bidding</result>
+		</action>
+		
+		<action name="creditCardPayment" class="ebay.CreditCardCheck">
+			<result name="success">ack.jsp</result>
 			<result name="error" type="chain">bidding</result>
 		</action>
 		
@@ -124,6 +134,10 @@
 		<action name="BuyItNow" class="ebay.BuyItNow">
 			<result name="success">buyitnow.jsp</result>
 			<result name="error" type="chain">bidding</result>
+		</action>
+		
+		<action name="continue" >
+			<result>home.jsp</result>
 		</action>
 	</package>
 </struts>

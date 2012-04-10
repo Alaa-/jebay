@@ -2,10 +2,12 @@
 package ebay;
 
 
-import com.opensymphony.xwork2.ActionSupport;
+import java.util.Map;
+
+import org.apache.struts2.ServletActionContext;
+
 import com.opensymphony.xwork2.ActionContext;
-import java.util.*;
-import java.sql.*;
+import com.opensymphony.xwork2.ActionSupport;
 
 public class logout extends ActionSupport
 {
@@ -18,6 +20,7 @@ public class logout extends ActionSupport
 		if (session.containsKey("User"))
 			user = (session.get("User").toString());
 		session.remove("User");
+		ServletActionContext.getRequest().getSession().invalidate();
 		return SUCCESS;
 	}
 }

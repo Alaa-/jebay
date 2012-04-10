@@ -1,14 +1,13 @@
 package ebay;
 import java.util.Properties;
-import javax.mail.Message;
+
+import javax.mail.Message.RecipientType;
 import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Transport;
-import javax.mail.Message.RecipientType;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-import com.sun.mail.smtp.SMTPSSLTransport;
 
 public class SendMail1 {
 static String message;
@@ -26,10 +25,10 @@ sendMail.send();
 }
 
 class SendMail {
-private String from;
-private  String to;
-private String subject;
-private String text;
+private final String from;
+private final  String to;
+private final String subject;
+private final String text;
 public SendMail(String from, String to, String subject, String text) throws Exception {
 this.from = from; this.to = to; this.subject = subject;this.text = text;}
 
@@ -42,7 +41,7 @@ try
 {
 //SendMailExample sem=new SendMailExample();
 Properties system=System.getProperties();
-system.put("proxyHost","192.16.3.254");
+system.put("proxyHost","192.168.3.254");
 		system.put("proxyPort","8080");
 		System.setProperties(system);
 Properties props = System.getProperties();

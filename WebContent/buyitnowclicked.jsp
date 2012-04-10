@@ -533,8 +533,7 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VtotojCooki
 										</font><a
 											href="http://cgi.ebay.in/ws/eBayISAPI.dll?ViewItem&amp;item=270950260152"
 											style="color: rgb(0, 51, 255);"
-											title="Back to item description"><font>Back to
-													item description</font>
+											title="Back to item description">
 										</a>
 									</span>
 									</td>
@@ -673,7 +672,7 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VtotojCooki
 																																class="symDiv">Rs.</div>
 																														</td>
 																														<td class="priceDivTd"><div
-																																class="priceDiv" id="regsubtotal"><s:property value="item_total"/></div>
+																																class="priceDiv" id="regsubtotal"><s:property value="item_price"/></div>
 																														</td>
 																													</tr>
 																												</tbody>
@@ -714,18 +713,17 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VtotojCooki
 																								type="hidden">
 																							<div class="g-std" id="addrrow">
 																								<div id="addrrow">
-																									<b>sivakrishna gontla</b>
+																									<b><s:property value="user_name"/></b>
 																								</div>
 																								<div id="addrrow">
-																									<span>room no 404,mh2,international
-																										institute of information technology bangalore</span>
+																									<span><s:property value="user_home_address"/></span>
 																								</div>
 																								<div id="addrrow"></div>
 																								<div id="addrrow">
-																									<span>bangalore </span><span>560100 </span>
+																									<span><s:property value="user_city"/></span>
 																								</div>
 																								<div id="addrrow">
-																									<span>AP </span>
+																									<span><s:property value="user_state"/></span>
 																								</div>
 																								<div id="addrrow"></div>
 																								<div id="addrrow"></div>
@@ -762,7 +760,7 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VtotojCooki
 																											<b>Sub-Total</b>
 																										</div>
 																										<div class="sub-div-middle2">Rs.</div>
-																										<div class="sub-div-right2"><s:property value="item_total"/></div>
+																										<div class="sub-div-right2"><s:property value="item_price"/></div>
 																										<div class="sub-div-left">
 																											<b>Shipping method: </b><input
 																												name="shipping_method" id="shipping_method"

@@ -46,13 +46,14 @@ try {
 			c.dml(query3);
 			c.dml(query4);
 			SendMail1 s = new SendMail1();
-			query5="select user_email from user_details where user_id='"+winner+"'";
+			query5="select * from user_details where user_id='"+winner+"'";
 			rs3=c.getResult(query5);
 			rs3.next();
 			String  email=rs3.getString("user_email");
+
 			s.to = email;
 			s.subject = "Congratulations "+"Mr/Ms."+winner+"  You have won the bid";
-			s.message = "<a href=\"http://192.16.11.80:8080/Jebay/Confirmation.action?cid=" + winner + "\">Click here </a> To Confirm your Bid";
+			s.message = "<a href=\"http://localhost:8080/Jebay/Intermediate.action?winnerid=" + winner + "&item_id="+item_id+"\">Click here </a> To Confirm your Bid";
 			try {
 				s.main();
 			} catch (Exception e) {

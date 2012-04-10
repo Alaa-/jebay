@@ -1,11 +1,10 @@
 package ebay;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.Map;
 
 import model.BankDetails;
 
-import com.opensymphony.xwork2.ActionContext;
+import org.apache.struts2.ServletActionContext;
 public class BuyItNowClicked {
 int item_id,quantity;
 ArrayList<xyz> arr=new ArrayList<xyz>();
@@ -40,6 +39,7 @@ public String execute() throws Exception
 {
 	lstBanks = BankDetails.getAllBanks();
 	Connect c=new Connect();
+	String username=ServletActionContext.getRequest().getSession().getAttribute("username").toString();
 	ResultSet rs=c.getResult("select * from item_details where item_id='"+item_id+"'");
 	while(rs.next()){
 		xyz x=new xyz();
@@ -51,6 +51,13 @@ public String execute() throws Exception
 		x.setItem_id(rs.getInt("item_id"));
 		x.setQuantity(quantity);
 		x.setItem_shipping_charge(rs.getInt("item_shipping_charge"));
+		Connect c1=new Connect();
+		ResultSet rs1=c.getResult("select * from user_details where user_id='"+username+"'");
+		rs1.next();
+		x.setUser_home_address(rs1.getString("user_home_address"));
+		x.setUser_city(rs1.getString("user_city"));
+		x.setUser_name(rs1.getString("user_first_name")+rs1.getString("user_last_name"));
+		x.setUser_state(rs1.getString("user_state"));
 		//int total=get
 		arr.add(x);
 	}
@@ -59,6 +66,37 @@ public String execute() throws Exception
 }
 }
 class xyz{
+	String user_name,user_home_address,user_city,user_state;
+	public String getUser_name() {
+		return user_name;
+	}
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
+	}
+	public String getUser_home_address() {
+		return user_home_address;
+	}
+	public void setUser_home_address(String user_home_address) {
+		this.user_home_address = user_home_address;
+	}
+	public String getUser_city() {
+		return user_city;
+	}
+	public void setUser_city(String user_city) {
+		this.user_city = user_city;
+	}
+	public String getUser_state() {
+		return user_state;
+	}
+	public void setUser_state(String user_state) {
+		this.user_state = user_state;
+	}
+	public int getTotal() {
+		return total;
+	}
+	public void setTotal(int total) {
+		this.total = total;
+	}
 	String item_seller,item_name;int item_total_shipping;
 	int total=getItem_total();
 	

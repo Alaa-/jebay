@@ -297,6 +297,23 @@ public class ItemDetails
 			
 		}
 		return details;
-		
+	}
+	
+	public static String getSellerItem(int item_id)
+	{
+		String seller=null;
+		ResultSet rs = null;
+		String sqlQuery = "select item_seller from item_details where item_id ="+item_id;
+		rs = DB.readFromDB(sqlQuery);
+		try
+		{
+			if (rs.next())
+			{
+				seller = rs.getString("item_seller");
+			}
+		}
+		catch(Exception e){}
+		ItemDetailsVo itVo = new ItemDetailsVo(seller);
+		return seller;
 	}
 }

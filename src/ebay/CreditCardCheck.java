@@ -12,19 +12,26 @@ public class CreditCardCheck extends ActionSupport{
 	private String creditcardnumber;
 	private String cvv;
 	private String holdername;
-	
+	//private int item_id;
 	public String execute(){
 		
 		System.out.println("holder is"+holdername);
-	    String buyer = User.getUserName(holdername);
+	    String holder = User.getUserName(holdername);
 	    String creditCard = User.getCreditCardNumber(holdername);
-	    if(holdername.equals(buyer) && creditcardnumber.equals(creditCard))
+	    if(holdername.equals(holder) && creditcardnumber.equals(creditCard))
 	    {
 	    	Map session=ActionContext.getContext().getSession();
 	    	String total=(String)session.get("totalPrice");
 	    	int price = Integer.parseInt(total);
-	    	System.out.println("total after is "+total);
+	    	String buyer=(String)session.get("User");
+	    	String itemid=(String)session.get("item_id");
+	    	int item_id=Integer.parseInt(itemid);
 	    	
+	    	String qtyi = (String)session.get("qty");
+	    	int qty = Integer.parseInt(qtyi);
+	    	System.out.println("price after is "+price);
+	    	System.out.println("item id in payment "+item_id);
+	    	//Transaction.makePayment(price,buyer,item_id,qty);
 	    	return "success";
 	    }
 	    	
@@ -34,8 +41,15 @@ public class CreditCardCheck extends ActionSupport{
 		
 	}
     
-   
-    
+   /* 
+	public int getItem_id() {
+		return item_id;
+	}
+
+	public void setItem_id(int item_id) {
+		this.item_id = item_id;
+	}*/
+
 	public String getCreditcardnumber() {
 		return creditcardnumber;
 	}

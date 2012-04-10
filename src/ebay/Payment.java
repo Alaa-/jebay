@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import model.BankDetails;
+import model.ItemDetails;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -42,10 +43,17 @@ public class Payment extends ActionSupport{
 	
 	public String execute()
 	{
-		
+		String id = new Integer(item_id).toString();
+		String quant = new Integer(quantity).toString();
+		//id = Integer(item_id).
+		Map session=ActionContext.getContext().getSession();
+		session.put("item_id", id);
+		session.put("qty", quant);
 		System.out.println("item id is"+item_id);
 		System.out.println("mode is"+paymentmode);
 		System.out.println("Qty is"+quantity);
+		String seller = ItemDetails.getSellerItem(item_id);
+		System.out.println("seller is "+seller);
 		//System.out.println("total is"+item_total);
 		//lstBanks = BankDetails.getAllBanks();
 		if(paymentmode.equals("1"))
@@ -61,8 +69,9 @@ public class Payment extends ActionSupport{
 			
 			else{
 				//banks = new ArrayList();
-				Map session=ActionContext.getContext().getSession();
+				
 		    	session.put("bank",banks);
+		    	
 		    	System.out.println("banks is "+banks);
 				return "bank";
 			}

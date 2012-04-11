@@ -16,7 +16,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class PlaceBid extends ActionSupport{
 	int item_id,bid_amt;
 	
-	String user_id;
+	String user_id="rohit";
 	public int getItem_id() {
 		return item_id;
 	}
@@ -35,14 +35,14 @@ public class PlaceBid extends ActionSupport{
 		int maxbid = 0,item_mode = 0;
 		HttpServletRequest request=ServletActionContext.getRequest();
 		HttpSession session=request.getSession();
-		user_id=session.getAttribute("User")+"";
+		user_id=((ServletRequest) session).getAttribute("User")+"";
 		String sqlQuery3 = "select max(b.bidding_bid) as maxi,i.item_mode from bidding_details b,item_details i where item_id=bidding_item_id and bidding_item_id="+item_id; //current highest bid
 		try {
 			ResultSet rs=c.getResult(sqlQuery3);
 			while(rs.next())
 			{
 				maxbid=rs.getInt("maxi");
-				//item_mode=Integer.parseInt(rs.getString("item_mode"));
+				item_mode=Integer.parseInt(rs.getString("item_mode"));
 			}
 			if(item_mode==2)
 			{
@@ -60,11 +60,13 @@ public class PlaceBid extends ActionSupport{
 				if(rs1.next())
 				{
 					System.out.println("updating bid....");
+					System.out.println("bid amt=:"+bid_amt+" user_id="+user_id+" max bid=:"+maxbid+" item_id="+item_id);
 					c.dml("update bidding_details set bidding_bid="+bid_amt+" where bidding_buyer='"+user_id+"' and bidding_item_id="+item_id);	
 				}
 				else
 				{
 					System.out.println("adding bid....");
+					System.out.println("bid amt=:"+bid_amt+" user_id="+user_id+" max bid=:"+maxbid+" item_id="+item_id);
 					c.dml("insert into bidding_details(bidding_item_id,bidding_buyer,bidding_bid) values("+item_id+",'"+user_id+"',"+bid_amt+")");	
 				}
 			}

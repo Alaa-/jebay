@@ -10,9 +10,9 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class SendMail1 {
-static String message;
-static String to;
-static String subject;
+public static String message;
+public static String to;
+public static String subject;
 public static void main() throws Exception{
 
 String from = "jebayiiitb@gmail.com";
@@ -25,10 +25,12 @@ sendMail.send();
 }
 
 class SendMail {
-private final String from;
-private final  String to;
-private final String subject;
-private final String text;
+
+public String from;
+public String to;
+public String subject;
+public String text;
+
 public SendMail(String from, String to, String subject, String text) throws Exception {
 this.from = from; this.to = to; this.subject = subject;this.text = text;}
 

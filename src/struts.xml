@@ -88,11 +88,15 @@
 		</action>
 
 
-<action name="save_mobile_detail" class="ebay.Save_mobile_detail">
+		<action name="save_mobile_detail" class="ebay.Save_mobile_detail">
 			<result name="success">/home.jsp</result>
 		</action>
 		<action name="getform" class="ebay.Getform">
 			<result name="mobile">/mobile_sell_form.jsp</result>
+		</action>
+		
+		<action name="getpaisaform" class="ebay.GetPaisaForm">
+			<result name="mobile">/paisapayregisteration.jsp</result>
 		</action>
 
 		<action name="bidding" class="ebay.bid">

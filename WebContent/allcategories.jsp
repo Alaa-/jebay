@@ -16,6 +16,7 @@
 		<s:iterator value="allCats">
 			<s:property value="subcategory_name"/>
 		</s:iterator>
+		
 		<%-- <s:property value="subcategory_name"/> --%>
 </s:iterator>
 </form>

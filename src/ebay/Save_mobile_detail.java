@@ -13,6 +13,8 @@ import java.sql.*;
 
 import vo.ItemVo;
 
+import model.BiddingStatusMo;
+import model.Image;
 import model.ItemDetails;
 import model.Mobile;
 
@@ -178,6 +180,11 @@ public class Save_mobile_detail extends ActionSupport
 			newGeneratedItemId = ItemDetails.saveItemDetails(objitemvo);
 
 			Mobile.saveMobileDetails(newGeneratedItemId, mobilebrand, mobileos, camera, mobiletype);
+			
+			Image.saveImage(newGeneratedItemId, getImage());
+			
+			BiddingStatusMo.initBiddingStatus(newGeneratedItemId);
+			
 			System.out.println("Mobile details saved.");
 		}
 		catch (Exception e)

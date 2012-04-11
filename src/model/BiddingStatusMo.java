@@ -3,6 +3,8 @@ package model;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
+import myutil.DB;
 import vo.*;
 import ebay.Connect;
 
@@ -35,6 +37,13 @@ public class BiddingStatusMo
 			return null;
 		}
 
+	}
+
+	public static void initBiddingStatus(int item_id)
+	{
+		String sqlQuery="insert into biddingstatus (bidding_item_id) values("+item_id+")";
+		DB.update(sqlQuery);
+		System.out.println("Biddingstatus initialized");
 	}
 
 }

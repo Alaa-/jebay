@@ -16,14 +16,17 @@ function checkmode()
 	{
 		document.getElementById("pbaseprice").style.display="inline";
 		document.getElementById("mobilebaseprice").style.display="inline";
+		document.getElementById("mobilebaseprice").value="";
 		document.getElementById("mobilequantity").value="1";
-		document.getElementById("mobilequantity").disabled="true";
+		document.getElementById("mobilequantity").disabled=true;
+		
 	}
 	else
 	{
 		document.getElementById("pbaseprice").style.display="none";	
 		document.getElementById("mobilebaseprice").style.display="none";
-		document.getElementById("mobilequantity").disabled="false";
+		document.getElementById("mobilebaseprice").value="0";
+		document.getElementById("mobilequantity").disabled=false;
 	}
 }
 </script>

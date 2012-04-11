@@ -56,7 +56,7 @@ public class PlaceBid extends ActionSupport{
 			}
 			else
 			{
-				ResultSet rs1=c.getResult("select * from bidding_details where bidding_buyer='"+user_id+"'");
+				ResultSet rs1=c.getResult("select * from bidding_details where bidding_buyer='"+user_id+"' and bidding_item_id="+item_id);
 				if(rs1.next())
 				{
 					System.out.println("updating bid....");

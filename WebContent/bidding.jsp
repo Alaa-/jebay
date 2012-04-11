@@ -13,10 +13,11 @@
 
 
 <link rel="stylesheet" type="text/css" href="css/bid2.css">
+<link rel="stylesheet" type="text/css" href="css/header1.css">
 </head>
 <body style="text-align: left" id="body">
-
-	<div><%@ include file="header.jsp"%></div>
+<%@ include file="wideheader.jsp"%>
+	
 	<s:iterator value="arr">
 		<br />
 		<br />
@@ -321,7 +322,7 @@
 		<br>
 		<br>
 		<br>
-		<div><%@ include file="footer.jsp"%></div>
+		<div><%@ include file="widefooter.jsp"%></div>
 	</s:iterator>
 </body>
 </html>

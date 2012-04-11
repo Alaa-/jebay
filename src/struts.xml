@@ -104,6 +104,10 @@
 			<result name="success">/paisapayregisteration.jsp</result>
 		</action>
 		
+		<action name="bidconfirm" class="ebay.BidConfirm">
+			<result name="success">bidding_confirm.jsp</result>
+		</action>
+		
 		<action name="bidding" class="ebay.bid">
 			<result name="success">bidding.jsp</result>
 		</action>
@@ -121,7 +125,7 @@
 		</action>
 		
 		<action name="placebid" class="ebay.PlaceBid">
-			<result name="success">fake.jsp</result>
+			<result name="success" type="chain">bidconfirm</result>
 			<result name="error" type="chain">bidding</result>
 		</action>
 		

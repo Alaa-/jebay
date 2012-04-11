@@ -7,13 +7,13 @@ import model.PaisaMapping;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class GetPaisaForm extends ActionSupport
+public class GetPaisa extends ActionSupport
 {
 	String paisaregister;
 	public String execute()
 	{
 		Map session=ActionContext.getContext().getSession();
-		String user_id=(String) session.get("uname");
+		String user_id=(String) session.get("User");
 		PaisaMapping.getSellerPaisaStatus(user_id);
 		return SUCCESS;
 	}

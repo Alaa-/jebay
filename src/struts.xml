@@ -95,8 +95,12 @@
 			<result name="mobile">/mobile_sell_form.jsp</result>
 		</action>
 		
+		<action name="getpaisa" class="ebay.GetPaisa">
+			<result name="success">/mypaisapay.jsp</result>
+		</action>
+		
 		<action name="getpaisaform" class="ebay.GetPaisaForm">
-			<result name="mobile">/paisapayregisteration.jsp</result>
+			<result name="success">/paisapayregisteration.jsp</result>
 		</action>
 
 		<action name="bidding" class="ebay.bid">

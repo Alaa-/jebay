@@ -181,9 +181,9 @@
 																<td width="20" align="left"></td>
 																<td align="left">
 																
-																<s:if test="<s:property value="paisaregister"/> == 0 ">
+																<s:if test="<s:property value='paisaregister'/> == 0 ">
 																<a
-																	href="/Jebay/paisapayregisteration.jsp">Register
+																	href="/Jebay/paisapayregisteration.jsp"><s:property value="paisaregister"/>Register
 																		now</a> and offer buyers the assurance of PaisaPay the
 																	fast, easy and secure way to accept credit cards and
 																	online bank transfers on your listings. Learn more on <a

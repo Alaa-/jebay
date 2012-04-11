@@ -95,8 +95,6 @@
 		<action name="getform" class="ebay.Getform">
 			<result name="mobile">/mobile_sell_form.jsp</result>
 		</action>
-
-		</action>
 		
 		<action name="getpaisa" class="ebay.GetPaisa">
 			<result name="success">/mypaisapay.jsp</result>

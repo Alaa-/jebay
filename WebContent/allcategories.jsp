@@ -9,6 +9,7 @@
 </head>
 <body>
 <s:action name='addcompactheader' executeResult='true' />
+
 <h1>All Categories</h1>
 <form action="details">
 <s:iterator value="allCats">

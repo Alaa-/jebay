@@ -3,7 +3,7 @@
 <%@ page trimDirectiveWhitespaces="true" %>
 
 <%
-String connectionURL = "jdbc:mysql://localhost:3306/studentinfo";
+String connectionURL = "jdbc:mysql://localhost:3306/jebay";
 
 ResultSet rs = null;
 
@@ -15,12 +15,12 @@ try {
 
 Class.forName("com.mysql.jdbc.Driver").newInstance();
 
-String id=request.getParameter("id");
+String id=request.getParameter("item_id");
 con= DriverManager.getConnection(connectionURL, "root", "");
 
 Connect c=new Connect();
 
-rs =c.getResult("SELECT image FROM student where roll='"+id+"'");
+rs =c.getResult("SELECT image_blob FROM image_details where image_item_id='"+id+"'");
 if(rs.next()) {
 byte[] bytearray = new byte[1048576];
 int size=0;

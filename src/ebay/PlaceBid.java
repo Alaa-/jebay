@@ -16,7 +16,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class PlaceBid extends ActionSupport{
 	int item_id,bid_amt;
 	
-	String user_id="rohit";
+	String user_id;
 	public int getItem_id() {
 		return item_id;
 	}
@@ -35,7 +35,7 @@ public class PlaceBid extends ActionSupport{
 		int maxbid = 0,item_mode = 0;
 		HttpServletRequest request=ServletActionContext.getRequest();
 		HttpSession session=request.getSession();
-		user_id=((ServletRequest) session).getAttribute("User")+"";
+		user_id=(session).getAttribute("User")+"";
 		String sqlQuery3 = "select max(b.bidding_bid) as maxi,i.item_mode from bidding_details b,item_details i where item_id=bidding_item_id and bidding_item_id="+item_id; //current highest bid
 		try {
 			ResultSet rs=c.getResult(sqlQuery3);

@@ -72,7 +72,7 @@ public void setPassword(String password)
 
                  if (rs.next())
                  {
-                	if(rs.getInt("ser_cstatus")==0){
+                	if(rs.getInt("user_cstatus")==0){
                 		addActionError("confirm your registration by clicking the confirmation link set to your email");
                 		return "unconfirm";
                 		

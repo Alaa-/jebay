@@ -14,6 +14,13 @@
         <link rel="stylesheet" media="all" href="css/register2.css" type="text/css">
         <link rel="stylesheet" media="all" href="css/css1.css" type="text/css">
         <link rel="stylesheet" media="all" href="css/css2.css" type="text/css">
+        <script type="text/javascript">
+function load(){
+	//alert("hello");
+	$('#d1').realperson({length: 6,includeNumbers: false,regenerate: 'Click to change',hashName: 'Hash'}); 
+}
+
+</script>
         <SCRIPT LANGUAGE="JavaScript">
 
 
@@ -102,8 +109,11 @@ function check(){
 	document.getElementById("s1").disabled=true;}
 }
 </script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<style type="text/css">@import "jquery.realperson.css";</style> 
+<script type="text/javascript" src="jquery.realperson.js"></script>
     </head>
-    <body onLoad="SetToToday('birth');">
+    <body onLoad="SetToToday('birth');load();">
         <table width="960">
             <tr>
                 <td>
@@ -1006,7 +1016,7 @@ added security
 <br>
 <div>
 <img id="img_tokentext" alt="Error" style="display:none;margin-bottom:-2px;_margin-bottom:0px;" src="https://securepics.ebaystatic.com/aw/pics/icons/iconFormError_16x16.gif">
-<iframe id="frameBot" width="155" scrolling="no" height="50" frameborder="0" title="Verification code" marginheight="0" marginwidth="0" name="frameBot" src="images/verify.jpg">
+
 <html>
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
@@ -1016,17 +1026,17 @@ added security
 <form id="GetBotImage" name="GetBotImage">
 
 
+<table>
+<tr><td><div id="d1"/></div><s:actionerror/></td></tr>
+<tr><td><input type="text" name="captcha"/></td></tr>
+</table>
 
-<img width="155" height="50" alt="verify" src="images/verify.jpg">
 <input id="tokenstring" type="hidden" value="wAl00AUAAAA%3D" maxlength="6" name="tokenstring">
 
 <img width="1" height="1" border="0" alt=" " name="i_sGauge" src="https://securepics.ebaystatic.com/aw/pics/s.gif">
 </form>
 </body>
 </html>
-</iframe>
-<input id="tokentext" class="lierrindent" type="text" title="Verification Code" value="" name="tokentext" maxlength="6" size="6">
-<input id="tokenstring" type="hidden" value="wAl00AUAAAA%3D" maxlength="6" name="tokenstring">
 
 <div id="div1_tokentext" class="quickwinError" style="display:none;">Please enter the verification code</div>
 <div>

@@ -30,6 +30,7 @@
 
 		<action name="Register" class="ebay.sign_up">
 			<result name="success">/confirmation.jsp</result>
+				<result name="fail">/register.jsp</result>
 		</action>
 
 		

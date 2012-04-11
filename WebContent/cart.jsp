@@ -835,8 +835,7 @@ function proceed(a){
 																													</span>|<a
 																														href="RemoveFromCart.action?cart_id=<s:property value="cart_id"/>"
 																														class="link">Remove</a>|<a
-																														href="http://orders.ebay.in/ws/eBayISAPI.dll?ShoppingCartMgmt&amp;itemid=130662051525&amp;transid=1932672003&amp;action=save&amp;ssPageName=SCART:SCSL:IN:2"
-																														class="link">Save for later</a>
+																														href="#"	class="link">Save for later</a>
 																												</div>
 																											</div>
 																											<div class="item-quantity">

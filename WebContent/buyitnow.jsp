@@ -9,9 +9,9 @@
 <script type="text/javascript">
 	var plst = new Date().getTime();
 	function check(a){
-		alert(a);
+		//alert(a);
 		var quantity=document.getElementById('quantity').value;
-		alert("AddToCart.action?item_id="+a+"&quantity="+quantity);
+		//alert("AddToCart.action?item_id="+a+"&quantity="+quantity);
 		window.location.href="AddToCart.action?item_id="+a+"&quantity="+quantity;
 	}
 	

@@ -13,6 +13,22 @@ public class sign_up extends ActionSupport
 {
 
 	private String firstname;
+	int Hash;String captcha;
+	public int getHash() {
+		return Hash;
+	}
+
+	public void setHash(int hash) {
+		Hash = hash;
+	}
+
+	public String getCaptcha() {
+		return captcha;
+	}
+
+	public void setCaptcha(String captcha) {
+		this.captcha = captcha;
+	}
 
 	private String lastname;
 	private String password;
@@ -223,6 +239,12 @@ public class sign_up extends ActionSupport
 
 		try
 		{
+			int hash = 5381; 
+			   captcha= captcha.toUpperCase(); 
+			    for(int i = 0; i <captcha.length(); i++) { 
+			        hash = ((hash << 5) + hash) + captcha.charAt(i); }
+			        System.out.println(hash);
+			        if(Hash!=hash){addActionError("CAPTCHA WRONG!"); return "fail";}
 			System.out.println("In try");
 			System.out.println("here in try");
 			Class.forName("org.gjt.mm.mysql.Driver");
@@ -234,7 +256,7 @@ public class sign_up extends ActionSupport
 			ResultSet rs = null;
 			number = (long) Math.floor(Math.random() * 9000000000L) + 1000000000L;
 			checkrandom();
-			sql = "insert into user_details (user_id,first_name,last_name,home_address,city,state,country,pin_code,phone_no,email,dob,password,secret_question,secret_answer,cstatus,cid) values ('" + getUid() + "','" + getFirstname() + "','" + getLastname() + "','" + getAddress1() + getAddress2() + "','" + getCity() + "','" + getState() + "','" + getCountry() + "','" + getPincode() + "','" + getPhone() + "','" + getEmail() + "','" + getBirthdate() + "-" + getBirthmonth() + "-" + getBirthyear()
+			sql = "insert into user_details (user_id,user_first_name,user_last_name,user_home_address,user_city,user_state,user_country,user_pin_code,user_phone_no,user_email,user_dob,user_password,user_secret_question,user_secret_answer,user_cstatus,user_cid) values ('" + getUid() + "','" + getFirstname() + "','" + getLastname() + "','" + getAddress1() + getAddress2() + "','" + getCity() + "','" + getState() + "','" + getCountry() + "','" + getPincode() + "','" + getPhone() + "','" + getEmail() + "','" + getBirthdate() + "-" + getBirthmonth() + "-" + getBirthyear()
 					+ "','" + getPassword() + "','" + getSecquestion() + "','" + getSecanswer() + "','0','" + number + "')";
 
 			System.out.println(sql);
@@ -243,7 +265,7 @@ public class sign_up extends ActionSupport
 			SendMail1 s = new SendMail1();
 			s.to = email;
 			s.subject = "JEBAY CONFIRMATION LINK";
-			s.message = "<a href=\"http://192.16.11.80:8080/Jebay/Confirmation.action?cid=" + number + "\">CLICK HERE </a>TO CONFIRM YOUR JEBAY REGISTRATION";
+			s.message = "<a href=\"http://localhost:8080/Jebay/Confirmation.action?cid=" + number + "\">CLICK HERE </a>TO CONFIRM YOUR JEBAY REGISTRATION";
 			s.main();
 			Map session = ActionContext.getContext().getSession();
 			session.put("logged-in", "true");

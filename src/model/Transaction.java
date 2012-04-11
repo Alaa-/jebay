@@ -1,6 +1,10 @@
 package model;
 
+import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.Statement;
+
+import vo.ItemVo;
 
 import ebay.Connect;
 
@@ -10,19 +14,71 @@ public class Transaction {
 
 	public static void makePayment(int price, String buyer,int item_id,int qty,int acc)
 	{
-		//ResultSet rs = null;
 		
-		String seller = ItemDetails.getSellerItem(item_id);
+		/*ResultSet rs = null;
 		String sqlQuery = "insert into `transaction_details` " +
-				"(`t_buyer`,`t_seller`,`t_status`,`t_item_id`,`t_quantity`,`t_timestamp`,`cart_id`,`buyer_acc_no`) " +
-				"values ('"+buyer+"','"+seller+"',1,"+item_id+","+qty+",now(),"+cart_id+","+acc+")";
+				"(`t_buyer`,`t_seller`,`t_status`,`t_item_id`,`t_quantity`,`t_timestamp`,+`buyer_acc_no`) " +
+				"values ('"+buyer+"','"+seller+"',1,"+item_id+","+qty+",now(),"+acc+")";
 		
-		DB.update(sqlQuery);
+		//DB.update(sqlQuery);*/
+		//
+		String seller = ItemDetails.getSellerItem(item_id);
+		int transaction_id = getTransactionId(price, buyer, item_id, qty, acc,seller);
+		System.out.println(transaction_id);
 		reduceQuantity(item_id);
 		deductAmount(acc, price);
+		addToPaisaPay(price, seller, buyer, transaction_id);
 		
 	}
 	
+	
+	
+	public static int getTransactionId(int price, String buyer,int item_id,int qty,int acc, String seller)
+	{
+
+		String sqlQuery;
+		Connection conn;
+		Statement stmt;
+		ResultSet rs = null;
+		int newGeneratedItemid = -1;
+		conn = DB.getConnection();
+		sqlQuery = "insert into transaction_details " +
+				"(t_buyer,t_seller,t_status,t_item_id,t_quantity,t_timestamp,buyer_acc_no) " +
+				"values ('"+buyer+"','"+seller+"',1,"+item_id+","+qty+",now(),"+acc+")";
+		System.out.println(sqlQuery);
+		try
+		{
+			stmt = conn.createStatement();
+
+			System.out.println(sqlQuery);
+			stmt.executeUpdate(sqlQuery, Statement.RETURN_GENERATED_KEYS);
+			rs = stmt.getGeneratedKeys();
+			if (rs.next())
+			{
+				newGeneratedItemid = rs.getInt(1);
+				System.out.println("New generated Item_id is " + newGeneratedItemid);
+
+			}
+			else
+			{
+				System.out.println("no key generated");
+			}
+		}
+		catch (Exception ex)
+		{
+			System.out.println("no key generated");
+			ex.getStackTrace();
+		}
+		finally
+		{
+			DB.close(rs);
+			DB.close(conn);
+		}
+
+		return newGeneratedItemid;
+
+	}
+		
 	public static void removeFromCart(int cart_id){
 		String sqlQuery = "update table cart_details set cart_status=0 where cart_id="+cart_id;
 		DB.update(sqlQuery);
@@ -44,7 +100,7 @@ public class Transaction {
 		}
 		catch(Exception e){}	
 		finally{
-			String sqlQuery1 = "update table item_details set item_quantity="+qty+" where item_id="+item_id;
+			String sqlQuery1 = "update item_details set item_quantity="+qty+" where item_id="+item_id;
 			DB.update(sqlQuery1);
 		}
 	}
@@ -65,14 +121,18 @@ public class Transaction {
 		}
 		catch(Exception e){}	
 		finally{
-			String sqlQuery1 = "update table account_details set account_balance="+balance+" where account_no="+acc;
+			String sqlQuery1 = "update account_details set account_balance="+balance+" where account_no="+acc;
 			DB.update(sqlQuery1);
 		}
 	}
 	
-	public static void addToPaisaPay(int cart_id,int price,String seller,String buyer)
+	public static void addToPaisaPay(int price,String seller,String buyer, int transaction_id)
 	{
-		int tid = Cart.getTransactionId(cart_id);
+		String sqlQuery = "insert into `paisapay_details` " +
+				"(`paisa_seller`,`paisa_buyer`,`paisa_amount`,`paisa_t_id`) " +
+				"values ('"+seller+"','"+buyer+"',"+price+","+transaction_id+")";
+		
+		DB.update(sqlQuery);
 		
 	}
 }

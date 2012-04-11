@@ -36,11 +36,11 @@ public ArrayList<ItemVo> getitemdetails(int item_id){
 			it.setItem_shipping_charge(rs.getInt("item_shipping_charge"));
 			it.setItem_seller(rs.getString("item_seller"));
 			it.setItem_id(rs.getInt("item_id"));
-			int tot = rs.getInt("item_quantity")*rs.getInt("item_price")+rs.getInt("item_shipping_charge");
-			String total=Integer.toString(tot);
-			System.out.println("total is coming "+total);
-			Map session=ActionContext.getContext().getSession();
-		    session.put("totalPrice",total);
+			//int tot = rs.getInt("item_quantity")*rs.getInt("item_price")+rs.getInt("item_shipping_charge");
+			//String total=Integer.toString(tot);
+			//System.out.println("total is coming "+total);
+			//Map session=ActionContext.getContext().getSession();
+		    //session.put("totalPrice",total);
 			arr.add(it);
 		}
 		

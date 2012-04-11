@@ -23,7 +23,7 @@
 </head>
 <body style="text-align: left" id="body">
 <s:iterator value="arr">
-	<div><%@ include file="header.jsp"%></div>
+	<div><%@ include file="wideheader.jsp"%></div>
 	
 		<br />
 		<br />
@@ -321,7 +321,7 @@
 		<br>
 		<br>
 		</s:iterator>
-		<div><%@ include file="footer.jsp"%></div>
+		<div><%@ include file="widefooter.jsp"%></div>
 
 </body>
 </html>

@@ -30,7 +30,7 @@
 
 		<action name="Register" class="ebay.sign_up">
 			<result name="success">/confirmation.jsp</result>
-				<result name="fail">/register.jsp</result>
+			<result name="fail">/register.jsp</result>
 		</action>
 
 		
@@ -89,11 +89,13 @@
 		</action>
 
 
-		<action name="save_mobile_detail" class="ebay.Save_mobile_detail">
+<action name="save_mobile_detail" class="ebay.Save_mobile_detail">
 			<result name="success">/home.jsp</result>
 		</action>
 		<action name="getform" class="ebay.Getform">
 			<result name="mobile">/mobile_sell_form.jsp</result>
+		</action>
+
 		</action>
 		
 		<action name="getpaisa" class="ebay.GetPaisa">
@@ -103,7 +105,7 @@
 		<action name="getpaisaform" class="ebay.GetPaisaForm">
 			<result name="success">/paisapayregisteration.jsp</result>
 		</action>
-
+		
 		<action name="bidding" class="ebay.bid">
 			<result name="success">bidding.jsp</result>
 		</action>
@@ -121,12 +123,8 @@
 		</action>
 		
 		<action name="placebid" class="ebay.PlaceBid">
-			<result name="success" type="chain">bidconfirm</result>
+			<result name="success">fake.jsp</result>
 			<result name="error" type="chain">bidding</result>
-		</action>
-		
-		<action name="bidconfirm" class="ebay.BidConfirm">
-			<result name="success">bidding_confirm.jsp</result>
 		</action>
 		
 		<action name="ProceedToPayment" class="ebay.Payment">
@@ -140,15 +138,15 @@
 			<result name="error" type="chain">bidding</result>
 		</action>
 		
-		<action name="debitCardPayment" >
+		<action name="debitCardPayment" class="ebay.DebitCardCheck">
 			<result name="success">ack.jsp</result>
 			<result name="error" type="chain">bidding</result>
 		</action>
 		
-		<action name="creditCardPayment" class="ebay.CreditCardCheck">
+	<!-- 	<action name="creditCardPayment" class="ebay.CreditCardCheck">
 			<result name="success">ack.jsp</result>
 			<result name="error" type="chain">bidding</result>
-		</action>
+		</action> -->
 		
 		<action name="allcategories" class="ebay.BrowseCategories">
 			<result name="success">allcategories.jsp</result>

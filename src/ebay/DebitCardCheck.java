@@ -2,6 +2,8 @@ package ebay;
 
 import java.util.Map;
 
+import model.Account;
+import model.Transaction;
 import model.User;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -16,15 +18,24 @@ public class DebitCardCheck extends ActionSupport{
 	public String execute(){
 		
 		System.out.println("holder is"+holdername);
-	    String buyer = User.getUserName(holdername);
+	    String holder = User.getUserName(holdername);
 	    String debitCard = User.getDebitCardNumber(holdername);
-	    if(holdername.equals(buyer) && debitcardnumber.equals(debitCard))
+	    if(holdername.equals(holder) && debitcardnumber.equals(debitCard))
 	    {
 	    	Map session=ActionContext.getContext().getSession();
 	    	String total=(String)session.get("totalPrice");
+	    	int dcnumber = Integer.parseInt(debitcardnumber);
 	    	int price = Integer.parseInt(total);
 	    	System.out.println("total after is "+total);
-	    	
+	    	String buyer=(String)session.get("User");
+	    	String itemid=(String)session.get("item_id");
+	    	int item_id=Integer.parseInt(itemid);	    	
+	    	String qtyi = (String)session.get("qty");
+	    	int qty = Integer.parseInt(qtyi);
+	    	int acc = Account.getAccountBuyerDebit(dcnumber);
+	    	System.out.println("price after is "+price);
+	    	System.out.println("item id in payment "+item_id);
+	    	Transaction.makePayment(price,buyer,item_id,qty,acc);
 	    	return "success";
 	    }
 	    	

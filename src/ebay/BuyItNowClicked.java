@@ -1,10 +1,13 @@
 package ebay;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Map;
 
 import model.BankDetails;
 
 import org.apache.struts2.ServletActionContext;
+
+import com.opensymphony.xwork2.ActionContext;
 public class BuyItNowClicked {
 int item_id,quantity;
 ArrayList<xyz> arr=new ArrayList<xyz>();
@@ -50,6 +53,12 @@ public String execute() throws Exception
 		x.setItem_seller(rs.getString("item_seller"));
 		x.setItem_id(rs.getInt("item_id"));
 		x.setQuantity(quantity);
+		int q = x.getQuantity();
+		System.out.println("finally qty is "+q);
+		int tot = x.getItem_total_shipping();
+		String total = Integer.toString(tot);
+		Map session=ActionContext.getContext().getSession();
+	    session.put("totalPrice",total);
 		x.setItem_shipping_charge(rs.getInt("item_shipping_charge"));
 		Connect c1=new Connect();
 		ResultSet rs1=c.getResult("select * from user_details where user_id='"+username+"'");

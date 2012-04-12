@@ -61,8 +61,8 @@ public class Search_Name extends ActionSupport{
 
 
 	public String execute(){
-		System.out.println(""+_nkw);
-		System.out.println(""+_sacat);
+		//System.out.println(""+_nkw);
+		System.out.println("thi is what you chose "+_sacat);
 		if(_sacat.equals("See-All-Categories"))
 		{
 

@@ -129,6 +129,10 @@
 			<result name="error" type="chain">bidding</result>
 		</action>
 		
+		<action name="ProceedToPayCart" class="ebay.PaymentCart">
+			<result name="success">buyfromcart.jsp</result>	
+		</action>
+		
 		<action name="ProceedToPayment" class="ebay.Payment">
 			<result name="credit">credit.jsp</result>
 			<result name="debit" >debit.jsp</result>

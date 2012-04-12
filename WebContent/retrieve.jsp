@@ -1,5 +1,5 @@
 <%@ page import="java.sql.*" %>
-<%@ page import="java.io.*,student.Connect" %> 
+<%@ page import="java.io.*,ebay.Connect" %> 
 <%@ page trimDirectiveWhitespaces="true" %>
 
 <%

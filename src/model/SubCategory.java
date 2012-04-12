@@ -72,4 +72,65 @@ public class SubCategory
 
 	}
 
+	public static ArrayList getBidDetails(int cat_id,int sub_cat_id)
+	{
+		ArrayList lstDetails = new ArrayList();
+		ResultSet rs = null;
+		String mode=null;
+		System.out.println("This method is being called with " + cat_id+" sub category "+sub_cat_id);
+		String sqlQuery = "select * from item_details where item_category_id="+cat_id+" and " +
+				"item_subcategory_id="+sub_cat_id+" and item_mode=1 and item_quantity>0 " +
+						"and datediff(item_endtime,now())>0";
+
+		rs = DB.readFromDB(sqlQuery);
+		try
+		{
+			while (rs.next())
+			{
+				String item_name = rs.getString("item_name");
+				int price = rs.getInt("item_price");
+				int shipping_charge = rs.getInt("item_shipping_charge");
+				int item_id = rs.getInt("item_id");
+				String image = rs.getString("item_image");
+				String mod = rs.getString("item_mode");
+				if(mod.equals("1"))
+					mode="Bid Now";
+				ItemDetailsVo ivo = new ItemDetailsVo(item_name, price, shipping_charge, mode, item_id, image);
+				lstDetails.add(ivo);
+			}
+		}
+		catch(Exception e){}
+		return lstDetails;
+	}
+	
+	public static ArrayList getBuyDetails(int cat_id,int sub_cat_id)
+	{
+		ArrayList lstDetails = new ArrayList();
+		ResultSet rs = null;
+		String mode=null;
+		System.out.println("This method is being called with " + cat_id+" sub category "+sub_cat_id);
+		String sqlQuery = "select * from item_details where item_category_id="+cat_id+" and " +
+				"item_subcategory_id="+sub_cat_id+" and item_mode=0 and item_quantity>0 " +
+						"and datediff(item_endtime,now())>0";
+
+		rs = DB.readFromDB(sqlQuery);
+		try
+		{
+			while (rs.next())
+			{
+				String item_name = rs.getString("item_name");
+				int price = rs.getInt("item_price");
+				int shipping_charge = rs.getInt("item_shipping_charge");
+				int item_id = rs.getInt("item_id");
+				String image = rs.getString("item_image");
+				String mod = rs.getString("item_mode");
+				if(mod.equals("0"))
+					mode="Buy Now";
+				ItemDetailsVo ivo = new ItemDetailsVo(item_name, price, shipping_charge, mode, item_id, image);
+				lstDetails.add(ivo);
+			}
+		}
+		catch(Exception e){}
+		return lstDetails;
+	}
 }

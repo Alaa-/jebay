@@ -168,5 +168,9 @@
 		<action name="continue" >
 			<result>home.jsp</result>
 		</action>
+		
+		<action name="subcatDetails" class="ebay.SubCategoryDetails">
+		<result name="success">showdetails.jsp</result>
+		</action>
 	</package>
 </struts>

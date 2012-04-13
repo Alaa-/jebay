@@ -60,12 +60,10 @@
 	%>
 	<table>
 		<tr bgcolor="663333">
-
 			<th><font color="white"><% out.print(rs4.getString("account_holder"));%>'s account balance</font>
 			</th>
 			<th><font color="white"><% out.print(rs5.getString("account_holder"));%>'s account balance</font>
 			</th>
-
 		</tr>
 	
 		<tr>

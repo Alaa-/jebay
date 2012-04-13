@@ -2,17 +2,7 @@ package vo;
 
 public class PurchasehistoryVo
 {
-	String t_seller, item_name, t_buyer, t_status;
-
-	public String getT_status()
-	{
-		return t_status;
-	}
-
-	public void setT_status(String t_status)
-	{
-		this.t_status = t_status;
-	}
+	String t_seller, item_name, t_buyer, courier_name;
 
 	public String getT_buyer()
 	{
@@ -24,7 +14,37 @@ public class PurchasehistoryVo
 		this.t_buyer = t_buyer;
 	}
 
-	int item_price, item_id, t_id;
+	int item_price, item_id, t_status, t_id, courier_shipping_id;
+
+	public String getCourier_name()
+	{
+		return courier_name;
+	}
+
+	public void setCourier_name(String courier_name)
+	{
+		this.courier_name = courier_name;
+	}
+
+	public int getCourier_shipping_id()
+	{
+		return courier_shipping_id;
+	}
+
+	public void setCourier_shipping_id(int courier_shipping_id)
+	{
+		this.courier_shipping_id = courier_shipping_id;
+	}
+
+	public int getT_status()
+	{
+		return t_status;
+	}
+
+	public void setT_status(int t_status)
+	{
+		this.t_status = t_status;
+	}
 
 	public int getT_id()
 	{

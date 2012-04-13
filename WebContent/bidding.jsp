@@ -16,8 +16,8 @@
 <link rel="stylesheet" type="text/css" href="css/header1.css">
 </head>
 <body style="text-align: left" id="body">
-<%@ include file="wideheader.jsp"%>
-	
+	<%@ include file="wideheader.jsp"%>
+
 	<s:iterator value="arr">
 		<br />
 		<br />
@@ -43,24 +43,28 @@
 																	<div class="ic-w300 ic-m" id="vv4-38_idiv">
 																		<center>
 																			<span></span><img
-																				src="retrieve.jsp?item_id=<s:property value='item_id'/>" width="150" height="150" />
+																				src="retrieve.jsp?item_id=<s:property value='item_id'/>"
+																				width="150" height="150" />
 																		</center>
 																	</div>
 																	<a id="vv4-38_a" class="ic-cp" href="javascript:;"></a>
 
 																</div>
-															</div></td>
+															</div>
+														</td>
 													</tr>
 													<tr>
 														<td id="vv4-38_sp" class="vs_w-spr">&#160;</td>
 													</tr>
 													<tr>
-														<td><div id="pD_vv4-38" class="tg-p"></div></td>
+														<td><div id="pD_vv4-38" class="tg-p"></div>
+														</td>
 													</tr>
 												</table>
 											</div>
 
-										</div></td>
+										</div>
+									</td>
 									<td id="isclmn" class="isumv1_5-cell"><form name="v4-26"
 											id="v4-26" method="get" class="vi-is1-s4"
 											action="placebid.action">
@@ -74,7 +78,8 @@
 															<h2 class="vi-is1-titleH2">100% Guaranted Lowest
 																eBAY Price+FREE GIFT+Prompt Dlvry</h2>
 															<div class="vi-is1-pt5"></div>
-														</div></td>
+														</div>
+													</td>
 												</tr>
 												<tr>
 													<td colspan="4" height="10"></td>
@@ -83,19 +88,23 @@
 													<th class="vi-is1-lbl">Item condition:</th>
 													<td colspan="3" class="vi-is1-clr"><span
 														class="vi-is1-condText"><s:property
-																value="item_condition"></s:property>
-													</span></td>
+																value="item_condition"></s:property> </span>
+													</td>
 												</tr>
 												<tr>
 													<td colspan="4" height="10"></td>
 												</tr>
 												<tr>
-													<th class="vi-is1-lbl">Time left:</th>
-													<td colspan="3" class="vi-is1-clr"><span
-														class="vi-is1-dt"><span class="vi-is1-tml"><s:property
-																	value="diff"></s:property>
-														</span> </span> </span><span class="vi-is1-s7"><span class="vi-is1-misc"></span>
-													</span></td>
+													<s:if test='bid_status.equals("1")'>
+														<th class="vi-is1-lbl">Time left:</th>
+														<td colspan="3" class="vi-is1-clr"><span
+															class="vi-is1-dt"><span class="vi-is1-tml"><s:property
+																		value="diff"></s:property> </span> </span> </span><span class="vi-is1-s7"><span
+																class="vi-is1-misc"></span> </span>
+														</td>
+													</s:if>
+													<th><s:else>Sorry, bidding has finished</s:else>
+													</th>
 												</tr>
 												<tr>
 													<td colspan="4" height="10"></td>
@@ -105,14 +114,12 @@
 													<td colspan="3" class="vi-is1-clr"><div>
 															<span class="vi-is1-s6"><span><a
 																	href="bidhistory.action?item_id=<s:property value="item_id"/>"
-																	rel="nofollow"><span id="v4-27">
-																	
-																			<s:property	value="count"></s:property>
-																		
-																	</span> <span>bids</span> </a> </span> </span><span id="v4-28"
-																class="vi-is1-tet vi-is1-rf vi-is1-dspl">[<a
+																	rel="nofollow"><span id="v4-27"> <s:property
+																				value="count"></s:property> </span> <span>bids</span> </a> </span> </span><span
+																id="v4-28" class="vi-is1-tet vi-is1-rf vi-is1-dspl">[<a
 																href="javascript:;">Refresh bidhistory</a>]</span>
-														</div></td>
+														</div>
+													</td>
 												</tr>
 												<tr>
 													<td colspan="4" height="10"></td>
@@ -121,49 +128,80 @@
 													<td colspan="4" height="10" class="vi-is1-solid"></td>
 												</tr>
 												<tr>
-													<th class="vi-is1-lblp vi-is1-solidBg">Starting bid:</th>
-													<td class="vi-is1-solid vi-is1-tbll"><span><span
-															id="v4-29" class="vi-is1-prcp"><s:property
-																	value="item_baseprice"></s:property>
-														</span> </span></td>
-													<td colspan="2" class="vi-is1-solid vi-is1-tblb"></td>
+													<s:if test='bid_status.equals("1")'>
+														<th class="vi-is1-lblp vi-is1-solidBg">Starting bid:</th>
+														<td class="vi-is1-solid vi-is1-tbll"><span><span
+																id="v4-29" class="vi-is1-prcp"> <s:property
+																		value="item_baseprice"></s:property> </span> </span>
+														</td>
+														<td colspan="2" class="vi-is1-solid vi-is1-tblb"></td>
+													</s:if>
+													<s:else>
+														<th class="vi-is1-lblp vi-is1-solidBg">Final bid:</th>
+														<td class="vi-is1-solid vi-is1-tbll"><span><span
+																id="v4-29" class="vi-is1-prcp"> <s:property
+																		value="max_bid"></s:property> </span> </span>
+														</td>
+														<td colspan="2" class="vi-is1-solid vi-is1-tblb"></td>
+													</s:else>
 												</tr>
 												<tr>
 													<td colspan="4" height="10" class="vi-is1-solid"></td>
 												</tr>
 												<tr>
-													<th class="vi-is1-lblp vi-is1-solidBg"><label
-														for="v4-30">Your max bid:</label></th>
-													
-														<td class="vi-is1-solid vi-is1-tbll"><table
-																cellpadding="0" cellspacing="0" border="0"
-																class="vi-is1-prcp">
-																<tr>
-																	<td class="vi-is1-prcs vi-is1-cur">Rs.</td>
-																	<td><div>
+													<s:if test='bid_status.equals("1")'>
+														<th class="vi-is1-lblp vi-is1-solidBg"><label
+															for="v4-30">Your max bid:</label>
+														</th>
+													</s:if>
+
+													<td class="vi-is1-solid vi-is1-tbll"><table
+															cellpadding="0" cellspacing="0" border="0"
+															class="vi-is1-prcp">
+															<tr>
+																<td class="vi-is1-prcs vi-is1-cur"><s:if
+																		test='bid_status.equals("1")'>Rs.</s:if>
+																</td>
+																<td><div>
+																		<s:if test='bid_status.equals("1")'>
 																			<input type="text" size="8" maxlength="10"
 																				name="bid_amt" id="v4-30"
 																				class="vi-is1-tet vi-is1-mb">
-																		</div></td>
-																</tr>
-																<tr></tr>
-															</table></td>
-														<td colspan="2" class="vi-is1-solid vi-is1-tblb"><div>
+																		</s:if>
+																	</div>
+																</td>
+															</tr>
+															<tr></tr>
+														</table>
+													</td>
+
+													<td colspan="2" class="vi-is1-solid vi-is1-tblb"><div>
+															<s:if test='bid_status.equals("1")'>
 																<b id="v4-7" class="bn-w bn-pad psb-S"><i>Place
-																		bid</i><span id="spn_v4-7" class="bn-b psb-b psb-S"><input
-																		id="but_v4-7" name="" value="Place bid" title=""
-																		type="submit"><b id="txt_v4-7">Place bid</b> </span>
-																</b><label class="g-hdn" for="v4-31"></label><input
-																	type="hidden" value="<s:property value="item_id"/>" name="item_id" style="display: none"
-																	id="v4-31">
-															</div></td>
-													
+																		bid</i><span id="spn_v4-7" class="bn-b psb-b psb-S">
+
+																		<input id="but_v4-7" name="" value="Place bid"
+																		title="" type="submit"><b id="txt_v4-7">Place
+																			bid</b> </span> </b>
+																<label class="g-hdn" for="v4-31"></label>
+																<input type="hidden"
+																	value="<s:property value="item_id"/>" name="item_id"
+																	style="display: none" id="v4-31">
+															</s:if>
+														</div>
+													</td>
+
+
 												</tr>
 												<tr>
 													<th class="vi-is1-lblp vi-is1-solidBg"></th>
-													<td colspan="3" class="vi-is1-solid"><span id="v4-32"
-														class="vi-c-fsmt"><s:actionerror />(Enter Rs. <s:property
-																value="max_bid"></s:property> or more)<br> </span></td>
+													<td colspan="3" class="vi-is1-solid"><s:if
+															test='bid_status.equals("1")'>
+															<span id="v4-32" class="vi-c-fsmt"><s:actionerror />(Enter
+																Rs. <s:property value="max_bid"></s:property> or more)<br>
+															</span>
+														</s:if>
+													</td>
 												</tr>
 												<tr>
 													<td colspan="4" height="10" class="vi-is1-solid"></td>
@@ -184,10 +222,11 @@
 													<td colspan="3" class="vi-is1-clr"><span
 														id="fshippingCost"><span
 															class="vi-is1-sh-srvcCost vi-is1-hideElem vi-is1-showElem">Rs.
-																<s:property value="item_shipping_charge"></s:property></span> </span><span><span> </span> </span><span
-														id="fshippingSvc">Flat Rate Courier - Delivery
-															anywhere in India</span><span class="sh-nowrap"><a
-															href="javascript:;" id="changeLocLink"
+																<s:property value="item_shipping_charge"></s:property> </span>
+													</span><span><span> </span> </span><span id="fshippingSvc">Flat
+															Rate Courier - Delivery anywhere in India</span><span
+														class="sh-nowrap"><a href="javascript:;"
+															id="changeLocLink"
 															class="vi-tl vi-is1-shpl vi-c-fsmt vi-is1-hideDisc"><span>See
 																	more services</span>&#160;<span class="vi-pla-sI vi-pla-iD"></span>
 														</a> </span><input type="hidden" id="chngLocPnlJSId"
@@ -196,14 +235,13 @@
 															href="javascript:;" id="seeDcnt"
 															class="vi-tl vi-is1-shpl vi-c-fsmt vi-is1-hideDisc"><span>See
 																	<b class="g-hdn">shipping</b> discounts</span>&#160;<span
-																class="vi-pla-sI vi-pla-iD vi-is1-hideDiv"></span> </a> </wbr> </span></td>
+																class="vi-pla-sI vi-pla-iD vi-is1-hideDiv"></span> </a> </wbr> </span>
+													</td>
 												</tr>
 												<!-- shipping and courier box ends... -->
 												<!-- jst breaks.. -->
 												<tr>
-													<td><br />
-													<br />
-													</td>
+													<td><br /> <br /></td>
 												</tr>
 												<!-- jst breaks.. -->
 												<!-- payment box starts... -->
@@ -220,15 +258,18 @@
 																								<tr>
 																									<td style="padding: 0px" class="noBorder"><span><img
 																											src="http://q.ebaystatic.com/aw/pics/psp_new/imgguaranteeshield1.png"
-																											height="35" width="28"> </span></td>
+																											height="35" width="28"> </span>
+																									</td>
 																									<td class="noBorder" style="padding: 0px"><span
 																										class="titleSpan divPosition">Make the
-																											smart choice:</span></td>
+																											smart choice:</span>
+																									</td>
 																								</tr>
 																							</table>
 																						</div>
 																						<div class="fontSize">Use PaisaPay, complete
-																							your purchase on eBay!</div> </span></td>
+																							your purchase on eBay!</div> </span>
+																				</td>
 																				<td valign="top" class="secondTd noBorder"><span
 																					class="display divPosition"><div
 																							class="listDiv">
@@ -245,7 +286,8 @@
 																							<a
 																								href="http://pages.ebay.in/aboutebay/The_smart_choice.html"
 																								target="_blank">Know more</a> | *T&amp;C apply
-																						</div> </span></td>
+																						</div> </span>
+																				</td>
 																			</tr>
 																		</table>
 																	</div>
@@ -254,7 +296,8 @@
 															<div class="vi-is1-cls">
 																<div id="rtm_html_699" style="height: 25; width: 447"></div>
 															</div>
-														</div></td>
+														</div>
+													</td>
 												</tr>
 												<!-- payment box ends... -->
 											</table>
@@ -262,10 +305,12 @@
 
 										<div>
 											<div class="vi-is1-s1"></div>
-										</div></td>
+										</div>
+									</td>
 								</tr>
 							</table>
-						</div></td>
+						</div>
+					</td>
 					<td colspan="1" rowspan="1" id="vi-tTblS" class="vi-tTblS"></td>
 					<td colspan="1" rowspan="1" id="vi-tTblC2" class="vi-tTblC2_0"><div>
 							<div>
@@ -313,7 +358,8 @@
 									</div>
 								</div>
 							</div>
-						</div></td>
+						</div>
+					</td>
 				</tr>
 			</table>
 		</div>

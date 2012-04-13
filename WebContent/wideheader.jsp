@@ -1,6 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
+<%@ page import="java.sql.*"%>
+<%@ page import="ebay.*"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -104,39 +106,23 @@
 											for search</label><select name="_sacat" id="_sacat" size="1"
 											class="gh-sb"><option value="See-All-Categories"
 												selected="selected">All Categories</option>
-											<option value="11450">Clothing &amp; Accessories</option>
-											<option value="174982">Shoes &amp; Other Footwear</option>
-											<option value="131090">Auto Accessories &amp; Parts</option>
-											<option value="267">Books &amp; Magazines</option>
-											<option value="Cameras & Optics">Cameras &amp; Optics</option>
-											<option value="9800">Cars &amp; Bikes</option>
-											<option value="116365">Charity</option>
-											<option value="11116">Coins &amp; Notes</option>
-											<option value="1">Collectibles</option>
-											<option value="293">Consumer Electronics</option>
-											<option value="13361">Fitness &amp; Sports</option>
-											<option value="157606">Fun Stuff</option>
-											<option value="11700">Home, Decor &amp; Furnishings</option>
-											<option value="281">Jewellery &amp; Diamonds</option>
-											<option value="137080">Kitchen &amp; Home Appliances</option>
-											<option value="160">Laptops &amp; Computer
-												Peripherals</option>
-											<option value="162260">Memory Cards, Pen Drives
-												&amp; HDD</option>
-											<option value="14416">Mobile Accessories</option>
-											<option value="Mobile Phones">Mobile Phones</option>
-											<option value="11232">Movies &amp; Music</option>
-											<option value="619">Musical Instruments</option>
-											<option value="26395">Perfumes, Cosmetics &amp;
-												Health</option>
-											<option value="95680">Services &amp; Real Estate</option>
-											<option value="169977">Stamps</option>
-											<option value="631">Tools &amp; Office Supplies</option>
-											<option value="220">Toys, Games &amp; Baby</option>
-											<option value="3252">Travel</option>
-											<option value="1249">Video &amp; Computer Games</option>
-											<option value="14324">Watches</option>
-											<option value="99">Everything Else</option></select><a class="gh-ss"><input
+																						<%
+												{
+													Connect c = new Connect();
+													ResultSet rs = c.getResult("select * from category_details");
+													while (rs.next()) {
+											%>
+
+											<option value="<%=rs.getInt("category_id")%>">
+												<%
+													out.print(rs.getString("category_name"));
+												%>
+											</option>
+											<%
+												}
+												}
+											%>
+											</select><a class="gh-ss"><input
 											type="submit" value="Search" id="ghSearch" class="gh-btn"></a>
 									</div>
 									

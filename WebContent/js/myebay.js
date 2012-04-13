@@ -3991,7 +3991,7 @@ function get_MyEbay_menu() {
 	return {
 		"items" : [
 				{
-					"value" : "<a href=\"http://my.ebay.in/ws/eBayISAPI.dll?MyEbay&amp;gbh=1&amp;CurrentPage=MyeBaySummary&amp;ssPageName=STRK:ME:LNLK:MESUMX\" rel=\"nofollow\">Summary</a>"
+					"value" : "<a href=\"#\" rel=\"nofollow\">Summary</a>"
 				},
 				{
 					"value" : "<a href=\"http://my.ebay.in/ws/eBayISAPI.dll?MyEbay&amp;gbh=1&amp;CurrentPage=MyeBayBidding&amp;ssPageName=STRK:ME:LNLK:MEBIDX\" rel=\"nofollow\">Bids/Offers</a>"
@@ -4005,7 +4005,7 @@ function get_Sell_menu() {
 	return {
 		"items" : [
 				{
-					"value" : "<a href=\"http://pages.ebay.in/ebayexplained/sell.html\">How to Sell</a>"
+					"value" : "<a href=\"#\">How to Sell</a>"
 				} ]
 	};
 }

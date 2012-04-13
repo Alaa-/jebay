@@ -549,7 +549,7 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VtotojCooki
 							<tbody>
 								<tr>
 									<td><form name="pageForm" autocomplete="OFF"
-											action="ProceedToPayment.action"
+											action="PaymentCartMode.action"
 											method="get" id="SSPMformID">
 											<input value="CreateOrder" name="MfcISAPICommand"
 												type="hidden"><input name="paymenthidden"
@@ -599,7 +599,7 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VtotojCooki
 																				</div>
 																			</td>
 																		</tr>
-																		<s:iterator value="lstUserDetails">
+																		<s:iterator value="lstItemDetails">
 																		<input type="hidden" name="item_id" value="<s:property value="item_id"/>"/>
 																		<input type="hidden" name="quantity" value="<s:property value="quantity"/>"/>
 																		<tr>

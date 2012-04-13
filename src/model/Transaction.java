@@ -12,22 +12,23 @@ import myutil.DB;
 
 public class Transaction {
 
-	public static void makePayment(int price, String buyer,int item_id,int qty,int acc)
+	public static int makePayment(int price, String buyer,int item_id,int qty,int acc)
 	{
 		
-		/*ResultSet rs = null;
-		String sqlQuery = "insert into `transaction_details` " +
-				"(`t_buyer`,`t_seller`,`t_status`,`t_item_id`,`t_quantity`,`t_timestamp`,+`buyer_acc_no`) " +
-				"values ('"+buyer+"','"+seller+"',1,"+item_id+","+qty+",now(),"+acc+")";
+		int trans_status=0;
 		
-		//DB.update(sqlQuery);*/
-		//
+		trans_status= deductAmount(acc, price);
+		
+		if(trans_status == 1)
+		{
 		String seller = ItemDetails.getSellerItem(item_id);
 		int transaction_id = getTransactionId(price, buyer, item_id, qty, acc,seller);
 		System.out.println(transaction_id);
 		reduceQuantity(item_id,qty);
-		deductAmount(acc, price);
 		addToPaisaPay(price, seller, buyer, transaction_id);
+		}
+		
+		return trans_status;
 		
 	}
 	
@@ -43,7 +44,7 @@ public class Transaction {
 		int newGeneratedItemid = -1;
 		conn = DB.getConnection();
 		sqlQuery = "insert into transaction_details " +
-				"(t_buyer,t_seller,t_status,t_item_id,t_quantity,t_timestamp,buyer_acc_no) " +
+				"(t_buyer,t_seller,t_status,t_item_id,t_quantity,t_timestamp,t_buyer_account_no) " +
 				"values ('"+buyer+"','"+seller+"',1,"+item_id+","+qty+",now(),"+acc+")";
 		System.out.println(sqlQuery);
 		try
@@ -105,10 +106,11 @@ public class Transaction {
 		}
 	}
 	
-	public static void deductAmount(int acc, int price)
+	public static int deductAmount(int acc, int price)
 	{
 		ResultSet rs = null;
 		int balance=0;
+		int trans_status=0;
 		String sqlQuery = "select account_balance from account_details where account_no="+acc;
 		rs = DB.readFromDB(sqlQuery);
 		try
@@ -117,10 +119,15 @@ public class Transaction {
 			{
 				balance=rs.getInt("account_balance");
 				if(balance>price)
+				{
 				balance=balance-price;
-			//	else 
-					
-					
+				trans_status=1;
+				}
+			
+			else 
+			{		
+				trans_status=0;	
+			}
 			}
 		}
 		catch(Exception e){}	
@@ -128,6 +135,8 @@ public class Transaction {
 			String sqlQuery1 = "update account_details set account_balance="+balance+" where account_no="+acc;
 			DB.update(sqlQuery1);
 		}
+		
+		return trans_status;
 	}
 	
 	public static void addToPaisaPay(int price,String seller,String buyer, int transaction_id)

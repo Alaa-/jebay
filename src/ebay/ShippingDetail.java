@@ -48,9 +48,9 @@ public class ShippingDetail
 		session.put("t_id", t_id);
 		session.put("shippingid", shippingid);
 		String user_id = session.get("username").toString();
-		System.out.println(user_id);
+
 		Connect c = new Connect();
-		c.dml("insert into courier_details(courier_seller_id,courier_name,courier_shipping_id) values('" + user_id + "','" + courier_name + "','" + shippingid + "')");
+		c.dml("insert into courier_details(courier_seller_id,courier_name,courier_shipping_id,courier_t_id) values('" + user_id + "','" + courier_name + "','" + shippingid + "','" + t_id + "')");
 		return "success";
 
 	}

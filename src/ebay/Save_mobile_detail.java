@@ -170,6 +170,7 @@ public class Save_mobile_detail extends ActionSupport
 			System.out.println(mobilebaseprice); // printing value to check....
 			objitemvo.setItem_baseprice(mobilebaseprice);
 			objitemvo.setItem_mode(mobilesellmode);
+			System.out.println("mobile sell mode is :" + mobilesellmode + ":");
 			Map session = ActionContext.getContext().getSession();
 			objitemvo.setItem_seller((String) session.get("User"));
 			objitemvo.setItem_quantity(mobilequantity);
@@ -180,11 +181,11 @@ public class Save_mobile_detail extends ActionSupport
 			newGeneratedItemId = ItemDetails.saveItemDetails(objitemvo);
 
 			Mobile.saveMobileDetails(newGeneratedItemId, mobilebrand, mobileos, camera, mobiletype);
-			
+
 			Image.saveImage(newGeneratedItemId, getImage());
-			
+
 			BiddingStatusMo.initBiddingStatus(newGeneratedItemId);
-			
+
 			System.out.println("Mobile details saved.");
 		}
 		catch (Exception e)

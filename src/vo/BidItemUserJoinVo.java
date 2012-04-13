@@ -20,8 +20,14 @@ public String getItem_name() {
 public void setItem_name(String item_name) {
 	this.item_name = item_name;
 }
-int item_id,bidding_bid,item_baseprice,count,max_bid;
+int item_id,bidding_bid,item_baseprice,count,max_bid,item_shipping_charge;
 
+public int getItem_shipping_charge() {
+	return item_shipping_charge;
+}
+public void setItem_shipping_charge(int item_shipping_charge) {
+	this.item_shipping_charge = item_shipping_charge;
+}
 public String getBid_status() {
 	return bid_status;
 }

@@ -23,6 +23,7 @@ public class ItemDetails
 		String sqlQuery = "select * from item_details where item_name like '%" + pdt + "%' and " +
 				"item_category_id=" + "" + getCategory(category) + " and item_mode=1 " +
 						"and item_quantity>0 and datediff(item_endtime,now())>0";
+		
 		rs = DB.readFromDB(sqlQuery);
 		try
 		{

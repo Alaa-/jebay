@@ -151,9 +151,31 @@
 			<result name="error" type="chain">bidding</result>
 		</action>
 		
+		
+		<!-- Payment with Cart Actions -->
+		
 		<action name="ProceedToPayCart" class="ebay.PaymentCart">
 			<result name="success">buyfromcart.jsp</result>	
 		</action>
+		
+		<action name="PaymentCartMode" class="ebay.PaymentCartMode">
+			<result name="credit">credit.jsp</result>
+			<result name="debit" >debit.jsp</result>
+			<result name="bank">bank.jsp</result>
+		</action>
+		
+		<action name="creditPaymentCart" class="ebay.CreditCardCart">
+			<result name="success">ack.jsp</result>
+			<result name="error" >failed.jsp</result>
+		</action>
+		
+		<action name="debitPaymentCart" class="ebay.DebitCardCart">
+			<result name="success">ack.jsp</result>
+			<result name="error">failed.jsp</result>
+		</action>
+		
+		
+		<!-- Payment without Cart Actions -->
 		
 		<action name="ProceedToPayment" class="ebay.Payment">
 			<result name="credit">credit.jsp</result>
@@ -163,18 +185,18 @@
 		
 		<action name="creditCardPayment" class="ebay.CreditCardCheck">
 			<result name="success">ack.jsp</result>
-			<result name="error" type="chain">bidding</result>
+			<result name="error" >failed.jsp</result>
 		</action>
 		
 		<action name="debitCardPayment" class="ebay.DebitCardCheck">
 			<result name="success">ack.jsp</result>
-			<result name="error" type="chain">bidding</result>
+			<result name="error">failed.jsp</result>
 		</action>
 		
-	<!-- 	<action name="creditCardPayment" class="ebay.CreditCardCheck">
-			<result name="success">ack.jsp</result>
-			<result name="error" type="chain">bidding</result>
-		</action> -->
+		<!-- Payment for Bidding Actions -->
+		
+		
+		
 		
 		<action name="allcategories" class="ebay.BrowseCategories">
 			<result name="success">allcategories.jsp</result>

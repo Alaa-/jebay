@@ -14,6 +14,7 @@ public class DebitCardCheck extends ActionSupport{
 	private String debitcardnumber;
 	private String cvv;
 	private String holdername;
+	int trans_status;
 	
 	public String execute(){
 		
@@ -35,8 +36,12 @@ public class DebitCardCheck extends ActionSupport{
 	    	int acc = Account.getAccountBuyerDebit(dcnumber);
 	    	System.out.println("price after is "+price);
 	    	System.out.println("item id in payment "+item_id);
-	    	Transaction.makePayment(price,buyer,item_id,qty,acc);
+	    	trans_status = Transaction.makePayment(price,buyer,item_id,qty,acc);
+	    	System.out.println("trans_status"+trans_status);
+	    	if(trans_status==1)
 	    	return "success";
+	    	else 
+	    	return "error";
 	    }
 	    	
 	    else

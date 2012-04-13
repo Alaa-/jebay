@@ -12,6 +12,8 @@ public class CreditCardCheck extends ActionSupport{
 	private String creditcardnumber;
 	private String cvv;
 	private String holdername;
+	int trans_status;
+
 	//private int item_id;
 	public String execute(){
 		
@@ -32,8 +34,12 @@ public class CreditCardCheck extends ActionSupport{
 	    	int acc = Account.getAccountBuyerCredit(ccnumber);
 	    	System.out.println("price after is "+price);
 	    	System.out.println("item id in payment "+item_id);
-	    	Transaction.makePayment(price,buyer,item_id,qty,acc);
-	    	return "success";
+	    	trans_status = Transaction.makePayment(price,buyer,item_id,qty,acc);
+	    	System.out.println("trans_status"+trans_status);
+	    	if(trans_status==1)
+		    	return "success";
+		    else 
+		    	return "error";
 	    }
 	    	
 	    else

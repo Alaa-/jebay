@@ -71,9 +71,10 @@
 						</div>
 						<div id="tabsContent_1_0" class="tabsContent">
 						<s:iterator value="bidhis">
+						<s:set name="status" value="t_status"/>
 							<div class="panelHead2">
 						<input type="checkbox"  class="left"/>
-						<img src="retrieve.jsp?item_id=<s:property value="item_id"/>" width="205" height="156" class="left" />
+						<img src="retrieve.jsp?item_id=<s:property value="item_id"/>" width="150" height="150" class="left" />
 						<div class="left">
 							<div>
 								<a href="#"><s:property value="item_name"/></a>
@@ -81,12 +82,13 @@
 							</div>
 							<div>
 								<a href="#" class="seperator">Seller: <s:property value="item_seller"/></a>
-								<a href="#" class="seperator">124</a>
+								<a href="#" class="seperator"></a>
 								<span class="grey">100%</span>
 							</div>
-							
-							
-							
+							<s:if test="%{#status==0}">
+							<div><a href="Intermediate.action?winner=<s:property value="bidding_winner"/>&item_id=<s:property value="item_id"/>"> <input type="button" value="Pay Now"></input></a></div>
+							</s:if>
+							<s:else> YOU HAVE PAID THE AMOUNT</s:else>
 						</div>
 						<div class="left">
 							<div class="green">Rs. <s:property value="item_price"/></div>

@@ -13,7 +13,7 @@
 <script type="text/javascript">
 function loadtextfield(){
 	//alert("hjo");
-	$("#d1").html('Enter Courier Name:<input type="text" name="couriername"/><br>Enter Shipping TID:<input type="text" name="shiptid"/><br><input type="submit" name="Submit"/>');
+	$("#d1").html('Enter Courier Name:<input type="text" name="courier_name"/><br>Enter Shipping TID:<input type="text" name="shippingid"/><br><input type="submit" name="Submit"/>');
 	
 }
 

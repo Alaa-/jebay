@@ -115,7 +115,7 @@
 								<a href="#" class="seperator">Your amount is with Paisapay right now</a>
 								</s:if>
 								<s:elseif test="%{#status==2}">
-   								<a href="#" class="seperator">Seller has Shipped the item .. </a>
+   								<a href="#" class="seperator">Seller has Shipped the item ..<s:property value="courier_shipping_id"></s:property> </a>
    								<a href="UpdateTStatus.action?id=<s:property value="t_id"/>" class="seperator">Click here if u got the item </a>
 								</s:elseif>
 								<s:elseif test="%{#status==3}">

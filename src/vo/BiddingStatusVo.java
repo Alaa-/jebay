@@ -2,7 +2,17 @@ package vo;
 
 public class BiddingStatusVo
 {
-	String bidding_status, bidding_winner, item_name, item_seller;
+	String bidding_status, bidding_winner, item_name, item_seller, item_mode;
+
+	public String getItem_mode()
+	{
+		return item_mode;
+	}
+
+	public void setItem_mode(String item_mode)
+	{
+		this.item_mode = item_mode;
+	}
 
 	public String getItem_seller()
 	{
@@ -44,7 +54,17 @@ public class BiddingStatusVo
 		this.item_id = item_id;
 	}
 
-	int bidding_item_id, email_sent, item_price, item_id;
+	int bidding_item_id, email_sent, item_price, item_id, t_status;
+
+	public int getT_status()
+	{
+		return t_status;
+	}
+
+	public void setT_status(int t_status)
+	{
+		this.t_status = t_status;
+	}
 
 	public String getBidding_status()
 	{

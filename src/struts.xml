@@ -115,7 +115,7 @@
 			<result name="success">/home.jsp</result>
 		</action>
 		
-		<action name="save_item_detail" class="ebay.Save_item_detail">
+		<action name="save_item_detail" class="ebay.Save_item_details">
 			<result name="success">/home.jsp</result>
 		</action>
 		

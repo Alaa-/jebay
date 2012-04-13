@@ -9,6 +9,26 @@ import myutil.DB;
 
 
 public class PaymentCartModel {
+	
+	public static int getShipping(int item_id)
+	{
+		int item_shipping_charge=0;
+		
+		ResultSet rs = null;
+		String sqlQuery = "select item_shipping_charge from item_details where item_id ="+item_id;
+		rs = DB.readFromDB(sqlQuery);
+		try
+		{
+			if (rs.next())
+			{
+				item_shipping_charge=rs.getInt("item_shipping_charge");
+				System.out.println(item_shipping_charge);	
+			}
+		}
+		catch(Exception e){}
+		
+		return item_shipping_charge;
+	}
 	public static int getItemIdFromCart(int cart_id)
 	{
 		int item_id = 0;
@@ -53,4 +73,22 @@ public class PaymentCartModel {
 		catch(Exception e){}
 		return lstItemDetails;
 	}
+
+public static int getPrice(int item_id)
+{
+	int item_price=0;
+	ResultSet rs = null;
+	String sqlQuery = "select item_price from item_details where item_id ="+item_id;
+	rs = DB.readFromDB(sqlQuery);
+	try
+	{
+		if (rs.next())
+		{
+			item_price=rs.getInt("item_price");
+			System.out.println(item_price);	
+		}
+	}
+	catch(Exception e){}
+	return item_price;
+}
 }

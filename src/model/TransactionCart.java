@@ -22,7 +22,8 @@ public class TransactionCart {
 		Map session=ActionContext.getContext().getSession();
     	String cart_id_string=(String)session.get("cart_id");
     	int cart_id = Integer.parseInt(cart_id_string);
-    	System.out.println("cart_id_string"+cart_id_string);
+    	System.out.println("cart_id"+cart_id);
+    	
 		trans_status= deductAmount(acc, price);
 		
 		if(trans_status == 1)

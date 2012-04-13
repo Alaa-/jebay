@@ -2,7 +2,17 @@ package vo;
 
 public class PurchasehistoryVo
 {
-	String t_seller, item_name, t_buyer;
+	String t_seller, item_name, t_buyer, t_status;
+
+	public String getT_status()
+	{
+		return t_status;
+	}
+
+	public void setT_status(String t_status)
+	{
+		this.t_status = t_status;
+	}
 
 	public String getT_buyer()
 	{
@@ -14,7 +24,18 @@ public class PurchasehistoryVo
 		this.t_buyer = t_buyer;
 	}
 
-	int item_price, item_id;
+	int item_price, item_id, t_id;
+
+	public int getT_id()
+	{
+		return t_id;
+	}
+
+	public void setT_id(int t_id)
+	{
+		this.t_id = t_id;
+	}
+
 	String t_timestamp;
 
 	public String getT_seller()

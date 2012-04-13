@@ -29,11 +29,11 @@ public class UpdateTStatus
 		String sellerid = null;
 		int selleraccountid = 0;
 		Connect c = new Connect();
-		c.dml("update transaction_details set t_status=2 where t_id='" + id + "'");
+		c.dml("update transaction_details set t_status=3 where t_id='" + id + "'");
 		ResultSet rs = c.getResult("select * from paisapay_details where paisa_t_id='" + id + "'");
 		while (rs.next())
 		{
-			balance = rs.getInt("paisa_balance");
+			balance = rs.getInt("paisa_amount");
 
 		}
 		rs = c.getResult("select * From transaction_Details where t_id='" + id + "'");

@@ -4,20 +4,19 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
 <link rel="stylesheet"
-	href="http://include.ebaystatic.com/css/e765/in/tbx/darwin/main_e7651in.css"
+	href="css/main_e7651in.css"
 	type="text/css">
 <link rel="stylesheet"
-	href="http://include.ebaystatic.com/css/e765/in/tbx/darwin/syi/ebaystd_e7651in.css"
+	href="css/ebaystd_e7651in.css"
 	type="text/css">
 <link rel="stylesheet"
-	href="http://include.ebaystatic.com/css/e765/in/tbx/darwin/syi/main_e7651in.css"
-	type="text/css">
-<!--[if IE]><link rel="stylesheet" href="http://include.ebaystatic.com/css/e765/in/tbx/darwin/syi/mainIEFixes_e7651in.css" type="text/css"/><![endif]-->
-<link rel="stylesheet"
-	href="http://include.ebaystatic.com/css/e765/in/tbx/common_e7651in.css"
+	href="css/syi-main_e7651in.css"
 	type="text/css">
 <link rel="stylesheet"
-	href="http://include.ebaystatic.com/css/e765/in/tbx/darwin/syi/sellhub_e7651in.css"
+	href="css/common_e7651in.css"
+	type="text/css">
+<link rel="stylesheet"
+	href="css/sellhub_e7651in.css"
 	type="text/css">
 </head>
 

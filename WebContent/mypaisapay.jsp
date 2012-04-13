@@ -45,14 +45,14 @@
 			<div class="navTabListContainer">
 				<div>
 					<ul class="navtabs">
-						<li class="active"><a href="getpaisa.action" id="tab1"
+						<li class="active"><a href="getpaisa" id="tab1"
 							class="bluelink">My PaisaPay summary</a></li>
 						<li class="highlight"><a href="#" id="tab2"
 							onmouseover="return vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab2&quot;, true);"
 							onmouseout="return vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab2&quot;, false);"
 							class="bluelink">Bought with PaisaPay</a></li>
 						<li class="highlight"><a
-							href="getpaisaform.action" id="tab5"
+							href="getpaisaform" id="tab5"
 							onmouseover="return vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab5&quot;, true);"
 							onmouseout="return vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab5&quot;, false);"
 							class="bluelink">Register to sell with PaisaPay</a></li>
@@ -181,9 +181,9 @@
 																<td width="20" align="left"></td>
 																<td align="left">
 																
-																<s:if test="<s:property value='paisaregister'/> == 0 ">
+																<s:if test="%{paisaregister} == 0 ">
 																<a
-																	href="getpaisaform.action"><s:property value="paisaregister"/>Register
+																	href="getpaisaform"><s:property value="paisaregister"/>Register
 																		now</a> and offer buyers the assurance of PaisaPay the
 																	fast, easy and secure way to accept credit cards and
 																	online bank transfers on your listings. Learn more on <a
@@ -191,7 +191,7 @@
 																</s:if>
 																<s:else>
 																	Your PaisaPay seller registration is active. You can manage your registration details and check your PaisaPay account balance from 
-																	<a href="getpaisaform.action">Registration details</a> and <a href="#">Account balance</a> tabs respectively.
+																	<a href="getpaisaform">Registration details</a> and <a href="#">Account balance</a> tabs respectively.
 																
 																
 																</s:else>	

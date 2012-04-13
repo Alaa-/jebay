@@ -25,7 +25,7 @@ public class SellHistoryMo
 				i.setItem_name(rs.getString("item_name"));
 				i.setItem_price(rs.getInt("item_price"));
 				i.setT_buyer(rs.getString("t_buyer"));
-				i.setT_status(rs.getString("t_status"));
+				i.setT_status(rs.getInt("t_status"));
 				i.setT_id(rs.getInt("t_id"));
 				i.setT_timestamp(rs.getString("t_timestamp"));
 				sellhis.add(i);

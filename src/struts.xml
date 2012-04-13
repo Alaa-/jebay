@@ -27,6 +27,13 @@
 
 
 		</action>
+		<action name="loadimage" class="ebay.loadimage">
+
+			<result name="success" >uploadimage.jsp</result>
+
+
+		</action>
+		
 
 		<action name="Register" class="ebay.sign_up">
 			<result name="success">/confirmation.jsp</result>
@@ -61,6 +68,21 @@
 		<action name="SellHistory" class="ebay.SellHistory">
 			<result name="success">/sellhistory.jsp</result>
 		</action>
+		
+		
+			<action name="UpdateTStatus" class="ebay.UpdateTStatus">
+			<result name="success" type="chain">Myebay</result>
+		</action>
+		
+		<action name="UpdateTStatusSeller" class="ebay.UpdateTStatusSeller">
+			<result name="success" type="chain">SellHistory</result>
+		</action>
+		<action name="ShippingDetail" class="ebay.ShippingDetail">
+			<result name="success" type="redirectAction">UpdateTStatusSeller</result>
+		</action>
+		
+		
+		
 		
 		<action name="BiddingStatus" class="ebay.BiddingStatus">
 			<result name="success">/myebaybidding.jsp</result>

@@ -23,6 +23,8 @@ public class PurchaseHistory
 				p.setItem_name(rs.getString("item_name"));
 				p.setItem_price(rs.getInt("item_price"));
 				p.setT_seller(rs.getString("t_seller"));
+				p.setT_status(rs.getString("t_status"));
+				p.setT_id(rs.getInt("t_id"));
 				p.setT_timestamp(rs.getString("t_timestamp"));
 				pur.add(p);
 

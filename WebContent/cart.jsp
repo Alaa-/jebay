@@ -736,7 +736,7 @@ function visit(a){
 function proceed(a){
 	//alert(a);
 	var b=document.getElementById('quantity'+a).value;
-	window.location.href="ProceedToPayment.action?cart_id="+a+"&cart_quantity="+b;
+	window.location.href="ProceedToPayCart.action?cart_id="+a+"&cart_quantity="+b;
 }
 </script>
 

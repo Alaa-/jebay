@@ -17,6 +17,7 @@
 
 	<%@include file="header.jsp"%> 
 
+
 	<div class="bgContainer">
 		<div class="tabsWrapper">
 			<div class="tab">Activity</div>
@@ -84,11 +85,16 @@
 								<option>Time ended:recent first</option>
 							</select>
 						</div>
+						
+			
+						
+						
+						
 					</div><s:iterator value="pur">
-					
+					<s:set name="status" value="t_status"/>
 					<div class="panelHead2">	
 						<input type="checkbox"  class="left"/>
-						<img src="images/icecream.jpg" width="205" height="156" class="left" />
+						<img src="retrieve.jsp?item_id=<s:property value="item_id"/>" width="150" height="150" class="left" />
 						<div class="left">
 					
 							<div>
@@ -98,6 +104,33 @@
 							<div>
 								<a href="#" class="seperator">Seller: <s:property value="t_seller"/></a>
 								<a href="#" class="seperator">124</a>
+								<%-- <s:if test="%{#status==1}">
+								<a href="UpdateTStatus.action?id=<s:property value="t_id"/>" class="seperator">Click here if you got item</a>
+								</s:if>
+								<s:elseif test="%{#status==2}">
+   								<a href="#" class="seperator">Shipped</a>
+								</s:elseif> --%>
+								
+								<s:if test="%{#status==1}">
+								<a href="#" class="seperator">Your amount is with Paisapay right now</a>
+								</s:if>
+								<s:elseif test="%{#status==2}">
+   								<a href="#" class="seperator">Seller has Shipped the item .. </a>
+   								<a href="UpdateTStatus.action?id=<s:property value="t_id"/>" class="seperator">Click here if u got the item </a>
+								</s:elseif>
+								<s:elseif test="%{#status==3}">
+   								<a href="#" class="seperator">You got the Item..</a>
+								</s:elseif>
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
 								<span class="grey">100%</span>
 							</div>
 							<div>
@@ -111,7 +144,18 @@
 							<div class="grey">Free shipping</div>
 						</div>
 						
-					</div></s:iterator>
+					</div>
+					
+									
+
+
+
+					
+					
+					
+					
+					
+					</s:iterator>
 					<div class="panelHead2 Last">
 						<div>
 							<input type="checkbox" />

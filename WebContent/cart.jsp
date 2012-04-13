@@ -801,8 +801,8 @@ function proceed(a){
 																											<div class="item-image">
 																												<div style="Height: 80px; Width: 80px;">
 																													<a
-																														href="http://cgi.ebay.in/ws/eBayISAPI.dll?ViewItem&amp;item=130662051525"><img
-																														src="cart/1306620515258080_0.jpg" alt=""
+																														href="#"><img
+																														src="retrieve.jsp?item_id=<s:property value="item_id"/>" height="75" width="75" alt=""
 																														border="0">
 																													</a>
 																												</div>

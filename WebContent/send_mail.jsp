@@ -50,7 +50,7 @@ try {
 			rs3=c.getResult(query5);
 			rs3.next();
 			String  email=rs3.getString("user_email");
-
+			
 			s.to = email;
 			s.subject = "Congratulations "+"Mr/Ms."+winner+"  You have won the bid";
 			s.message = "<a href=\"http://localhost:8080/Jebay/Intermediate.action?winnerid=" + winner + "&item_id="+item_id+"\">Click here </a> To Confirm your Bid";

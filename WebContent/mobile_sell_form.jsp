@@ -125,7 +125,7 @@ function checkmode()
             </select><br/><br/>
 
             Upload Image:<s:file name="image" id="image" label="Upload Image" /><br/><br/>
-            <s:submit name="submit" value="upload image"></s:submit>
+           
 
             <s:submit name="submit" value="submit" align="left"></s:submit>
         </s:form>

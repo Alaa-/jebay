@@ -486,7 +486,7 @@ a {
 									<div class="navTabListContainer">
 										<div>
 											<ul class="navtabs">
-												<li class="highlight"><a href="/Jebay/mypaisapay.jsp"
+												<li class="highlight"><a href="getpaisa.action"
 													id="tab1"
 													onmouseover="return 
 vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab1&quot;, true);"
@@ -498,7 +498,7 @@ vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab1&quot;, 
 													onmouseout="return vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab2&quot;, false);"
 													class="bluelink">Bought with PaisaPay</a></li>
 												<li class="active"><a
-													href="/Jebay/paisapayregisteration.jsp" id="tab5"
+													href="getpaisaform.action" id="tab5"
 													class="bluelink">Register to sell with PaisaPay</a></li>
 												<li class="highlight"><a href="#" id="tab6"
 													onmouseover="return vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab6&quot;, true);"
@@ -532,7 +532,7 @@ vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab1&quot;, 
 			</div>
 		</div>
 
-		<s:if test="<s:property value="paisaregister"/> == 0 ">
+		<s:if test="<s:property value='paisaregister'/> == 0 ">
 			<div class="blueboxconld">
 				<div class="blueboxconrd">
 					<div class="blueboxcontb">

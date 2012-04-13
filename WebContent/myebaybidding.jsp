@@ -73,7 +73,7 @@
 						<s:iterator value="bidhis">
 							<div class="panelHead2">
 						<input type="checkbox"  class="left"/>
-						<img src="images/ipad_mobil_watchs_02.jpg" width="205" height="156" class="left" />
+						<img src="retrieve.jsp?item_id=<s:property value="item_id"/>" width="205" height="156" class="left" />
 						<div class="left">
 							<div>
 								<a href="#"><s:property value="item_name"/></a>

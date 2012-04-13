@@ -87,7 +87,7 @@
 					</div><s:iterator value="sum">
 					<div class="panelHead2">	
 						<input type="checkbox"  class="left"/>
-						<img src="images/icecream.jpg" width="205" height="156" class="left" />
+						<img src="retrieve.jsp?item_id=<s:property value="item_id"/>" width="205" height="156" class="left" />
 						<div class="left">
 					
 							<div>

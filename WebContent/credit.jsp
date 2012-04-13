@@ -17,7 +17,7 @@
     <s:textfield name="creditcardnumber" value=""></s:textfield>
     <th></th>
        </td>
-    <td>&nbsp;Valid Till</td>
+    <!-- <td>&nbsp;Valid Till</td> -->
     <td></td>
     <td></td>
   </tr>
@@ -28,7 +28,7 @@
     </td>
     <td colspan="2">&nbsp;
     CVV (3-digit card verification number)
-    <s:textfield size="5" name="cvv" value=""></s:textfield><img alt="" src="images/icon_card_back.gif">
+    <s:textfield type="password" size="5" name="cvv" value=""></s:textfield><img alt="" src="images/icon_card_back.gif">
     </td>
   </tr>
   

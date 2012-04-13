@@ -631,8 +631,8 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VtotojCooki
 																										<div class="item-summ-body-image">
 																											<div style="Height: 80px; Width: 80px;">
 																												<a
-																													href="http://cgi.ebay.in/ws/eBayISAPI.dll?ViewItem&amp;item=270950260152"><img
-																													src="buyitnow/2709502601528080_1.jpg"
+																													href="#"><img height="75" width="75"
+																													src="retrieve.jsp?item_id=<s:property value="item_id"/>"
 																													alt="" border="0">
 																												</a>
 																											</div>
@@ -827,7 +827,7 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VtotojCooki
 																											</div>
 																										</div>
 																										<div class="ps-ppButton">
-																										<s:radio label="paymentmode" name="paymentmode" list="#{'1':'Credit Card','2':'Debit Card','3':'Online Bank Transfer'}" value="1" />
+																										<s:radio label="paymentmode" name="paymentmode" list="#{'1':'Credit Card','2':'Debit Card'}" value="1" />
 																										<s:select name="banks" headerKey="-1" headerValue="--Select Bank--" list = "lstBanks"/>
 																											<!-- <input name="payment_method" value="29"
 																												id="29"> -->

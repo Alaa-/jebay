@@ -43,9 +43,7 @@
 																	<div class="ic-w300 ic-m" id="vv4-38_idiv">
 																		<center>
 																			<span></span><img
-																				src="http://i.ebayimg.com/00/s/MTk0WDI1OQ==/$(KGrHqFHJBEE8+i(NON+BPWRF)mcE!~~60_35.JPG"
-																				id="i_vv4-38"
-																				alt="Combo of Nokia BL-5C Battery+Freshner+WARANTY">
+																				src="retrieve.jsp?item_id=<s:property value='item_id'/>" width="150" height="150" />
 																		</center>
 																	</div>
 																	<a id="vv4-38_a" class="ic-cp" href="javascript:;"></a>
@@ -64,8 +62,8 @@
 
 										</div></td>
 									<td id="isclmn" class="isumv1_5-cell"><form name="v4-26"
-											id="v4-26" method="post" class="vi-is1-s4"
-											action="placebid.action?item_id=2">
+											id="v4-26" method="get" class="vi-is1-s4"
+											action="placebid.action">
 											<table class="vi-is1" cellpadding="0" cellspacing="0"
 												border="0">
 												<tr>
@@ -156,7 +154,7 @@
 																		id="but_v4-7" name="" value="Place bid" title=""
 																		type="submit"><b id="txt_v4-7">Place bid</b> </span>
 																</b><label class="g-hdn" for="v4-31"></label><input
-																	type="text" name="hiddenText" style="display: none"
+																	type="hidden" value="<s:property value="item_id"/>" name="item_id" style="display: none"
 																	id="v4-31">
 															</div></td>
 													

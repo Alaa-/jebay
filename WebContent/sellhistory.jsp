@@ -8,7 +8,17 @@
 <link href="css/global.css" rel="stylesheet"/>
 
 <script src="script/jQuery.js" type="text/javascript"></script>
+<script src="js/hello.js" type="text/javascript"></script>
 <script src="script/app.js" type="text/javascript"></script>
+<script type="text/javascript">
+function loadtextfield(){
+	//alert("hjo");
+	$("#d1").html('Enter Courier Name:<input type="text" name="couriername"/><br>Enter Shipping TID:<input type="text" name="shiptid"/><br><input type="submit" name="Submit"/>');
+	
+}
+
+
+</script>
 </head>
 
 <body>
@@ -72,27 +82,58 @@
 						</div>
 						<div id="tabsContent_0_0" class="tabsContent">
 							<s:iterator value="sellhis">
+							<s:set name="status" value="t_status"/>
 							<div class="panelHead2">
 						<input type="checkbox"  class="left"/>
-						<img src="images/ipad_mobil_watchs_02.jpg" width="205" height="156" class="left" />
+						<img src="retrieve.jsp?item_id=<s:property value="item_id"/>" width="150" height="150" class="left" />
 						<div class="left">
 							<div>
 								<a href="#"><s:property value="item_name"/></a>
-								<span class="grey">123456789</span>
+							<%-- 	<span class="grey">123456789</span> --%>
 							</div>
 							<div>
 								<a href="#" class="seperator">Buyer: <s:property value="t_buyer"/></a>
-								<a href="#" class="seperator">124</a>
-								<span class="grey">100%</span>
-							</div>
-							
-							<div>
+								<!-- <a href="#" class="seperator">124</a> -->
+							<%-- 	<s:if test="%{#status==1}">
+								<a href="#" class="seperator">Item Has not Been Yet Shipped</a>
+								</s:if>
+								<s:elseif test="%{#status==2}">
+   								<a href="#" class="seperator">Item Shipped</a>
+								</s:elseif> --%>
+								<div>
 								<a href="#">Sale Date: <s:property value="t_timestamp"/></a>
 								
 							</div>
+								<s:if test="%{#status==1}">
+								<a href="#" class="seperator">Buyer has bought the item..</a>
+								<a href="UpdateTStatusSeller.action?tid=<s:property value="t_id"/>" class="seperator">Enter shipping detail..</a>
+								
+								<div>Enter Shipping Details: <input type="button" value="click this" onclick="loadtextfield()"/>
+								<form action="ShippingDetail"><input type="hidden" name="t_id" value="<s:property value="t_id"/>"/>
+								<div id="d1"></div>
+								</form></div>
+								</s:if>
+								<s:elseif test="%{#status==2}">
+   								<a href="#" class="seperator">You have shipped the item.. waiting for buyer confirmation</a>
+								</s:elseif>
+								<s:elseif test="%{#status==3}">
+   								<a href="#" class="seperator">Buyer got the item... money credited to your account</a>
+								</s:elseif>
+								
+								
+								
+								
+								
+								
+								
+								
+								<%-- <span class="grey">100%</span> --%>
+							</div>
+							
+							
 							
 						</div>
-						<div class="left">
+						<div class="right">
 							<div class="green">Rs. <s:property value="item_price"/></div>
 							<div class="grey">Free shipping</div>
 						</div>

@@ -72,6 +72,7 @@ public class Bidding extends ActionSupport {
 				objvo.setItem_condition(rs.getString("item_condition"));
 				objvo.setItem_mode(rs.getString("item_mode"));
 				objvo.setUser_id(rs.getString("user_id"));
+				objvo.setItem_shipping_charge(rs.getInt("item_shipping_charge"));
 				objvo.setItem_id(item_id);
 				objvo.setCount(count);
 				objvo.setMax_bid(maxbid);

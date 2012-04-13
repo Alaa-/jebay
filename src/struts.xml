@@ -81,7 +81,18 @@
 			<result name="success" type="redirectAction">UpdateTStatusSeller</result>
 		</action>
 		
-		
+		<action name="Search" class="search.Search">
+
+			<result name="success">searchsuccess.jsp</result>
+			<result name="error">error.jsp</result>
+
+		</action>
+		<action name="Paraaction" class="search.Paraaction">
+
+			<result name="success">ajax.jsp</result>
+			<result name="error">error.jsp</result>
+
+		</action>
 		
 		
 		<action name="BiddingStatus" class="ebay.BiddingStatus">

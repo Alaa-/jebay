@@ -25,7 +25,7 @@ public class Transaction {
 		String seller = ItemDetails.getSellerItem(item_id);
 		int transaction_id = getTransactionId(price, buyer, item_id, qty, acc,seller);
 		System.out.println(transaction_id);
-		reduceQuantity(item_id);
+		reduceQuantity(item_id,qty);
 		deductAmount(acc, price);
 		addToPaisaPay(price, seller, buyer, transaction_id);
 		
@@ -84,7 +84,7 @@ public class Transaction {
 		DB.update(sqlQuery);
 	}
 	
-	public static void reduceQuantity(int item_id)
+	public static void reduceQuantity(int item_id, int quan)
 	{
 		ResultSet rs = null;
 		int qty=0;
@@ -95,7 +95,7 @@ public class Transaction {
 			if (rs.next())
 			{
 				qty=rs.getInt("item_quantity");
-				qty=qty-1;
+				qty=qty-quan;
 			}
 		}
 		catch(Exception e){}	
@@ -116,7 +116,11 @@ public class Transaction {
 			if (rs.next())
 			{
 				balance=rs.getInt("account_balance");
+				if(balance>price)
 				balance=balance-price;
+			//	else 
+					
+					
 			}
 		}
 		catch(Exception e){}	

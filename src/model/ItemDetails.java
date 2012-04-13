@@ -21,7 +21,8 @@ public class ItemDetails
 		ResultSet rs = null;
 		String mode=null;
 		String sqlQuery = "select * from item_details where item_name like '%" + pdt + "%' and " +
-				"item_category_id=" + "" + getCategory(category) + " and item_mode=1";
+				"item_category_id=" + "" + getCategory(category) + " and item_mode=1 " +
+						"and item_quantity>0 and datediff(item_endtime,now())>0";
 		rs = DB.readFromDB(sqlQuery);
 		try
 		{
@@ -57,7 +58,8 @@ public class ItemDetails
 		ResultSet rs = null;
 		String mode=null;
 		String sqlQuery = "select * from item_details where item_name like '%" + pdt + "%' and " +
-				"item_category_id=" + "" + getCategory(category) + " and item_mode=0";
+				"item_category_id=" + "" + getCategory(category) + " and item_mode=0 "+
+				"and item_quantity>0 and datediff(item_endtime,now())>0";
 		rs = DB.readFromDB(sqlQuery);
 		try
 		{
@@ -157,7 +159,8 @@ public class ItemDetails
 
 		ResultSet rs = null;
 		String mode=null;
-		String sqlQuery = "select * from item_details where item_name like '%" + pdtName + "%' and item_mode=1";
+		String sqlQuery = "select * from item_details where item_name like '%" + pdtName + "%' and item_mode=1 "+
+				"and item_quantity>0 and datediff(item_endtime,now())>0";
 		rs = DB.readFromDB(sqlQuery);
 		try
 		{
@@ -191,7 +194,8 @@ public class ItemDetails
 
 		ResultSet rs = null;
 		String mode=null;
-		String sqlQuery = "select * from item_details where item_name like '%" + pdtName + "%' and item_mode=0";
+		String sqlQuery = "select * from item_details where item_name like '%" + pdtName + "%' and item_mode=0 "+
+				"and item_quantity>0 and datediff(item_endtime,now())>0";
 		rs = DB.readFromDB(sqlQuery);
 		try
 		{
@@ -236,7 +240,8 @@ public class ItemDetails
 		ArrayList details = new ArrayList();
 		ResultSet rs = null;
 		String mode=null;
-		String sqlQuery = "select * from item_details where item_category_id ="+catid+" and item_mode=1";
+		String sqlQuery = "select * from item_details where item_category_id ="+catid+" and item_mode=1 "+
+				"and item_quantity>0 and datediff(item_endtime,now())>0";
 		rs = DB.readFromDB(sqlQuery);
 		try
 		{
@@ -271,7 +276,8 @@ public class ItemDetails
 		ArrayList details = new ArrayList();
 		ResultSet rs = null;
 		String mode=null;
-		String sqlQuery = "select * from item_details where item_category_id ="+catid+" and item_mode=0";
+		String sqlQuery = "select * from item_details where item_category_id ="+catid+" and item_mode=0 "+
+				"and item_quantity>0 and datediff(item_endtime,now())>0";
 		rs = DB.readFromDB(sqlQuery);
 		try
 		{

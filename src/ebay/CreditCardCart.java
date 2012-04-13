@@ -17,7 +17,7 @@ public class CreditCardCart extends ActionSupport{
 	//private int item_id;
 	public String execute(){
 		
-		System.out.println("holder is"+holdername);
+		System.out.println("holder is "+holdername);
 	    String holder = User.getUserName(holdername);
 	    String creditCard = User.getCreditCardNumber(holdername);
 	    if(holdername.equals(holder) && creditcardnumber.equals(creditCard))
@@ -34,7 +34,7 @@ public class CreditCardCart extends ActionSupport{
 	    	
 	    	int acc = Account.getAccountBuyerCredit(ccnumber);
 	    	System.out.println("price after is "+price);
-	    	System.out.println("item id in payment "+item_id);
+	    	System.out.println("item id in cart "+item_id);
 	    	
 	    	trans_status = TransactionCart.makePayment(price,buyer,item_id,qty,acc);
 	    	System.out.println("trans_status"+trans_status);

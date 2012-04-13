@@ -184,7 +184,7 @@
 													<td colspan="3" class="vi-is1-clr"><span
 														id="fshippingCost"><span
 															class="vi-is1-sh-srvcCost vi-is1-hideElem vi-is1-showElem">Rs.
-																49.00</span> </span><span><span> </span> </span><span
+																<s:property value="item_shipping_charge"></s:property></span> </span><span><span> </span> </span><span
 														id="fshippingSvc">Flat Rate Courier - Delivery
 															anywhere in India</span><span class="sh-nowrap"><a
 															href="javascript:;" id="changeLocLink"

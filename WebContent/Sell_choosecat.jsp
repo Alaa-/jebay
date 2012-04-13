@@ -11,17 +11,17 @@
 	href="http://include.ebaystatic.com/css/v/in/legacy/ebay.css">
 
 <link rel="stylesheet"
-	href="http://include.ebaystatic.com/css/e765/in/tbx/darwin/main_e7651in.css"
+	href="css/main_e7651in.css"
 	type="text/css">
 <link rel="stylesheet"
-	href="http://include.ebaystatic.com/css/e765/in/tbx/darwin/syi/ebaystd_e7651in.css"
+	href="css/ebaystd_e7651in.css"
 	type="text/css">
 <link rel="stylesheet"
-	href="http://include.ebaystatic.com/css/e765/in/tbx/darwin/syi/main_e7651in.css"
+	href="css/syi-main_e7651in.css"
 	type="text/css">
 <!--[if IE]><link rel="stylesheet" href="http://include.ebaystatic.com/css/e765/in/tbx/darwin/syi/mainIEFixes_e7651in.css" type="text/css"/><![endif]-->
 <link rel="stylesheet"
-	href="http://include.ebaystatic.com/css/e765/in/tbx/darwin/syi/category_e7651in.css"
+	href="css/category_e7651in.css"
 	type="text/css">
 <script type="text/javascript" language="JavaScript"
 	src="http://include.ebaystatic.com/js/e765/in/features/syi3/category_browse_e7656in.js">
@@ -48,7 +48,7 @@
 								<div class="gh-log">
 									<span class="gh-lg"><a href="home.jsp"
 										rel="nofollow"> <img
-											src="http://p.ebaystatic.com/aw/pics/in/logos/logoEbay_x45.gif"
+											src="images/logoEbay_x45.gif"
 											alt="eBay" border="0"></img></a></span>
 								</div>
 								<span></span>

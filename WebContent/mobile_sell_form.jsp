@@ -102,7 +102,7 @@ function checkmode()
             </select><br/><br/>
 
 			
-            Quantity :<input type="text" name="mobilequantity" id="mobilequantity" pattern="\d" value="1" pattern="\d{0,3}"/><br/><br/>
+            Quantity :<input type="text" name="mobilequantity" id="mobilequantity" pattern="\d{1,3}" value="1" pattern="\d{0,3}"/><br/><br/>
 
             How you would like to sell:<select name="mobilesellmode" id="mobilesellmode" tabindex="-1" onchange="checkmode()">
                 <option value="0">Buy It Now</option>

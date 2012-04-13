@@ -111,11 +111,16 @@
 		</action>
 
 
-<action name="save_mobile_detail" class="ebay.Save_mobile_detail">
+		<action name="save_mobile_detail" class="ebay.Save_mobile_detail">
 			<result name="success">/home.jsp</result>
 		</action>
+		
+		<action name="save_item_detail" class="ebay.Save_item_detail">
+			<result name="success">/home.jsp</result>
+		</action>
+		
 		<action name="getform" class="ebay.Getform">
-			<result name="mobile">/mobile_sell_form.jsp</result>
+			<result name="mobile">/item_sell_form.jsp</result>
 		</action>
 		
 		<action name="getpaisa" class="ebay.GetPaisa">

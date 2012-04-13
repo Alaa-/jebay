@@ -1,0 +1,66 @@
+body,.standard,p,td,blockquote,div,span,ul,ol,dl,th,.standardtitle { font-size:small; }
+.emlcontent { margin:0 auto;width:940px; }
+.errorPanel,.infoPanel { margin-top:10px; }
+.startSellingBtn { margin-top:-7px;margin-left:3px;width:auto; }
+.brdcmb_sellhub { color:#333;font-family:Verdana;font-size:x-small;margin-top:-4px;margin-left:13px; }
+.mainCol { width:625px; }
+.colSpacer { width:15px; }
+.sideCol { width:275px; }
+.main,.main_congrats { background-color:#ededed;padding:15px; }
+.mainCnt { background-color:#fff;padding:15px; }
+.coreTitle { font-size:medium; }
+.lastEditedDate { font-size:x-small; }
+.orImage { margin:7px 0 12px 10px; }
+#keywords { margin-top:5px;width:200px; }
+.newImage { margin-left:8px; }
+.vertLnks { border-top:solid 1px #ccc;margin-top:10px;padding-top:10px; }
+.galleryImage { border:solid 1px #dedede; }
+.smplImg { border:2px solid #999999;margin:15px 0 0 20px;overflow:auto;height:360px;width:580px; }
+.pdTop { padding-top:15px; }
+.ptSml { padding-top:5px; }
+.cntDivider { border-bottom:solid 1px #ccc;padding:5px 0;clear:both; }
+.cntImg { float:left;padding:5px 0 0 15px; }
+.cntTitle { font-weight:bold;padding:10px 20px 0;font-size:16px;color:#333;font-family:Trebuchet; }
+.cntTxt { color:#999999;font-family:Arial;font-size:13px; }
+.lh { line-height:87px; }
+.mtSml { margin-top:10px; }
+.mtMdm { margin-top:17px; }
+.mtLrg { margin-top:27px; }
+.cntLnk { font-family:Verdana;font-size:11px; }
+#printShpLabel_sec .idt { padding:10px 0 0; }
+#printShpLabel_sec { width:300px; }
+.sectDivider { border-bottom:1px solid #999999; }
+.nshIcons table { margin-top:10px; }
+.nshIcons h2 { border-bottom:solid 1px #999;padding-bottom:5px; }
+.nshIcons img { display:block; }
+.nshIcons .help { display:block;font-weight:normal; }
+.template { margin-top:15px;width:625px; }
+.template .secBar { border-bottom:solid 1px #ccc; }
+.template .secTitCtr { padding-left:0; }
+#tid { width:200px; }
+.tidSnapshot { color:#333;font-size:x-small;padding-top:3px; }
+.tidActions { padding-top:10px;padding-bottom:5px;vertical-align:middle; }
+.ppEscMsg_container { margin-top:15px; }
+.ppEscMsg_container .n,.ppEscMsg_container .s { background-color:#e9e9e9; }
+.ppEscMsg { background-color:#e9e9e9; }
+.ppEscMsgTxt { float:left;width:865px; }
+.bdrWhite { border:solid 1px #fff; }
+.sellhub_LeftRTM { float:left;width:298px; }
+.sellhub_cash { color:#5d5d5d;font-size:large;padding-bottom:10px;text-align:left; }
+.content_LeftRTM { padding-bottom:10px; }
+.sellhub_avgPrices { color:#999;font-size:small;text-align:center; }
+.rtm_content_divider { background-color:none;border-right:solid 1px #b6b6b6;float:left;margin-bottom:30px;_margin-bottom:0; }
+.ecpDivider { border-right:solid 1px #ccc;height:460px; }
+.sellhub_MidRTM { float:left;padding:0 15px;width:300px; }
+.sellhub_flashwidget { padding-bottom:15px; }
+.content_MidRTM { border-top:dashed 1px #ccc;padding-top:25px;width:300px; }
+.SellingTip_Title { color:#5d5d5d;font-size:large;padding-bottom:10px; }
+.sellhub_RightRTM { float:left;width:275px; }
+.content_RightRTM { padding-left:15px; }
+.sellhub_RightDiv { border-top:dashed 1px #ccc;float:left;margin-left:20px;_margin-left:10px;padding-top:20px;width:275px; }
+.sellhub_sellerRTM { float:left;margin-left:20px;_margin-left:10px;padding-top:20px;width:275px; }
+#PIwarnMsg .warning { border:1px solid #fe9900;background-color:#fe9900; }
+#PIwarnMsg .cnt { padding:3px 10px; }
+#PIwarnMsg1 { padding-top:10px; }
+
+/* b=14592107 */

@@ -52,6 +52,7 @@ public class Bidding extends ActionSupport {
 		try {
 			rs3.next();
 			maxbid=rs3.getInt("maxi");
+			System.out.println(maxbid);
 			rs4.next();
 			count=rs4.getInt("counti");
 		} catch (SQLException e1) {
@@ -64,6 +65,7 @@ public class Bidding extends ActionSupport {
 				BidItemUserJoinVo objvo = new BidItemUserJoinVo();
 				objvo.setItem_name(rs.getString("item_name"));
 				//objvo.setBidding_bid(rs.getInt("bidding_bid"));
+				if(maxbid==0){maxbid=rs.getInt("item_baseprice");}
 				objvo.setItem_baseprice(rs.getInt("item_baseprice"));
 				objvo.setItem_id(item_id);
 				objvo.setUser_city(rs.getString("user_city"));

@@ -51,7 +51,7 @@ public class Bidding extends ActionSupport {
 	    }
 		try {
 			rs3.next();
-			maxbid=rs3.getInt("maxi");
+			maxbid=rs3.getInt("maxi")+1;
 			//System.out.println(maxbid);
 			rs4.next();
 			count=rs4.getInt("counti");
@@ -66,7 +66,7 @@ public class Bidding extends ActionSupport {
 				objvo.setItem_name(rs.getString("item_name"));
 				//objvo.setBidding_bid(rs.getInt("bidding_bid"));
 				System.out.println(status+":");
-				if(maxbid==0){maxbid=rs.getInt("item_baseprice");}
+				if(maxbid==1){maxbid=rs.getInt("item_baseprice");}
 				objvo.setItem_baseprice(rs.getInt("item_baseprice"));
 				objvo.setItem_id(item_id);
 				objvo.setUser_city(rs.getString("user_city"));

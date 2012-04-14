@@ -50,8 +50,11 @@ public class Save_item_details extends ActionSupport
 
 			newGeneratedItemId = ItemDetails.saveItemDetails(objitemvo);			
 			Image.saveImage(newGeneratedItemId, getImage());
-			BiddingStatusMo.initBiddingStatus(newGeneratedItemId);
-
+			if(itemsellmode!=null && itemsellmode.equals("1"))
+			{
+				System.out.println("Item is bidding item, init bidding status");
+				BiddingStatusMo.initBiddingStatus(newGeneratedItemId);
+			}
 			System.out.println("Item details saved.");
 		}
 		catch(Exception ex)

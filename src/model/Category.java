@@ -118,4 +118,13 @@ public class Category
 		}
 		return catname;
 	}
+
+	public static void addCat(String categoryname)
+	{
+		String sqlQuery="insert into category_details (category_name) values ('"+categoryname+"')";
+		DB.update(sqlQuery);
+		System.out.println(categoryname +  " Category Added");
+		
+	}
+
 }

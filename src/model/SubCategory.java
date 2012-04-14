@@ -21,6 +21,7 @@ public class SubCategory
 			while (rs.next())
 			{
 				SubCategoryVo objcatvo = new SubCategoryVo();
+				objcatvo.setSubcategory_category_id(rs.getInt("subcategory_category_id"));
 				objcatvo.setSubcategory_id(rs.getInt("subcategory_id"));
 				objcatvo.setSubcategory_name(rs.getString("subcategory_name"));
 				subcatList.add(objcatvo);
@@ -132,5 +133,12 @@ public class SubCategory
 		{
 		}
 		return lstDetails;
+	}
+
+	public static void addSubCat(int fcat,String fsubcat)
+	{
+		String sqlQuery="insert into subcategory_details(subcategory_name,subcategory_category_id) values ('"+fsubcat+"',"+fcat+")";
+		DB.update(sqlQuery);
+		System.out.println(fsubcat +  " Category Added");
 	}
 }

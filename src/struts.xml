@@ -14,13 +14,27 @@
 			<result name="success">/home.jsp</result>
 			<result name="error">/user_sign_in.jsp</result>
 			<result name="unconfirm">user_sign_in.jsp</result>
+			<result name="admin" type="redirectAction">admin</result>
 		</action>
-<action name="Search" class="search.Search">
-
+		
+		<action name="admin" class="ebay.Admin">
+			<result name="success">admin.jsp</result>
+		</action>
+		
+		<action name="adminaddcat" class="ebay.AdminAddCat">
+			<result name="success" type="redirectAction">admin</result>
+		</action>
+		
+		<action name="adminaddsubcat" class="ebay.AdminAddSubcat">
+			<result name="success" type="redirectAction">admin</result>
+		</action>
+		
+		
+		<action name="Search" class="search.Search">
 			<result name="success">searchsuccess.jsp</result>
 			<result name="error">error.jsp</result>
-
 		</action>
+		
 		<action name="Paraaction" class="search.Paraaction">
 
 			<result name="success">ajax.jsp</result>

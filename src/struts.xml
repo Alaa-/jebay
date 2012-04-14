@@ -182,7 +182,7 @@
 		
 		<action name="placebid" class="ebay.PlaceBid">
 			<result name="success" type="chain">bidconfirm</result>
-			<result name="error" type="chain">bidding</result>
+			<result name="error">user_sign_in.jsp</result>
 		</action>
 
 		

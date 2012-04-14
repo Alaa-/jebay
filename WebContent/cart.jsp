@@ -728,6 +728,7 @@
     pointer-events: auto !important;
 }</style>
 <script type="text/javascript">
+var hello;
 function visit(a){
 	//alert('quantity'+a);
 	var b=document.getElementById('quantity'+a).value;
@@ -740,7 +741,7 @@ function visit(a){
 		window.location.href="AddToCart.action?item_id="+a+"&quantity="+b;
 	}
 }
-function proceed(a,f,c){
+function proceed(a,f,c,d){
 	//alert('quantity'+a);
 
 	var b=document.getElementById('quantity'+f).value;
@@ -749,28 +750,26 @@ function proceed(a,f,c){
 	document.getElementById('quantity'+f).focus();
 	}
 	else{
-		visit1(f);
+		visit1(f,d);
 		window.location.href="ProceedToPayCart.action?cart_id="+a+"&cart_quantity="+b;
 		
 	}
 	
 }
-function visit1(a){
+function visit1(a,e){
 	var req;
 	
 	//alert('quantity'+a);
 	var b=document.getElementById('quantity'+a).value;
-	var c=document.getElementById('iquantity'+a).value;
-	if(b>c){
-		alert("not possible");
-		document.getElementById('quantity'+a).focus();
-	}
-	else{
+//	var c=document.getElementById('iquantity'+a).value;
+	
+	
 		req=new XMLHttpRequest();
-		req.open("GET","AddToCart.action?item_id="+a+"&quantity="+b,true);
+		alert("siva "+b);
+		req.open("GET","AddToCart.action?item_id="+e+"&quantity="+b,true);
 		req.send();
-		window.location.href="AddToCart.action?item_id="+a+"&quantity="+b;
-	}
+		//window.location.href="AddToCart.action?item_id="+a+"&quantity="+b;
+	
 }
 </script>
 
@@ -917,7 +916,7 @@ function visit1(a){
 																													<div style="padding-top: 5px;">
 																														<input src="cart/proceed_to_pay.gif"
 																															
-																															type="image" onclick="proceed('<s:property value="cart_id"/>','<s:property value="cart_item_id"/>','<s:property value="item_quantity"/>')"><span
+																															type="image" onclick="proceed('<s:property value="cart_id"/>','<s:property value="cart_item_id"/>','<s:property value="item_quantity"/>','<s:property value="item_id"/>')"><span
 																															style="padding-left: 5px">The next
 																															step is to select shipping method.</span>
 																													</div>

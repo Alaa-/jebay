@@ -103,7 +103,7 @@ public class Search extends ActionSupport {
 					query1 = query1 + " and item_subcategory_id='"
 							+ subcategory + "'";
 				}
-				ResultSet rs2 = c1.getResult(query1);
+				ResultSet rs2 = c1.getResult(query1+"order by item_price");
 				while (rs2.next()) {
 					ItemVo i = new ItemVo();
 					i.setItem_id(rs2.getInt("item_id"));

@@ -96,6 +96,14 @@ function check(){
 <tr><td>Rs.<input type="text" id="min" name="min" size="5"/></td></tr>
 <tr><td>To</td></tr>
 <tr><td>Rs.<input type="text" id="max" name="max" size="5"/></td></tr>
+
+<tr><td><h4>Sorting order</h4></td></tr>
+<tr><td><input type="radio" name="order" value="asc" checked="checked">Ascending</input></td></tr>
+<tr><td><input type="radio" name="order" value="desc">Descending</input></td></tr>
+<tr><td><h4>Sort By</h4></td></tr>
+<tr><td><select name="entity">
+<option value="price">Price</option>
+<option value="time">Time</option></select></td></tr>
 <tr><td><input type="button" name="b1" value="Submit" onclick="check()"/></td></tr>
 </table></form></td>
 

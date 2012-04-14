@@ -725,6 +725,8 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VtotojCooki
 																								<div id="addrrow">
 																									<span><s:property value="user_state"/></span>
 																								</div>
+																								<input type="button" value="Change Shipping Address" onclick="loadtextarea()"/>
+																								<div id="dk1"></div>
 																								<div id="addrrow"></div>
 																								<div id="addrrow"></div>
 																							</div>

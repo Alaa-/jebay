@@ -10,7 +10,22 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import ebay.Connect;
 public class Paraaction extends ActionSupport{
-String condition,mode;
+String condition,mode,order,entity;
+public String getOrder() {
+	return order;
+}
+
+public void setOrder(String order) {
+	this.order = order;
+}
+
+public String getEntity() {
+	return entity;
+}
+
+public void setEntity(String entity) {
+	this.entity = entity;
+}
 String min,max;
 public String getMin() {
 	return min;
@@ -58,6 +73,21 @@ public String execute() throws Exception {
 	Map session=ActionContext.getContext().getSession();
 	int subcategory;
 	String keyword=session.get("keyword").toString();
+	String ordering=" ";
+	if(entity.equals("price")){
+		ordering+="order by item_price";
+		if(order.equals("desc")){
+			ordering+=" desc";
+		}
+		
+	}
+	if(entity.equals("time")){
+		ordering+="order by item_endtime";
+		if(order.equals("desc")){
+			ordering+=" desc";
+		}
+		
+	}
 	int category=Integer.parseInt(session.get("category").toString());
 	if(session.get("subcategory")!=null){
 		subcategory=Integer.parseInt(session.get("subcategory").toString());
@@ -88,7 +118,7 @@ if(min.length()!=0&&max.length()!=0){
 }
 Connect c=new Connect();
 	globalquery="select *,concat('',timediff(item_endtime,now())) as diff from item_details "+wherequery;
-	ResultSet rs=c.getResult(globalquery);
+	ResultSet rs=c.getResult(globalquery+ordering);
 	while(rs.next()){
     	ItemVo i=new ItemVo();
     	i.setItem_id(rs.getInt("item_id"));

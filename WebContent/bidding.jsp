@@ -164,9 +164,9 @@
 																</td>
 																<td><div>
 																		<s:if test='bid_status.equals("1")'>
-																			<input type="text" size="8" maxlength="10"
-																				name="bid_amt" id="v4-30"
-																				class="vi-is1-tet vi-is1-mb">
+																			<input type="number" size="8" maxlength="10" 
+																				name="bid_amt" id="v4-30" 
+																				class="vi-is1-tet vi-is1-mb" required="true" min=<s:property value="max_bid"></s:property>>
 																		</s:if>
 																	</div>
 																</td>

@@ -672,7 +672,7 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VtotojCooki
 																																class="symDiv">Rs.</div>
 																														</td>
 																														<td class="priceDivTd"><div
-																																class="priceDiv" id="regsubtotal"><s:property value="item_price"/></div>
+																																class="priceDiv" id="regsubtotal"><s:property value="item_total"/></div>
 																														</td>
 																													</tr>
 																												</tbody>
@@ -760,7 +760,7 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VtotojCooki
 																											<b>Sub-Total</b>
 																										</div>
 																										<div class="sub-div-middle2">Rs.</div>
-																										<div class="sub-div-right2"><s:property value="item_price"/></div>
+																										<div class="sub-div-right2"><s:property value="item_total"/></div>
 																										<div class="sub-div-left">
 																											<b>Shipping method: </b><input
 																												name="shipping_method" id="shipping_method"

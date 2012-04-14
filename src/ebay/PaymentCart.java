@@ -1,15 +1,13 @@
 package ebay;
-import vo.*;
 import java.util.ArrayList;
 import java.util.Map;
 
-import org.apache.struts2.ServletActionContext;
+import model.BankDetails;
+import model.PaymentCartModel;
+import model.UserDetailsModel;
+import vo.ItemVo;
 
 import com.opensymphony.xwork2.ActionContext;
-
-import model.PaymentCartModel;
-import model.BankDetails;
-import model.UserDetailsModel;
 
 public class PaymentCart {
 
@@ -21,12 +19,7 @@ public class PaymentCart {
 	ArrayList lstItemDetails = new ArrayList();
 	ArrayList lstUserDetails = new ArrayList();
 	ArrayList<ItemVo> arr=new ArrayList<ItemVo>();
-	/*public static ArrayList concat(ArrayList first, ArrayList second) 
-	{
-			first.addAll(second);	
-		  return first;
-		  
-	}*/
+	
 
 	
 	
@@ -100,6 +93,7 @@ public class PaymentCart {
 		//ArrayList arr = concat(lstItemDetails,lstUserDetails);
 		System.out.println(lstItemDetails.size());
 		System.out.println(lstUserDetails.size());
+		
 		return "success";
 	}
 	

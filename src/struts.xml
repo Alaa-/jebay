@@ -15,7 +15,18 @@
 			<result name="error">/user_sign_in.jsp</result>
 			<result name="unconfirm">user_sign_in.jsp</result>
 		</action>
+<action name="Search" class="search.Search">
 
+			<result name="success">searchsuccess.jsp</result>
+			<result name="error">error.jsp</result>
+
+		</action>
+		<action name="Paraaction" class="search.Paraaction">
+
+			<result name="success">ajax.jsp</result>
+			<result name="error">error.jsp</result>
+
+		</action>
 		<action name="ViewCart" class="ebay.AddToCart">
 
 			<result name="success">cart.jsp</result>

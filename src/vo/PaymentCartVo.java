@@ -3,8 +3,17 @@ package vo;
 public class PaymentCartVo {
 
 	String item_name,item_seller;
-	int item_price,item_shipping_charge;
+	int item_price,item_shipping_charge,item_id;
 	
+	
+	public int getItem_id() {
+		return item_id;
+	}
+
+	public void setItem_id(int item_id) {
+		this.item_id = item_id;
+	}
+
 	public String getItem_name() {
 		return item_name;
 	}
@@ -38,12 +47,14 @@ public class PaymentCartVo {
 	}
 
 	public PaymentCartVo(String item_name, String item_seller, int item_price,
-			int item_shipping_charge) {
+			int item_shipping_charge,int item_id) {
 		super();
 		this.item_name = item_name;
 		this.item_seller = item_seller;
+		this.item_id=item_id;
 		this.item_price = item_price;
 		this.item_shipping_charge = item_shipping_charge;
+		//this.item_price_quantity=item_price*quantity;
 	}
 
 	public PaymentCartVo() {

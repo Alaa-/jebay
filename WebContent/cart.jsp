@@ -821,7 +821,7 @@ function proceed(a){
 																														style="float: right; padding-right: 30px;"><s:property
 																															value="item_price" />
 																													</span><a
-																														href="http://cgi.ebay.in/ws/eBayISAPI.dll?ViewItem&amp;item=130662051525"><s:property
+																														href="BuyItNow.action?item_id=<s:property value="item_id"/>"><s:property
 																															value="item_name" />
 																													</a>
 																													<div></div>

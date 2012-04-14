@@ -13,7 +13,12 @@ public class GetPaisa extends ActionSupport
 	public String execute()
 	{
 		Map session=ActionContext.getContext().getSession();
+		
 		String user_id=(String) session.get("User");
+		if (user_id == null)
+		{
+			return LOGIN;
+		}
 		paisaregister=PaisaMapping.getSellerPaisaStatus(user_id);
 		return SUCCESS;
 	}

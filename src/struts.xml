@@ -136,6 +136,7 @@
 		</action>
 		
 		<action name="getpaisa" class="ebay.GetPaisa">
+			<result name="login">/user_sign_in.jsp</result>
 			<result name="success">/mypaisapay.jsp</result>
 		</action>
 		

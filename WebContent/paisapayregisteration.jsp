@@ -696,11 +696,6 @@ vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab1&quot;, 
 									<form name="paisaform"
 										action="savepaisaform"
 										method="post">
-										<input type="hidden" name="mode" value="" id="mode"><input
-											type="hidden" name="fromsyi" value="" id="fromsyi"><input
-											type="hidden" name="account" value="" id="account"><input
-											type="hidden" value="PaisaPaySellerRegistration"
-											name="MfcISAPICommand">
 										<div>
 											<div class="sellerRegistration">
 												<div>

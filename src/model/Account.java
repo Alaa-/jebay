@@ -17,7 +17,10 @@ public class Account {
 				acc=rs.getInt("account_no");
 			}
 		}
-		catch(Exception e){}
+		catch(Exception e)
+		{
+			DB.close(rs);
+		}
 		AccountVo accVo = new AccountVo(acc);
 		return acc;
 	}
@@ -34,8 +37,31 @@ public class Account {
 				acc=rs.getInt("account_no");
 			}
 		}
-		catch(Exception e){}
+		catch(Exception e)
+		{
+			DB.close(rs);
+		}
 		AccountVo accVo = new AccountVo(acc);
+		return acc;
+	}
+	
+	public static int verifyAccount(String accno,String acholder)
+	{
+		int acc=-1;
+		ResultSet rs = null;
+		String sqlQuery = "select account_no from account_details where account_holder ='"+acholder+"' and account_no="+accno;
+		rs = DB.readFromDB(sqlQuery);
+		try
+		{
+			if (rs.next())
+			{
+				acc=rs.getInt("account_no");
+			}
+		}
+		catch(Exception e)
+		{
+			DB.close(rs);
+		}
 		return acc;
 	}
 }

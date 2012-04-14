@@ -21,5 +21,11 @@ public class PaisaMapping
 		}
 	}
 
+	public static void savePaisaMapping(String sellerid,int accid)
+	{
+		String sqlQuery="insert into paisapay_mapping (seller_id,seller_acc_id) values ('"+sellerid+"',"+ accid+")";
+		DB.update(sqlQuery);
+		System.out.println("Paisa pay mapping saved");
+	}
 
 }

@@ -181,9 +181,9 @@
 																<td width="20" align="left"></td>
 																<td align="left">
 																
-																<s:if test="%{paisaregister} == 0 ">
+																<s:if test="paisaregister == 0">
 																<a
-																	href="getpaisaform"><s:property value="paisaregister"/>Register
+																	href="getpaisaform">Register
 																		now</a> and offer buyers the assurance of PaisaPay the
 																	fast, easy and secure way to accept credit cards and
 																	online bank transfers on your listings. Learn more on <a

@@ -466,7 +466,7 @@ a {
 				<tr>
 					<td class="txt-black25normal">My PaisaPay</td>
 					<td align="right"><a
-						href="http://my.ebay.in/ws/eBayISAPI.dll?MyEbay"
+						href="/Jebay/home.jsp"
 						class="bluelinkYukon">Back to My eBay</a></td>
 				</tr>
 			</table>
@@ -532,7 +532,7 @@ vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab1&quot;, 
 			</div>
 		</div>
 
-		<s:if test="<s:property value='paisaregister'/> == 0 ">
+		<s:if test="paisaregister == 0">
 			<div class="blueboxconld">
 				<div class="blueboxconrd">
 					<div class="blueboxcontb">
@@ -693,8 +693,8 @@ vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab1&quot;, 
 									</div>
 								</div>
 								<div>
-									<form name="pageForm" autocomplete="off"
-										action="https://pay.ebay.in/ws/eBayISAPI.dll?PaisaPaySellerRegistration"
+									<form name="paisaform"
+										action="savepaisaform"
 										method="post">
 										<input type="hidden" name="mode" value="" id="mode"><input
 											type="hidden" name="fromsyi" value="" id="fromsyi"><input
@@ -739,31 +739,28 @@ vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab1&quot;, 
 																		<div id="left-table">
 																			<div class="fe-padding">
 																				<div style="padding-left: 0px"
-																					class="txt-gray17normal">Payee Name</div>
-																				<input name="acholdername" value="" maxlength="140"
-																					class="inputbox">
+																					class="txt-gray17normal">Account Holder Name</div>
+																				<input name="acholdername" type="text" value="" required="required" maxlength="140">
 																			</div>
 																			<div class="fe-padding">
 																				<div style="padding-left: 0px"
 																					class="txt-gray17normal">Bank Account Number</div>
-																				<input name="acnumber" value="" maxlength="20"
-																					class="inputbox">
+																				<input name="acnumber" value="" required="required" maxlength="20" type="text">
 																			</div>
 																			<div class="fe-padding">
 																				<div style="padding-left: 0px"
 																					class="txt-gray17normal">Bank Name</div>
-																				<select name="bank" class="inputbox" id="v4-1"><option></option>
-																				</select>
+																				<input name="bankname" value="" maxlength="20" type="text">
 																			</div>
 																			<div class="fe-padding">
 																				<div style="padding-left: 0px"
 																					class="txt-gray17normal">City</div>
-																				<select name="city" class="inputbox" id="v4-2"><option></option></select>
+																				<input name="city" value="" maxlength="20" type="text">
 																			</div>
 																			<div class="fe-padding">
 																				<div style="padding-left: 0px"
 																					class="txt-gray17normal">Branch</div>
-																				<select name="branch" class="inputbox"><option></option></select>
+																				<input name="branch" value="" maxlength="20" type="text">
 																			</div>
 																			<div>
 																				<div>
@@ -773,8 +770,7 @@ vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab1&quot;, 
 																				</div>
 																				<table cellpadding="0" cellspacing="0">
 																					<tr>
-																						<td><input name="micrcode" value=""
-																							maxlength="9" class="inputbox"></td>
+																						<td><input name="micr" value="" maxlength="20" type="text"></td>
 																						<td
 																							style="background: url('https://securepics.ebaystatic.com/aw/pics/in/psp_new/seller_reg_micra_140408.gif'); background-repeat: repeat-x; height: 2px; background-position: center; width: 16%"></td>
 																						<td style="float: right; padding-bottom: 3px"><img
@@ -842,12 +838,7 @@ vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab1&quot;, 
 																								src="https://securepics.ebaystatic.com/aw/pics/psp_new/seller_reg_a_110408.gif"
 																								alt="" align="absmiddle"></span></td>
 																						<td><span style="color: #6E6E6E"><b>Live
-																									Chat</b> - </span><span><a
-																								href="http://ocs.ebay.in/ws/eBayISAPI.dll?ContactUsNextGen&amp;format=1&amp;pid=572"
-																								target="helpwin"
-																								onclick="return 
-window.open(this.href,this.target,'width=472,height=320,status=no,scrollbars=no,toolbar=no,location=no,menu=no,resizable=no');return false;">Click
-																									here</a><br></span><span class="txt-gray13normal">(Monday
+																									Chat</b> - </span><span><br></span><span class="txt-gray13normal">(Monday
 																								to Friday,10:00 AM to 6:00 PM)</span></td>
 																					</tr>
 																					<tr>
@@ -855,10 +846,7 @@ window.open(this.href,this.target,'width=472,height=320,status=no,scrollbars=no,
 																								src="https://securepics.ebaystatic.com/aw/pics/psp_new/seller_reg_c_110408.gif"
 																								alt="" align="absmiddle"></span></td>
 																						<td><span style="color: #6E6E6E"><b>Email
-																									Us</b> - </span><span><a
-																								href="http://pages.ebay.in/help/contact_us/_base/result_3_3_26.html?item=&amp;dsturl=http%3A%2F%2Fpages.ebay.in%2Fhelp%2Fcontact_us%2F_base%2Findex.html&amp;tier0=%5Bobject+O
-bject%5D&amp;tier1=result_3_3_26&amp;continue=Continue+%3E#"
-																								target="_blank">Click here</a></span></td>
+																									Us</b> - </span><span></span></td>
 																					</tr>
 																				</table>
 																			</div>
@@ -895,11 +883,10 @@ bject%5D&amp;tier1=result_3_3_26&amp;continue=Continue+%3E#"
 																		<span class="txt-gray13normal"><table>
 																				<tr>
 																					<td valign="top"><input type="checkbox"
-																						name="termscondition"></td>
+																						name="termscondition" required="required" title="Please agree to terms and conditions"></td>
 																					<td>That by clicking on the box I agree that I
 																						have read and understood the <a
-																						href="http://pages.ebay.in/help/policies/pspx-seller-terms-conditions.html"
-																						target="_blank">PaisaPay Seller Terms &amp;
+																						href="#">PaisaPay Seller Terms &amp;
 																							Conditions</a>(hereinafter referred as the "Seller
 																						Terms &amp; Conditions") and unconditionally
 																						accept to be legally bound by the following:
@@ -937,7 +924,7 @@ bject%5D&amp;tier1=result_3_3_26&amp;continue=Continue+%3E#"
 										<div class="button">
 											<button
 												style="background: transparent none repeat scroll 0%; border: 0px none; height: 25px; margin: 0px; padding: 0px; vertical-align: middle;"
-												type="submit" value="Register &gt;" id="v4-3">
+												type="submit" value="Register" id="v4-3">
 												<span
 													style="background: transparent url('https://securepics.ebaystatic.com/aw/pics/viewitem/imgVIPrmryBtnLt.gif') no-repeat scroll left top; color: #FFFFFF; cursor: pointer; display: block; font-family: Arial; font-weight: bold; height: 24px; line-height: 190%; padding-left: 2px; vertical-align: middle; white-space: nowrap; float: left"><span
 													style="background: transparent url('https://securepics.ebaystatic.com/aw/pics/buttons/btnViPrmry.gif') no-repeat scroll 100% 0px; font-size: 3.4mm; color: #FFFFFF; cursor: pointer; display: block; font-family: Arial; font-weight: bold; height: 24px; line-height: 190%; padding-left: 15px; padding-right: 15px; vertical-align: middle; white- space: nowrap;">Register
@@ -953,6 +940,17 @@ bject%5D&amp;tier1=result_3_3_26&amp;continue=Continue+%3E#"
 				</div>
 			</div>
 		</s:if>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		<s:else>
 			<div style="margin-left: 5px" class="content_area">
 				<div>
@@ -996,12 +994,7 @@ bject%5D&amp;tier1=result_3_3_26&amp;continue=Continue+%3E#"
 															<tr>
 																<td width="20" align="left"></td>
 																<td align="left">Your PaisaPay seller registration
-																	is active. You can manage your registration details and
-																	check your PaisaPay account balance from <a
-																	href="https://pay.ebay.in/ws/eBayISAPI.dll?PaisaPaySellerRegistrationShow">Registration
-																		details</a> and <a
-																	href="https://pay.ebay.in/ws/eBayISAPI.dll?PaisaPayAccountBalance">Account
-																		balance</a> tabs respectively.
+																	is active.
 																</td>
 															</tr>
 														</table>

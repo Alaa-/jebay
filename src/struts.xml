@@ -143,6 +143,11 @@
 			<result name="success">/paisapayregisteration.jsp</result>
 		</action>
 		
+		
+		<action name="savepaisaform" class="ebay.SavePaisaForm">
+			<result name="success">/paisapayregisteration.jsp</result>
+		</action>
+		
 		<action name="bidconfirm" class="ebay.BidConfirm">
 			<result name="success">bidding_confirm.jsp</result>
 		</action>

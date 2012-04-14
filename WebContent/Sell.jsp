@@ -62,8 +62,10 @@
 																<div id="msg">
 																	<div class="info">
 																		<div class="cnt">
+																		<s:if test="#session['User']==null">
 																			<a href="/Jebay/user_sign_in.jsp">Sign in</a> to see
 																			your saved information.
+																			</s:if>
 																		</div>
 																	</div>
 																</div>
@@ -87,7 +89,7 @@
 															<div class="idtBtm">For example: Amethyst gemstone
 																rings</div>
 															<div class="idtTop">
-																<a href="BrowseCategories" id="aBrowseCategories">Browse
+																<a href="sell_choosecat" id="aBrowseCategories">Browse
 																	categories</a>
 															</div>
 													</span></td>

@@ -9,19 +9,19 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class GetPaisa extends ActionSupport
 {
-	String paisaregister;
+	int paisaregister;
 	public String execute()
 	{
 		Map session=ActionContext.getContext().getSession();
 		String user_id=(String) session.get("User");
-		PaisaMapping.getSellerPaisaStatus(user_id);
+		paisaregister=PaisaMapping.getSellerPaisaStatus(user_id);
 		return SUCCESS;
 	}
-	public String getPaisaregister()
+	public int getPaisaregister()
 	{
 		return paisaregister;
 	}
-	public void setPaisaregister(String paisaregister)
+	public void setPaisaregister(int paisaregister)
 	{
 		this.paisaregister = paisaregister;
 	}

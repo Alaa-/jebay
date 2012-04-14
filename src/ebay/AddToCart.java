@@ -61,6 +61,7 @@ public void setQuantity(String quantity) {
 	    	i.setItem_quantity(rs1.getInt("item_quantity"));
 	    	i.setItem_id(rs1.getInt("item_id"));
 	    	i.setCart_id(rs.getInt("cart_id"));
+	    	i.setCart_item_id(rs.getInt("cart_item_id"));
 	    	i.setCart_quantity(rs.getInt("cart_quantity"));
 	    	arr.add(i);
 	    	

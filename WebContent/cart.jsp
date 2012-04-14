@@ -729,13 +729,17 @@
 }</style>
 <script type="text/javascript">
 function visit(a){
-	//alert(a);
+	//alert('quantity'+a);
 	var b=document.getElementById('quantity'+a).value;
+	alert(b);
 	window.location.href="AddToCart.action?item_id="+a+"&quantity="+b;
 }
-function proceed(a){
-	//alert(a);
-	var b=document.getElementById('quantity'+a).value;
+function proceed(a,f){
+	alert('quantity'+a);
+
+	var b=document.getElementById('quantity'+f).value;
+	alert(b);
+	alert("ProceedToPayCart.action?cart_id="+a+"&cart_quantity="+b);
 	window.location.href="ProceedToPayCart.action?cart_id="+a+"&cart_quantity="+b;
 }
 </script>
@@ -839,7 +843,7 @@ function proceed(a){
 																												</div>
 																											</div>
 																											<div class="item-quantity">
-																												<input id="quantity<s:property value="cart_id"/>" name="bx_quantity"
+																												<input id="quantity<s:property value="cart_item_id"/>" name="bx_quantity"
 																													style="text-align: center;"
 																													autocomplete="off" size="5" maxlength="5"
 																													class="item-quantityValue"
@@ -882,7 +886,7 @@ function proceed(a){
 																													<div style="padding-top: 5px;">
 																														<input src="cart/proceed_to_pay.gif"
 																															
-																															type="image" onclick="proceed('<s:property value="cart_id"/>')"><span
+																															type="image" onclick="proceed('<s:property value="cart_id"/>','<s:property value="cart_item_id"/>')"><span
 																															style="padding-left: 5px">The next
 																															step is to select shipping method.</span>
 																													</div>

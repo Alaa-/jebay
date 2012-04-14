@@ -109,7 +109,7 @@ function check(){
 	document.getElementById("s1").disabled=true;}
 }
 </script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="hello.js"></script>
 <style type="text/css">@import "jquery.realperson.css";</style> 
 <script type="text/javascript" src="jquery.realperson.js"></script>
     </head>

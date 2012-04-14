@@ -36,6 +36,7 @@ public class PlaceBid extends ActionSupport{
 		HttpServletRequest request=ServletActionContext.getRequest();
 		HttpSession session=request.getSession();
 		user_id=(session).getAttribute("User")+"";
+		//user_id="nikdd87";
 		String sqlQuery3 = "select max(b.bidding_bid) as maxi,i.item_mode from bidding_details b,item_details i where item_id=bidding_item_id and bidding_item_id="+item_id; //current highest bid
 		try {
 			ResultSet rs=c.getResult(sqlQuery3);
@@ -62,12 +63,14 @@ public class PlaceBid extends ActionSupport{
 					System.out.println("updating bid....");
 					System.out.println("bid amt=:"+bid_amt+" user_id="+user_id+" max bid=:"+maxbid+" item_id="+item_id);
 					c.dml("update bidding_details set bidding_bid="+bid_amt+" where bidding_buyer='"+user_id+"' and bidding_item_id="+item_id);	
+					c.dml("update biddingstatus set bidding_winner='"+user_id+"' where bidding_item_id="+item_id);
 				}
 				else
 				{
 					System.out.println("adding bid....");
 					System.out.println("bid amt=:"+bid_amt+" user_id="+user_id+" max bid=:"+maxbid+" item_id="+item_id);
-					c.dml("insert into bidding_details(bidding_item_id,bidding_buyer,bidding_bid) values("+item_id+",'"+user_id+"',"+bid_amt+")");	
+					c.dml("insert into bidding_details(bidding_item_id,bidding_buyer,bidding_bid) values("+item_id+",'"+user_id+"',"+bid_amt+")");
+					c.dml("update biddingstatus set bidding_winner='"+user_id+"' where bidding_item_id="+item_id);
 				}
 			}
 		} catch (SQLException e) {

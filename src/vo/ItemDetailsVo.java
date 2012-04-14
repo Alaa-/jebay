@@ -4,12 +4,15 @@ public class ItemDetailsVo {
 	private String item_name;
 	private int price;
 	private int shipping_charge;
+	
 	private String mode;
 	private int item_id;
 	private String image;
 	private String seller;
 	
-	
+	public ItemDetailsVo(){
+		
+	}
 	public ItemDetailsVo(String seller) {
 		super();
 		this.seller = seller;

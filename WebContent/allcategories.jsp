@@ -13,9 +13,9 @@
 <h1>All Categories</h1>
 <form action="details">
 <s:iterator value="allCats">
-	<a href="catDetails.action?catid=<s:property value='category_id'/>" ><font size="4" color="green"><b><s:property value="category_name"/></b></font></a><br>
+	<a href="Search.action?category=<s:property value='category_id'/>&keyword= " ><font size="4" color="green"><b><s:property value="category_name"/></b></font></a><br>
 		<s:iterator value="subcatlist">
-			<a href="subcatDetails.action?cat_id=<s:property value='category_id'/> &subcatid=<s:property value='subcategory_id'/>" ><s:property value="subcategory_name"/></a><br>
+			<a href="Search.action?category=<s:property value='category_id'/>&subcategory=<s:property value='subcategory_id'/>&keyword=" ><s:property value="subcategory_name"/></a><br>
 		</s:iterator>
 		
 		<%-- <s:property value="subcategory_name"/> --%>

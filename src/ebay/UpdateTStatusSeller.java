@@ -1,13 +1,8 @@
 package ebay;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.*;
-import java.sql.Statement;
 import java.util.Map;
-import org.apache.struts2.ServletActionContext;
+
 import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.ActionSupport;
 
 public class UpdateTStatusSeller
 {
@@ -26,7 +21,7 @@ public class UpdateTStatusSeller
 	public String execute() throws Exception
 	{
 		Map session = ActionContext.getContext().getSession();
-		int trans = (int) session.get("t_id");
+		int trans = (Integer.parseInt(session.get("t_id").toString()));
 		System.out.println(trans);
 		Connect c = new Connect();
 		c.dml("update transaction_details set t_status=2 where t_id='" + trans + "'");

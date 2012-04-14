@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <%@taglib prefix="s" uri="/struts-tags"%>
 <%@ page import="java.sql.*"%>
 <%@ page import="ebay.*"%>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <script>
 	var pageHasRtmPlacements = true;
 </script>
@@ -94,20 +94,20 @@
 							<div class="gh-cl"></div>
 
 
-							<form method="get" action="search.action" name="headerSearch"
+							<form method="get" action="Search.action" name="headerSearch"
 								id="headerSearch">
 								<input type="hidden" name="_from" value="R40"><input
 									type="hidden" name="_trksid" value="m570">
 								<div class="gh-sbox">
 									<div class="gh-fl">
 										<label for="_nkw" class="g-hdn">Enter your search
-											keyword</label><input type="text" name="_nkw" id="_nkw" value=""
+											keyword</label><input type="text" name="keyword" required="true" id="_nkw" value=""
 											maxlength="300" size="60" class="gh-tb"><input
 											title="Show Suggestions" readonly="readonly" id="_nkw_acdiv"
 											class="ac-ac_div"> <label for="_sacat" class="g-hdn">Select
-											a category for search</label><select name="_sacat" id="_sacat"
+											a category for search</label><select name="category" id="_sacat"
 											size="1" class="gh-sb"><option
-												value="See-All-Categories" selected="selected">All
+												value="0" selected="selected">All
 												Categories</option>
 											<%
 												{

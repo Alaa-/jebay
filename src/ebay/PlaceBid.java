@@ -46,7 +46,12 @@ public class PlaceBid extends ActionSupport
 		int maxbid = 0, item_mode = 0;
 		HttpServletRequest request = ServletActionContext.getRequest();
 		HttpSession session = request.getSession();
+		try{
 		user_id = (session).getAttribute("User") + "";
+		}catch(NullPointerException ex){
+			
+			return ERROR;
+		}
 		// user_id="nikdd87";
 		String sqlQuery3 = "select max(b.bidding_bid) as maxi,i.item_mode,i.item_baseprice from bidding_details b,item_details i where item_id=bidding_item_id and bidding_item_id=" + item_id; // current highest bid
 		try

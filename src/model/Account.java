@@ -49,13 +49,13 @@ public class Account {
 	{
 		int acc=-1;
 		ResultSet rs = null;
-		String sqlQuery = "select account_no from account_details where account_holder ='"+acholder+"' and account_no="+accno;
+		String sqlQuery = "select account_id from account_details where account_holder ='"+acholder+"' and account_no="+accno;
 		rs = DB.readFromDB(sqlQuery);
 		try
 		{
 			if (rs.next())
 			{
-				acc=rs.getInt("account_no");
+				acc=rs.getInt("account_id");
 			}
 		}
 		catch(Exception e)

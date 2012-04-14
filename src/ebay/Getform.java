@@ -34,7 +34,10 @@ public class Getform extends ActionSupport
 
 			return "mobile";
 		}
-		return ERROR;
+		else
+		{
+			return "item";
+		}
 
 	}
 

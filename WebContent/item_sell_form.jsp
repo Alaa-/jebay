@@ -7,7 +7,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Enter Item Details</title>
 <link rel="stylesheet"
-	href="css/main_e7651in.css"
+	href="css/main_e7671in.css"
+	type="text/css">
+	<link rel="stylesheet"
+	href="css/syi-main_e7671in.css"
 	type="text/css">
 <script type="text/javascript">
 function checkmode()
@@ -40,7 +43,7 @@ function checkmode()
 </script>
 </head>
 <body>
-
+<s:action name="addcompactheader" executeResult="true"></s:action>
 						<div class="brdcmb" id="brdcmb">
 							<div class="level1">SELL YOUR ITEM</div>
 							<div class="active">1. TELL US WHAT YOU SELL</div>
@@ -69,7 +72,6 @@ function checkmode()
 						
 						
 		<s:form action="save_item_detail" method="post" enctype="multipart/form-data">
-        <img src="images/logoebay.gif"/>
         <hr>
         <br>
         <br>

@@ -131,7 +131,8 @@
 		</action>
 		
 		<action name="getform" class="ebay.Getform">
-			<result name="mobile">/item_sell_form.jsp</result>
+			<result name="mobile">/mobile_sell_form.jsp</result>
+			<result name="item">/item_sell_form.jsp</result>
 		</action>
 		
 		<action name="getpaisa" class="ebay.GetPaisa">

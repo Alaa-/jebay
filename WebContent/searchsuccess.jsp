@@ -104,7 +104,7 @@ function check(){
 <table id="t1" width="810">
 
 <tr><th><h3>Item Image</th><th><h3>Item Name</th><th><h3>Mode</h3></th><th><h3>Condition</h3></th><th><h3>Price</th>
-<th><h3>Time Left</th>
+<th><h3>Time Left</th><th><h3>Quantity</th>
 <tr><th colspan="4"><s:actionerror/></th></tr>
 </tr>
 <s:iterator value="arr">
@@ -121,6 +121,7 @@ function check(){
 <td><h5><s:property value="item_condition"/></td>
 <td><h4><s:property value="item_price"/></td>
 <td><h4><s:property value="item_endtime"/></td>
+<td><h4><s:property value="item_quantity"/></td>
 </tr>
 </s:iterator>
 

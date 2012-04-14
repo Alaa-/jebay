@@ -82,6 +82,7 @@ public void setPassword(String password)
                     session.put("logged-in","true");
                     System.out.println(getUid());
                     session.put("User",getUid());
+                    session.put("username",getUid());
                     ServletActionContext.getRequest().getSession().setAttribute("username",getUid());
                    
                  }

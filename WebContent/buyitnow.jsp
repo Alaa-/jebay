@@ -11,8 +11,19 @@
 	function check(a){
 		//alert(a);
 		var quantity=document.getElementById('quantity').value;
+		var maxq=document.getElementById('maxq').value;
+		//alert(maxq);
 		//alert("AddToCart.action?item_id="+a+"&quantity="+quantity);
-		window.location.href="AddToCart.action?item_id="+a+"&quantity="+quantity;
+		if(quantity.length==0||Math.floor(quantity)!=quantity||quantity>maxq){
+			alert("Quantity field should not be empty and it should be a number and it should not be more than available quantity");
+			document.getElementById('quantity').focus();
+			
+		}
+		
+		else{
+			window.location.href="AddToCart.action?item_id="+a+"&quantity="+quantity;
+		}
+		
 	}
 	
 </script>
@@ -109,9 +120,9 @@
 												<tr>
 													<th class="vi-is1-lbl">Quantity:</th>
 													<td colspan="3" class="vi-is1-clr">
-													<input type="number" name="quantity" id="quantity" min="1" max="<s:property value="item_quantity"/>"/>(<s:property value="item_quantity"/> available)
+													<input type="number" name="quantity" id="quantity" min="1" max="<s:property value="item_quantity"/>"/ required="true">(<s:property value="item_quantity"/> available)
 													<input type="hidden" name="item_id" value="<s:property value="item_id"/>"/>
-													
+													<input type="hidden" id="maxq" value="<s:property value="item_quantity"/>"/>
 													
 													</td>
 												</tr>

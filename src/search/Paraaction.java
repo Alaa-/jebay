@@ -59,9 +59,9 @@ public String execute() throws Exception {
 	String keyword=session.get("keyword").toString();
 	int category=Integer.parseInt(session.get("category").toString());
 	if(category==0){
-	wherequery="where item_name like '%"+keyword+"%' ";}
+	wherequery="where item_name like '%"+keyword+"%' and timediff(item_endtime,now())>0 and item_quantity>0 and item_mode<>'2'";}
 	else{
-		wherequery="where item_name like '%"+keyword+"%' and item_category_id='"+category+"'";	
+		wherequery="where item_name like '%"+keyword+"%' and item_category_id='"+category+"' and timediff(item_endtime,now())>0 and item_quantity>0 ";	
 	}
 	if(condition!=null){
 		
@@ -79,7 +79,7 @@ if(min.length()!=0&&max.length()!=0){
 	wherequery+="and item_price between '"+min1+"' and '"+max1+"'";
 }
 Connect c=new Connect();
-	globalquery="select * from item_details "+wherequery;
+	globalquery="select *,concat('',timediff(item_endtime,now())) as diff from item_details "+wherequery;
 	ResultSet rs=c.getResult(globalquery);
 	while(rs.next()){
     	ItemVo i=new ItemVo();
@@ -92,6 +92,20 @@ Connect c=new Connect();
     	}
     	i.setItem_condition(rs.getString("item_condition"));
     	i.setItem_price(rs.getInt("item_price"));
+    	String diff=rs.getString("diff");
+    	String[] a=diff.split(":");
+		int days=(Integer.parseInt(a[0])/24);
+		int hours=0;
+		if(days>0){
+			hours=Integer.parseInt(a[0])-days*24;
+		}
+		else{
+			hours=Integer.parseInt(a[0]);
+		}
+		int minutes=Integer.parseInt(a[1]);
+		String str=days+"D "+hours+"H "+minutes+"M ";
+		i.setItem_endtime(str);
+		i.setItem_quantity(rs.getInt("item_quantity"));
     	arr.add(i);
     }
 	if(arr.size()==0){

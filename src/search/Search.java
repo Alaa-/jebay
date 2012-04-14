@@ -44,7 +44,7 @@ public String execute()  throws Exception{
     Connect c=new Connect();
     String query;
     if(category==0){
-    query="select *,concat('',timediff(item_endtime,now())) as diff from item_details where item_name like '%"+keyword+"%' and item_mode<>'2' and timediff(item_endtime,now())>0";
+    query="select *,concat('',timediff(item_endtime,now())) as diff from item_details where item_name like '%"+keyword+"%' and item_mode<>'2' and timediff(item_endtime,now())>0 and item_quantity>0";
     ResultSet rs=c.getResult(query);
     while(rs.next()){
     	  
@@ -80,7 +80,7 @@ public String execute()  throws Exception{
     	ResultSet rs1=c.getResult(query);
     	while(rs1.next()){
     		Connect c1=new Connect();
-    		String query1="select *,concat('',timediff(item_endtime,now())) as diff from item_details where item_category_id='"+rs1.getString("category_id")+"' and item_name like '%"+keyword+"%' and item_mode<>'2'";
+    		String query1="select *,concat('',timediff(item_endtime,now())) as diff from item_details where item_category_id='"+rs1.getString("category_id")+"' and item_name like '%"+keyword+"%' and item_mode<>'2' and timediff(item_endtime,now())>0 and item_quantity>0";
     		if(subcategory!=null){
     			query1=query1+" and item_subcategory_id='"+subcategory+"'";
     		}

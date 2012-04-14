@@ -5,7 +5,7 @@
 
 	<!-- <a href="bidding.action?item_id=2">click here</a> -->
 	<br>
-	<form name="details" method="post" action="fake.jsp">
+	<form name="details" method="post" action="#">
 		Select the account through which the buyer has paid the amount:
 		<%
 		{

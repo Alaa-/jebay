@@ -488,7 +488,7 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VtotojCooki
 									<div class="gh-emn">&nbsp;</div>
 								</div>
 								<div class="gh-log">
-									<span class="gh-lg"><a href="http://www.ebay.in/"
+									<span class="gh-lg"><a href="home.jsp"
 										rel="nofollow"> <img
 											src="buyitnow/logoEbay_x45.gif" alt="eBay"
 											border="0">

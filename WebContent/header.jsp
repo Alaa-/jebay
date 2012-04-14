@@ -58,9 +58,9 @@
 										<span class="gh-fst"><a id="MyEbay"
 											href="Myebay.action">My eBay</a></span> <a id="Sell"
 											href="/Jebay/Sell.jsp">Sell</a> <a id="Community"
-											href="http://hub.ebay.in/community">Community</a> <a
+											href="#">Community</a> <a
 											id="Help"
-											href="http://ocs.ebay.in/ws/eBayISAPI.dll?CustomerSupportRedirect&amp;target=help">Customer
+											href="#">Customer
 											Support</a><span class="gh-nho"><span></span></span>
 									</div>
 								</div>
@@ -146,9 +146,9 @@
 
 										<!-- <a id="chevron0" href="javascript:;" class="gh-ai"><b>&nbsp;</b></a -->
 										<a id="EbayStores" title="Find more of what you love."
-											href="http://stores.ebay.in/">SHOPS</a><a id="v4-gnh_0"
-											href="http://cars.ebay.in/">MOTORS</a><a id="v4-gnh_1"
-											href="http://pages.ebay.in/photocenter">PHOTO CENTRE</a>
+											href="#">SHOPS</a><a id="v4-gnh_0"
+											href="#">MOTORS</a><a id="v4-gnh_1"
+											href="#">PHOTO CENTRE</a>
 									</div>
 								</div>
 								<div class="gh-lbh1">

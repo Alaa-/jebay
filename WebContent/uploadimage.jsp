@@ -8,19 +8,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<<<<<<< .mine
-<form action="loadimage">
-id:<input type="text" name="item_id"/>
-image:<input type="file" name="image"/>
 
-
-</form>
-=======
 <s:form action="loadimage.action" enctype="multipart/form-data">
 <s:textfield name="item_id"/>
 <s:file name="image"/>
 <s:submit name="submit" value ="submit"/>
 </s:form>
->>>>>>> .r248
+
 </body>
 </html>

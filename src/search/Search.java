@@ -44,7 +44,7 @@ public String execute()  throws Exception{
     Connect c=new Connect();
     String query;
     if(category==0){
-    query="select * from item_details where item_name like '%"+keyword+"%' and item_mode<>'2'";
+    query="select *,concat('',timediff(item_endtime,now())) as diff from item_details where item_name like '%"+keyword+"%' and item_mode<>'2' and timediff(item_endtime,now())>0";
     ResultSet rs=c.getResult(query);
     while(rs.next()){
     	  
@@ -58,6 +58,20 @@ public String execute()  throws Exception{
     	}
     	i.setItem_condition(rs.getString("item_condition"));
     	i.setItem_price(rs.getInt("item_price"));
+    	String diff=rs.getString("diff");
+    	String[] a=diff.split(":");
+		int days=(Integer.parseInt(a[0])/24);
+		int hours=0;
+		if(days>0){
+			hours=Integer.parseInt(a[0])-days*24;
+		}
+		else{
+			hours=Integer.parseInt(a[0]);
+		}
+		int minutes=Integer.parseInt(a[1]);
+		String str=days+"D "+hours+"H "+minutes+"M ";
+		i.setItem_endtime(str);
+		i.setItem_quantity(rs.getInt("item_quantity"));
     	arr.add(i);
     }
     }
@@ -66,7 +80,7 @@ public String execute()  throws Exception{
     	ResultSet rs1=c.getResult(query);
     	while(rs1.next()){
     		Connect c1=new Connect();
-    		String query1="select * from item_details where item_category_id='"+rs1.getString("category_id")+"' and item_name like '%"+keyword+"%' and item_mode<>'2'";
+    		String query1="select *,concat('',timediff(item_endtime,now())) as diff from item_details where item_category_id='"+rs1.getString("category_id")+"' and item_name like '%"+keyword+"%' and item_mode<>'2'";
     		if(subcategory!=null){
     			query1=query1+" and item_subcategory_id='"+subcategory+"'";
     		}
@@ -80,8 +94,22 @@ public String execute()  throws Exception{
     	    	}else{
     	    		i.setItem_mode("Bidding");
     	    	}
+    	    	String diff=rs2.getString("diff");
+    	    	String[] a=diff.split(":");
+    			int days=(Integer.parseInt(a[0])/24);
+    			int hours=0;
+    			if(days>0){
+    				hours=Integer.parseInt(a[0])-days*24;
+    			}
+    			else{
+    				hours=Integer.parseInt(a[0]);
+    			}
+    			int minutes=Integer.parseInt(a[1]);
+    			String str=days+"D "+hours+"H "+minutes+"M ";
+    			i.setItem_endtime(str);
     	    	i.setItem_condition(rs2.getString("item_condition"));
     	    	i.setItem_price(rs2.getInt("item_price"));
+    	    	i.setItem_quantity(rs2.getInt("item_quantity"));
     	    	arr.add(i);	
     		}
     	}

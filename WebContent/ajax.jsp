@@ -27,7 +27,14 @@
 </tr>
 <s:iterator value="arr">
 <tr><td><img src="retrieve.jsp?item_id=<s:property value="item_id"/>" height="100" width="150"/></td>
-<td><h4><s:property value="item_name"/></td>
+<td><h4>
+
+<s:if test='item_mode.equals("Buy It Now")'>
+<a href="BuyItNow.action?item_id=<s:property value="item_id"/>"><s:property value="item_name"/></td></a>
+</s:if>
+<s:else>
+<a href="bidding.action?item_id=<s:property value="item_id"/>"><s:property value="item_name"/></td></a>
+</s:else></td>
 <td><h5><s:property value="item_mode"/></td>
 <td><h5><s:property value="item_condition"/></td>
 <td><h4><s:property value="item_price"/></td>

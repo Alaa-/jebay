@@ -15,7 +15,7 @@ public class Getform extends ActionSupport
 	public String execute()
 	{
 		System.out.println("Im printing what i got " + fcat + " " + fsubcat);
-		if (fcat == 1)
+		/*if (fcat == 1)
 		{
 			brands = new ArrayList<String>();
 			types = new ArrayList<String>();
@@ -37,7 +37,8 @@ public class Getform extends ActionSupport
 		else
 		{
 			return "item";
-		}
+		}*/
+		return "item";
 
 	}
 

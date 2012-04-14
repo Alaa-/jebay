@@ -731,16 +731,46 @@
 function visit(a){
 	//alert('quantity'+a);
 	var b=document.getElementById('quantity'+a).value;
-	alert(b);
-	window.location.href="AddToCart.action?item_id="+a+"&quantity="+b;
+	var c=document.getElementById('iquantity'+a).value;
+	if(b>c){
+		alert("not possible");
+		document.getElementById('quantity'+a).focus();
+	}
+	else{
+		window.location.href="AddToCart.action?item_id="+a+"&quantity="+b;
+	}
 }
-function proceed(a,f){
-	alert('quantity'+a);
+function proceed(a,f,c){
+	//alert('quantity'+a);
 
 	var b=document.getElementById('quantity'+f).value;
-	alert(b);
-	alert("ProceedToPayCart.action?cart_id="+a+"&cart_quantity="+b);
-	window.location.href="ProceedToPayCart.action?cart_id="+a+"&cart_quantity="+b;
+//	var c=document.getElementById('iquantity'+a).value;
+	if(b>c){alert("not possible");
+	document.getElementById('quantity'+f).focus();
+	}
+	else{
+		visit1(f);
+		window.location.href="ProceedToPayCart.action?cart_id="+a+"&cart_quantity="+b;
+		
+	}
+	
+}
+function visit1(a){
+	var req;
+	
+	//alert('quantity'+a);
+	var b=document.getElementById('quantity'+a).value;
+	var c=document.getElementById('iquantity'+a).value;
+	if(b>c){
+		alert("not possible");
+		document.getElementById('quantity'+a).focus();
+	}
+	else{
+		req=new XMLHttpRequest();
+		req.open("GET","AddToCart.action?item_id="+a+"&quantity="+b,true);
+		req.send();
+		window.location.href="AddToCart.action?item_id="+a+"&quantity="+b;
+	}
 }
 </script>
 
@@ -848,9 +878,10 @@ function proceed(a,f){
 																													autocomplete="off" size="5" maxlength="5"
 																													class="item-quantityValue"
 																													value="<s:property value="cart_quantity"/>"
-																													type="text"><br>(
+																													type="number" min="1" max="<s:property value="item_quantity" />"/><br>(
 																												<s:property value="item_quantity" />
 																												available)
+																												<input type="hidden" id="iquantity<s:property value="cart_item_id"/>" value="<s:property value="item_quantity"/>"/>
 																											</div>
 																											<div class="item-summ-body-subtotal-ssm">
 																												<div style="float: left; padding-left: 0px;">Rs.</div>
@@ -886,7 +917,7 @@ function proceed(a,f){
 																													<div style="padding-top: 5px;">
 																														<input src="cart/proceed_to_pay.gif"
 																															
-																															type="image" onclick="proceed('<s:property value="cart_id"/>','<s:property value="cart_item_id"/>')"><span
+																															type="image" onclick="proceed('<s:property value="cart_id"/>','<s:property value="cart_item_id"/>','<s:property value="item_quantity"/>')"><span
 																															style="padding-left: 5px">The next
 																															step is to select shipping method.</span>
 																													</div>

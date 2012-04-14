@@ -431,6 +431,24 @@ div.btnMsgBar input.btnMsgBar-bTxt {
 <!--[if IE 8]><style>.btn-b input{padding:2px 17px 3px}.btn-bp input{background-position:1px -139px}</style><![endif]-->
 <script type="text/javascript" src="buyitnow/a.js"></script>
 <link href="buyitnow/a.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="hello.js"></script>
+<script type="text/javascript">
+function loadtextarea(a){
+	$('#shippingaddressbox').slideDown();
+	
+	//alert("hello");
+	$('#change').remove();
+	$('#shippingaddressbox').html('<textarea id="t1" cols="20" rows="4"/><input type="button" value="submit" id="b1" onclick="changeaddress()"/>');
+}
+function changeaddress(){
+	alert("hello");
+	var a=document.getElementById('t1').value;
+	$('#addrrow1').text(a);
+	$('#t1').remove();
+	//add code to store in transaction table
+
+}
+</script>
 </head>
 <body id="body">
 	<script type="text/javascript"
@@ -711,7 +729,7 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VtotojCooki
 																							<input id="addDsplCountry"
 																								value="com.ebay.darwin.app.spark.pres.AddressLayoutIN"
 																								type="hidden">
-																							<div class="g-std" id="addrrow">
+																							<div class="g-std" id="addrrow1">
 																								<div id="addrrow">
 																									<b><s:property value="user_name"/></b>
 																								</div>
@@ -725,11 +743,12 @@ vjo.dsf.cookie.VjCookieJar.sCookieDomain = '.ebay.in';vjo.dsf.cookie.VtotojCooki
 																								<div id="addrrow">
 																									<span><s:property value="user_state"/></span>
 																								</div>
-																								<input type="button" value="Change Shipping Address" onclick="loadtextarea()"/>
-																								<div id="dk1"></div>
-																								<div id="addrrow"></div>
-																								<div id="addrrow"></div>
-																							</div>
+																								</div>
+																								<div id="shippingaddressbox"></div>
+																								<input type="button" id="change" value="Change Shipping Address" onclick="loadtextarea(this)"/>
+																								
+																							
+																							
 																						</div>
 																						<div style="padding-top: 10px;">
 																							

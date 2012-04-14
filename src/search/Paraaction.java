@@ -56,12 +56,20 @@ public void setMode(String mode) {
 @Override
 public String execute() throws Exception {
 	Map session=ActionContext.getContext().getSession();
+	int subcategory;
 	String keyword=session.get("keyword").toString();
 	int category=Integer.parseInt(session.get("category").toString());
-	if(category==0){
-	wherequery="where item_name like '%"+keyword+"%' and timediff(item_endtime,now())>0 and item_quantity>0 and item_mode<>'2'";}
+	if(session.get("subcategory")!=null){
+		subcategory=Integer.parseInt(session.get("subcategory").toString());
+		wherequery="where item_subcategory_id='"+subcategory+"' ";
+	}
 	else{
-		wherequery="where item_name like '%"+keyword+"%' and item_category_id='"+category+"' and timediff(item_endtime,now())>0 and item_quantity>0 ";	
+		wherequery="where 1=1 ";
+	}
+	if(category==0){
+	wherequery+="and item_name like '%"+keyword+"%' and timediff(item_endtime,now())>0 and item_quantity>0 and item_mode<>'2'";}
+	else{
+		wherequery+="and item_name like '%"+keyword+"%' and item_category_id='"+category+"' and timediff(item_endtime,now())>0 and item_quantity>0 and item_mode<>'2'";	
 	}
 	if(condition!=null){
 		

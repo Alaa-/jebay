@@ -3991,13 +3991,13 @@ function get_MyEbay_menu() {
 	return {
 		"items" : [
 				{
-					"value" : "<a href=\"#\" rel=\"nofollow\">Summary</a>"
+					"value" : "<a href=\"#\" >Summary</a>"
 				},
 				{
-					"value" : "<a href=\"http://my.ebay.in/ws/eBayISAPI.dll?MyEbay&amp;gbh=1&amp;CurrentPage=MyeBayBidding&amp;ssPageName=STRK:ME:LNLK:MEBIDX\" rel=\"nofollow\">Bids/Offers</a>"
+					"value" : "<a href=\"#\" >Bidding History</a>"
 				},
 				{
-					"value" : "<a href=\"http://my.ebay.in/ws/eBayISAPI.dll?MyEbay&amp;gbh=1&amp;CurrentPage=MyeBayWon&amp;ssPageName=STRK:ME:LNLK:MEWNX\" rel=\"nofollow\">Purchase History</a>"
+					"value" : "<a href=\"#\" >Purchase History</a>"
 				} ]
 	};
 }

@@ -3,12 +3,11 @@ package model;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-
-import vo.ItemVo;
-
-import ebay.Connect;
+import java.util.Map;
 
 import myutil.DB;
+
+import com.opensymphony.xwork2.ActionContext;
 
 public class Transaction {
 
@@ -43,9 +42,12 @@ public class Transaction {
 		ResultSet rs = null;
 		int newGeneratedItemid = -1;
 		conn = DB.getConnection();
+		Map session=ActionContext.getContext().getSession();
+		String temp=session.get("temp").toString();
 		sqlQuery = "insert into transaction_details " +
-				"(t_buyer,t_seller,t_status,t_item_id,t_quantity,t_timestamp,t_buyer_account_no) " +
-				"values ('"+buyer+"','"+seller+"',1,"+item_id+","+qty+",now(),"+acc+")";
+				"(t_buyer,t_seller,t_status,t_item_id,t_quantity,t_timestamp,t_buyer_account_no,t_shipping_address) " +
+				"values ('"+buyer+"','"+seller+"',1,"+item_id+","+qty+",now(),"+acc+",'"+temp+"')";
+		session.remove("temp");
 		System.out.println(sqlQuery);
 		try
 		{

@@ -433,6 +433,7 @@ div.btnMsgBar input.btnMsgBar-bTxt {
 <link href="buyitnow/a.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" src="hello.js"></script>
 <script type="text/javascript">
+var address;
 function loadtextarea(a){
 	$('#shippingaddressbox').slideDown();
 	
@@ -441,12 +442,21 @@ function loadtextarea(a){
 	$('#shippingaddressbox').html('<textarea id="t1" cols="20" rows="4"/><input type="button" value="submit" id="b1" onclick="changeaddress()"/>');
 }
 function changeaddress(){
-	alert("hello");
+	//alert("hello");
 	var a=document.getElementById('t1').value;
+	address=a;
 	$('#addrrow1').text(a);
 	$('#t1').remove();
+	$('#b1').remove();
+	transaction();
 	//add code to store in transaction table
 
+}
+function transaction(){
+	var request;
+	request=new XMLHttpRequest();
+	request.open("GET","ChangeShipping.action?temp="+address,true);
+	request.send();
 }
 </script>
 </head>

@@ -250,7 +250,10 @@
 			<result name="success">showdetails.jsp</result>
 			<result name="error" type="chain">bidding</result>
 		</action>
-		
+		<action name="ChangeShipping" class="ebay.ChangeShipping">
+			<result name="success">buyitnow.jsp</result>
+			<result name="error" type="chain">bidding</result>
+		</action>
 		<action name="BuyItNow" class="ebay.BuyItNow">
 			<result name="success">buyitnow.jsp</result>
 			<result name="error" type="chain">bidding</result>

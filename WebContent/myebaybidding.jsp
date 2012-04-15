@@ -72,6 +72,8 @@
 						<div id="tabsContent_1_0" class="tabsContent">
 						<s:iterator value="bidhis">
 						<s:set name="status" value="t_status"/>
+						<s:set name="buyer" value="bidding_winner"/>
+						<s:set name="seller" value="item_seller"/>
 							<div class="panelHead2">
 						<input type="checkbox"  class="left"/>
 						<img src="retrieve.jsp?item_id=<s:property value="item_id"/>" width="150" height="150" class="left" />
@@ -86,7 +88,10 @@
 								<span class="grey">100%</span>
 							</div>
 							<s:if test="%{#status==0}">
+							<s:if test="%{#buyer.equals(#seller)}">same buyer and seller</s:if>
+							<s:else>
 							<div><a href="Intermediate.action?winner=<s:property value="bidding_winner"/>&item_id=<s:property value="item_id"/>"> <input type="button" value="Pay Now"></input></a></div>
+							</s:else>
 							</s:if>
 							<s:else> YOU HAVE PAID THE AMOUNT</s:else>
 						</div>

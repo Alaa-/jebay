@@ -50,7 +50,7 @@ public void setQuantity(String quantity) {
 		ResultSet rs=c.getResult("select * from cart_details where cart_buyer='"+username+"'");
 		while(rs.next()){
 		Connect c1=new Connect();
-		ResultSet rs1=c1.getResult("select * from item_details where item_id='"+rs.getInt("cart_item_id")+"'");
+		ResultSet rs1=c1.getResult("select * from item_details where item_id='"+rs.getInt("cart_item_id")+"' and timediff(item_endtime,now())>0 and item_quantity>0");
 	
 	    while(rs1.next()){
 	    	ItemCartVo i=new ItemCartVo();

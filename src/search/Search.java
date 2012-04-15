@@ -68,11 +68,14 @@ public class Search extends ActionSupport {
 				i.setItem_name(rs.getString("item_name"));
 				if (rs.getString("item_mode").equals("0")) {
 					i.setItem_mode("Buy It Now");
+					i.setItem_price(rs.getInt("item_price"));
 				} else {
 					i.setItem_mode("Bidding");
+					System.out.println("hello world");
+					i.setItem_price(rs.getInt("item_baseprice"));
 				}
 				i.setItem_condition(rs.getString("item_condition"));
-				i.setItem_price(rs.getInt("item_price"));
+				
 				String diff = rs.getString("diff");
 				String[] a = diff.split(":");
 				int days = (Integer.parseInt(a[0]) / 24);
@@ -110,8 +113,10 @@ public class Search extends ActionSupport {
 					i.setItem_name(rs2.getString("item_name"));
 					if (rs2.getString("item_mode").equals("0")) {
 						i.setItem_mode("Buy It Now");
+						i.setItem_price(rs2.getInt("item_price"));
 					} else {
 						i.setItem_mode("Bidding");
+						i.setItem_price(rs2.getInt("item_baseprice"));
 					}
 					String diff = rs2.getString("diff");
 					String[] a = diff.split(":");
@@ -126,7 +131,7 @@ public class Search extends ActionSupport {
 					String str = days + "D " + hours + "H " + minutes + "M ";
 					i.setItem_endtime(str);
 					i.setItem_condition(rs2.getString("item_condition"));
-					i.setItem_price(rs2.getInt("item_price"));
+					
 					i.setItem_quantity(rs2.getInt("item_quantity"));
 					arr.add(i);
 				}

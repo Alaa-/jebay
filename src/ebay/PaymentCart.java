@@ -88,6 +88,8 @@ public class PaymentCart {
 		
 		int totalprice = (quantity * item_price)+item_shipping_charge;
 		String total = Integer.toString(totalprice);
+		session.put("item_price",item_price);
+		session.put("cart_quantity",cart_quantity);
 		session.put("totalPrice",total);
 		System.out.println("total price shreepriya "+totalprice);
 		//ArrayList arr = concat(lstItemDetails,lstUserDetails);

@@ -144,6 +144,7 @@ Connect c=new Connect();
 		String str=days+"D "+hours+"H "+minutes+"M ";
 		i.setItem_endtime(str);
 		i.setItem_quantity(rs.getInt("item_quantity"));
+		i.setItem_seller(rs.getString("item_seller"));
     	arr.add(i);
     }
 	if(arr.size()==0){

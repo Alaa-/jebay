@@ -89,6 +89,7 @@ public class Search extends ActionSupport {
 				String str = days + "D " + hours + "H " + minutes + "M ";
 				i.setItem_endtime(str);
 				i.setItem_quantity(rs.getInt("item_quantity"));
+				i.setItem_seller(rs.getString("item_seller"));
 				arr.add(i);
 			}
 		} else {
@@ -133,6 +134,7 @@ public class Search extends ActionSupport {
 					i.setItem_condition(rs2.getString("item_condition"));
 					
 					i.setItem_quantity(rs2.getInt("item_quantity"));
+					i.setItem_seller(rs2.getString("item_seller"));
 					arr.add(i);
 				}
 			}

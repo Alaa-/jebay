@@ -52,7 +52,7 @@
 </table>
 <div id="navigation" align="center"></div></div></td></table>
 <script type="text/javascript">
-    var pager = new Pager('t1', 5); 
+    var pager = new Pager('t1', 3); 
     pager.init(); 
     pager.showPageNav('pager', 'navigation'); 
     pager.showPage(1);

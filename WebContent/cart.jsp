@@ -765,7 +765,7 @@ function visit1(a,e){
 	
 	
 		req=new XMLHttpRequest();
-		alert("siva "+b);
+		//alert("siva "+b);
 		req.open("GET","AddToCart.action?item_id="+e+"&quantity="+b,true);
 		req.send();
 		//window.location.href="AddToCart.action?item_id="+a+"&quantity="+b;

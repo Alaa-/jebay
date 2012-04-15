@@ -13,12 +13,10 @@ import com.opensymphony.xwork2.ActionSupport;
 public class Admin extends ActionSupport
 {
 	ArrayList<CategoryVo> catlist;
-	ArrayList<SubCategoryVo> subcatlist;
 	
 	public String execute()
 	{
-		catlist=Category.getAllCategories();
-		subcatlist=SubCategory.getAllSubCategories();
+		catlist = Category.getAllCategoriesSubCategories();
 		return SUCCESS;
 	}
 
@@ -31,15 +29,4 @@ public class Admin extends ActionSupport
 	{
 		this.catlist = catlist;
 	}
-
-	public ArrayList<SubCategoryVo> getSubcatlist()
-	{
-		return subcatlist;
-	}
-
-	public void setSubcatlist(ArrayList<SubCategoryVo> subcatlist)
-	{
-		this.subcatlist = subcatlist;
-	}
-
 }

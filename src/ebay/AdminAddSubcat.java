@@ -7,12 +7,12 @@ import model.SubCategory;
 
 public class AdminAddSubcat extends ActionSupport
 {
-	int fcat;
-	String fsubcat;
+	int fcat,fsubcat;
+	String newsub;
 
 	public String execute()
 	{
-		SubCategory.addSubCat(fcat,fsubcat);
+		SubCategory.addSubCat(fcat,newsub);
 		return SUCCESS;
 	}
 	public int getFcat()
@@ -23,13 +23,21 @@ public class AdminAddSubcat extends ActionSupport
 	{
 		this.fcat = fcat;
 	}
-	public String getFsubcat()
+	public int getFsubcat()
 	{
 		return fsubcat;
 	}
-	public void setFsubcat(String fsubcat)
+	public void setFsubcat(int fsubcat)
 	{
 		this.fsubcat = fsubcat;
+	}
+	public String getNewsub()
+	{
+		return newsub;
+	}
+	public void setNewsub(String newsub)
+	{
+		this.newsub = newsub;
 	}
 
 }

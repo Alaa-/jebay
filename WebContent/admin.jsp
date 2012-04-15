@@ -23,7 +23,7 @@ td.label {
 }
 
 .box {
-	width: 800px;
+	width: 900px;
 	border: 1px solid #8ED17C;
 	align: center;
 	padding: 25px 18px;
@@ -33,30 +33,57 @@ td.label {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
-table,th,td{
-border-collapse:collapse;
-	border:1px solid black;
+
+#outer {
+	border-collapse: collapse;
+	border: 1px solid black;
 	border-spacing: 5px;
 	padding: 20px;
-
 }
-
 </style>
 </head>
 <body>
 	<div class="box">
 		<h2 style="text-align: center;">Welcome ADMIN !!!</h2>
-		<table style="border: 2px solid black;border-width: 2px;">
-			<tr>
+		<table id="outer" style="border: 2px solid black; border-width: 2px;">
+			<tr id="outer">
 				<td><s:form action="adminaddcat" method="post">
-						<label>Add New Category:&nbsp;&nbsp;</label><s:textfield label="Add New Category" name="fcat"></s:textfield>
-						<s:submit value="Submit"></s:submit>
+						<table>
+							<tr>
+								<td><label>Add New Category:&nbsp;&nbsp;</label></td>
+								<td><s:textfield label="Add New Category" name="fcat"></s:textfield>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="center"><s:submit value="Submit"></s:submit></td>
+							</tr>
+						</table>
 					</s:form></td>
-				<td><s:form action="adminaddsubcat" method="post">
-						<label>Select Category:&nbsp;&nbsp;</label><s:select list="catlist" listKey="category_id"
-							listValue="category_name" name="fcat" /><br/><br/>
-						<label>Add new Subcategory under it:&nbsp;&nbsp;</label><s:textfield label="Add New SubCategory" name="fsubcat"></s:textfield>
-						<s:submit value="Submit"></s:submit>
+				<td id="outer"><s:form action="adminaddsubcat" method="post">
+
+						<table>
+							<tr>
+								<td><label>Select Category to add more
+										subcategories&nbsp;&nbsp;</label><br /> <label>(Current
+										Subcategories are shown here)</label></td>
+								<td><s:doubleselect label="Categories" id="fcat"
+										name="fcat" list="catlist" listKey="category_id"
+										listValue="category_name" doubleName="fsubcat"
+										doubleId="fsubcat" doubleList="subcatlist"
+										doubleListKey="subcategory_id"
+										doubleListValue="subcategory_name" /></td>
+							</tr>
+							<tr>
+								<td><label>Add new Subcategory under
+										it:&nbsp;&nbsp;</label></td>
+								<td><s:textfield label="Add New SubCategory"
+										name="newsub"></s:textfield></td>
+							</tr>
+							<tr>
+								<td colspan="2" align="center"><s:submit value="Submit"></s:submit>
+								</td>
+							</tr>
+						</table>
 					</s:form></td>
 			</tr>
 

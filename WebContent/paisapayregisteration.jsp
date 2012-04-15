@@ -532,7 +532,7 @@ vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab1&quot;, 
 			</div>
 		</div>
 
-		<s:if test="paisaregister == 0">
+ 		<s:if test="paisaregister == 0">	<%--//User is not registered as seller in paisapay Hence give him the form to register. --%>
 			<div class="blueboxconld">
 				<div class="blueboxconrd">
 					<div class="blueboxcontb">
@@ -945,7 +945,7 @@ vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab1&quot;, 
 		
 		
 		
-		
+<!-- 		//User is already registered with paisapay so no registeration form show him the details if u can. -->
 		<s:else>
 			<div style="margin-left: 5px" class="content_area">
 				<div>
@@ -1028,42 +1028,21 @@ vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab1&quot;, 
 											<table>
 												<tr>
 													<td width="27%" class="txt-black13bold">Payee Name:</td>
-													<td width="65%" class="txt1-black13normal"><label>Nikhil
-															Dhawan</label></td>
+													<td width="65%" class="txt1-black13normal"><s:property value="acc_holder"/></td>
 													<td width="8%" class="txt2-black13norma"></td>
 												</tr>
 												<tr>
 													<td class="txt-black13bold">Bank account number:</td>
-													<td class="txt1-black13normal"><label>********7086</label></td>
+													<td class="txt1-black13normal"><s:property value="acc_no"/></td>
 													<td class="txt2-black13norma"></td>
 												</tr>
 												<tr>
 													<td class="txt-black13bold">Bank name:</td>
-													<td class="txt1-black13normal"><label>ICICI
-															Bank</label></td>
+													<td class="txt1-black13normal"><s:property value="bank_name"/></td>
 													<td class="txt2-black13norma"></td>
 												</tr>
-												<tr>
-													<td class="txt-black13bold">Branch, city:</td>
-													<td class="txt1-black13normal"><label>Ahmedabad
-															- JMC House , Ahmedabad </label></td>
-													<td class="txt2-black13norma"></td>
-												</tr>
-												<tr>
-													<td class="txt-black13bold">MICR code:</td>
-													<td class="txt1-black13normal"><label>380229002</label></td>
-													<td class="txt2-black13norma"></td>
-												</tr>
-												<tr>
-													<td class="txt-black13bold">IFSC code:</td>
-													<td class="txt1-black13normal"><span><label>ICIC0000024</label></span><span
-														class="help-span"><a
-															href="http://pages.ebay.in/help/sell/contextual/ifsc.html"
-															target="_blank"><img
-																src="https://securepics.ebaystatic.com/aw/pics/in/buttons/btnHelp.gif"
-																alt="" border="0"></a></span></td>
 													<div></div>
-												</tr>
+												
 												<tr>
 													<td colspan="3"><div
 															style="background: #e9e9e9 no-repeat scroll bottom left; background-image: url('https://securepics.ebaystatic.com/aw/pics/psp_new/corner_k.gif'); background-repeat: no-repeat; background-position: left bottom;">
@@ -1088,21 +1067,7 @@ vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab1&quot;, 
 														</div>
 														<div></div></td>
 												</tr>
-												<tr>
-													<td class="txt-black13bold">Registration date:</td>
-													<td class="txt1-black13normal"><label>
-															08/09/11</label></td>
-													<td class="txt1-black13normal"></td>
-												</tr>
-												<tr>
-													<td class="txt-black13bold">Remittance details last
-														changed on:</td>
-													<td class="txt-black13normal"><label>08/09/11
-													</label></td>
-													<td class="txt-black13normal"><a
-														href="https://pay.ebay.in/ws/eBayISAPI.dll?EditPaisaPaySellerRegistration&amp;mode=2"
-														class="editDetail">Edit details </a></td>
-												</tr>
+												
 											</table>
 										</div>
 									</div>

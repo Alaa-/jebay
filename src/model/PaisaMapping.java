@@ -1,5 +1,7 @@
 package model;
 
+import java.sql.ResultSet;
+
 import myutil.DB;
 
 public class PaisaMapping
@@ -26,6 +28,13 @@ public class PaisaMapping
 		String sqlQuery="insert into paisapay_mapping (seller_id,seller_acc_id) values ('"+sellerid+"',"+ accid+")";
 		DB.update(sqlQuery);
 		System.out.println("Paisa pay mapping saved");
+	}
+	
+	public static ResultSet getPaisaMappingDetails(String sellerid)
+	{
+		String sqlQuery="select account_no,account_holder,bank_name from account_details,paisapay_mapping,bank_details where seller_acc_id=account_id and seller_id='" + sellerid+"' and bank_id=account_bank_id";
+		ResultSet rs=DB.readFromDB(sqlQuery);
+		return rs;
 	}
 
 }

@@ -26,7 +26,7 @@ function submitForm() {
 function check(){
 	var a=document.getElementById('min').value;
 	var b=document.getElementById('max').value;
-	alert(a+" "+b);
+	//alert(a+" "+b);
 	if(Math.floor(a)!=a){
 		
 		alert("not a number");

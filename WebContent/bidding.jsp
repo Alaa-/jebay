@@ -284,7 +284,7 @@
 																						</div>
 																						<div class="knwMore">
 																							<a
-																								href="http://pages.ebay.in/aboutebay/The_smart_choice.html"
+																								href="#"
 																								target="_blank">Know more</a> | *T&amp;C apply
 																						</div> </span>
 																				</td>

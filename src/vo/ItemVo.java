@@ -4,6 +4,18 @@ public class ItemVo
 {
 	int item_id, item_category_id, item_subcategory_id, item_price, item_baseprice, item_quantity, item_shipping_charge, item_total;
 
+	float item_rating;
+
+	public float getItem_rating()
+	{
+		return item_rating;
+	}
+
+	public void setItem_rating(float item_rating)
+	{
+		this.item_rating = item_rating;
+	}
+
 	public int getItem_total()
 	{
 		return item_total;

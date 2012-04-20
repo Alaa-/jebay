@@ -731,6 +731,7 @@ vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab1&quot;, 
 																		</div>
 																	</div>
 																	<div id="content-area" style="padding-bottom: 15px;">
+																	<font color="red"><s:actionerror/></font>
 																		<div id="left-table">
 																			<div class="fe-padding">
 																				<div style="padding-left: 0px"
@@ -797,8 +798,7 @@ vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab1&quot;, 
 																										<li><span class="txt-gray13normal">The
 																												details you provide to PaisaPay are
 																												protected and secure. Please review our <a
-																												href="http://pages.ebay.in/help/policies/paisapay-policy-data-privacy-security.html"
-																												target="_blank">Data Privacy and
+																												href="#">Data Privacy and
 																													Security Policy</a> to know how PaisaPay
 																												protects your bank account information.
 																										</span></li>
@@ -922,7 +922,7 @@ vjo.darwin.app.spark.escrow.dashboard.DashboardCheck.changeBG(&quot;tab1&quot;, 
 												type="submit" value="Register" id="v4-3">
 												<span
 													style="background: transparent url('https://securepics.ebaystatic.com/aw/pics/viewitem/imgVIPrmryBtnLt.gif') no-repeat scroll left top; color: #FFFFFF; cursor: pointer; display: block; font-family: Arial; font-weight: bold; height: 24px; line-height: 190%; padding-left: 2px; vertical-align: middle; white-space: nowrap; float: left"><span
-													style="background: transparent url('https://securepics.ebaystatic.com/aw/pics/buttons/btnViPrmry.gif') no-repeat scroll 100% 0px; font-size: 3.4mm; color: #FFFFFF; cursor: pointer; display: block; font-family: Arial; font-weight: bold; height: 24px; line-height: 190%; padding-left: 15px; padding-right: 15px; vertical-align: middle; white- space: nowrap;">Register
+													style="background: transparent url('images/btnViPrmry.gif') no-repeat scroll 100% 0px; font-size: 3.4mm; color: #FFFFFF; cursor: pointer; display: block; font-family: Arial; font-weight: bold; height: 24px; line-height: 190%; padding-left: 15px; padding-right: 15px; vertical-align: middle; white- space: nowrap;">Register
 														&gt;</span></span>
 											</button>
 											<input type="hidden" name="registration">

@@ -63,8 +63,8 @@ td.label {
 
 						<table>
 							<tr>
-								<td><label>Select Category to add more
-										subcategories&nbsp;&nbsp;</label><br /> <label>(Current
+								<td><label>Select Category to add
+										Subcategories&nbsp;&nbsp;</label><br /> <label>(Current
 										Subcategories are shown here)</label></td>
 								<td><s:doubleselect label="Categories" id="fcat"
 										name="fcat" list="catlist" listKey="category_id"
@@ -76,8 +76,7 @@ td.label {
 							<tr>
 								<td><label>Add new Subcategory under
 										it:&nbsp;&nbsp;</label></td>
-								<td><s:textfield label="Add New SubCategory"
-										name="newsub"></s:textfield></td>
+								<td><s:textfield label="Add New SubCategory" name="newsub"></s:textfield></td>
 							</tr>
 							<tr>
 								<td colspan="2" align="center"><s:submit value="Submit"></s:submit>

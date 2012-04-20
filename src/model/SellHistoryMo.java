@@ -27,9 +27,23 @@ public class SellHistoryMo
 				i.setT_buyer(rs.getString("t_buyer"));
 				i.setT_status(rs.getInt("t_status"));
 				i.setT_id(rs.getInt("t_id"));
-				i.setT_timestamp(rs.getString("t_timestamp"));
-				sellhis.add(i);
 
+				i.setT_timestamp(rs.getString("t_timestamp"));
+				if (rs.getString("t_shipping_address").equals("12345"))
+				{
+					Connect c1 = new Connect();
+					ResultSet rs5 = c1.getResult("select * from user_details where user_id='" + rs.getString("t_buyer") + "'");
+					String str = "";
+					rs5.next();
+					str += rs5.getString("user_home_address") + rs5.getString("user_city") + rs5.getString("user_state");
+					i.setT_shipping_address(str);
+				}
+				else
+				{
+					i.setT_shipping_address(rs.getString("t_shipping_address"));
+
+				}
+				sellhis.add(i);
 			}
 			return sellhis;
 		}

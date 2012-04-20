@@ -12,6 +12,11 @@
 <form action="continue.action">
 <h1>Payment Successful</h1>
 <h3>Congratulations! Your transaction is successful. Press Continue to go to Home</h3>
+
+<%out.println(session.getAttribute("item_id")+""); %>
+<%out.println(session.getAttribute("qty")+""); %>
+<%out.println(session.getAttribute("totalPrice")+""); %>
+
 <s:submit name="submit" value="Continue"></s:submit>
 </form>
 </body>

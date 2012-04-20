@@ -2,7 +2,17 @@ package vo;
 
 public class PurchasehistoryVo
 {
-	String t_seller, item_name, t_buyer, courier_name;
+	String t_seller, item_name, t_buyer, courier_name, t_shipping_address;
+
+	public String getT_shipping_address()
+	{
+		return t_shipping_address;
+	}
+
+	public void setT_shipping_address(String t_shipping_address)
+	{
+		this.t_shipping_address = t_shipping_address;
+	}
 
 	public String getT_buyer()
 	{
@@ -14,7 +24,37 @@ public class PurchasehistoryVo
 		this.t_buyer = t_buyer;
 	}
 
-	int item_price, item_id, t_status, t_id, courier_shipping_id;
+	int item_price, item_id, t_status, t_id, courier_shipping_id, t_quantity, item_totalprice, item_shipping_charge;
+
+	public int getItem_shipping_charge()
+	{
+		return item_shipping_charge;
+	}
+
+	public void setItem_shipping_charge(int item_shipping_charge)
+	{
+		this.item_shipping_charge = item_shipping_charge;
+	}
+
+	public int getItem_totalprice()
+	{
+		return item_totalprice;
+	}
+
+	public void setItem_totalprice(int item_totalprice)
+	{
+		this.item_totalprice = item_totalprice;
+	}
+
+	public int getT_quantity()
+	{
+		return t_quantity;
+	}
+
+	public void setT_quantity(int t_quantity)
+	{
+		this.t_quantity = t_quantity;
+	}
 
 	public String getCourier_name()
 	{

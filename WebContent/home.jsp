@@ -171,10 +171,10 @@
 				<div class="pcontent">
 					<!--cacheStatus: true-->
 					<script>var _GlobalNavHeaderUtf8Encoding=true;</script>
-					<script
+					<!-- <script
 						src="http://ir.ebaystatic.com/v4js/z/e5/xlabaeavieyydbpqc5wlwyjye.js#GH-ZAM_ReskinEbay_e767i_1_Ear_en_IN"></script>
 
-					<%@include file="header.jsp"%>
+ -->					<%@include file="header.jsp"%>
 
 					<!--vo{2d71f+}0nd{71hj,,RlogId p4kjkbsdabjkrk9%3Fvo%7B2d71f%2B%7D0nd%7F%7B71hj-1368e4f8187-0x167-->
 				</div>

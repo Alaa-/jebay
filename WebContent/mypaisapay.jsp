@@ -12,12 +12,6 @@
 	href="http://ir.ebaystatic.com/v4css/z/mt/czic43lc4q0xldvdn445m5knd.css#SparkApp_MyPaisaPaySummary_e767i_Ear_en_IN">
 
 
-
-
-
-
-
-
 </head>
 <body>
 

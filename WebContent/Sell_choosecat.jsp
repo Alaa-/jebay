@@ -23,10 +23,7 @@
 <link rel="stylesheet"
 	href="css/category_e7651in.css"
 	type="text/css">
-<script type="text/javascript" language="JavaScript"
-	src="http://include.ebaystatic.com/js/e765/in/features/syi3/category_browse_e7656in.js">
-	
-</script>
+
 
 </head>
 <body>
@@ -190,7 +187,7 @@
 																		listKey="category_id" listValue="category_name"	size="13" 
 																		cssStyle="float:right" doubleCssClass="idtRgt" doubleCssStyle="top:0px;left:215px;width:215px;position:absolute;float:top"
 																		doubleSize="13" doubleName="fsubcat" doubleId="fsubcat" doubleList="subcatlist" 
-																		doubleListKey="subcategory_id" doubleListValue="subcategory_name"  />												
+																		doubleListKey="subcategory_id" doubleListValue="subcategory_name"  />											
 															</div></td>
 													</tr>
 												</table>

@@ -104,7 +104,8 @@ function check(){
 <tr><td><h4>Sort By</h4></td></tr>
 <tr><td><select name="entity">
 <option value="price">Price</option>
-<option value="time">Time</option></select></td></tr>
+<option value="time">Time</option>
+<option value="rating">Rating</option></select></td></tr>
 <tr><td><input type="button" name="b1" value="Submit" onclick="check()"/></td></tr>
 </table></form></td>
 
@@ -113,7 +114,7 @@ function check(){
 <table id="t1" width="810">
 
 <tr><th><h3>Item Image</th><th><h3>Item Name</th><th><h3>Mode</h3></th><th><h3>Condition</h3></th><th><h3>Price</th>
-<th><h3>Time Left</th><th><h3>Quantity</th><th><h3>Seller</th>
+<th><h3>Time Left</th><th><h3>Quantity</th><th><h3>Seller</th><th>Rating</th>
 <tr><th colspan="4"><s:actionerror/></th></tr>
 </tr>
 <s:iterator value="arr">
@@ -132,6 +133,7 @@ function check(){
 <td><h4><s:property value="item_endtime"/></td>
 <td><h4><s:property value="item_quantity"/></td>
 <td><h4><s:property value="item_seller"/></td>
+<td><h4><s:property value="item_rating"/></td>
 </tr>
 </s:iterator>
 

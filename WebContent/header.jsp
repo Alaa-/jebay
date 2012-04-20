@@ -26,8 +26,8 @@
 
 </head>
 <body id="body" onload="document.getElementById('_nkw').focus()">
-	<script type="text/javascript"
-		src="http://ir.ebaystatic.com/v4js/z/qt/5oiu3dmnniy4tculwdphcncts.js#SYS-ZAM_vjo_e767i_1_Ear_en_IN"></script>
+	<%-- <script type="text/javascript"
+		src="http://ir.ebaystatic.com/v4js/z/qt/5oiu3dmnniy4tculwdphcncts.js#SYS-ZAM_vjo_e767i_1_Ear_en_IN"></script> --%>
 
 	<div></div>
 	<div align="center">
@@ -41,7 +41,7 @@
 					<script>
 						var _GlobalNavHeaderUtf8Encoding = true;
 					</script>
-					<script src="js/myebay.js"></script>
+					<%-- <script src="js/myebay.js"></script> --%>
 					<div id="gnheader" class="gh-w">
 						<div id="cobrandHeader"></div>
 						<a href="#mainContent" rel="nofollow"
@@ -68,7 +68,7 @@
 							<div class="gh-log">
 								<span class="gh-lg"><a href="home.jsp" rel="nofollow">
 										<img
-										src="http://p.ebaystatic.com/aw/pics/in/logos/logoEbay_x45.gif"
+										src="images/logoEbay_x45.gif"
 										alt="eBay" border="0"></img>
 								</a> </span> <span class="greeting gh-ui"> <!-- BEGIN: GREETING:SIGNEDOUT -->
 									<s:if test="#session['User']==null">Welcome!&ensp;<s:property

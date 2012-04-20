@@ -239,7 +239,7 @@
 										<td>Only actual bids (not automatic bids generated up to
 											a bidder's maximum) are shown. Automatic bids may be placed
 											days or hours before a listing ends. <a
-											href="http://pages.ebay.in/help/buy/bidding-ov.html">Learn
+											href="#">Learn
 												more about bidding<b class="g-hdn"> - opens in a new
 													window or tab</b> </a>.</td>
 										<td width="20"><img

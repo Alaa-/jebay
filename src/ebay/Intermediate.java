@@ -88,6 +88,8 @@ public class Intermediate
 			x.setItem_price(rs1.getInt("bidding_bid"));
 			price = rs1.getInt("bidding_bid") + "";
 			session.put("totalPrice", price);
+			int quantity = 1;
+			x.setItem_total(Integer.parseInt(price));
 			System.out.println("total price is : " + price);
 			x.setQuantity(1);
 			x.setItem_shipping_charge(rs.getInt("item_shipping_charge"));

@@ -10,21 +10,32 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class SavePaisaForm extends ActionSupport
 {
-	String acholdername,acnumber;
+	String acholdername, acnumber;
 
+	int paisaregister;
+
+	@Override
 	public String execute()
 	{
-		int accid=Account.verifyAccount(acnumber, acholdername);
-		if(accid!=-1)
+		int accid = Account.verifyAccount(acnumber, acholdername);
+		if (accid != -1)
 		{
-			Map<String, Object> session=ActionContext.getContext().getSession();
-			String user=(String)session.get("User");
-			PaisaMapping.savePaisaMapping(user,accid);
-			
+			Map<String, Object> session = ActionContext.getContext().getSession();
+			String user = (String) session.get("User");
+			PaisaMapping.savePaisaMapping(user, accid);
+			return SUCCESS;
 		}
-		return SUCCESS;
+		else
+		{
+			Map<String, Object> session = ActionContext.getContext().getSession();
+			String user_id = (String) session.get("User");
+			addActionError("Account can not be verified");
+			paisaregister = PaisaMapping.getSellerPaisaStatus(user_id);
+			return ERROR;
+		}
+
 	}
-	
+
 	public String getAcholdername()
 	{
 		return acholdername;
@@ -44,6 +55,15 @@ public class SavePaisaForm extends ActionSupport
 	{
 		this.acnumber = acnumber;
 	}
-	
+
+	public int getPaisaregister()
+	{
+		return paisaregister;
+	}
+
+	public void setPaisaregister(int paisaregister)
+	{
+		this.paisaregister = paisaregister;
+	}
 
 }

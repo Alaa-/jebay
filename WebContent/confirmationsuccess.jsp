@@ -8,5 +8,9 @@
 </head>
 <body>
 ACCOUNT VERIFICATION DONE.PLEASE <a href="user_sign_in.jsp">CLICK HERE TO LOGIN</a>
+<%
+response.sendRedirect("user_sign_in.jsp");
+
+%>
 </body>
 </html>

@@ -20,7 +20,7 @@
 			<td width="190"></td>
 			<td width="940">
 				<div>
-					<a rel="nofollow" href="ebay_main.jsp"> <img border="0"
+					<a rel="nofollow" href="home.jsp"> <img border="0"
 						alt="From collectables to cars, buy and sell all kinds of items on eBay"
 						src="images/logoEbay_x45.gif"> </a>
 				</div>
@@ -137,8 +137,8 @@
 																								maxlength="64" size="27"> </span>
 																							<div class="bltns">
 																								<span class="smalVerF"> I forgot my <a
-																									href="forgot_userid.jsp">user ID</a> or <a
-																									href="forgot_password.jsp">password</a> </span>
+																									href="#">user ID</a> or <a
+																									href="#">password</a> </span>
 																							</div>
 																						</div>
 																					</div>

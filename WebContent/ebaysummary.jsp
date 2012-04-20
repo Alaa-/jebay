@@ -23,7 +23,7 @@
 		</div>
 		<div class="wrapper">
 			<div class="leftNav">
-				<div class="bgShadow"><div class="bgLeft"><div class="mainLink"><a href="EbaySummary.action">Summary</a></div></div></div>
+				<div class="bgShadow"><div class="bgLeft"><div class="mainLink"><a href="EbaySummary.action">Recent Purchase</a></div></div></div>
 				<div class="bgShadow">
 					<div class="bgLeft">
 						<div class="mainLink"><a href="BiddingStatus" class="arrow active" id="arrow_0">Bidding History</a></div>
@@ -87,27 +87,27 @@
 					</div><s:iterator value="sum">
 					<div class="panelHead2">	
 						<input type="checkbox"  class="left"/>
-						<img src="retrieve.jsp?item_id=<s:property value="item_id"/>" width="205" height="156" class="left" />
+						<img src="retrieve.jsp?item_id=<s:property value="item_id"/>" width="130" height="130" class="left" />
 						<div class="left">
 					
 							<div>
 								<a href="#"><s:property value="item_name"/></a>
-								<span class="grey">123456789</span>
-							</div>
+								
+							</div><div><br></div>
 							<div>
-								<a href="#" class="seperator">Seller: <s:property value="t_seller"/></a>
-								<a href="#" class="seperator">124</a>
-								<span class="grey">100%</span>
-							</div>
+								<a href="#" class="seperator"><b>Seller:</b> <s:property value="t_seller"/></a>
+								
+								
+							</div><div><br></div>
 							<div>
-								<a href="#">Sale Date: <s:property value="t_timestamp"/></a>
+								<a href="#"><b>Sale Date:</b> <s:property value="t_timestamp"/></a>
 								
 							</div>
 							
 						</div>
-						<div class="left">
+						<div class="right">
 							<div class="green">Rs. <s:property value="item_price"/></div>
-							<div class="grey">Free shipping</div>
+							
 						</div>
 						
 					</div></s:iterator>

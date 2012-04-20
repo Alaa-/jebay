@@ -18,7 +18,7 @@ public class BiddingStatusMo
 		try
 		{
 			Connect c = new Connect();
-			ResultSet rs = c.getResult("select * from biddingstatus,item_details where bidding_item_id=item_id and bidding_winner='" + username + "'");
+			ResultSet rs = c.getResult("select * from biddingstatus,item_details where bidding_item_id=item_id and bidding_status=2 and bidding_winner='" + username + "'");
 
 			while (rs.next())
 			{
@@ -64,7 +64,21 @@ public class BiddingStatusMo
 
 	public static void initBiddingStatus(int item_id)
 	{
-		String sqlQuery = "insert into biddingstatus (bidding_item_id) values(" + item_id + ")";
+		Connect c = new Connect();
+		String seller = null;
+		try
+		{
+			ResultSet rs = c.getResult("select * from item_details where item_id=" + item_id);
+			rs.next();
+			seller = rs.getString("item_seller");
+		}
+		catch (SQLException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		String sqlQuery = "insert into biddingstatus (bidding_item_id,bidding_winner) values(" + item_id + ", '" + seller + "')";
 		DB.update(sqlQuery);
 		System.out.println("Biddingstatus initialized");
 	}

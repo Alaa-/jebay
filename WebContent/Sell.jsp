@@ -78,11 +78,7 @@
 																	aria-expanded="false" role="combobox"
 																	aria-owns="results" autocomplete="off"
 																	title="Enter 3-5 words about your item. ">
-																<button id="aidZ" name="aidZ" type="submit"
-																	class="startSellingBtn">
-																	<span class="btn" id="aidZ_btnFrm"><span
-																		class="btn" id="aidZ_btnLbl">Start selling</span></span>
-																</button>
+																<input id="aidZ" name="aidZ" type="submit" value="Start selling"/>
 															</div>
 															
 															

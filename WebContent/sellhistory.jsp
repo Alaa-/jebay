@@ -11,9 +11,9 @@
 <script src="js/hello.js" type="text/javascript"></script>
 <script src="script/app.js" type="text/javascript"></script>
 <script type="text/javascript">
-function loadtextfield(){
+function loadtextfield(a){
 	//alert("hjo");
-	$("#d1").html('Enter Courier Name:<input type="text" name="courier_name"/><br>Enter Shipping TID:<input type="text" name="shippingid"/><br><input type="submit" name="Submit"/>');
+	$("#d"+a).html('Enter Courier Name:<input type="text" name="courier_name"/><br>Enter Shipping TID:<input type="text" name="shippingid"/><br><input type="submit" name="Submit"/>');
 	
 }
 
@@ -31,10 +31,10 @@ function loadtextfield(){
 		</div>
 		<div class="wrapper">
 			<div class="leftNav">
-				<div class="bgShadow"><div class="bgLeft"><div class="mainLink"><a href="EbaySummary.action">Summary</a></div></div></div>
+				<div class="bgShadow"><div class="bgLeft"><div class="mainLink"><a href="EbaySummary.action">Recent Purchase</a></div></div></div>
 				<div class="bgShadow">
 					<div class="bgLeft">
-						<div class="mainLink"><a href="BiddingStatus.action" class="arrow active" id="arrow_0">Buy</a></div>
+						<div class="mainLink"><a href="BiddingStatus.action" class="arrow active" id="arrow_0">Bidding History</a></div>
 						<div class="subSection" id="subSection_0">
 							<ul>
 								<li><a href="#">Bids/Offers<span>(0)</span></a></li>
@@ -90,7 +90,7 @@ function loadtextfield(){
 							<div>
 								<a href="#"><s:property value="item_name"/></a>
 							<%-- 	<span class="grey">123456789</span> --%>
-							</div>
+							</div><div><br></div>
 							<div>
 								<a href="#" class="seperator">Buyer: <s:property value="t_buyer"/></a>
 								<!-- <a href="#" class="seperator">124</a> -->
@@ -100,26 +100,25 @@ function loadtextfield(){
 								<s:elseif test="%{#status==2}">
    								<a href="#" class="seperator">Item Shipped</a>
 								</s:elseif> --%>
-								<div>
-								<a href="#">Sale Date: <s:property value="t_timestamp"/></a>
 								
-							</div>
 								<s:if test="%{#status==1}">
 								<a href="#" class="seperator">Buyer has bought the item..</a>
-								<a href="UpdateTStatusSeller.action?tid=<s:property value="t_id"/>" class="seperator">Enter shipping detail..</a>
 								
-								<div>Enter Shipping Details: <input type="button" value="click this" onclick="loadtextfield()"/>
+								
+								<div>Enter Shipping Details: <input type="button" value="click this" onclick="loadtextfield('<s:property value="t_id"/>')"/>
 								<form action="ShippingDetail"><input type="hidden" name="t_id" value="<s:property value="t_id"/>"/>
-								<div id="d1"></div>
+								<div id="d<s:property value="t_id"/>"></div>
 								</form></div>
 								</s:if>
 								<s:elseif test="%{#status==2}">
-   								<a href="#" class="seperator">You have shipped the item.. waiting for buyer confirmation</a>
+   								<div><a href="#" class="seperator">You have shipped the item to <b><s:property value="t_shipping_address"/></b>.. waiting for buyer confirmation</a></div>
 								</s:elseif>
 								<s:elseif test="%{#status==3}">
-   								<a href="#" class="seperator">Buyer got the item... money credited to your account</a>
+   								<div><a href="#" class="seperator">Buyer got the item... money credited to your account</a></div>
 								</s:elseif>
-								
+								<s:elseif test="%{#status==4}">
+   								<div><a href="#" class="seperator">Buyer got the item in BAD condition</a></div>
+								</s:elseif>
 								
 								
 								
@@ -130,12 +129,15 @@ function loadtextfield(){
 								<%-- <span class="grey">100%</span> --%>
 							</div>
 							
-							
+								<div><div><br></div>
+								<a href="#">Sale Date: <s:property value="t_timestamp"/></a>
+								
+							</div>
 							
 						</div>
 						<div class="right">
 							<div class="green">Rs. <s:property value="item_price"/></div>
-							<div class="grey">Free shipping</div>
+						
 						</div>
 					</div></s:iterator>
 						</div>
@@ -145,7 +147,7 @@ function loadtextfield(){
 						<img src="images/ipad_mobil_watchs_02.jpg" width="205" height="156" class="left" />
 						<div class="left">
 							<div>
-								<a href="#">Orange Icecream</a>
+								<a href="#">Dummy</a>
 								<span class="grey">123456789</span>
 							</div>
 							<div>
@@ -166,7 +168,7 @@ function loadtextfield(){
 						<img src="images/ipad_mobil_watchs_02.jpg" width="205" height="156" class="left" />
 						<div class="left">
 							<div>
-								<a href="#">Orange Icecream</a>
+								<a href="#">Dummy</a>
 								<span class="grey">123456789</span>
 							</div>
 							<div>

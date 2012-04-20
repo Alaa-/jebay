@@ -24,7 +24,7 @@
 <table id="t1" width="810">
 
 <tr><th><h3>Item Image</th><th><h3>Item Name</th><th><h3>Mode</h3></th><th><h3>Condition</h3></th><th><h3>Price</th>
-<th><h3>Time Left</th><th><h3>Quantity</th><th><h3>Seller</th>
+<th><h3>Time Left</th><th><h3>Quantity</th><th><h3>Seller</th><th>Rating</th>
 <tr><th colspan="4"><s:actionerror/></th></tr>
 </tr>
 <s:iterator value="arr">
@@ -43,6 +43,7 @@
 <td><h4><s:property value="item_endtime"/></td>
 <td><h4><s:property value="item_quantity"/></td>
 <td><h4><s:property value="item_seller"/></td>
+<td><h4><s:property value="item_rating"/></td>
 </tr>
 </s:iterator>
 
@@ -52,7 +53,7 @@
 </table>
 <div id="navigation" align="center"></div></div></td></table>
 <script type="text/javascript">
-    var pager = new Pager('t1', 3); 
+    var pager = new Pager('t1', 4); 
     pager.init(); 
     pager.showPageNav('pager', 'navigation'); 
     pager.showPage(1);

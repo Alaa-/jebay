@@ -21,7 +21,7 @@ function loadthis(){
 
 
 <% 
-ResultSet rs=c.getResult("select sum(paisa_amount) as amt from paisapay_details,transaction_details as t where paisa_t_id=t.t_id and t.t_status<>3");
+ResultSet rs=c.getResult("select sum(paisa_amount) as amt from paisapay_details,transaction_details as t where paisa_t_id=t.t_id and t.t_status<>3 and t.t_status<>4");
 rs.next();
 %>
 <h3>The current Paisa Pay Total of unfinished transactions is : </h3><h2>

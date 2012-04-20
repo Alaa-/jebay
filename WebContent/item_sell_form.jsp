@@ -88,7 +88,7 @@ function checkmode()
             </select><br/><br/>
 
 			
-            Quantity :<input type="text" name="itemquantity" id="itemquantity" pattern="\d{1,3}" value="1"/><br/><br/>
+            Quantity :<input type="text" name="itemquantity" id="itemquantity" value="1" pattern="\d{1,3}"/><br/><br/>
 
             How you would like to sell:<select name="itemsellmode" id="itemsellmode" tabindex="-1" onchange="checkmode()">
                 <option value="0">Buy It Now</option>

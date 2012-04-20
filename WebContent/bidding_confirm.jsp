@@ -38,9 +38,9 @@
 									<div class="gh-emn">&nbsp;</div>
 								</div>
 								<div class="gh-log">
-									<span class="gh-lg"><a href="http://www.ebay.in"
+									<span class="gh-lg"><a href="home.jsp"
 										rel="nofollow"> <img
-											src="http://p.ebaystatic.com/aw/pics/in/logos/logoEbay_x45.gif"
+											src="images/logoEbay_x45.gif"
 											alt="eBay" border="0"></img>
 									</a>
 									</span>
@@ -86,9 +86,9 @@
 								trademarks and brands are the property of their respective
 								owners. Use of this Web site constitutes acceptance of the eBay
 								<a
-									href="http://pages.ebay.in/help/policies/user-agreement.html?rt=nc"
+									href="#"
 									_sp="m571.l2612">User Agreement</a> and <a
-									href="http://pages.ebay.in/help/policies/privacy-policy.html?rt=nc"
+									href="#"
 									_sp="m571.l2613">Privacy Policy</a>.<br>
 								<br>
 								<div class="g-nav"></div>

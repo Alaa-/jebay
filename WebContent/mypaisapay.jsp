@@ -7,9 +7,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>My PaisaPay summary</title>
 <link rel="stylesheet" type="text/css"
-	href="http://ir.ebaystatic.com/v4css/z/i5/44sahi3l3azqpahlonk2cetjj.css#GH-ZAM_ReskinEbayNoAutoComplete_e767i_Ear_en_IN">
+	href="css/44sahi3l3azqpahlonk2cetjj.css">
 <link rel="stylesheet" type="text/css"
 	href="http://ir.ebaystatic.com/v4css/z/mt/czic43lc4q0xldvdn445m5knd.css#SparkApp_MyPaisaPaySummary_e767i_Ear_en_IN">
+
+
+
+
+
+
 
 
 </head>
